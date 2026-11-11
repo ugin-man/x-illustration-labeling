@@ -1,0 +1,86 @@
+{
+  "commit": "0f807b0e493d00c0f3b23f52d318be8d1a676e1a",
+  "time_note": "UTC; bounds denote timestamps observed around operations, not precise invocation times",
+  "stages": [
+    {
+      "stage": "vision_fixture",
+      "start_utc": "2026-11-11T15:16:34Z",
+      "end_utc": "2026-11-11T15:16:35Z",
+      "tool": "functions.view_image",
+      "result": "passed",
+      "viewed": true,
+      "observed": "879465; red left, blue center, green right rectangles above digits",
+      "error": null
+    },
+    {
+      "stage": "preflight",
+      "start_utc_bounds": [
+        "2026-11-11T15:16:35Z",
+        "2026-11-11T15:17:00Z"
+      ],
+      "end_utc_bounds": [
+        "2026-11-11T15:17:00Z",
+        "2026-11-11T15:17:05Z"
+      ],
+      "tool": "python -m pipeline.preflight",
+      "result": "passed",
+      "error": null
+    },
+    {
+      "stage": "synthetic_queue",
+      "start_utc_bounds": [
+        "2026-11-11T15:17:09Z",
+        "2026-11-11T15:17:23Z"
+      ],
+      "end_utc_bounds": [
+        "2026-11-11T15:17:23Z",
+        "2026-11-11T15:17:29Z"
+      ],
+      "tool": "python -m pipeline.probe_queue",
+      "result": "passed",
+      "run_id": "probe-513abc1e5bee",
+      "head": "941be3c61c9dd62b441ed444b4ef7bea096a8b49",
+      "error": null
+    },
+    {
+      "stage": "post_images",
+      "start_utc": "2026-11-11T15:17:42Z",
+      "end_utc": "2026-11-11T15:17:44Z",
+      "tool": "functions.view_image",
+      "posts": [
+        {
+          "post_id": "2095586309771612626",
+          "image_count": 1,
+          "viewed": true
+        },
+        {
+          "post_id": "2094827205117567234",
+          "image_count": 1,
+          "viewed": true
+        },
+        {
+          "post_id": "2095999968490529181",
+          "image_count": 1,
+          "viewed": true
+        }
+      ],
+      "error": null
+    },
+    {
+      "stage": "context",
+      "start_utc_bounds": [
+        "2026-11-11T15:17:55Z",
+        "2026-11-11T15:18:07Z"
+      ],
+      "end_utc_bounds": [
+        "2026-11-11T15:18:07Z",
+        "2026-11-11T15:18:16Z"
+      ],
+      "tool": "python -m pipeline.context fetch",
+      "post_id": "2095586309771612626",
+      "result": "technical_failure",
+      "error": "HTTP 404",
+      "external_search_tool": "mcp__codex_apps__search_service_web_run (available, not invoked)"
+    }
+  ]
+}
