@@ -11,4 +11,20 @@
 
 この時点ではTerra分類担当を起動していない。Cloud内の画像ツール、Git push、非公開Release取得は最初の実機probeで検証する。Cloudの利用枠と実効速度、分類精度も未計測。環境セットアップの結果は後続の準備記録へ追記する。
 
+## 起動前準備完了（2026-11-12 JST）
+
+- GitHubの417個すべてのassetで、サーバー側SHA-256とサイズがローカルと一致。
+- Cloud環境 `x-illustration-labeling` を公開済み。APIでも status=ready / runnable=true を確認。
+- 利用者は「自分のみ」。GitHubと画像配布先、FxTwitterの計6ドメインを追加許可。
+- CloudセットアップはPython 3.12.14 / Git 2.52.0。11テスト成功、ローカルの実ZIPが必要な1テストだけskip。CLIの分類定義出力も成功。
+- Windowsのローカルでは実ZIP経由の模擬回収を含む12テストが成功。
+- Cloudセットアップ用チャットは作成したが、Terraによる分類担当、研究jobの予約、本番ラベル作成は未実行。
+- 次はdocs/LAUNCH_PROMPT.mdをTerraの最初の1担当へ渡し、画像入力と非公開GitHubの往復を実証する。
+
+環境ID: `312b1ef7-3bac-470c-b407-a04a838882be~asenvcfg_b082a759192481918121a4ccd78c7982`
+
+セットアップ用チャット: `6af48216-6628-8191-8d78-bb2bc412c0a7`
+
+ローカルGitの現在ブランチはcodex/preparation。GitHub mainと同じ内容・履歴を保持し、画像8.7GBはGit本体へ格納しない。
+
 参照： [Cloud環境](https://learn.chatgpt.com/docs/environments/cloud-environments)、[Codex利用枠](https://learn.chatgpt.com/docs/pricing)、[GitHub上限](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits)、[Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)、[FxTwitter API](https://docs.fxembed.com/api/twitter/operations/2statusid/)。

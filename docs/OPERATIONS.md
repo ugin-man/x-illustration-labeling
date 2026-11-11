@@ -36,6 +36,7 @@ push失敗を予約成功として扱わない。leaseが切れたら保存/完�
 2. `git ls-remote https://github.com/ugin-man/x-illustration-labeling.git` が成功する。
 3. 専用テストrunの予約→小さいJSONのcheckpoint→finishを実施し、別環境から同じ結果を読める。
    実投稿の仕事をテストデータで完了しない。
+   コマンドは `python -m pipeline.probe_queue`。毎回固有のprobe runを使い、実投稿の台帳と分離する。
 4. `python -m pipeline.preflight` でReleaseの1バッチだけを取得し、全hashを照合する。
 5. パイロットの3投稿で全画像をモデルへ入力し、正しいJSONが保存できる。
 6. 中断/再開、限定探索、モデル実行設定、実処理速度を記録する。
