@@ -1,0 +1,73 @@
+{
+  "additional_workers_launched": 0,
+  "audit": {
+    "images": 28,
+    "posts": 20,
+    "reviewer": "independent AI, not human gold",
+    "statistics": {
+      "color_mode": {
+        "agreement": 27,
+        "disagreement": 1
+      },
+      "content_kind": {
+        "agreement": 27,
+        "ambiguous_reference": 1
+      },
+      "depiction_count": {
+        "agreement": 24,
+        "ambiguous_reference": 3,
+        "disagreement": 1
+      },
+      "format": {
+        "agreement": 21,
+        "ambiguous_reference": 6,
+        "disagreement": 1
+      },
+      "has_animal_like": {
+        "agreement": 28
+      },
+      "has_human_like": {
+        "agreement": 28
+      },
+      "has_red_hair": {
+        "agreement": 23,
+        "ambiguous_reference": 5
+      }
+    }
+  },
+  "cloud_report_commit": "69d0cf717950472baf38b587a2da987a68e60a7b",
+  "context_states": {
+    "complete": 74,
+    "technical_failure": 26
+  },
+  "creation": {
+    "derivative": 3,
+    "official": 1,
+    "original": 2,
+    "technical_failure": 26,
+    "unknown": 68
+  },
+  "human_gold_accuracy": null,
+  "images": 126,
+  "independently_checked_image_tool_traces": 70,
+  "jobs": {
+    "cal-0001": {
+      "records": 50,
+      "result_sha256": "c6d3a7b9e856f1fa7988b77a68ee6939ff4fc51bb4c1b880e5d79e36d1fd20c2"
+    },
+    "cal-0002": {
+      "records": 50,
+      "result_sha256": "ca53eb4e84fcf7759ab4ebcd85a787353c26539b689ae82514f74addc5f50615"
+    }
+  },
+  "note": "AI agreement is not human-ground-truth accuracy; candidate retries have not been executed.",
+  "partial_detail_images": 7,
+  "pilot_elapsed_seconds_including_batch_finish": 5792,
+  "posts": 100,
+  "posts_per_hour_including_batch_finish": 62.15469613259668,
+  "production_started": false,
+  "run_id": "pilot-v2-001",
+  "schema_and_hash_validation": "passed",
+  "usage_and_cost": null,
+  "worker_reported_viewed_images": 126
+}
