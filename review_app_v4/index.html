@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>イラストの確認 · 100投稿パイロット</title>
+  <title>イラストの確認 · パイロット</title>
   <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
 </head>
 <body>
@@ -11,10 +11,10 @@
     <div class="top-actions"><span id="progress" class="progress">読み込み中</span><span id="save-state" role="status">このPCに自動保存</span><button id="export" class="quiet">確認結果をダウンロード</button></div>
   </header>
   <div id="error" class="error-banner" role="alert" hidden><span id="error-message"></span><button id="retry">保存を再試行</button></div>
-  <div id="loading" class="loading">100投稿の画像と判定を準備しています…</div>
+  <div id="loading" class="loading">保存済みの画像と判定を準備しています…</div>
   <main id="app" hidden>
     <aside class="sidebar">
-      <div class="side-top"><div class="eyebrow">PILOT REVIEW <span id="total-count">100 POSTS</span></div><button id="sample" class="sample-button">ランダムに10投稿だけ見る <span>↗</span></button><button id="reset-sample" class="text-button" hidden>すべての投稿に戻す</button>
+      <div class="side-top"><div class="eyebrow">PILOT REVIEW <span id="total-count">PILOT</span></div><button id="sample" class="sample-button">ランダムに10投稿だけ見る <span>↗</span></button><button id="reset-sample" class="text-button" hidden>すべての投稿に戻す</button>
       <label class="sr-only" for="filter">確認状態で絞り込み</label><select id="filter"><option value="all">すべての投稿</option><option value="pending">未確認</option><option value="issue">気になる</option><option value="hold">保留</option><option value="ok">合ってそう</option></select>
       <label class="sr-only" for="search">投稿IDで検索</label><input id="search" placeholder="投稿IDで検索" type="search" autocomplete="off"><div id="list-count" class="muted"></div></div>
       <nav id="post-list" aria-label="投稿一覧"></nav>
