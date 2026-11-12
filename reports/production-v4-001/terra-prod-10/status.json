@@ -2,9 +2,10 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0252",
-  "checkpointed_posts": 44,
-  "checkpoint_head": "011d6d290ac7d0fb7083452a1d9af59db4471fb5",
-  "status": "active",
+  "checkpointed_posts": 50,
+  "checkpoint_head": "84ee100ea18a5e2afa338cc72a2bb001f125d9ba",
+  "status": "finished",
   "note": "Individual post context errors recorded as technical failures without retries. First two viewing events have recording times but no exact tool-return timestamp. Conditional recovery instructions for prod-0096 retained.",
-  "recorded_at": "2026-11-12T18:34:08.739879+00:00"
+  "recorded_at": "2026-11-12T18:43:34.432775+00:00",
+  "finish_head": "1f47095d0f9611496d6fc0e0072f9726c3a2f608"
 }
