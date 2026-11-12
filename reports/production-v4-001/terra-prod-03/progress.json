@@ -2,13 +2,13 @@
   "worker_id": "terra-prod-03",
   "run_id": "production-v4-001",
   "job_id": "prod-0090",
-  "checkpoint_head": "223831c1f6682f57788d4c23fda3310122ecd949",
-  "saved_posts": 23,
+  "checkpoint_head": "cfd881b0b027061ee1bac6a6884a9327832acffe",
+  "saved_posts": 31,
   "excluded_posts": 1,
-  "recorded_at": "2026-11-12T17:45:26.110872+00:00",
+  "recorded_at": "2026-11-12T17:54:37.235804+00:00",
   "notes": [
     "Two focal post text fetches returned 404.",
-    "Popularity metrics incidentally exposed in search results and one focal post text; values not recorded.",
+    "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
     "Post 2095375107128799526 excluded via model_refusal, media index 1."
   ]
 }
