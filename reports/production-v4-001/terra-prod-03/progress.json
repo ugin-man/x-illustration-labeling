@@ -1,11 +1,15 @@
 {
   "worker_id": "terra-prod-03",
   "run_id": "production-v4-001",
-  "job_id": "prod-0090",
-  "checkpoint_head": "dffa93bb27ca2788ec6e9a3f646c2c459e64f67c",
-  "saved_posts": 46,
-  "excluded_posts": 1,
-  "recorded_at": "2026-11-12T18:14:51.900002+00:00",
+  "completed_jobs": [
+    {
+      "job_id": "prod-0090",
+      "finish_head": "6e13f3d62c466143c6db3e2beec9c22c9cfdb0b3",
+      "saved_posts": 49,
+      "excluded_posts": 1
+    }
+  ],
+  "recorded_at": "2026-11-12T18:19:29.301122+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
