@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-11-12T17:51:32.214481+00:00",
+  "job_id": "prod-0165",
+  "event": "image_tool_probe_restored_and_work_resumed",
+  "completed_checkpointed_posts": 13,
+  "checkpoint_head": "f1c4ce1370ae47e4a9634441ba03bdf7aaa0736d"
+}
