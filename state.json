@@ -1,0 +1,1 @@
+{"acquired_at":1794478752,"attempt":1,"catalog_sha256":"095aebd495c0b14b3b9945185bd8083d69963e214d2ed7e0f89f1c0325090767","completed_posts":[],"job_id":"s3-cal-0002","lease_until":1794482352,"retry_after":0,"run_id":"pilot-v3-001","status":"leased","token":"787a7aaceffd46aaa41762a15cfd9176","updated_at":1794478752,"worker_id":"terra-v3-01"}
