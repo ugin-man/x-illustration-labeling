@@ -13,9 +13,15 @@
       "finish_head": "0690659c38a37254433826ea14e228fdcbdb2bf9",
       "saved_posts": 49,
       "excluded_posts": 1
+    },
+    {
+      "job_id": "prod-0191",
+      "finish_head": "9de70d37503549db59926d86b41d0c346866d3a7",
+      "saved_posts": 50,
+      "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-12T20:02:20.027322+00:00",
+  "recorded_at": "2026-11-12T20:30:52.526790+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -25,11 +31,8 @@
     "Focal post 2095068779596374134 text fetch failed; recorded as technical_failure.",
     "An external source returned HTTP 500 for post 2095066758252257485; recorded as technical_failure.",
     "Post 2096270328444141598 focal text fetch failed with HTTP 404 and was recorded as technical_failure.",
-    "Popularity metrics appeared incidentally in search results and focal content; facts recorded in corresponding review_flags without values."
-  ],
-  "active_job": {
-    "job_id": "prod-0191",
-    "checkpoint_head": "f79742d9d4c9b48258dcdcf700659c1bcc0d1826",
-    "checkpointed_posts": 28
-  }
+    "Popularity metrics appeared incidentally in search results and focal content; facts recorded in corresponding review_flags without values.",
+    "Several prod-0191 focal text fetches returned HTTP 404 or 401; technical failures recorded without retry.",
+    "Popularity metrics incidentally appeared in prod-0191 search results or focal content; review flags record exposure without values."
+  ]
 }
