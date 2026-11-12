@@ -31,9 +31,15 @@
       "finish_head": "7092dbc10338f7a2e88ea11607b94e157a950f63",
       "saved_posts": 47,
       "excluded_posts": 3
+    },
+    {
+      "job_id": "prod-0325",
+      "finish_head": "972dd9b135c98e73263557229d8cdd7912b1b3e3",
+      "saved_posts": 49,
+      "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-12T22:57:10.715340+00:00",
+  "recorded_at": "2026-11-12T23:57:18.474379+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -52,7 +58,11 @@
     "In prod-0050 some search outputs exposed popularity metrics; exposure is flagged without metric values.",
     "In prod-0051 focal text fetch failures were recorded without retry.",
     "Posts 2094847404709491039, 2094847419783729537 and 2094848168257261831 were excluded via model_refusal, media index 1. Do not reopen.",
-    "Search results incidentally exposed popularity metrics; the relevant review_flags record exposure without values."
+    "Search results incidentally exposed popularity metrics; the relevant review_flags record exposure without values.",
+    "Post 2097364842546151655 excluded via model_refusal, media index 1; do not reopen.",
+    "Individual post text failures were recorded without retry.",
+    "Popularity metrics incidentally appeared in images or search results; exposure was recorded without values.",
+    "The first image view event for post 2097366874136920326 was recorded after execution environment startup; its timestamp is the later recording time."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
