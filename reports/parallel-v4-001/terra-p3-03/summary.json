@@ -1,20 +1,33 @@
 {
   "worker_id": "terra-p3-03",
-  "head": "34974eb15886d8cc1cb366e951987bbc765d8f9f",
-  "claim_before_utc": "2026-11-12T15:40:41Z",
-  "jobs_claimed": [
-    "p3-cal-0001"
+  "pinned_head": "34974eb15886d8cc1cb366e951987bbc765d8f9f",
+  "model_configuration_basis": "Coordinator confirmed successful create_thread with model=gpt-6.1-terra and thinking=high for this worker.",
+  "initial_claim_before_utc": "2026-11-12T15:40:41Z",
+  "resume_claim_before_utc": "2026-11-12T15:44:13Z",
+  "last_finish_utc": "2026-11-12T16:06:21Z",
+  "jobs": [
+    {
+      "job_id": "p3-cal-0004",
+      "saved_posts": 9,
+      "saved_images": 10,
+      "finish_commit": "f0df5cd7801d1409e0448cfeff8e433caa9e9d8d"
+    },
+    {
+      "job_id": "p3-cal-0001",
+      "saved_posts": 9,
+      "saved_images": 12,
+      "finish_commit": "769dec526a378d3e7ee2cffb7e69806dce93d8a2"
+    }
   ],
-  "saved_posts": 0,
-  "saved_images": 0,
-  "viewed_images": 4,
-  "finished_jobs": [],
-  "finish_time_utc": null,
-  "release_remote_head": "1e660f6e8090b57d35b976228eb329819da71579",
-  "release_status": "released",
-  "reason": "Actual model and reasoning settings could not be independently verified; no labels submitted.",
+  "claim_end": "no_available_job",
+  "initial_interruption": "Initially released p3-cal-0001 after viewing four images without saving, due to mistaken requirement for independent model confirmation. Coordinator clarified launch record suffices; ordinary CLI subsequently returned the job, and the same worker resumed.",
   "policy_refusals": 0,
-  "input_validation_errors": 0,
-  "popularity_metric_exposure": "none observed",
-  "view_timestamps": "Exact per-image times not captured; bounded in view-events.jsonl."
+  "errors": [
+    "Initial draft authoring command failed because Python module path was missing; corrected and validated.",
+    "One validation error in 2096228890582958537: missing reason for other; corrected before save.",
+    "Post 2097701659405406397 text fetch returned 404; recorded technical_failure.",
+    "Post 2096868943587901498 external source accessed_at was entered as an approximate time 2026-11-12T15:50:00Z rather than measured exact time; do not interpret as exact."
+  ],
+  "popularity_metric_exposure": "A search result for post 2096868943587901498 incidentally showed a popularity metric. No metric was used or transcribed. Its saved result lacks a review flag because this was recognized after saving; coordinator should account for exposure.",
+  "view_times": "Per-image exact times not captured; bounded intervals recorded, with initial four events retained."
 }
