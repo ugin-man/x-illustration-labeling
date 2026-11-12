@@ -1,0 +1,31 @@
+{
+  "sent_utc": "2026-11-12 17:44:18 UTC",
+  "workers": [
+    "terra-prod-01",
+    "terra-prod-02",
+    "terra-prod-03",
+    "terra-prod-04",
+    "terra-prod-05",
+    "terra-prod-06",
+    "terra-prod-07",
+    "terra-prod-08",
+    "terra-prod-09",
+    "terra-prod-10"
+  ],
+  "reason": "Observed FxTwitter post HTTP401 yielded technical_failure with CLI exit0; worker08 stopped unnecessarily",
+  "rule_changed": false,
+  "observed_worker": "terra-prod-08",
+  "job_id": "prod-0140",
+  "post_id": "2095799227477905766",
+  "actual_source": "https://api.fxtwitter.com/2/status/2095799227477905766",
+  "context_result": {
+    "state": "technical_failure",
+    "code": 401,
+    "cli_exit_code": 0,
+    "retrieved_at": "2026-11-12T17:29:57.334277+00:00"
+  },
+  "checkpointed_posts_at_stop": 9,
+  "checkpoint_head": "ad3c2511f1b67706bb28a91211bb6226003902b4",
+  "rule": "Existing manual: record failed text context and preserve observed visual fields; no retry or access bypass",
+  "frozen_files_modified": false
+}

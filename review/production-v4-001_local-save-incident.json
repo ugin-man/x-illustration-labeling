@@ -1,0 +1,24 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-09",
+  "job_id": "prod-0096",
+  "post_id": "2095438109416858082",
+  "detected_at_utc": "2026-11-12T17:49:14Z",
+  "confirmed_remote_checkpoint_posts": 9,
+  "confirmed_remote_checkpoint_head": "b0502ddf051236727aae366e97ae403fb32a6c50",
+  "bad_row_status": "local_saved_not_checkpointed",
+  "issue": "Worker reported estimated external-source accessed_at; local immutable result was not submitted.",
+  "source_budget_consumed": {
+    "searches": 1,
+    "pages": 0,
+    "elapsed_seconds": 15.898
+  },
+  "search_reserved_at_unix": 1794504470.478957,
+  "source_url": "https://shop.thecure.com/pages/4-13-dream-2008",
+  "action": "Requested frozen CLI release without checkpointing bad row, then claim different work under same worker ID.",
+  "classification_rules_changed": false,
+  "recovery_pending": false,
+  "recovery_context_commit": "83a931f2ae062105e65f02308636506d8efbfcb0",
+  "recovery_instruction": "復旧用の限定運用指示です。現在の作業はそのまま継続し、今後CLIが prod-0096 をあなたへ割り当てた場合だけ次を適用してください。元terra-prod-09の9投稿はremote checkpoint済みで変更禁止です。10件目2095438109416858082は出典時刻の誤記を検知して未checkpointのまま残し、CLI releaseしました。別担当が未受理分から回復する正規経路を使います。元の誤記ラベルやdraftをコピー/参照しません。\n\nprod-0096取得後、当該投稿のcontext fetch/search/page/summaryを実行する前に、GitHubの固定commit 83a931f2ae062105e65f02308636506d8efbfcb0 の reports/production-v4-001/terra-prod-09/recovery-context/ にある2つのJSONを、あなたの .runtime/production-v4-001/prod-0096/context/ の同名ファイルへ元バイトで保存してください。既存ファイルがあれば先に照合し、異なるなら上書きせず停止報告。2095438109416858082.json SHA256=d9c615ccdea94aecf598b212e065786ca0585761bb8a22d7a57497643297c979、2095438109416858082-budget.json SHA256=286ac07c3f892ec0b8388877a7a690b8aeecd8a143df1a3d27ce9f2a5e749f32。manifest.jsonにも同値があります。\n\n検索は既に1回・ページ0回、元60秒deadlineは終了済みです。本文cacheをそのまま使い、追加の本文再取得・検索・ページ取得や予算のリセットをしません。検索終了直後の実CLI summaryは1search/0pages/15.898秒でした（後続の待機時間を探索時間と混同しない）。外部出典の正しい取得時刻を復元できないので、その外部出典で確定せず、本文と実画像で判定できる項目のみ保存し、足りない創作区分等は判別不能とします。画像のポリシー拒否は発生していない未受理投稿なので、通常どおり実画像ツールで確認してよいです。確定9投稿は再表示・再分類せず、以降の未受理投稿を通常のCLIで処理してください。review_flagsと専用報告には本件の回復を記録します。\n\nコード・validator・分類基準・queue手編集は一切不要です。該当区分以外は通常どおり50投稿ずつ自律継続してください。",
+  "recovery_state": "instructions_dispatched_pending_job_recovery"
+}
