@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-11-12T17:31:44.490337+00:00",
+  "job_id": "prod-0165",
+  "post_id": "2095987338468044886",
+  "event": "image_tool_transport_failure",
+  "message": "exec-server transport closed",
+  "completed_checkpointed_posts": 8,
+  "checkpoint_head": "3c1aeeacb85de32247f2428adf74f89d5143486f",
+  "note": "No policy refusal established; post not excluded. Stop for unavailable image tool."
+}
