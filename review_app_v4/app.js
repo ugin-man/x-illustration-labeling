@@ -52,6 +52,7 @@ function detail(title,subtitle){const d=el('details','detail-block'),s=el('summa
 function renderLabels(){
   const p=current(),im=p.images[imageIndex],container=$('labels'),scope=`image.${im.media_index}`;
   container.replaceChildren();
+  if(p.coordinator_notes?.length){container.append(section('集約時の監査注記','元の保存済み判定は変更していません'));for(const note of p.coordinator_notes)container.append(el('p','small-note',note));}
   container.append(section('投稿全体の数え方','同じIDは1件。モブの観測記録は人数に含めません'));
   for(const field of ['character_count','person_count','animal_count'])container.append(attribute(field,p[field],'post'));
   container.append(el('p','small-note',p.character_coverage==='complete'?'全添付の個別IDを確認済み':'同一性・役割などに判別不能が残ります'));
