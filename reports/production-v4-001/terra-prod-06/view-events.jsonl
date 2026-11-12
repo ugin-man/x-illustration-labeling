@@ -366,3 +366,14 @@
 {"post_id": "2095574455439261809", "media_index": 2, "sha256": "77238bfab6da033bf9e013822f6e728393cdd8b553b87f8e701bea4635c0b48b", "viewed_at_utc": "2026-11-12T22:37+00:00", "tool": "functions.view_image"}
 {"post_id": "2095574455439261809", "media_index": 3, "sha256": "635f5907e3b05b3c55995715619b545a630dffff6187deef6da5b45b1f9df07f", "viewed_at_utc": "2026-11-12T22:37+00:00", "tool": "functions.view_image"}
 {"post_id": "2095574455439261809", "media_index": 4, "sha256": "4b45bf0f11f6a97f403085aff8ce78041ab59327326b968d740b632d13890efe", "viewed_at_utc": "2026-11-12T22:38+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574458971144398", "media_index": 1, "sha256": "ab5282ae4b7680c604bf48934b543def16f4012c2f01dd396168f7e8cb3d56bf", "viewed_at_utc": "2026-11-12T22:39+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574458971144398", "media_index": 2, "sha256": "3602f9899d91bdab0b8c3cfa29b1dd0999fc7373625585ba5e77f7a2b88a9f00", "viewed_at_utc": "2026-11-12T22:40+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574699564749208", "media_index": 1, "sha256": "76f64c290d179e54aaf8f654f74c8de8124603d6538cbd4559572b8cb01e4334", "viewed_at_utc": "2026-11-12T22:41+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574704178516077", "media_index": 1, "sha256": "59a0afb6d48e6574e462008e6fb1ac3fb17477fe530b9b36bebd1e6a6a77dbb7", "viewed_at_utc": "2026-11-12T22:42+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574939407712644", "media_index": 1, "sha256": "1eb9fd4194ece55571ba0de89b2a9d1b98d3eb1832efdacdd324bb69f4a3d868", "viewed_at_utc": "2026-11-12T22:43+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574939407712644", "media_index": 2, "sha256": "d276496c64a18854dfb252967ee2877d42f3d50358557da0e64bad801ef087f6", "viewed_at_utc": "2026-11-12T22:43+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574944348606796", "media_index": 1, "sha256": "45617000f6713a0ef2c1224186b418cbd8d2786282475c986663aaeddf3cd3e4", "viewed_at_utc": "2026-11-12T22:44+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574944348606796", "media_index": 2, "sha256": "86f896abd0f59d25491e52bd0637f3ecd8b4bfb683ffa89cfa9f361482fb46b2", "viewed_at_utc": "2026-11-12T22:46+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574944348606796", "media_index": 3, "sha256": "aa31bb7750ccc4e70f632977331289343399087f3cb47c77fc1f249ad3f1032a", "viewed_at_utc": "2026-11-12T22:46+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574944348606796", "media_index": 4, "sha256": "cd05c976cba6fc5a6a780b440ddaadab3bfe7cb7d27cbe668ca8997c1289e9c3", "viewed_at_utc": "2026-11-12T22:46+00:00", "tool": "functions.view_image"}
+{"post_id": "2095574944348606796", "media_index": 1, "sha256": "45617000f6713a0ef2c1224186b418cbd8d2786282475c986663aaeddf3cd3e4", "viewed_at_utc": "2026-11-12T22:47+00:00", "tool": "functions.view_image", "note": "repeat view after context compaction"}
