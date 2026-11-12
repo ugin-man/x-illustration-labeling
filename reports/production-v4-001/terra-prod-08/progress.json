@@ -5,5 +5,10 @@
   "finish_head": "989c4269da51b3ebcf4af2fb4758d71eeef7ff71",
   "completed_posts": 50,
   "status": "claim_next",
-  "recorded_at": "2026-11-12T18:36:18.597905+00:00"
+  "recorded_at": "2026-11-12T18:36:18.597905+00:00",
+  "prod-0187": {
+    "saved_checkpointed_posts": 5,
+    "checkpoint": "af305b6bac8e15d84002f2bfca31e59acf3dc2c9",
+    "current_post": "2096240011633181036"
+  }
 }
