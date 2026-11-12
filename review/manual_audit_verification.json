@@ -1,0 +1,19 @@
+{
+  "source_questions": 24,
+  "source_database_matches_code": true,
+  "source_database_questions_only": true,
+  "mapped_original_questions": 24,
+  "required_when_applicable": 24,
+  "explicitly_required_reinstatements": [
+    "color",
+    "person.pose",
+    "animal.range"
+  ],
+  "html_rows": 24,
+  "html_research_media": 0,
+  "prior_run_pins_valid": true,
+  "prior_result_unchanged": true,
+  "launch_blocked": true,
+  "new_classification_started": false,
+  "runtime_schema_changed": false
+}
