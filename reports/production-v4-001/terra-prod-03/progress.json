@@ -19,9 +19,15 @@
       "finish_head": "9de70d37503549db59926d86b41d0c346866d3a7",
       "saved_posts": 50,
       "excluded_posts": 0
+    },
+    {
+      "job_id": "prod-0050",
+      "finish_head": "9abc4915b6fe58e35a0c197d8fd4dd8ac452202f",
+      "saved_posts": 50,
+      "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-12T21:31:27.136849+00:00",
+  "recorded_at": "2026-11-12T22:00:08.416818+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -39,11 +45,6 @@
     "prod-0050 includes focal text fetch failures recorded without retry.",
     "In prod-0050 some search outputs exposed popularity metrics; exposure is flagged without metric values."
   ],
-  "active_job": {
-    "job_id": "prod-0050",
-    "checkpoint_head": "d2c39176f4f122ca959f7d894d515676bd58759a",
-    "checkpointed_posts": 26
-  },
   "recovery_job": {
     "job_id": "prod-0049",
     "status": "released",
