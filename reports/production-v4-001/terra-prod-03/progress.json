@@ -39,7 +39,7 @@
       "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-12T23:57:18.474379+00:00",
+  "recorded_at": "2026-11-12T23:59:55.376298+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -62,7 +62,8 @@
     "Post 2097364842546151655 excluded via model_refusal, media index 1; do not reopen.",
     "Individual post text failures were recorded without retry.",
     "Popularity metrics incidentally appeared in images or search results; exposure was recorded without values.",
-    "The first image view event for post 2097366874136920326 was recorded after execution environment startup; its timestamp is the later recording time."
+    "The first image view event for post 2097366874136920326 was recorded after execution environment startup; its timestamp is the later recording time.",
+    "prod-0369: uncheckpointed post 2097739314381943250 cited a text search result whose URL was an image-search page, contrary to the input restriction. No image-search page or external image was opened. The job was released without checkpointing the result; do not reuse that result or prohibited source. Local context cache and budget are retained under .runtime/production-v4-001/prod-0369/context/; preserve the spent search budget and avoid re-fetching the post text when recovering."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
@@ -70,5 +71,12 @@
     "release_head": "8596401d52f57acf054422cb36ac0f823c55170f",
     "checkpoint_head": "4b5581b34554af4c6680f3d78e316f7e9d11451f",
     "checkpointed_posts": 19
+  },
+  "recovery_job_prod_0369": {
+    "job_id": "prod-0369",
+    "status": "released",
+    "release_head": "1223f21e463bcfab8a3a372aa2a86ec13278067c",
+    "checkpointed_posts": 0,
+    "unaccepted_post_id": "2097739314381943250"
   }
 }
