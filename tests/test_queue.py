@@ -83,6 +83,23 @@ class QueueTests(unittest.TestCase):
         with self.assertRaises(Conflict):
             self.q._publish('job-1', old_head, stale)
 
+    def test_hold_preserves_checkpoint_and_prevents_automatic_reclaim(self):
+        lease=self.q.reserve('job-1','worker-1')
+        self.q.checkpoint('job-1',lease['token'],{'123':{'post_id':'123'}},manifest={'job_id':'job-1'},
+                          hold={'post_id':'124','reason':'input_requires_review'})
+        self.now += 10000
+        self.assertIsNone(self.q.reserve('job-1','worker-2'))
+        sha,state=self.q.read('job-1')
+        self.assertEqual(state['status'],'needs_review')
+        self.assertEqual(state['completed_posts'],['123'])
+        self.assertEqual(json.loads(self.q.git('show',sha+':post-123.json').stdout),{'post_id':'123'})
+        with self.assertRaises(LostLease):self.q.finish('job-1',lease['token'],['123'])
+
+    def test_checkpoint_cannot_replace_manifest(self):
+        lease=self.q.reserve('job-1','worker-1')
+        self.q.checkpoint('job-1',lease['token'],{},manifest={'job_id':'job-1'})
+        with self.assertRaises(Conflict):self.q.checkpoint('job-1',lease['token'],{},manifest={'job_id':'other'})
+
 
 if __name__ == '__main__':
     unittest.main()

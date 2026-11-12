@@ -9,6 +9,7 @@ from urllib.parse import urlsplit
 import zipfile
 
 from .common import atomic_write, digest
+from .isolation import check_manifest
 
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
@@ -73,7 +74,7 @@ def download(catalog, job, target, assets):
             part.unlink()
 
 
-def unpack(bundle, job, destination):
+def unpack(bundle, job, destination, exclusion_policy=None):
     destination = Path(destination)
     assert digest(bundle) == job['sha256'], 'Bundle hash mismatch'
     with zipfile.ZipFile(bundle) as z:
@@ -82,6 +83,8 @@ def unpack(bundle, job, destination):
         manifest = json.loads(mbytes)
         assert manifest['job_id'] == job['job_id']
         assert [p['post_id'] for p in manifest['posts']] == job['post_ids']
+        if exclusion_policy is not None:
+            check_manifest(manifest, exclusion_policy)
         images = {i['path']: i['sha256'] for p in manifest['posts'] for i in p['images']}
         expected = set(images) | {'manifest.json'}
         assert set(z.namelist()) == expected and len(z.namelist()) == len(expected)

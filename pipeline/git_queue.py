@@ -157,12 +157,15 @@ class GitQueue:
             raise LostLease("Reservation expired; reacquire before further work")
         return sha, state
 
-    def checkpoint(self, job_id, token, records, manifest=None):
+    def checkpoint(self, job_id, token, records, manifest=None, hold=None):
         parent, state = self._owned(job_id, token)
         additions = {}
         if manifest is not None:
             additions['manifest.json'] = canonical(manifest)
         existing = self.files(parent)
+        if manifest is not None and 'manifest.json' in existing:
+            if self.git('show',f'{parent}:manifest.json').stdout != canonical(manifest):
+                raise Conflict('Pinned job manifest cannot be changed')
         done = set(state["completed_posts"])
         for post_id, record in records.items():
             if not re.fullmatch(r"[0-9]{1,25}", post_id):
@@ -178,6 +181,11 @@ class GitQueue:
         now = int(self.clock())
         state.update(completed_posts=sorted(done), updated_at=now,
                      lease_until=now + self.lease_seconds)
+        if hold is not None:
+            if (set(hold) != {'post_id','reason'} or not re.fullmatch(r'[0-9]{1,25}',hold['post_id'])
+                    or hold['reason'] not in {'input_requires_review','image_unavailable','schema_ambiguity'}):
+                raise ValueError('Invalid non-descriptive hold reason')
+            state.update(status='needs_review',lease_until=0,review=hold)
         return self._publish(job_id, parent, self._commit(state, parent, additions))
 
     def finish(self, job_id, token, expected_post_ids):
