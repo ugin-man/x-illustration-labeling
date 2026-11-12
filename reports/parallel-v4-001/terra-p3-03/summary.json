@@ -1,0 +1,20 @@
+{
+  "worker_id": "terra-p3-03",
+  "head": "34974eb15886d8cc1cb366e951987bbc765d8f9f",
+  "claim_before_utc": "2026-11-12T15:40:41Z",
+  "jobs_claimed": [
+    "p3-cal-0001"
+  ],
+  "saved_posts": 0,
+  "saved_images": 0,
+  "viewed_images": 4,
+  "finished_jobs": [],
+  "finish_time_utc": null,
+  "release_remote_head": "1e660f6e8090b57d35b976228eb329819da71579",
+  "release_status": "released",
+  "reason": "Actual model and reasoning settings could not be independently verified; no labels submitted.",
+  "policy_refusals": 0,
+  "input_validation_errors": 0,
+  "popularity_metric_exposure": "none observed",
+  "view_timestamps": "Exact per-image times not captured; bounded in view-events.jsonl."
+}
