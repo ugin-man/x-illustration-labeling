@@ -1,0 +1,17 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-10",
+  "job_id": "prod-0252",
+  "checkpointed_posts": 9,
+  "checkpoint_head": "dc8a12653ca224a81565efb5fc296b61871e8984",
+  "pending_post": "2096766839724597753",
+  "pending_images_viewed": 3,
+  "context_fetch": {
+    "state": "technical_failure",
+    "http_status": 401,
+    "retrieved_at": "2026-11-12T17:31:50.021632+00:00"
+  },
+  "status": "paused_authentication_response",
+  "note": "The 401 may be post-specific or service authentication; no retry or bypass. Pending post remains unsaved. First two viewing events lack exact tool timestamps and include their recording times.",
+  "recorded_at": "2026-11-12T17:32:29.865240+00:00"
+}
