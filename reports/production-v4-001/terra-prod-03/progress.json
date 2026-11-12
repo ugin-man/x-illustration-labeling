@@ -2,11 +2,11 @@
   "worker_id": "terra-prod-03",
   "run_id": "production-v4-001",
   "job_id": "prod-0090",
-  "checkpoint_head": "0a56627263f38bb687573bc61dc953b1724348e3",
-  "saved_posts": 8,
-  "recorded_at": "2026-11-12T17:28:05.696431+00:00",
+  "checkpoint_head": "17790920e796e1381786236a7e6a728296b8c49c",
+  "saved_posts": 18,
+  "recorded_at": "2026-11-12T17:38:14.413807+00:00",
   "notes": [
-    "One post text fetch returned 404.",
-    "Search results for one post incidentally exposed popularity metrics; no values recorded."
+    "Two focal post text fetches returned 404.",
+    "Popularity metrics incidentally exposed in two search results and one focal post text; values not recorded."
   ]
 }
