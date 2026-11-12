@@ -9,10 +9,16 @@
       "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-12T18:19:29.301122+00:00",
+  "recorded_at": "2026-11-12T18:42:04.871262+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
-    "Post 2095375107128799526 excluded via model_refusal, media index 1."
-  ]
+    "Post 2095375107128799526 excluded via model_refusal, media index 1.",
+    "Popularity metrics incidentally exposed in several prod-0069 image, focal text, and search results; facts recorded in corresponding review_flags without values."
+  ],
+  "active_job": {
+    "job_id": "prod-0069",
+    "checkpoint_head": "77c9618ee5283094fcd9c574bb6f8e668925b72e",
+    "checkpointed_posts": 15
+  }
 }
