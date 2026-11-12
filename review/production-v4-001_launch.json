@@ -1,0 +1,168 @@
+{
+  "run_id": "production-v4-001",
+  "code_commit": "4d2c98374a1364faf1e2b546a4c460e80e9b2903",
+  "code_branch": "codex/production-v4-001",
+  "run_config": "runs/production-v4-001.json",
+  "run_config_sha256": "28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1",
+  "created_model": "gpt-6.1-terra",
+  "thinking": "high",
+  "phase": "production_started",
+  "workers": [
+    {
+      "workerId": "terra-prod-01",
+      "threadId": "6af5f241-4e00-8191-9a7d-c9889091c088",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-02",
+      "threadId": "6af5f247-ce7c-8191-be1c-9d7eef4a40b0",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-03",
+      "threadId": "6af5f24e-1ac8-8191-aa25-2907975600a2",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-04",
+      "threadId": "6af5f254-be94-8191-ae23-b503546d80ab",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-05",
+      "threadId": "6af5f25a-e028-8191-8823-bcebdec4c09b",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-06",
+      "threadId": "6af5f261-b8a8-8191-b467-d98a289940bd",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-07",
+      "threadId": "6af5f268-0764-8191-9186-19e563bb1081",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-08",
+      "threadId": "6af5f26e-368c-8191-9996-4c21cd718089",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-09",
+      "threadId": "6af5f274-5144-8191-a09d-eedf8c9720bc",
+      "hostId": "durable"
+    },
+    {
+      "workerId": "terra-prod-10",
+      "threadId": "6af5f27a-880c-8191-b571-543342aa80a5",
+      "hostId": "durable"
+    }
+  ],
+  "watcher": {
+    "hostId": "local",
+    "threadId": "01a1d0a1-35dd-79c3-8b43-f2204418e432"
+  },
+  "coordinator": {
+    "hostId": "local",
+    "threadId": "01a1ca93-4ae7-7670-a82e-b1a6e750bc9b"
+  },
+  "dataset": {
+    "posts": 20628,
+    "jobs": 413,
+    "max_posts_per_job": 50,
+    "already_completed_posts": 100,
+    "excluded_posts": 30,
+    "excluded_hashes": 31
+  },
+  "release_id": 443239231,
+  "release_url": "https://github.com/ugin-man/x-illustration-labeling/releases/tag/data-v4-production-7113eaaefc38",
+  "launch_started_utc": "2026-11-12T17:16:30Z",
+  "started_workers": [
+    "terra-prod-01",
+    "terra-prod-02",
+    "terra-prod-03",
+    "terra-prod-04",
+    "terra-prod-05",
+    "terra-prod-06",
+    "terra-prod-07",
+    "terra-prod-08",
+    "terra-prod-09",
+    "terra-prod-10"
+  ],
+  "watcher_phase": "monitoring",
+  "watcher_start_sent_utc": "2026-11-12 17:18:21 UTC",
+  "first_ten_distinct_claims": {
+    "observed_utc": "2026-11-12T17:19:24Z",
+    "index_head": "1f0aade81652b33477c81b0402522bcca9b27520",
+    "assignments": [
+      {
+        "job_id": "prod-0090",
+        "worker_id": "terra-prod-03",
+        "job_head": "b613cee6b86714528b17cf87fcf768f200b6bba4",
+        "lease_until": 1794507484
+      },
+      {
+        "job_id": "prod-0092",
+        "worker_id": "terra-prod-06",
+        "job_head": "48f921d1dc5f838a81f4395af29e6869271028d9",
+        "lease_until": 1794507474
+      },
+      {
+        "job_id": "prod-0096",
+        "worker_id": "terra-prod-09",
+        "job_head": "762acea3e298624d37a77830f04eb7134d106474",
+        "lease_until": 1794507482
+      },
+      {
+        "job_id": "prod-0127",
+        "worker_id": "terra-prod-07",
+        "job_head": "c37240ca7a7d9cff0fc8661f170558c0457c286d",
+        "lease_until": 1794507472
+      },
+      {
+        "job_id": "prod-0140",
+        "worker_id": "terra-prod-08",
+        "job_head": "d17417c6852c9f757c2051771ecaebacf4d4c297",
+        "lease_until": 1794507488
+      },
+      {
+        "job_id": "prod-0159",
+        "worker_id": "terra-prod-05",
+        "job_head": "af4189b56b840790594f0290f2518260e0ecadbc",
+        "lease_until": 1794507477
+      },
+      {
+        "job_id": "prod-0165",
+        "worker_id": "terra-prod-01",
+        "job_head": "306bb5cea69720d6519f585296b027fb288ba68e",
+        "lease_until": 1794507479
+      },
+      {
+        "job_id": "prod-0205",
+        "worker_id": "terra-prod-04",
+        "job_head": "bcf60a67a96ab53c03b212678c779dc66dda5d6f",
+        "lease_until": 1794507461
+      },
+      {
+        "job_id": "prod-0252",
+        "worker_id": "terra-prod-10",
+        "job_head": "eb957b6114c7af9d172da4b3cf5a74a358343b35",
+        "lease_until": 1794507490
+      },
+      {
+        "job_id": "prod-0273",
+        "worker_id": "terra-prod-02",
+        "job_head": "d2f88efe2cb5f33a4db06f674cc565f7b34942cc",
+        "lease_until": 1794507469
+      }
+    ]
+  },
+  "watcher_initial_check": {
+    "observed_utc": "2026-11-12T17:19:16.7089227Z",
+    "active_threads": 10,
+    "leased_jobs": 10,
+    "restarts_sent": 0,
+    "next_check_approximately_utc": "2026-11-12T18:19:16Z"
+  }
+}
