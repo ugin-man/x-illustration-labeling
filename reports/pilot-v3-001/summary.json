@@ -1,0 +1,50 @@
+{
+  "run_id": "pilot-v3-001",
+  "code_commit": "505e4ed7b76a66872c62e25b7ac3f56b9b1e7053",
+  "worker": "terra-v3-01",
+  "configured_model_id": "gpt-6.1-terra",
+  "configured_reasoning_effort": "high",
+  "internal_model_snapshot": null,
+  "claim_utc": "2026-11-12T09:23:00+00:00",
+  "first_image_view_call_bounds_utc": [
+    "2026-11-12T09:23:21Z",
+    "2026-11-12T09:24:00Z"
+  ],
+  "last_post_saved_finished_at": "2026-11-12T11:15:11.491593+00:00",
+  "last_finish_utc": "2026-11-12T11:15:27+00:00",
+  "elapsed_seconds": 6747.0,
+  "posts_per_hour": 53.35704757670076,
+  "minutes_per_100_posts": 112.45,
+  "first_job_finish_utc": "2026-11-12T10:19:00Z",
+  "first_job_head": "b9444185eb2969f506263bbfc5d99579229e8752",
+  "second_job_finish_utc": "2026-11-12T11:15:27Z",
+  "second_job_head": "ffbf4c6b0013ccf913f02c84334d44f853839088",
+  "per_post_start_finish": "collected/labels.jsonl execution.started_at and execution.finished_at",
+  "model_usage": null,
+  "ledger_searches": 30,
+  "known_actual_searches_minimum": 31,
+  "self_recorded_image_events": 126,
+  "self_recorded_unique_images": 126,
+  "isolation": {
+    "result": "pass",
+    "excluded_images_found": 0,
+    "loose_images_scanned": 187,
+    "archive_images_scanned": 185,
+    "record_type": "retrospective from execution context, original raw output and precise time unavailable"
+  },
+  "vision_probe": {
+    "tool": "functions.view_image",
+    "digits": "879465",
+    "colors_and_positions": "red left, blue middle, green right",
+    "record_type": "retrospective from execution context, original raw output and precise time unavailable"
+  },
+  "preflight": "private release retrieval and hash checks passed; raw output and precise time unavailable",
+  "limitations": [
+    "Self-recorded view events are not independent tool execution logs. Coordinator reported tool-history access to first 58 unique images; independent access for remaining history is unavailable.",
+    "One post used 3 actual searches while ledger recorded 2; see errors.jsonl.",
+    "Popularity metrics appeared incidentally in external text and in one input image; not used in judgment.",
+    "This is a repeat on the same calibration sample, not a blinded accuracy test.",
+    "Exact per-post HTTP fetch outcomes are not all separately logged; context states are in the labels.",
+    "Setup and report creation excluded from claim-to-finish time."
+  ]
+}

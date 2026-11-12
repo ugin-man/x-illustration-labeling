@@ -1,0 +1,6 @@
+{"post_id": "2097328953585467578", "kind": "search_budget_violation", "ledger_searches": 2, "actual_searches": 3, "description": "2回目のWeb呼出しに2件の検索語を同梱", "recorded_at": "2026-11-12T10:21:01.318199+00:00"}
+{"post_id": "2096302695095419218", "kind": "incidental_popularity_exposure", "description": "外部資料の説明文とともに指標が表示された。判定に未使用", "recorded_at": "2026-11-12T10:23:58.186491+00:00"}
+{"post_id": "2094846399108251981", "kind": "incidental_popularity_exposure", "description": "外部検索結果スニペットに指標が混入。判定に未使用", "recorded_at": "2026-11-12T10:33:32.302835+00:00"}
+{"post_id": "2097340068826583133", "kind": "incidental_popularity_exposure", "description": "検索結果に指標が混入。判定に未使用", "recorded_at": "2026-11-12T10:37:43.605479+00:00"}
+{"post_id": "2094816086747439570", "kind": "incidental_popularity_exposure", "description": "外部検索結果にレビュー数等が表示。判定に未使用", "recorded_at": "2026-11-12T10:39:36.055869+00:00"}
+{"post_id": "2096390764326789205", "kind": "incidental_popularity_in_input_image", "description": "二枚目の画像に指標が含まれていた。分類根拠には使用しなかった", "recorded_at": "2026-11-12T11:12:06Z", "time_note": "approximate retrospective; exact observation time in self-recorded view events"}

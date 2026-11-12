@@ -1,0 +1,9 @@
+{"flags":[],"post_id":"2094743808022139215","random_audit":true,"visual_failure":false}
+{"flags":["検索結果にレビュー等の数値が混入表示されたが判定には未使用"],"post_id":"2094816086747439570","random_audit":false,"visual_failure":false}
+{"flags":["検索結果のスニペットに人気指標が混入表示されたが判定には使用していない"],"post_id":"2094846399108251981","random_audit":false,"visual_failure":false}
+{"flags":[],"post_id":"2095655643785179147","random_audit":true,"visual_failure":false}
+{"flags":[],"post_id":"2095783798940303834","random_audit":true,"visual_failure":false}
+{"flags":["外部テキスト資料に人気指標が同時表示されたが判定には使用していない"],"post_id":"2096302695095419218","random_audit":false,"visual_failure":false}
+{"flags":["二枚目の画像に人気指標が含まれたが、分類根拠には使用していない"],"post_id":"2096390764326789205","random_audit":false,"visual_failure":false}
+{"flags":["検索上限違反：台帳2回、実際は計3検索。2回目のツール呼出しに2語を誤投入。"],"post_id":"2097328953585467578","random_audit":false,"visual_failure":false}
+{"flags":["検索結果に他投稿の数値指標が混入表示されたが判定には未使用"],"post_id":"2097340068826583133","random_audit":false,"visual_failure":false}
