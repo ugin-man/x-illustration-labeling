@@ -1,7 +1,12 @@
 {
-  "revision": "v4-review-1",
+  "revision": "v4-review-2",
   "status": "awaiting_user_review",
   "execution_authorized": false,
+  "main_subject_controls_other_fields": false,
+  "assess_image_fields_regardless_of_main_subject": true,
+  "person_count_scope": "individualized_characters_excluding_clear_background_extras",
+  "presence_includes_background_extras": true,
+  "presence_derived_only_from_count": false,
   "source": "reference/attribute_app_20261111/attr_server.py:BUILTIN",
   "source_sha256": "8fb19c407790f40b139b78541cff727a6f5746d4b6ede5056fec47be4c902679",
   "source_question_count": 24,
@@ -38,6 +43,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "明示指示を維持",
       "rule": "画像の中心テーマを1つ選ぶ。存在するだけで主題にしない。人物入り広告でも情報配置が中心ならデザイン。人物・動物の存在は別記録。"
     },
@@ -63,6 +69,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "明示指示を維持",
       "rule": "実際に画像を見て、紙・ノート・キャンバス等の原画の撮影・スキャンと明らかならアナログ、それ以外の通常の絵はデジタル。不鮮明などでその確認自体ができなければ判別不能。作者説明やソフトの証拠を要求せず、この項目用の追加検索をしない。"
     },
@@ -91,6 +98,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "漫画として連続する場面が主なら漫画。独立した絵が複数なら複数イラスト。単独の絵なら一枚絵。1ファイルに複数絵がある場合も内容で判断する。漫画と独立絵が併存し代表が決まらなければその他。画像単位の形式は別の補助候補として分離。"
     },
@@ -117,6 +125,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "商品・販売・依頼募集・イベント等の宣伝を画像または取得済み本文に明確に含むか。署名だけで宣伝にしない。含まないと判断できる範囲を確認し、本文等が必要だが取れない場合は取得失敗として別記録。追加検索の枠は増やさない。"
     },
@@ -145,6 +154,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "必須への復帰を明示指示済み",
       "rule": "着色済み＝絵の対象領域に色・濃淡の塗りが施され、明らかな部分着色状態ではない。途中または多少着色＝一部に塗りがあり、他の部分に明確な未着色・作業途中の状態が見える。線画・下書き＝線を中心とした描画で着色がほぼない。単色仕上げ・少ない色数・意図的な白を途中扱いしない。完成した線画も線画に含み、作者の完成宣言までは推定しない。その他と判別不能を区別する。"
     },
@@ -171,6 +181,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "明示指示を維持",
       "rule": "一次＝対応する自作・オリジナルの申告または公式制作・発表の根拠。二次＝既存作品の二次創作と当該絵との対応。一次と二次の併存が確認できればその他、未特定なら判別不能。検索不発を一次の証拠にしない。"
     },
@@ -201,6 +212,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "明示指示を維持",
       "rule": "なし＝余白のみ。単色＝明確な1色の背景塗り。簡素＝少数の線・形・大まかな場所表現。描き込みあり＝背景の構造・配置・遠近・質感などの具体的な細部。人物の髪・衣服の細かさや文字量を背景の描き込みに数えない。"
     },
@@ -220,8 +232,9 @@
         "判別不能"
       ],
       "required_when_applicable": true,
-      "decision": "復帰・維持案（確認待ち）",
-      "rule": "同一の人物キャラを投稿内で1人として数える。顔違い・別コマ・複数添付を重複加算しない。人型／動物型の外見分類を人数内訳に使う案は、生物種としての人間数とは異なるため要確認。全体が分からない場合は既知の下限と判別不能を区別し、詳細数を総数にしない。"
+      "applicability_uses_main_subject": false,
+      "decision": "同一性と背景モブの扱いは明示指示済み",
+      "rule": "個別のキャラとして描かれた人物を投稿内で1人ずつ数える。顔違い・別コマ・複数添付を重複加算しない。明らかな背景モブで個別のキャラクター性がない人は人数へ計上しない。ただし人物の存在は別に記録し、人数対象外というだけで見えている属性を消さない。遠い・小さい・名前が不明というだけでモブ扱いにしない。個別キャラかモブか判断できず人数に影響するなら判別不能。人型／動物型と人数内訳の対応は別の確認点。全体が分からない場合は既知の下限と判別不能を区別する。"
     },
     {
       "original_qid": "n_animals",
@@ -239,6 +252,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "同一の動物キャラを投稿内で1体として数える。人型／動物型／その他のキャラ内訳の対応は確認対象。物体由来のキャラを動物へ自動編入しない。全体を確認できなければ判別不能。"
     },
@@ -267,6 +281,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "架空・描かれた人物の性別表現を対象とする。写真内の実在人物へ適用せず、服・髪型だけで性自認を断定しない。明確でなければ判別不能。元選択肢「複数」は人物ごとの項目との整合が未定義で、運用の確認が必要。"
     },
@@ -296,6 +311,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "必須への復帰を明示指示済み",
       "rule": "顔中心、肩・胸付近まで、腹・腰付近まで、全身を区別する。ひざ上・手だけ等はその他。見切れ等で境界が分からなければ判別不能。同じキャラの別ポーズが実際にある場合のみ複数値を記録し、迷った候補を並べない。別画像間で値を混ぜない。"
     },
@@ -326,6 +342,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "描かれた顔の表情を分類し、内心の感情を推定しない。顔が隠れる場合を真顔にしない。複数の表情差分が実際にあれば集合として残す。旧AI版で追加した「驚き」は元の選択肢へ戻す案ではその他。"
     },
@@ -370,6 +387,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "画像で見える髪の色。複数色は集合として保存し、元の「赤・オレンジ」「多色」への集約も出せるようにする。毛皮・帽子・輪郭・照明を髪の色にしない。未着色を白髪にしない。髪がなければ対象外、色が分からなければ判別不能。"
     },
@@ -398,6 +416,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "描かれた人物の外見上の年齢表現のみ。実年齢や作品設定を推測しない。頭身が低いだけで子供と決めない。写真の実在人物は対象外。不確実なら判別不能。"
     },
@@ -424,6 +443,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "現実の動物種に対応するか、竜等の架空生物かを分類。漫画の猫でも種として実在なら現実の動物。架空作品に登場するというだけで架空の動物にしない。分からなければ判別不能。"
     },
@@ -452,6 +472,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "デフォルメ＝形・比率の明確な省略や誇張。実物に近い＝自然な構造・比率。擬人化＝人間的な身体・服装・行動の表現。両立し代表が決まらなければその他と根拠。アニメ調を一律デフォルメとしない。重なりの扱いは確認対象。"
     },
@@ -480,6 +501,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "必須への復帰を明示指示済み",
       "rule": "動物の全身・顔・一部を記録する。人物の胸上／腰上と混同せず、元の動物用区分を別の欄に残す。姿や関節が対応しない部分を胸上等へ無理に分類しない。"
     },
@@ -510,6 +532,7 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
       "rule": "描かれた表情を分類する。人間のように表情が表現されていない、口元が見えない等なら判別不能。別ポーズ・別画像を同一キャラとして数えつつ、表情の違いを残す。"
     },
@@ -527,7 +550,7 @@
       "current_change": "削除",
       "current": "通常の物体の実在／架空を収集しない。物体由来キャラの体の形で代用できない。",
       "authority": "削除の個別指示なし。物体型キャラの検討はこの質問とは別。",
-      "unit": "主題が物体の画像ごと",
+      "unit": "全画像で確認。描かれた物体が対象",
       "proposed_field": "image.object_kind",
       "proposed_options": [
         "現実に存在するもの",
@@ -536,8 +559,9 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
-      "rule": "主な物体が現実に存在しうるものか架空の道具等か。背景の小物まで種類を増殖させない。物体キャラを人型・動物型へ無理に振らない。"
+      "rule": "主題を問わず、描かれた物体が現実に存在しうるものか架空の道具等かを判定する。実在と架空が併存し代表が決まらなければその他、見分けられなければ判別不能。対象となる物体がなければ対象外。物体キャラを動物へ強制編入しない。"
     },
     {
       "original_qid": "land.kind",
@@ -555,7 +579,7 @@
       "current_change": "削除",
       "current": "主題「風景」は残るが自然／街並み／室内等は収集しない。",
       "authority": "背景を場所分類にしない指示は、独立した風景種類の削除指示ではない。",
-      "unit": "主題が風景の画像ごと",
+      "unit": "全画像で確認。描かれた風景・環境が対象",
       "proposed_field": "image.landscape_kind",
       "proposed_options": [
         "自然",
@@ -566,8 +590,9 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
-      "rule": "中心となる環境の種類を選ぶ。現実の自然や街が架空作品に出るだけで架空の風景にしない。複数が併存し中心が決まらなければその他。背景の描き込みとは別項目。"
+      "rule": "人物が主題でも背景の風景・環境を判定する。現実の自然や街が架空作品に出るだけで架空の風景にしない。複数が併存し中心が決まらなければその他。風景・環境がなければ対象外、存在するが種類が分からなければ判別不能。背景の描き込みとは別項目。"
     },
     {
       "original_qid": "land.beings",
@@ -582,8 +607,8 @@
       "original_skip_if_color": null,
       "current_change": "統合・適用変更",
       "current": "主題を問わずキャラ一覧から人物・動物の存在を投稿単位で算出。",
-      "authority": "主題と人物・動物の存在を分析したい意図に沿うが、画像単位の風景回答は別途必要。",
-      "unit": "風景画像ごと。投稿へ集約",
+      "authority": "人物・動物の存在は主題から独立。今回の背景モブの人数除外と、存在の有無は別にする。",
+      "unit": "全画像ごと。投稿へ集約",
       "proposed_field": "image.has_person_or_animal",
       "proposed_options": [
         "いる",
@@ -592,8 +617,9 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
-      "rule": "その画像に人物・動物がいるか。主題が風景という理由で「いない」にしない。見える範囲・キャラ記録が不完全で否定できなければ判別不能。物体由来キャラの存在は別に分かるようにする。"
+      "rule": "その画像の絵に人物・動物が描かれているかを直接確認する。背景モブも存在には含める。個別キャラ人数が0でも人物がいる場合があるので、人数や個別キャラ一覧だけから「いない」を算出しない。主題を理由に質問を省かない。見えずに否定できなければ判別不能。"
     },
     {
       "original_qid": "land.objects",
@@ -609,8 +635,8 @@
       "current_change": "削除",
       "current": "風景内の物体の数の区分がない。",
       "authority": "削除の個別指示なし。元資料も何を1物体と数えるか詳細未定義。",
-      "unit": "主題が風景の画像ごと",
-      "proposed_field": "image.landscape_object_count",
+      "unit": "全画像ごと。主題による分岐なし",
+      "proposed_field": "image.object_count",
       "proposed_options": [
         "単体",
         "複数",
@@ -618,8 +644,9 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
-      "rule": "復帰案：独立した対象として描かれた建物・乗物・家具等が1つなら単体、2つ以上なら複数。窓・葉・模様など物体の部品は別に数えない。0ならその他に「対象物なし」と記録。どこまでを対象に数えるかは確認対象。"
+      "rule": "採用する場合は全画像で同じ数え方を使う。確認用案は、独立した対象として描かれた建物・乗物・家具等が1つなら単体、2つ以上なら複数。窓・葉・模様など部品は別に数えない。0ならその他に「対象物なし」と記録。何を1物体とするか元資料の定義が不足しており、採用と対象範囲は未確定。風景の時だけ行う理由にはしない。"
     },
     {
       "original_qid": "land.time",
@@ -636,7 +663,7 @@
       "current_change": "削除",
       "current": "時間帯の項目がない。",
       "authority": "削除の個別指示なし。",
-      "unit": "主題が風景の画像ごと",
+      "unit": "全画像ごと。主題による分岐なし",
       "proposed_field": "image.time_of_day",
       "proposed_options": [
         "朝",
@@ -646,8 +673,9 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
-      "rule": "光・空・太陽などに明確な手掛かりがあれば朝／昼／夜。夕方はその他。色が青いだけで夜、室内で暗いだけで夜と決めない。手掛かりがなければ判別不能。"
+      "rule": "人物が主題でも夜空や朝の光等の手掛かりがあれば朝／昼／夜を判定する。夕方はその他。色が青いだけで夜、室内で暗いだけで夜と決めない。絵は確認できるが時間帯の手掛かりがなければ判別不能。主題を理由に省略しない。"
     },
     {
       "original_qid": "design.kind",
@@ -666,7 +694,7 @@
       "current_change": "削除",
       "current": "主題・形式designだけにまとめ、デザインの種類を収集しない。",
       "authority": "削除の個別指示なし。デザイン分類ができているというコメントは細分類削除の承認ではない。",
-      "unit": "主題がデザインの画像ごと",
+      "unit": "全画像で確認。構成されたデザイン部分が対象",
       "proposed_field": "image.design_kind",
       "proposed_options": [
         "文字中心",
@@ -678,8 +706,9 @@
         "判別不能"
       ],
       "required_when_applicable": true,
+      "applicability_uses_main_subject": false,
       "decision": "復帰・維持案（確認待ち）",
-      "rule": "何を中心に構成したデザインか。文字・ロゴ・ポスター風・図形や模様・装飾から主なものを選ぶ。複数が同程度で決まらなければその他。署名だけの絵を文字中心デザインへ変えない。"
+      "rule": "主題を問わず、文字・ロゴ・ポスター風・図形や模様・装飾等の構成されたデザイン部分を分類する。複数が同程度で決まらなければその他。該当部分がなければ対象外。署名があるだけでデザイン部分があると扱わず、主題も変更しない。"
     }
   ],
   "instruction_register": [
@@ -778,6 +807,18 @@
       "topic": "今回の復帰と確認",
       "user_instruction": "「元のマニュアルと俺の指示を全部突き合わせて」「描写範囲と着色状態は必須に戻して」「俺が確認するまでは再分類しないで」",
       "interpretation": "24質問と関連指示を照合。確認用仕様を作り、launch-controlをblockedへ変更。"
+    },
+    {
+      "id": "U17",
+      "topic": "主題は質問分岐にしない",
+      "user_instruction": "風景が主題でなくても背景の時間帯を分析し、風景が主題でも描かれた人物を扱うべきだという訂正。",
+      "interpretation": "主題は分析用の独立ラベル。主題の値で他の質問・必須欄を切り替えない。"
+    },
+    {
+      "id": "U18",
+      "topic": "背景モブと人数",
+      "user_instruction": "明らかに背景のモブで、個別のキャラクター性を与えられていない人は人数に数えない。",
+      "interpretation": "個別人物の人数へ計上しない。人物の存在や見えている属性まで消さない。距離・小ささ・名前の不明だけではモブと決めない。"
     }
   ],
   "additional_items": [
@@ -797,7 +838,7 @@
       "item": "投稿内のユニークキャラ総数",
       "status": "明示指示を反映",
       "choices": "0以上の整数／判別不能",
-      "rule": "同じキャラの別コマ・ポーズ差分を重複計上しない。人物数と動物数の内訳を消さない。"
+      "rule": "同じキャラの別コマ・ポーズ差分を重複計上しない。個別のキャラクター性がない明らかな背景の人物モブは個別キャラとしての総数に含めない。人数への採否と、見えている人物・属性の記録を分ける。人物数・動物数の内訳と、人物・動物の存在の有無は別に残す。"
     },
     {
       "item": "有彩色／無彩色",

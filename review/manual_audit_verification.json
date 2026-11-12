@@ -15,5 +15,10 @@
   "prior_result_unchanged": true,
   "launch_blocked": true,
   "new_classification_started": false,
-  "runtime_schema_changed": false
+  "runtime_schema_changed": false,
+  "spec_revision": "v4-review-2",
+  "main_subject_dependencies": 0,
+  "presence_includes_background_extras": true,
+  "presence_derived_only_from_count": false,
+  "background_extras_excluded_from_individual_person_count": true
 }
