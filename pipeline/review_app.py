@@ -15,19 +15,26 @@ import webbrowser
 from .bundles import unpack
 from .human_source import bundle_root
 from .common import atomic_write, canonical
-from .contract import validate
-from .worker import check_config, provenance
+from .disposition import is_exclusion
+from .isolation import load_policy, check_post_files
+from .worker import check_config, validate_result
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / 'review_app'
 STATUSES = {'pending', 'ok', 'issue', 'hold'}
 
 
-def load_pilot(root=ROOT):
-    config, catalog = check_config(root / 'runs/pilot-v2-001.json')
-    folder = root / '.runtime/pilot-recovered'
+def load_pilot(root=ROOT, config_path=None, recovered=None):
+    root = Path(root)
+    config, catalog = check_config(config_path or root / 'runs/pilot-v3-001.json')
+    modern = config['schema_version'] == 'v3-1'
+    folder = Path(recovered) if recovered else (root / '.runtime/recovered' / config['run_id'] if modern else root / '.runtime/pilot-recovered')
+    policy = load_policy(config, root) if modern else None
+    source = root / 'dist' / catalog['dataset_version'] if modern else bundle_root(root)
     rows = {}
     image_paths = {}
+    exclusions = []
+    blocked_hashes = set()
     for job in catalog['jobs']:
         if job['job_id'] not in config['job_ids']:
             continue
@@ -36,22 +43,33 @@ def load_pilot(root=ROOT):
         raw = (saved / 'labels.jsonl').read_bytes()
         if state['status'] != 'completed' or hashlib.sha256(raw).hexdigest() != state['result_sha256']:
             raise ValueError('Completed result checksum mismatch')
-        destination = root / '.runtime/review-images' / job['job_id']
-        manifest = unpack(bundle_root(root) / job['asset'], job, destination)
+        destination = root / '.runtime/review-images' / config['run_id'] / job['job_id']
+        manifest = unpack(source / job['asset'], job, destination, exclusion_policy=policy)
         posts = {p['post_id']: p for p in manifest['posts']}
         batch = [json.loads(line) for line in raw.splitlines()]
         if len(batch) != len(posts) or {r['post_id'] for r in batch} != set(posts):
             raise ValueError('Result coverage mismatch')
         for row in batch:
-            validate(row, posts[row['post_id']], provenance(config, manifest))
+            post = posts[row['post_id']]
+            validate_result(row, post, config, manifest)
+            if is_exclusion(row):
+                exclusions.append({'post_id':row['post_id'], 'reason':row['reason']})
+                blocked_hashes.update(i['sha256'] for i in post['images'])
+                continue
+            if policy:
+                check_post_files(destination, post, policy)
             if row['post_id'] in rows:
                 raise ValueError('Duplicate post')
             rows[row['post_id']] = row
             for image in posts[row['post_id']]['images']:
                 image_paths[image['sha256']] = destination / image['path']
-    ordered = [rows[k] for k in sorted(rows)]
+    # Refused posts and identical image bytes never enter the review image route.
+    ordered = [rows[k] for k in sorted(rows) if not any(i['sha256'] in blocked_hashes for i in rows[k]['images'])]
+    visible_hashes = {i['sha256'] for r in ordered for i in r['images']}
+    image_paths = {sha:path for sha,path in image_paths.items() if sha in visible_hashes}
     fingerprint = hashlib.sha256(b''.join(canonical(r) for r in ordered)).hexdigest()
-    return {'run_id': config['run_id'], 'fingerprint': fingerprint, 'posts': ordered}, image_paths
+    return {'run_id': config['run_id'], 'schema_version':config['schema_version'], 'fingerprint': fingerprint,
+            'posts': ordered, 'exclusions':exclusions}, image_paths
 
 
 class ReviewStore:
@@ -148,7 +166,10 @@ class Handler(BaseHTTPRequestHandler):
             match = re.fullmatch(r'/images/([0-9a-f]{64})\.jpg', path)
             image = self.server.image_paths.get(match.group(1)) if match else None
             if image:
-                return self.send_bytes(200, image.read_bytes(), 'image/jpeg')
+                payload = image.read_bytes()
+                if hashlib.sha256(payload).hexdigest() != match.group(1):
+                    return self.send_json(409, {'error':'Image checksum mismatch'})
+                return self.send_bytes(200, payload, 'image/jpeg')
         static = {'/': ('index.html', 'text/html; charset=utf-8'), '/app.js': ('app.js', 'text/javascript; charset=utf-8'), '/style.css': ('style.css', 'text/css; charset=utf-8')}
         if path in static:
             filename, mime = static[path]
@@ -181,21 +202,24 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--port', type=int, default=8765)
+    parser.add_argument('--port', type=int, default=8766)
+    parser.add_argument('--config', type=Path, default=ROOT / 'runs/pilot-v3-001.json')
+    parser.add_argument('--recovered', type=Path)
     parser.add_argument('--open', action='store_true')
-    parser.add_argument('--review-file', type=Path, default=ROOT / 'private/reviews/pilot-v2-001.json')
+    parser.add_argument('--review-file', type=Path)
     args = parser.parse_args()
+    expected_run = json.loads(args.config.read_text(encoding='utf-8'))['run_id']
     if args.open:
         try:
             with urlopen(f'http://127.0.0.1:{args.port}/api/health', timeout=1) as response:
                 running = json.load(response)
-            if running.get('app') == 'illustration-pilot-review':
+            if running.get('app') == 'illustration-pilot-review' and running.get('run_id') == expected_run:
                 webbrowser.open(f'http://127.0.0.1:{args.port}')
                 return
         except (OSError, ValueError):
             pass
-    data, images = load_pilot()
-    server = ReviewServer(('127.0.0.1', args.port), data, images, args.review_file)
+    data, images = load_pilot(config_path=args.config, recovered=args.recovered)
+    server = ReviewServer(('127.0.0.1', args.port), data, images, args.review_file or ROOT / 'private/reviews' / (data['run_id']+'.json'))
     url = f'http://127.0.0.1:{server.server_port}'
     print(f'{url} | {len(data["posts"])} posts | {len(images)} images', flush=True)
     if args.open:

@@ -6,6 +6,8 @@ const WORDS = {illustration:'イラスト',photo:'写真',screenshot:'画面の�
 Object.assign(WORDS,{waist:'腰から上',other_partial:'その他の部分',anger:'怒り',sadness:'悲しみ',surprise:'驚き',morning:'朝',evening:'夕方',pattern:'パターン',self_claimed:'自作として申告',repost_claimed:'転載として申告'});
 Object.assign(NAMES,{depiction_count:'旧・描写回数',style:'旧版の画風'});
 Object.assign(WORDS,{stylized:'様式化（アニメ・漫画表現など）',limited_palette:'限定色（旧区分・見直し対象）'});
+Object.assign(NAMES,{main_subject:'主題',color_presence:'色の有無',character_count:'キャラクター数'});
+Object.assign(WORDS,{unknown:'判別不能',person_or_animal:'人物・動物',chromatic:'有彩色',achromatic:'無彩色',simple:'簡素',detailed:'描き込みあり'});
 const REVISION_NOTES = {
   '2094827205117567234':'見直し例：同じ人物の表情・ポーズ違いを、次版では1人にまとめます。以下の旧版の詳細は、同じ人物の繰り返しを別々に記録したものです。',
   '2096602285036163293':'見直し例：登場人物は2人です。同じ2人が3コマに登場するため、旧版は6描写と数えていました。次版では2人にまとめます。'
@@ -48,23 +50,38 @@ function detail(title,subtitle){const d=el('details','detail-block'),s=el('summa
 function overview(p,im){
   const box=el('div','overview'),a=im.attributes;
   const subject=el('div','overview-subject');
-  for(const field of ['format','subject_types'])subject.append(el('span','badge',value(a[field])));
-  subject.append(el('span','badge',a.depiction_count.status==='observed'?`旧・描写回数 ${a.depiction_count.value}`:'旧・描写回数は不明'));
+  const modern=Array.isArray(p.characters);
+  for(const field of (modern?['main_subject','format','technique']:['format','subject_types']))subject.append(el('span','badge',value(a[field])));
+  subject.append(el('span','badge',modern?`キャラクター数 ${value(p.character_count)}`:(a.depiction_count.status==='observed'?`旧・描写回数 ${a.depiction_count.value}`:'旧・描写回数は判別不能')));
   box.append(subject);
   const colors=COLORS.filter(c=>statusValue(a[`has_${c}_hair`])===true);
   const uncertain=COLORS.some(c=>a[`has_${c}_hair`]?.status!=='observed');
   const hair=el('div','overview-line');hair.append(el('span','overview-key','髪色'));
   if(colors.length)for(const color of colors){const chip=el('span','hair-chip');chip.append(el('i',`swatch ${color}`),document.createTextNode(word(color)));hair.append(chip);}
-  else hair.append(el('span','',uncertain?'判別できず':'該当する髪色なし'));
-  if(colors.length&&uncertain)hair.append(el('span','small-note','ほかに不明の色あり'));
+  else hair.append(el('span','',uncertain?'判別不能':'該当する髪色なし'));
+  if(colors.length&&uncertain)hair.append(el('span','small-note','ほかに判別不能の色あり'));
   const creation=p.context.attributes.creation,origin=el('div','overview-line');origin.append(el('span','overview-key','創作の由来'),el('span',creation.status==='technical_failure'?'badge failure':'',value(creation)));
   box.append(hair,origin);
-  box.append(el('p','small-note','この100投稿は旧基準の結果です。描写回数には同じキャラの繰り返しが含まれ、人数とは異なります。'));
-  if(REVISION_NOTES[p.post_id])box.append(el('p','revision-note',REVISION_NOTES[p.post_id]));
+  box.append(el('p','small-note',modern?'新基準の結果です。同じキャラの別コマ・表情差分は、投稿全体で1キャラクターにまとめています。':'この100投稿は旧基準の結果です。描写回数には同じキャラの繰り返しが含まれ、人数とは異なります。'));
+  if(!modern&&REVISION_NOTES[p.post_id])box.append(el('p','revision-note',REVISION_NOTES[p.post_id]));
   return box;
 }
-function renderLabels(){const p=current(),im=p.images[imageIndex],a=im.attributes,scope=`image${im.media_index}`,container=$('labels');container.replaceChildren();container.append(overview(p,im));container.append(section('画像の判定',`画像 ${imageIndex+1} に対応`));for(const field of ['content_kind','format','subject_types','depiction_count','color_mode','background'])if(a[field])container.append(attribute(field,a[field],scope));
-  container.append(section('この画像に見える髪色'));const hairs=el('div','hair-list');let positive=0,unknown=0;for(const color of COLORS){const h=a[`has_${color}_hair`];if(statusValue(h)===true){const chip=el('span','hair-chip');chip.append(el('i',`swatch ${color}`),document.createTextNode(word(color)));hairs.append(chip);positive++;}if(h?.status!=='observed')unknown++;}if(!positive)hairs.append(el('span','badge unknown',unknown?'髪色は判別できず':'該当する髪色なし'));container.append(hairs);if(unknown)container.append(el('p','small-note',`${unknown}色の有無が不明です。「不明」は「なし」と区別しています。`));const hairDetail=detail('髪色ごとの判定を見る');for(const color of COLORS)if(a[`has_${color}_hair`])hairDetail.append(attribute(`has_${color}_hair`,a[`has_${color}_hair`],scope));container.append(hairDetail);
+function renderLabels(){const p=current(),im=p.images[imageIndex],a=im.attributes,scope=`image${im.media_index}`,container=$('labels'),modern=Array.isArray(p.characters);container.replaceChildren();container.append(overview(p,im));container.append(section('画像の判定',`画像 ${imageIndex+1} に対応`));for(const field of (modern?['main_subject','content_kind','format','technique','color_presence','background']:['content_kind','format','subject_types','depiction_count','color_mode','background']))if(a[field])container.append(attribute(field,a[field],scope));
+  container.append(section('この画像に見える髪色'));const hairs=el('div','hair-list');let positive=0,unknown=0;for(const color of COLORS){const h=a[`has_${color}_hair`];if(statusValue(h)===true){const chip=el('span','hair-chip');chip.append(el('i',`swatch ${color}`),document.createTextNode(word(color)));hairs.append(chip);positive++;}if(h?.status!=='observed')unknown++;}if(!positive)hairs.append(el('span','badge unknown',unknown?'髪色は判別不能':'該当する髪色なし'));container.append(hairs);if(unknown)container.append(el('p','small-note',`${unknown}色の有無が判別不能です。「判別不能」は「なし」と区別しています。`));const hairDetail=detail('髪色ごとの判定を見る');for(const color of COLORS)if(a[`has_${color}_hair`])hairDetail.append(attribute(`has_${color}_hair`,a[`has_${color}_hair`],scope));container.append(hairDetail);
+  if(modern){
+    container.append(section('投稿全体のキャラクター',`${p.characters.length}件の詳細記録`));
+    container.append(attribute('character_count',p.character_count,'post'));
+    if(p.character_coverage==='partial')container.append(el('p','small-note','小さい・隠れているなど、詳しく記録できていない登場者があります。'));
+    if(!p.characters.length)container.append(el('p','small-note','キャラクターの記録はありません。'));
+    for(const ch of p.characters){
+      const visible=ch.appearances.filter(x=>x.media_index===im.media_index),block=detail(ch.id,value(ch.attributes.body_form));block.open=p.characters.length===1;
+      block.append(el('p','small-note',visible.length?'この画像に登場':'別の添付画像に登場'));
+      if(ch.grouping_evidence)block.append(el('p','small-note',ch.grouping_evidence));
+      for(const field of ['body_form','crop','expression'])if(ch.attributes[field])block.append(attribute(field,ch.attributes[field],`character.${ch.id}`));
+      for(const appearance of visible){block.append(el('p','small-note',appearance.location));block.append(attribute('hair_colors',appearance.hair_colors,`${scope}.${ch.id}`));}
+      container.append(block);
+    }
+  }else{
   const extra=detail('その他の画像属性');for(const field of ['background_detail','design_kind','environment','technique','time_of_day','visible_promotion','work_in_progress'])if(a[field])extra.append(attribute(field,a[field],scope));container.append(extra);
   container.append(section('旧版の描写ごとの記録',`${im.depictions.length}描写分`));
   container.append(el('p','small-note','同じキャラの別コマ・別ポーズも別々の記録です。キャラ単位への統合は次版で行います。'));
@@ -78,6 +95,7 @@ function renderLabels(){const p=current(),im=p.images[imageIndex],a=im.attribute
     auxiliary.append(el('p','small-note','「様式化」は普通のアニメ・漫画表現も含みます。頭身の低いちびキャラだけを指す区分ではありません。'));
     block.append(auxiliary);
     if(d.identity){const identity=el('div','identity');identity.append(el('strong','',d.identity.name||word(d.identity.status)));if(d.identity.work)identity.append(el('p','small-note',d.identity.work));if(d.identity.evidence)identity.append(el('p','small-note',d.identity.evidence));for(const source of d.identity.sources||[]){const link=safeLink(source.url);if(link)identity.append(link);}block.append(identity);}container.append(block);
+  }
   }
   const context=el('div','context-card');context.append(section('投稿全体の判定','本文・外部資料も使用'));for(const field of ['creation','poster_relation','promotion'])if(p.context.attributes[field])context.append(attribute(field,p.context.attributes[field],'context'));if(p.context.state==='technical_failure')context.append(el('p','context-state','本文や照合先を取得できず、由来などは判定できていません。画像の判定とは別です。'));context.append(el('p','small-note',`追加検索 ${p.context.searches}回 · 参照ページ ${p.context.pages}件`));container.append(context);
 }
@@ -100,4 +118,4 @@ $('image-stage').onclick=openZoom;$('zoom').onclick=openZoom;$('close-zoom').onc
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)||e.ctrlKey||e.metaKey||e.altKey||$('zoom-dialog').open)return;if(e.key==='ArrowLeft'){e.preventDefault();navigate(-1);}if(e.key==='ArrowRight'){e.preventDefault();navigate(1);}if(['1','2','3'].includes(e.key)){e.preventDefault();mark({'1':'ok','2':'issue','3':'hold'}[e.key]);}});
 window.addEventListener('beforeunload',e=>{flushNotes();if(pending.size||saving||noteTimers.size){e.preventDefault();e.returnValue='';}});
 
-(async()=>{try{const r=await fetch('/api/data');if(!r.ok)throw new Error('データを読み込めませんでした');const data=await r.json();posts=data.posts;byId=new Map(posts.map(p=>[p.post_id,p]));reviews=data.review.reviews;for(const [pid,item] of Object.entries(reviews))revisions[pid]=item.revision;token=data.token;runId=data.run_id;fingerprint=data.fingerprint;$('total-count').textContent=`${posts.length} POSTS`;const last=localStorage.getItem(`pilot-review-position:${fingerprint}`);currentId=byId.has(last)?last:posts[0]?.post_id||'';$('loading').hidden=true;$('app').hidden=false;render();updateSaveState();}catch(e){$('loading').textContent='読み込みに失敗しました。起動ツールから開き直してください。';showError(e.message);}})();
+(async()=>{try{const r=await fetch('/api/data');if(!r.ok)throw new Error('データを読み込めませんでした');const data=await r.json();posts=data.posts;byId=new Map(posts.map(p=>[p.post_id,p]));reviews=data.review.reviews;for(const [pid,item] of Object.entries(reviews))revisions[pid]=item.revision;token=data.token;runId=data.run_id;fingerprint=data.fingerprint;$('run-name').textContent=`${data.schema_version==='v3-1'?'新ルール':'旧ルール'} · ${runId}${data.exclusions?.length?' · 暫定除外 '+data.exclusions.length+'投稿（画像非表示）':''}`;$('total-count').textContent=`${posts.length} POSTS`;const last=localStorage.getItem(`pilot-review-position:${fingerprint}`);currentId=byId.has(last)?last:posts[0]?.post_id||'';$('loading').hidden=true;$('app').hidden=false;render();updateSaveState();}catch(e){$('loading').textContent='読み込みに失敗しました。起動ツールから開き直してください。';showError(e.message);}})();
