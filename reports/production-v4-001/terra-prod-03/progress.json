@@ -21,7 +21,7 @@
       "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-12T21:05:44.283276+00:00",
+  "recorded_at": "2026-11-12T21:16:40.550388+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -36,12 +36,13 @@
     "Popularity metrics incidentally appeared in prod-0191 search results or focal content; review flags record exposure without values.",
     "In prod-0049 individual focal text fetches returned HTTP 404 or 401; failures recorded without retry. Search result popularity metrics were incidentally exposed and flagged without values.",
     "Uncheckpointed post 2094833255333998737 contains an invented accessed_at for the first search source. Released before checkpoint. Unaccepted locally saved posts 2094833008591487197, 2094833014325088560, and 2094833255333998737 require recovery with preserved context budgets; do not reuse the erroneous source timestamp. Local context caches remain under the prod-0049 runtime.",
-    "prod-0050 includes focal text fetch failures recorded without retry."
+    "prod-0050 includes focal text fetch failures recorded without retry.",
+    "In prod-0050 some search outputs exposed popularity metrics; exposure is flagged without metric values."
   ],
   "active_job": {
     "job_id": "prod-0050",
-    "checkpoint_head": "bbc2e7d473e4122cec79afce5f81724164d5a976",
-    "checkpointed_posts": 8
+    "checkpoint_head": "d7a39102163e2f1c9c79b67d778b4a05339fd017",
+    "checkpointed_posts": 17
   },
   "recovery_job": {
     "job_id": "prod-0049",
