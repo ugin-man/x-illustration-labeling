@@ -1,0 +1,45 @@
+{
+  "run_id": "parallel-v4-001",
+  "worker_id": "terra-p3-02",
+  "code_head": "34974eb15886d8cc1cb366e951987bbc765d8f9f",
+  "model_configuration": {
+    "model": "gpt-6.1-terra",
+    "reasoning": "high",
+    "basis": "Coordinator confirmed successful create_thread with these formal arguments; not independently determined by worker."
+  },
+  "before_first_claim_utc": "2026-11-12T15:40:40Z",
+  "after_final_finish_utc": "2026-11-12T16:01:17Z",
+  "jobs": [
+    {
+      "job_id": "p3-cal-0003",
+      "saved_posts": 9,
+      "saved_images": 11,
+      "finish_commit": "bb1b5c7de41909d38e699a77610dfb9ff6331e19"
+    },
+    {
+      "job_id": "p3-cal-0002",
+      "saved_posts": 9,
+      "saved_images": 11,
+      "finish_commit": "e39e6a4eec5a0d37a496912aa5d8a70aada1b15d"
+    }
+  ],
+  "final_claim": "no_available_job",
+  "policy_refusals": 0,
+  "validation_and_input_errors": [
+    "Initial authoring script import failed because its module path was not set; initial validation consequently found required fields unassessed. Corrected module path and validated before saving.",
+    "One draft had a misspelled fixed color_presence value; validator and save rejected it. Corrected the draft value and validated and saved successfully."
+  ],
+  "context_fetch_errors": "Several post text fetches returned HTTP 401 or 404; affected required context fields were recorded as technical_failure.",
+  "search_budget": {
+    "searches": 0,
+    "pages": 0
+  },
+  "engagement_metric_exposure": "A participation count appeared incidentally in one image; no value was recorded or used for labeling.",
+  "view_event_times": "recorded_at was obtained shortly after display, not at the exact display instant; tool history provides independent event timing.",
+  "preparation": {
+    "tests": "84 run, OK, 1 skipped",
+    "excluded_images_found_before": 0,
+    "excluded_images_found_after_preflight": 0,
+    "preflight": "passed"
+  }
+}
