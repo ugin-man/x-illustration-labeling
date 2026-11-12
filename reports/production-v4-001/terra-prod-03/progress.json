@@ -1,0 +1,12 @@
+{
+  "worker_id": "terra-prod-03",
+  "run_id": "production-v4-001",
+  "job_id": "prod-0090",
+  "checkpoint_head": "0a56627263f38bb687573bc61dc953b1724348e3",
+  "saved_posts": 8,
+  "recorded_at": "2026-11-12T17:28:05.696431+00:00",
+  "notes": [
+    "One post text fetch returned 404.",
+    "Search results for one post incidentally exposed popularity metrics; no values recorded."
+  ]
+}
