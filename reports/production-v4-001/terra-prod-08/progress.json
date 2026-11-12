@@ -1,0 +1,11 @@
+{
+  "worker_id": "terra-prod-08",
+  "run_id": "production-v4-001",
+  "job_id": "prod-0140",
+  "checkpoint_head": "ad3c2511f1b67706bb28a91211bb6226003902b4",
+  "checkpointed_posts": 9,
+  "current_post_id": "2095799227477905766",
+  "current_post_state": "image_viewed_context_http_401_unfinished",
+  "reason": "Context fetch returned HTTP 401; stopped for authentication issue, no retry",
+  "recorded_at": "2026-11-12T17:30:32.765862+00:00"
+}
