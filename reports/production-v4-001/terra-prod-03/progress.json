@@ -25,9 +25,15 @@
       "finish_head": "9abc4915b6fe58e35a0c197d8fd4dd8ac452202f",
       "saved_posts": 50,
       "excluded_posts": 0
+    },
+    {
+      "job_id": "prod-0051",
+      "finish_head": "7092dbc10338f7a2e88ea11607b94e157a950f63",
+      "saved_posts": 47,
+      "excluded_posts": 3
     }
   ],
-  "recorded_at": "2026-11-12T22:00:08.416818+00:00",
+  "recorded_at": "2026-11-12T22:57:10.715340+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -43,7 +49,10 @@
     "In prod-0049 individual focal text fetches returned HTTP 404 or 401; failures recorded without retry. Search result popularity metrics were incidentally exposed and flagged without values.",
     "Uncheckpointed post 2094833255333998737 contains an invented accessed_at for the first search source. Released before checkpoint. Unaccepted locally saved posts 2094833008591487197, 2094833014325088560, and 2094833255333998737 require recovery with preserved context budgets; do not reuse the erroneous source timestamp. Local context caches remain under the prod-0049 runtime.",
     "prod-0050 includes focal text fetch failures recorded without retry.",
-    "In prod-0050 some search outputs exposed popularity metrics; exposure is flagged without metric values."
+    "In prod-0050 some search outputs exposed popularity metrics; exposure is flagged without metric values.",
+    "In prod-0051 focal text fetch failures were recorded without retry.",
+    "Posts 2094847404709491039, 2094847419783729537 and 2094848168257261831 were excluded via model_refusal, media index 1. Do not reopen.",
+    "Search results incidentally exposed popularity metrics; the relevant review_flags record exposure without values."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
