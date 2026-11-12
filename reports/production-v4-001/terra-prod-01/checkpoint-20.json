@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-11-12T17:59:54.139431+00:00",
+  "job_id": "prod-0165",
+  "completed_checkpointed_posts": 20,
+  "checkpoint_head": "21802050f7b97623c412ba567c4512d9b304b7e6",
+  "note": "One post had an individual HTTP 401 text-fetch failure; image observations saved, no retry. Four viewing events were logged after viewing; exact viewing seconds unavailable."
+}
