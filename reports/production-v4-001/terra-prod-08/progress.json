@@ -2,9 +2,8 @@
   "worker_id": "terra-prod-08",
   "run_id": "production-v4-001",
   "job_id": "prod-0140",
-  "checkpoint_head": "f863b8c089785580380f1983e43fed82b8d59f91",
-  "checkpointed_posts": 18,
+  "checkpoint_head": "99e9d3e224153a86577a1985e2d1a2a08abbc16a",
+  "checkpointed_posts": 26,
   "status": "in_progress",
-  "context_failures": "Individual HTTP failures recorded as technical_failure; no retry",
-  "recorded_at": "2026-11-12T17:54:42.857241+00:00"
+  "recorded_at": "2026-11-12T18:05:13.245403+00:00"
 }
