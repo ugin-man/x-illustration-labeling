@@ -1,0 +1,14 @@
+{
+  "worker": "terra-prod-02",
+  "job": "prod-0237",
+  "post_count": 50,
+  "status": "finished",
+  "checkpoint_head": "bbe1352c9acc42b81c49338abc16091e675ff62e",
+  "finish_head": "fe20f70e46827e2c60a2e39a707853f159f9e5da",
+  "recorded_at": "2026-11-12T22:48:21.976177+00:00",
+  "notes": [
+    "View event timestamps were recorded after observation; exact view times were not captured.",
+    "Individual post text fetch failures were recorded without refetch.",
+    "First image display for post 2096666466737377765 yielded truncated tool output before a subsequent successful display; no policy refusal occurred."
+  ]
+}
