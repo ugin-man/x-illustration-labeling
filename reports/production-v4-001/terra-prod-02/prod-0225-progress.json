@@ -1,0 +1,13 @@
+{
+  "worker": "terra-prod-02",
+  "job": "prod-0225",
+  "post_count": 50,
+  "status": "finished",
+  "checkpoint_head": "5c2157b7f573e9c986cd2d6d9f4b899bda0e8ffb",
+  "finish_head": "bfe723f6f6ee4241f9f03c1368695c248ae9a0d6",
+  "recorded_at": "2026-11-12T19:40:17.409462+00:00",
+  "notes": [
+    "Image view event timestamps were recorded after observation; exact view times were not captured.",
+    "Incidental popularity metrics in some search results were flagged in records; values are not recorded here."
+  ]
+}
