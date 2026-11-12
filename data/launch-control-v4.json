@@ -1,6 +1,1 @@
-{
-  "state": "blocked",
-  "authorized_run_id": null,
-  "reason": "pilot-v4-001 never labeled: cross-platform newline pin mismatch. Replaced by a fresh, LF-normalized pilot-v4-002; do not resume this attempt.",
-  "production_authorized": false
-}
+{"authorization_note":"2026-11-12 user explicitly approved this specification, tool/manual implementation, exclusion verification and one Terra worker for the same 100 calibration posts. No production run.","authorized_at":"2026-11-12T14:06:57.892049+00:00","authorized_run_id":"pilot-v4-002","catalog_sha256":"095aebd495c0b14b3b9945185bd8083d69963e214d2ed7e0f89f1c0325090767","max_posts":100,"max_workers":1,"production_authorized":false,"run_config_sha256":"135b48b88f7d3997f91fb7aaa12d005a0f78834cbbb90a3bfb7fdca5bdbcb8a8","screening_receipt_sha256":"7113eaaefc38bab730ddeffdf4771208133b49c6d3e5ea3a59de1d401f79ec24","state":"authorized"}

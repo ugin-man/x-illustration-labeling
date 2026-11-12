@@ -26,7 +26,7 @@ STATUSES = {'pending', 'ok', 'issue', 'hold'}
 
 def load_pilot(root=ROOT, config_path=None, recovered=None):
     root = Path(root)
-    config, catalog = check_config(config_path or root / 'runs/pilot-v4-001.json')
+    config, catalog = check_config(config_path or root / 'runs/pilot-v4-002.json')
     modern = config['schema_version'] == 'v4-1'
     folder = Path(recovered) if recovered else (root / '.runtime/recovered' / config['run_id'] if modern else root / '.runtime/pilot-recovered')
     policy = load_policy(config, root) if modern else None
@@ -203,7 +203,7 @@ class Handler(BaseHTTPRequestHandler):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8766)
-    parser.add_argument('--config', type=Path, default=ROOT / 'runs/pilot-v4-001.json')
+    parser.add_argument('--config', type=Path, default=ROOT / 'runs/pilot-v4-002.json')
     parser.add_argument('--recovered', type=Path)
     parser.add_argument('--open', action='store_true')
     parser.add_argument('--review-file', type=Path)
