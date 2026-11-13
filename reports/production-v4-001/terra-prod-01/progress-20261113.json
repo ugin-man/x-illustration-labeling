@@ -3,9 +3,9 @@
   "worker_id": "terra-prod-01",
   "finished_job": "prod-0165",
   "finished_posts": 50,
-  "finish_head": "e1b7c4c1e3f304dd412cc3005c6f9ecef16a4368",
   "current_job": "prod-0040",
-  "checkpoint_accepted_posts": 18,
-  "checkpoint_head": "93fd1e0085fc354521ec9444e2b73b0601182535",
-  "updated_at": "2026-11-13T03:46:44.210280+00:00"
+  "checkpoint_accepted_posts": 40,
+  "checkpoint_head": "5899f1a27e515974684b894a961dc1177f902da9",
+  "recovery": "expired lease reacquired; local results and context verified against backup before checkpoint",
+  "updated_at": "2026-11-13T05:18:38.419742+00:00"
 }
