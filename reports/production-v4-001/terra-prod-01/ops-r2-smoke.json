@@ -1,0 +1,15 @@
+{
+  "worker_id": "terra-prod-01",
+  "job_id": "prod-0078",
+  "post_id": "2095145739475366195",
+  "view_event_id": "d01d23ce-d7fa-4800-b18e-44a9c2a22f79",
+  "remote_head": "bc958c2b42888d47b05994910c0b5d0e604b0c81",
+  "accepted_before": 42,
+  "accepted_after": 43,
+  "claim_to_checkpoint_seconds": 551.186,
+  "claim_to_draft_start_seconds": 356.444,
+  "draft_start_to_checkpoint_seconds": 194.742,
+  "timing_note": "Initial interval includes claim migration, isolation and next preparation; second interval starts at draft creation. Total uses monotonic; intervals use recorded UTC.",
+  "isolation_excluded_images_found": 0,
+  "control_sha256": "0f8761de4b1ddcdb36202297c299cb8dcfd143e59043124964bdec97645624b8"
+}
