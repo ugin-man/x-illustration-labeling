@@ -51,7 +51,7 @@
       "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-13T02:32:44.090254+00:00",
+  "recorded_at": "2026-11-13T02:45:15.966827+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -81,7 +81,8 @@
     "prod-0323 individual post text HTTP failures recorded without retry; incidental popularity exposure recorded in review flag without values.",
     "Post 2097355231550132445 excluded via model_refusal at media index 3; do not reopen any image of that post.",
     "Popularity exposure in focal image and text was flagged without recording values.",
-    "prod-0323 completed with individual text failures recorded without retry; incidental popularity exposure flagged without values."
+    "prod-0323 completed with individual text failures recorded without retry; incidental popularity exposure flagged without values.",
+    "prod-0326 released without checkpointing two local results because post 2097370651808215439 excluded 3D virtual avatars from the illustration assessment on an uncertain interpretation. Reassess that post; do not reuse its unaccepted labels. The subsequent post 2097370927168393584 was viewed and its text fetch returned 404, but no result was saved. Preserve context caches and budgets during recovery; do not repeat the text fetch."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
@@ -115,5 +116,19 @@
       "2097735028042313797"
     ],
     "context_cache_directory": ".runtime/production-v4-001/prod-0368/context/"
-  }
+  },
+  "recovery_job_prod_0326": {
+    "job_id": "prod-0326",
+    "status": "released",
+    "release_head": "e935c5ca9b4fa94eae89034b4d30f6d3b4caee2b",
+    "checkpoint_head": "d823c5b19553b7046023ed5cad29f105927c3cbf",
+    "checkpointed_posts": 3,
+    "unaccepted_saved_post_ids": [
+      "2097370650314944850",
+      "2097370651808215439"
+    ],
+    "viewed_unsaved_post_id": "2097370927168393584",
+    "context_cache_directory": ".runtime/production-v4-001/prod-0326/context/"
+  },
+  "current_job": "prod-0095"
 }
