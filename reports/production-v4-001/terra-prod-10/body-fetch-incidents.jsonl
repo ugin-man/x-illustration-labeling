@@ -1,0 +1,1 @@
+{"job_id": "prod-0138", "worker_id": "terra-prod-10", "post_ids": ["2095780774301909083", "2095781547538596293", "2095781549618913679"], "service": "api.fxtwitter.com", "status_code": 404, "outcome": "technical_failure; image observations saved; subsequent fetch succeeded", "recorded_at": "2026-11-13T20:20:04.310129+00:00"}
