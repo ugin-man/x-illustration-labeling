@@ -1,7 +1,7 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0167",
-  "remote_accepted": 38,
-  "remote_head": "41fbad1957240bf74aaaf0aa17337b3809a099c5",
-  "notice": "Three successive individual post body fetches returned HTTP 401, 404, 404. Recorded as technical failures; observed image attributes saved. No body re-fetch."
+  "remote_accepted": 43,
+  "remote_head": "e583414dafa60b48ccc9f935ab43daf342fb740a",
+  "notice": "Body retrieval recovered after earlier individual HTTP failures; one transient Git ls-remote failure recovered on save retry."
 }
