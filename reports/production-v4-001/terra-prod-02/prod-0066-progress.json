@@ -2,8 +2,10 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-02",
   "job_id": "prod-0066",
-  "checkpointed_posts": 25,
+  "checkpointed_posts": 50,
   "post_count": 50,
-  "checkpoint_head": "72541a7f62f622a61a629a2eaf608e7ff8e057f6",
-  "recorded_at": "2026-11-13T06:58:02.087216+00:00"
+  "checkpoint_head": "559d7c1349ea5b9c93338beba13fa46bf22bde65",
+  "finish_head": "f4985cf59d9d0ca3e0fc2125b4bfc46c882757ea",
+  "status": "finished",
+  "recorded_at": "2026-11-13T07:33:56.429222+00:00"
 }
