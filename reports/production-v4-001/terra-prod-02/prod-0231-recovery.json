@@ -1,0 +1,11 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-02",
+  "job_id": "prod-0231",
+  "checkpointed_posts": 45,
+  "post_count": 50,
+  "checkpoint_head": "96ab83e0d01dbf4ce26b9f37ece45726cd9e6cc1",
+  "interrupted_post_id": "2096636885460561947",
+  "status": "recovery_blocked",
+  "note": "Image was viewed before environment disconnect and its view event was recorded retrospectively. Context fetch was launched in parallel with audit recording when exec transport disconnected; no context cache or search budget ledger exists, so whether the one allowed fetch reached the service cannot be established. No refetch or further classification was performed."
+}
