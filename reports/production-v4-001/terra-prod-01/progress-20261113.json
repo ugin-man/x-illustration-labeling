@@ -1,12 +1,11 @@
 {
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-01",
-  "finished_job": "prod-0040",
+  "finished_job": "prod-0041",
   "finished_posts": 50,
-  "checkpoint_accepted_posts": 35,
-  "checkpoint_head": "4f9c4f78a90af545c4518f18223f75a0243b88a3",
+  "checkpoint_accepted_posts": 50,
+  "checkpoint_head": "8e3c55bedbedbb74cac3c5e8abe42e2cd2a3c9f3",
   "recovery": "environment restored; same active ownership verified; six pending results and context, draft, and viewing events matched preserved backup; CLI checkpoint succeeded; isolation excluded matches zero",
-  "updated_at": "2026-11-13T08:11:39.429353+00:00",
-  "finish_head": "b47cfc22064c2aeb83266e12894a396533ad0263",
-  "current_job": "prod-0041"
+  "updated_at": "2026-11-13T08:35:19.258166+00:00",
+  "finish_head": "cabaeb8091c694bafcf7d4791adf9029825b98c0"
 }
