@@ -1,0 +1,30 @@
+{
+  "recorded_at": "2026-11-13T02:48:13.350319+00:00",
+  "conditional_jobs": {
+    "prod-0096": {
+      "commit": "83a931f2ae062105e65f02308636506d8efbfcb0",
+      "path": "reports/production-v4-001/terra-prod-09/recovery-context/",
+      "post_id": "2095438109416858082",
+      "files": {
+        "2095438109416858082.json": "d9c615ccdea94aecf598b212e065786ca0585761bb8a22d7a57497643297c979",
+        "2095438109416858082-budget.json": "286ac07c3f892ec0b8388877a7a690b8aeecd8a143df1a3d27ce9f2a5e749f32"
+      },
+      "instruction": "取得した場合のみ対象のcontext操作前にバイト照合して継承。既存差異で停止。受理済み9投稿は変更せず、対象の本文再取得・追加検索・ページ取得は禁止。既存探索は1検索0ページ15.898秒。外部出典の時刻は復元不能、画像と本文で判定し回復を記録。"
+    },
+    "prod-0114": {
+      "commit": "ff6e37132243137f8e4b6fb968cfc4ec1171216b",
+      "manifest_path": "reports/production-v4-001/terra-prod-06/recovery-context/prod-0114/manifest.json",
+      "manifest_sha256": "5ee14243a62dc790763d5542a6357bb03cf8099a8fd51f20f5f66b9f69e436fb",
+      "instruction": "取得した場合のみ未受理投稿前にmanifestと列挙された6 cache/budgetファイルをSHA256照合し、列挙post IDの同名JSONのみ元バイトで継承。既存差異では停止。受理済み33投稿を変更しない。対象5投稿の本文再取得と追加検索・ページ取得は禁止。2095575705207873708は1検索0ページ14.116秒、他4件は0検索。出典時刻を推測せず、回復をreview_flagsと報告へ記録。"
+    }
+  },
+  "temporary_release_jobs": {
+    "job_ids": [
+      "prod-0049",
+      "prod-0369",
+      "prod-0368",
+      "prod-0326"
+    ],
+    "instruction": "引継ぎ準備が確認されるまで、claimで割当後はnext、画像表示、context、save、checkpoint、holdを実施せずCLI releaseして別区分へ。受理済み・ローカル結果を編集しない。"
+  }
+}

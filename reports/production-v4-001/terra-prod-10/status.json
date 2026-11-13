@@ -2,9 +2,9 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0185",
-  "checkpointed_posts": 4,
-  "checkpoint_head": "51f1ba492a04e91334ec02ba74250871e3e3b995",
-  "status": "interrupted",
-  "note": "前区分 prod-0252 は50投稿で完了。現区分の投稿2096222295224410618は画像表示・本文401記録・draft検証済みだが、saveが中断され未保存。再開時はCLIの所有権とdraftを確認する。prod-0096の条件付き復旧手順を保持。",
-  "recorded_at": "2026-11-12T18:54:28.714493+00:00"
+  "checkpointed_posts": 12,
+  "checkpoint_head": "aedb8e4a31caed8420e4b9ca954fd4f2ded20c9f",
+  "status": "active",
+  "note": "再取得後に前回の未保存draftと閲覧記録を照合し、再表示・再取得なしで保存。prod-0096・prod-0114の条件付き回復と一時release対象4区分の指示を保持。",
+  "recorded_at": "2026-11-13T02:51:10.916853+00:00"
 }
