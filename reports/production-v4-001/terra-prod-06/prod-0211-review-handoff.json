@@ -1,0 +1,15 @@
+{
+  "worker_id": "terra-prod-06",
+  "job_id": "prod-0211",
+  "state": "paused_before_checkpoint",
+  "local_saved_posts": 5,
+  "remote_accepted_at_claim": 0,
+  "issue": "Some locally saved technique values are unknown despite the manual's default digital rule; the evidence for each requires review. No results were edited or checkpointed after discovery.",
+  "potentially_affected_local_post_ids": ["2096421866487640171", "2096422114198954300", "2096422368457773161", "2096422626776531206"],
+  "context_cache_directory": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/context/",
+  "search_budget_post_id": "2096422630178099504",
+  "search_summary_at_end": {"searches": 1, "pages": 0, "elapsed_seconds": 15.005},
+  "previous_completed_job_needing_review": "prod-0257",
+  "previous_job_posts_with_unknown_technique": ["2096826477841104921", "2096830258733539380", "2096827479621296547", "2096829518900306069", "2096830515018109307", "2096831534934503809", "2096827229284294803", "2096825719578091990", "2096831793676898410"],
+  "note": "Unknown is not automatically erroneous: determine whether the manual's indistinct-image exception applies without re-viewing prohibited material. Remote results are unchanged."
+}
