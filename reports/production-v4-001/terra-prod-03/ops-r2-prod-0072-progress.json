@@ -5,6 +5,13 @@
   "research_root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
   "accepted": 10,
   "checkpoint_head": "e4ca064da6b6afb549720b6770cf498d87e3e694",
+  "deferred": [
+    {
+      "post_id": "2095092045832732817",
+      "reason": "needs_quality_review",
+      "note": "複合画像内の多数の小さい個別人物の記録が確定できず保留。閲覧時に人気指標が表示されたが判定には使用しない。"
+    }
+  ],
   "isolation_excluded_matches": 0,
-  "recorded_at": "2026-11-13T10:51:03.512848+00:00"
+  "recorded_at": "2026-11-13T11:02:26.162024+00:00"
 }
