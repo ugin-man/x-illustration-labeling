@@ -6,20 +6,24 @@
   "checkpoint_accepted_posts": 50,
   "checkpoint_head": "8e3c55bedbedbb74cac3c5e8abe42e2cd2a3c9f3",
   "recovery": "environment restored; same active ownership verified; six pending results and context, draft, and viewing events matched preserved backup; CLI checkpoint succeeded; isolation excluded matches zero",
-  "updated_at": "2026-11-13T10:16:10.402806+00:00",
+  "updated_at": "2026-11-13T10:26:42.712797+00:00",
   "finish_head": "cabaeb8091c694bafcf7d4791adf9029825b98c0",
-  "current_job": "prod-0078",
-  "current_checkpoint_accepted_posts": 49,
-  "current_checkpoint_head": "94cd93391c8b9c485b1d52bc01dbdf0d7b3b2ce9",
+  "current_job": "prod-0241",
+  "current_checkpoint_accepted_posts": 5,
+  "current_checkpoint_head": "076b3a01e19ba1958216020777a9719db0f72e35",
   "local_uncheckpointed_posts": 0,
   "status": "OPS_R2_RUNNING",
-  "deferred_posts": [
-    {
-      "post_id": "2095146753926504552",
-      "reason": "needs_quality_review",
-      "note": "3D model image applicability under illustration criteria requires review"
-    }
-  ],
-  "current_job_status": "needs_review",
-  "current_finish_head": "54110ed6a5f59401a2db5718811043b44e0caa04"
+  "current_job_status": "active",
+  "review_job": {
+    "job_id": "prod-0078",
+    "accepted_posts": 49,
+    "deferred_posts": [
+      {
+        "post_id": "2095146753926504552",
+        "reason": "needs_quality_review",
+        "note": "3D model image applicability under illustration criteria requires review"
+      }
+    ],
+    "head": "54110ed6a5f59401a2db5718811043b44e0caa04"
+  }
 }
