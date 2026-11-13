@@ -1,7 +1,7 @@
 {
   "job_id": "prod-0155",
   "worker_id": "terra-prod-08",
-  "checkpointed_posts": 5,
-  "checkpoint_head": "667082a98c4afe281a77fe64574c2fc7b571a300",
-  "recorded_at_utc": "2026-11-13T03:47:29.336834+00:00"
+  "checkpointed_posts": 10,
+  "checkpoint_head": "5b4294981977c73e67795c3ba9045acd25e1647b",
+  "recorded_at_utc": "2026-11-13T03:56:30.222473+00:00"
 }
