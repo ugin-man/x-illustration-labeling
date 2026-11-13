@@ -7,3 +7,4 @@
 - Second checkpoint: 3 more results accepted, remote head e754a16a9353f7bd6ce27586ae411d984bc556de. One further result has since been saved locally.
 - Transient Git ls-remote and fetch failures preceded the second checkpoint. Checkpoint succeeded; the current post's context was recovered through the CLI without repeating an actual body request.
 - Third checkpoint: 4 further results accepted, remote head dee9009b7d02abc7a7cc9e1e962fbf0eb0b05da6. The quality-review deferral remains incomplete.
+- Fourth checkpoint: 5 further results accepted, remote head 55c0e055fa1cd1ede03fcb012999b5ac796e83d4. The quality-review deferral remains incomplete.
