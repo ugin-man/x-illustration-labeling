@@ -44,10 +44,15 @@
     ]
   },
   "latest_checkpoint": {
-    "accepted": 48,
-    "deferred": 2,
-    "remote_head": "e08981ac206443cf698ee683945d76b08ed9e1b2",
-    "updated_at": "2026-11-13T20:30:51.382767+00:00"
+    "job": "prod-0259",
+    "accepted": 4,
+    "remote_head": "c48ac7be3552d4566e8f7fec279ea9e8b43aa714",
+    "updated_at": "2026-11-13T20:43:03.833835+00:00",
+    "isolation": {
+      "loose_images_checked": 467,
+      "archive_images_checked": 465,
+      "excluded_images_found": 0
+    }
   },
   "later_consecutive_context_failures": {
     "source": "api.fxtwitter.com",
@@ -58,5 +63,12 @@
       "2095582280320499832",
       "2095582283206214112"
     ]
+  },
+  "previous_job": {
+    "job": "prod-0115",
+    "accepted": 48,
+    "deferred": 2,
+    "status": "needs_review",
+    "remote_head": "2fbbe526b03f615b5c3085825a83262a55f3b8b4"
   }
 }
