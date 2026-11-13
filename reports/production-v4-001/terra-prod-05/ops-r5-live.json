@@ -1,0 +1,51 @@
+{
+  "worker": "terra-prod-05",
+  "root": "/workspace/production-v4-001",
+  "job": "prod-0246",
+  "operations_revision": "ops-r5",
+  "manifest_sha256": "5a5ca44e20c28b45941937f5e1f699fa98df50bae9895080ff8f64718be0297d",
+  "recorded_at_utc": "2026-11-13T22:18:51.227857+00:00",
+  "reconciliation": {
+    "remote_accepted_count": 25,
+    "exact_matches": 25,
+    "local_unaccepted_ids": [
+      "2096722614626767282"
+    ],
+    "byte_conflicts": [],
+    "remote_head": "bdc545457f314adbc5df0a68ac321384d2a1e422"
+  },
+  "recovered_existing_ids": [
+    "2096722614626767282",
+    "2096722618464551109"
+  ],
+  "newly_processed_post_ids": [
+    "2096722862354944098",
+    "2096722866775736729"
+  ],
+  "checkpoint_head": "dd62938acc47059af24c36392d8e1d54c53355c9",
+  "new_view_events": [
+    {
+      "post_id": "2096722862354944098",
+      "path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0246/images/190c3666e3f985ee0f129a4b9f51f8f838acd0b450feb96fa3ed2c44159c3d21.jpg",
+      "view_time_window_utc": [
+        "2026-11-13T22:13:23Z",
+        "2026-11-13T22:13:23Z"
+      ],
+      "tool": "functions.view_image"
+    },
+    {
+      "post_id": "2096722866775736729",
+      "path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0246/images/a2650696b7b32f65b8a64382fe9ffe72cef1e0beafa741962978ec5ef25ad9ac.jpg",
+      "view_time_window_utc": [
+        "2026-11-13T22:15:34Z",
+        "2026-11-13T22:15:34Z"
+      ],
+      "tool": "functions.view_image"
+    }
+  ],
+  "isolation": {
+    "loose_images_checked": 731,
+    "archive_images_checked": 729,
+    "excluded_images_found": 0
+  }
+}
