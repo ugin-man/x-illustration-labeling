@@ -1,0 +1,143 @@
+{
+  "worker": "terra-prod-03",
+  "root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
+  "job": "prod-0291",
+  "observed_at": "2026-11-13T21:23:01.908317+00:00",
+  "remote": {
+    "accepted_count": 22,
+    "head": "057716aaf04a783713b333e8f25553077574caf0",
+    "evidence": "checkpoint success and subsequent status"
+  },
+  "local_results": [
+    {
+      "post_id": "2097074896115511754",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097074896115511754.json",
+      "sha256": "ff58ac3e799fc05bfc99468cacd898e725e1012d9aeb35606458499b65843858"
+    },
+    {
+      "post_id": "2097075149476626608",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075149476626608.json",
+      "sha256": "9a49746e50e0c6f1da80619ad5328b9a027ac28f17245f3a7d06dbda068aeeac"
+    },
+    {
+      "post_id": "2097075157953364059",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075157953364059.json",
+      "sha256": "bd1c92edde779789ce46deac85ba3ab4beac5f3364c8dd90be5e868a03fb28bf"
+    },
+    {
+      "post_id": "2097075165012402259",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075165012402259.json",
+      "sha256": "4d685a802280a6e3d2c9504ccdc9b5fccbc497ed1a3dc917f9eb27d1e5eb9416"
+    },
+    {
+      "post_id": "2097075401130709491",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075401130709491.json",
+      "sha256": "81e7ee9a23f9eff34b9683a47f6f36e3cc830415e3345422e39980ff8cac1f56"
+    },
+    {
+      "post_id": "2097075404125466724",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075404125466724.json",
+      "sha256": "8e8371aba87cf42388c50bc16b866cd286d561a27880ba5bb0bd8ddd0c1af325"
+    },
+    {
+      "post_id": "2097075411293507747",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075411293507747.json",
+      "sha256": "c2484c68eabe89be42ea4d3e14bcc1394a27f049a58a08cce49eab26098bb3d5"
+    },
+    {
+      "post_id": "2097075648770834915",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075648770834915.json",
+      "sha256": "f3fc7f4dff1ff08ce356450cec431246903f6c92c7f18a234073d96d974f97b0"
+    },
+    {
+      "post_id": "2097075648904958061",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075648904958061.json",
+      "sha256": "293fbdb867399f6ea1743e2275e7903f9d702a726632f43d8d5aec25f7f309de"
+    },
+    {
+      "post_id": "2097075893437149348",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075893437149348.json",
+      "sha256": "9749779f993a8154b35fb1db8e119f748c256c58e983850b6e7db652da4cc4b8"
+    },
+    {
+      "post_id": "2097075901288915243",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075901288915243.json",
+      "sha256": "2620cafd39fdaa66992738bc7fc44f572de6963b41b0e22a57558ed5409d5cf3"
+    },
+    {
+      "post_id": "2097075909178040661",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097075909178040661.json",
+      "sha256": "5f59bf591eb9206ad598c0af73d5f6cfac0cc6b830ea676f2fd22173bc853551"
+    },
+    {
+      "post_id": "2097076155069407292",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076155069407292.json",
+      "sha256": "2effd36ce4935938d4731f651e2d47f4c927317203a688faa53e6c832af6f662"
+    },
+    {
+      "post_id": "2097076409730785434",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076409730785434.json",
+      "sha256": "82de85f2c704e17385ba0188978e94b232784cd0cc5c91370658ad779afd95fa"
+    },
+    {
+      "post_id": "2097076411962150982",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076411962150982.json",
+      "sha256": "885bf6275e64181b561b93810ca4b135826a1878126fd8247d6641e1aa24578c"
+    },
+    {
+      "post_id": "2097076415762178165",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076415762178165.json",
+      "sha256": "a1ae701459d8cfa34e992019c3456557041001a99750f1e11cc9a29c61236895"
+    },
+    {
+      "post_id": "2097076667487604757",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076667487604757.json",
+      "sha256": "18cc533b9fe25256e847eaff73524c1a5fb04c0d5209419faf22ee99a0caddc0"
+    },
+    {
+      "post_id": "2097076945343418643",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076945343418643.json",
+      "sha256": "d04fa5bf565f6f0a110cfcb51d1bfc86fa3c9a45a75dabc685f935fa43747ed0"
+    },
+    {
+      "post_id": "2097076945423126751",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076945423126751.json",
+      "sha256": "488586d23b2c82fd325c23c76b40855d28f3ca884289651c4ddadaddd572fc7a"
+    },
+    {
+      "post_id": "2097076946203197789",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097076946203197789.json",
+      "sha256": "b967c290ac94f0e3a9296e3ee1a5e3d0784aa45ab7b25cd01b2c9bc7e62dbe89"
+    },
+    {
+      "post_id": "2097077174163701873",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097077174163701873.json",
+      "sha256": "d78807542354b1039245f8d0512ae9213538e38402e0b39ffeafb210f47e43bb"
+    },
+    {
+      "post_id": "2097077177821081770",
+      "relative_path": ".runtime/production-v4-001/prod-0291/results/2097077177821081770.json",
+      "sha256": "58a83feb6327e1ca034bef9813ad2ba5316276bfd718ab5232a46b0911708cfe"
+    }
+  ],
+  "uncheckpointed_count": 0,
+  "draft": {
+    "exists": true,
+    "post_id": "2097077177821081770",
+    "already_in_results": true
+  },
+  "running_cli_processes": 0,
+  "recent_error": {
+    "command": "save",
+    "post_id": "2097076409730785434",
+    "output": "AssertionError: entity_kind: Other requires a reason",
+    "resolution": "reason added to unaccepted draft; subsequent save and checkpoint succeeded"
+  },
+  "prior_validation_error": {
+    "command": "save/validate",
+    "post_id": "2097075909178040661",
+    "output": "AssertionError: Frozen validation failed",
+    "resolution": "local diagnosis showed media index mismatch; corrected before save; viewing event correction appended"
+  },
+  "stopped_reason": "ops-r4 transition; waiting for explicit start"
+}
