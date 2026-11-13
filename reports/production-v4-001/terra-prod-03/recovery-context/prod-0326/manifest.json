@@ -49,9 +49,9 @@
     },
     {
       "post_id": "2097370927168393584",
-      "elapsed_seconds": null,
-      "searches": null,
-      "pages": null,
+      "elapsed_seconds": 0,
+      "searches": 0,
+      "pages": 0,
       "files": [
         {
           "filename": "2097370927168393584.json",
@@ -62,9 +62,10 @@
           "filename": "2097370927168393584-budget.json",
           "kind": "budget",
           "sha256": null,
-          "missing": "取得中断で到達不明、再取得禁止"
+          "missing": "No budget file was created because no search or page was reserved; actual tool history confirms zero searches and pages."
         }
-      ]
+      ],
+      "evidence": "Actual tool history shows image view, then one context fetch returning HTTP 404, followed by release; no search reservation, external search, or page fetch occurred. Existing 404 post-text cache is available and should be used without refetch."
     }
   ]
 }
