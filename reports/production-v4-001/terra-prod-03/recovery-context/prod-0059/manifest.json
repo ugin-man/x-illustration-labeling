@@ -1,0 +1,168 @@
+{
+  "run_id": "production-v4-001",
+  "job_id": "prod-0059",
+  "worker_id": "terra-prod-03",
+  "classification": "unaccepted_not_adopted_audit_backup",
+  "fixed_commit": "4d2c98374a1364faf1e2b546a4c460e80e9b2903",
+  "accepted_head": "fde9768dcebc0606effc6b4a77f071f3fe7a2b32",
+  "accepted_posts": 0,
+  "ownership_observation": "CLI status showed leased to terra-prod-03 at 2026-11-13T08:14:56Z; lease expiry not extended.",
+  "posts": [
+    {
+      "post_id": "2094955403637567555",
+      "status": "unaccepted_not_adopted",
+      "cache": {
+        "source": ".runtime/production-v4-001/prod-0059/context/2094955403637567555.json",
+        "file": "recovery-context/prod-0059/2094955403637567555.json",
+        "sha256": "3b6d6c07c407484dd8a466b96ae135586104d7f46656610d5d1a243647d45a9f",
+        "fetch_state": "available",
+        "fetch_code": null,
+        "retrieved_at": "2026-11-13T07:36:48.373659+00:00"
+      },
+      "answer": {
+        "source": ".runtime/production-v4-001/prod-0059/results/2094955403637567555.json",
+        "file": "recovery-unaccepted/prod-0059/2094955403637567555.json",
+        "sha256": "06f65c1594799b993907f546830e26de09f90245db30bbb45dc603bda2592d96"
+      },
+      "budget": {
+        "present": false,
+        "reason": "No search or page reservation was executed in retained tool history; no budget file exists."
+      },
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds": null,
+      "elapsed_reason": "No actual CLI context summary was run; 0 in the answer was not separately measured by summary.",
+      "deadline": null,
+      "deadline_reason": "No exploration was reserved.",
+      "known_failure": null
+    },
+    {
+      "post_id": "2094955649528631311",
+      "status": "unaccepted_not_adopted",
+      "cache": {
+        "source": ".runtime/production-v4-001/prod-0059/context/2094955649528631311.json",
+        "file": "recovery-context/prod-0059/2094955649528631311.json",
+        "sha256": "b1ac9c19bc6580861422ea096173997d32869adf18cce374308fb3886823f178",
+        "fetch_state": "available",
+        "fetch_code": null,
+        "retrieved_at": "2026-11-13T07:37:36.448312+00:00"
+      },
+      "answer": {
+        "source": ".runtime/production-v4-001/prod-0059/results/2094955649528631311.json",
+        "file": "recovery-unaccepted/prod-0059/2094955649528631311.json",
+        "sha256": "2393ccd748aeb189ae29aab71241aa6f88b87626b00e8b533f4194a1153e22ee"
+      },
+      "budget": {
+        "present": false,
+        "reason": "No search or page reservation was executed in retained tool history; no budget file exists."
+      },
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds": null,
+      "elapsed_reason": "No actual CLI context summary was run; 0 in the answer was not separately measured by summary.",
+      "deadline": null,
+      "deadline_reason": "No exploration was reserved.",
+      "known_failure": null
+    },
+    {
+      "post_id": "2094955917259464731",
+      "status": "unaccepted_not_adopted",
+      "cache": {
+        "source": ".runtime/production-v4-001/prod-0059/context/2094955917259464731.json",
+        "file": "recovery-context/prod-0059/2094955917259464731.json",
+        "sha256": "6588c218d154671e64ef8db2f2be045c5e33b1a46d4144296e72549ec21e8ff1",
+        "fetch_state": "available",
+        "fetch_code": null,
+        "retrieved_at": "2026-11-13T07:38:37.055139+00:00"
+      },
+      "answer": {
+        "source": ".runtime/production-v4-001/prod-0059/results/2094955917259464731.json",
+        "file": "recovery-unaccepted/prod-0059/2094955917259464731.json",
+        "sha256": "e7478b517035a47967d32ef95b504eb1fa4851100ce16b63620ac2071afc8c2a"
+      },
+      "budget": {
+        "present": false,
+        "reason": "No search or page reservation was executed in retained tool history; no budget file exists."
+      },
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds": null,
+      "elapsed_reason": "No actual CLI context summary was run; 0 in the answer was not separately measured by summary.",
+      "deadline": null,
+      "deadline_reason": "No exploration was reserved.",
+      "known_failure": null
+    },
+    {
+      "post_id": "2094956166849905000",
+      "status": "unaccepted_not_adopted",
+      "cache": {
+        "source": ".runtime/production-v4-001/prod-0059/context/2094956166849905000.json",
+        "file": "recovery-context/prod-0059/2094956166849905000.json",
+        "sha256": "8dad03ede124f8bf8f3f629f778e27499defc588fe7086734e716e892000b125",
+        "fetch_state": "available",
+        "fetch_code": null,
+        "retrieved_at": "2026-11-13T07:39:29.330725+00:00"
+      },
+      "answer": {
+        "source": ".runtime/production-v4-001/prod-0059/results/2094956166849905000.json",
+        "file": "recovery-unaccepted/prod-0059/2094956166849905000.json",
+        "sha256": "e880e5538c1e484fa2c298d75797deef30f3eb5ad1ca9a5653fb36a5a2f2cf3b"
+      },
+      "budget": {
+        "present": false,
+        "reason": "No search or page reservation was executed in retained tool history; no budget file exists."
+      },
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds": null,
+      "elapsed_reason": "No actual CLI context summary was run; 0 in the answer was not separately measured by summary.",
+      "deadline": null,
+      "deadline_reason": "No exploration was reserved.",
+      "known_failure": null
+    },
+    {
+      "post_id": "2094956166925447558",
+      "status": "unaccepted_not_adopted",
+      "cache": {
+        "source": ".runtime/production-v4-001/prod-0059/context/2094956166925447558.json",
+        "file": "recovery-context/prod-0059/2094956166925447558.json",
+        "sha256": "5a1ae4e4be405c3f95cdc3db0338ca154ff399982ddfc86f11a3f7299403d3aa",
+        "fetch_state": "available",
+        "fetch_code": null,
+        "retrieved_at": "2026-11-13T07:40:20.595911+00:00"
+      },
+      "answer": {
+        "source": ".runtime/production-v4-001/prod-0059/results/2094956166925447558.json",
+        "file": "recovery-unaccepted/prod-0059/2094956166925447558.json",
+        "sha256": "b6f85b22a5e0c475f2e16bf3c389e2360fe6f65035dce208a5c8bd710ec95a32"
+      },
+      "budget": {
+        "present": false,
+        "reason": "No search or page reservation was executed in retained tool history; no budget file exists."
+      },
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds": null,
+      "elapsed_reason": "No actual CLI context summary was run; 0 in the answer was not separately measured by summary.",
+      "deadline": null,
+      "deadline_reason": "No exploration was reserved.",
+      "known_failure": "Individual observable fields were uniformly marked unknown based on uncertain image medium; unaccepted and requires independent review."
+    }
+  ],
+  "draft": {
+    "post_id": "2094956167713927375",
+    "viewed": false,
+    "context_fetch_executed": false,
+    "source": ".runtime/production-v4-001/prod-0059/draft.json",
+    "file": "recovery-unaccepted/prod-0059/draft.json",
+    "sha256": "5feaa729b36c75efba2b95f50ad09c0172a6f82cd925300583868b056c13d7c5"
+  },
+  "view_events": {
+    "file": "recovery-unaccepted/prod-0059/view-events.jsonl",
+    "sha256": "c3a33df86a9935f3b0e7a7b670ad8f5d6473a28312a584a22eb9c6d17b7c6de4",
+    "lines": 5,
+    "note": "Original event lines copied byte for byte; consult tool history for actual viewing."
+  },
+  "exploration_history": "Retained tool history shows no search reservations, searches, or page fetches for these five posts. No search-budget files exist; no CLI summary elapsed timing was observed.",
+  "created_at": "2026-11-13T08:16:10.050778+00:00"
+}
