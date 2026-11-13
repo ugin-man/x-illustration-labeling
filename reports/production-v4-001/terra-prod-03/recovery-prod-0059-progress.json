@@ -1,11 +1,9 @@
 {
-  "status": "OPS_R2_STOPPED",
+  "status": "OPS_R2_RUNNING",
   "job_id": "prod-0059",
   "worker_id": "terra-prod-03",
   "research_root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
-  "accepted": 45,
-  "uncheckpointed": 0,
-  "checkpoint_head": "e96028226d8e5bd065f6824cff6c4934c0d4f2ce",
-  "recovery_posts_reassessed": 5,
-  "recorded_at": "2026-11-13T09:30:13.305044+00:00"
+  "accepted": 46,
+  "checkpoint_head": "2b10e596703d494a36ddeab1f170fecdaa9e97e9",
+  "recorded_at": "2026-11-13T10:07:14.697585+00:00"
 }
