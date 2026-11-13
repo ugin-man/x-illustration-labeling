@@ -1,23 +1,23 @@
 {
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
-  "job_id": "prod-0242",
-  "checkpointed_posts": 50,
-  "status": "completed_job",
-  "note": "prod-0242 complete: 49 normal and one model-refusal exclusion. Prior reports labelled the checkpointed total as normal; correction: prior 46 total was 45 normal plus one exclusion, and prior 41 total was 40 normal plus one exclusion. Deadline incident retained in separate audit.",
-  "recorded_at": "2026-11-13T17:38:23.427035+00:00",
+  "job_id": "prod-0138",
+  "checkpointed_posts": 0,
+  "status": "OPS_R2_RUNNING",
+  "note": "prod-0138: one local save; second post viewed. Session transport dropped during context command; worker claim gate busy, waiting for automatic expiry. Previous prod-0242 completed 49 normal plus one exclusion.",
+  "recorded_at": "2026-11-13T17:43:15.801168+00:00",
   "checkpoint_head": "1a62e03164b5d45808ea6bd6ffe7d5fa123b08b0",
-  "local_saved_posts": 49,
-  "uncheckpointed_saved_posts": 0,
+  "local_saved_posts": 1,
+  "uncheckpointed_saved_posts": 1,
   "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
-  "previous_job": "prod-0027",
-  "previous_job_finish_head": "20247685fe1d60ba42bd21dd4d15fcf16da9bf67",
+  "previous_job": "prod-0242",
+  "previous_job_finish_head": "5dea1531361e7778cc9e667a5ea31bdf877afdaa",
   "latest_exclusion": {
     "post_id": "2096695034133487806",
     "signal": "model_refusal",
     "remote_head": "40fcd5a8978ff4f0562bdfc961873280e09faf4a"
   },
-  "uncheckpointed_posts": 0,
+  "uncheckpointed_posts": 1,
   "finish_head": "5dea1531361e7778cc9e667a5ea31bdf877afdaa",
-  "job": "prod-0242"
+  "job": "prod-0138"
 }
