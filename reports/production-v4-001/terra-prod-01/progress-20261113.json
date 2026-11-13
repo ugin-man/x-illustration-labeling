@@ -6,14 +6,14 @@
   "checkpoint_accepted_posts": 50,
   "checkpoint_head": "8e3c55bedbedbb74cac3c5e8abe42e2cd2a3c9f3",
   "recovery": "environment restored; same active ownership verified; six pending results and context, draft, and viewing events matched preserved backup; CLI checkpoint succeeded; isolation excluded matches zero",
-  "updated_at": "2026-11-13T12:21:10.566303+00:00",
+  "updated_at": "2026-11-13T12:32:26.385894+00:00",
   "finish_head": "cabaeb8091c694bafcf7d4791adf9029825b98c0",
-  "current_job": "prod-0241",
-  "current_checkpoint_accepted_posts": 50,
-  "current_checkpoint_head": "61017c67d7c99199b490685b08ce1d40d7575fd0",
+  "current_job": "prod-0115",
+  "current_checkpoint_accepted_posts": 4,
+  "current_checkpoint_head": "13f7964392c16789f75f6557c7cd170b53e2ac02",
   "local_uncheckpointed_posts": 0,
   "status": "OPS_R2_RUNNING",
-  "current_job_status": "completed",
+  "current_job_status": "active",
   "review_job": {
     "job_id": "prod-0078",
     "accepted_posts": 49,
@@ -27,5 +27,15 @@
     "head": "54110ed6a5f59401a2db5718811043b44e0caa04"
   },
   "recovery_note": "worker gate expired after transient Git error; next restored draft and checkpoint accepted preserved rows",
-  "current_finish_head": "71506e3f839bfffa0835e7c7adc125e9d49e0320"
+  "latest_finished_job": {
+    "job_id": "prod-0241",
+    "accepted_posts": 50,
+    "head": "71506e3f839bfffa0835e7c7adc125e9d49e0320"
+  },
+  "isolation": {
+    "workspace": "/workspace",
+    "loose_images_checked": 400,
+    "archive_images_checked": 398,
+    "excluded_images_found": 0
+  }
 }
