@@ -2,12 +2,12 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0170",
-  "checkpointed_posts": 44,
+  "checkpointed_posts": 47,
   "status": "active",
-  "note": "新rootで44投稿までcheckpoint。",
-  "recorded_at": "2026-11-13T08:46:59.901189+00:00",
-  "checkpoint_head": "3ec1553f06b1ea7a06e046598334a369c9adb30b",
-  "local_saved_posts": 44,
+  "note": "新rootで47投稿までcheckpoint。",
+  "recorded_at": "2026-11-13T08:55:36.343425+00:00",
+  "checkpoint_head": "915d565ed28eeea814be4455fa91d3a9227c7d5a",
+  "local_saved_posts": 47,
   "uncheckpointed_saved_posts": 0,
   "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113"
 }
