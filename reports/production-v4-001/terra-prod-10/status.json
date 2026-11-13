@@ -2,12 +2,12 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0308",
-  "checkpointed_posts": 42,
+  "checkpointed_posts": 43,
   "status": "OPS_R2_RUNNING",
   "note": "42 normal posts checkpointed; one separate model-refusal exclusion. Prior deadline incident retained in separate audit.",
-  "recorded_at": "2026-11-13T14:01:32.875430+00:00",
-  "checkpoint_head": "cab4c2001e3e5978c9d9a5c1651ecbb0d723afd1",
-  "local_saved_posts": 42,
+  "recorded_at": "2026-11-13T15:14:14.580848+00:00",
+  "checkpoint_head": "ec278d4457d5363850d0f5f8a80b5ce19c6fab63",
+  "local_saved_posts": 43,
   "uncheckpointed_saved_posts": 0,
   "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
   "previous_job": "prod-0027",
@@ -17,5 +17,6 @@
     "post_id": "2097231479185314275",
     "signal": "model_refusal",
     "remote_head": "8ac18ce039a108a3d8b27efe3aac3d263176c838"
-  }
+  },
+  "uncheckpointed_posts": 0
 }
