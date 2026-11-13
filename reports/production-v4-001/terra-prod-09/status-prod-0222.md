@@ -22,3 +22,5 @@
 - Checkpoint cc92218386b599bf5e1984d7bf159df6f9fe6eaa: 42 posts accepted, including 5 since prior checkpoint. Two consecutive individual text retrievals returned HTTP 404 and were recorded as technical_failure; monitor for a third.
 
 - Checkpoint c8becf36016c4273012d34e4e83a7c72ddc112d5: 43 posts accepted. Stopped for possible systemic failure after consecutive post text fetches for 2096552285203800137, 2096552553119146149, and 2096553056423100636 each returned technical_failure HTTP 404 with CLI exit 0. Each post retained observed image labels and recorded the missing text as technical_failure; no refetch. Seven posts remain in this job.
+
+- ops-r3 checkpoint 53fd2406709cb53da7081c237638955e1d2a4c07: 46 accepted. Completed post 2096553562226761939 before pausing for coordinator verification.
