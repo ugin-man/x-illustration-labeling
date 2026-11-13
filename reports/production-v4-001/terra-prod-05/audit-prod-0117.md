@@ -7,3 +7,4 @@
 - Individual post text retrieval failures are recorded as technical failures. A text search exposed popularity metrics; no values were retained in this report.
 - Second checkpoint accepted 17 posts in total at queue commit 5187dce3a868369b0436b484fbd762fe1040b6b1. Text-search exposures to popularity indicators are recorded without values in the affected review flags.
 - OPS_R2_STOPPED: checkpoint accepted 21 posts at queue commit ece93e6ba4f4623176f21d81f8bb10465ae82e66; local result count 21, uncheckpointed 0. No known preservation-pending issue. Worker stopped for ops-r2 transition without release or hold.
+- OPS_R2_RUNNING: isolation audit found zero excluded-image matches; existing 21 accepted posts restored. First ops-r2 checkpoint added one accepted post, remote head ca027baa7bcb8e66d66146ab7c97efe8f9546317. A transient Git error during context processing recovered through the same CLI operation without repeating a confirmed source request.
