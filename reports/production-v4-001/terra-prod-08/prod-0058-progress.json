@@ -1,8 +1,10 @@
 {
   "job_id": "prod-0058",
   "worker_id": "terra-prod-08",
-  "checkpointed_posts": 45,
-  "checkpoint_head": "ad4e52221b81aa48ead779b7e1b69d6a93d03c68",
-  "recorded_at_utc": "2026-11-13T05:28:01.685540+00:00",
+  "status": "finished",
+  "checkpointed_posts": 50,
+  "checkpoint_head": "f2a28bdd8dfb57609543c6683eebd78aae530234",
+  "finish_head": "c511e976b6a3b62f08d623a70f3197f3c451d2de",
+  "recorded_at_utc": "2026-11-13T05:34:04.981233+00:00",
   "audit_note": "Post 2094953731762819170: search-result access time not captured; result not used as attribution evidence; creation marked unknown and review flag saved."
 }
