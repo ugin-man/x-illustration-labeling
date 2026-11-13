@@ -1,7 +1,7 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "remote_accepted": 19,
-  "remote_head": "4e6cc18d0e8dd20afaf53c68040eba9c526e3adf",
-  "notice": "Three additional results checkpointed. One search completed within approximately 15–16 seconds; delayed summary 83.897 seconds included sync failure and retry."
+  "remote_accepted": 22,
+  "remote_head": "ee09f7b75a8aa1c039065d3f3f89896a8c7070d8",
+  "notice": "Three successive individual body fetches returned HTTP 404; image observations and failures checkpointed; no body refetch."
 }
