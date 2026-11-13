@@ -1,9 +1,8 @@
 {
   "worker": "terra-prod-07",
   "job": "prod-0021",
-  "status": "stopped_worker_claim_busy",
-  "remote_accepted": 21,
-  "remote_head": "8053b6b4df3df432a1523d6586afcc471937f397",
-  "local_uncheckpointed": 0,
-  "updated_at": "2026-11-13T15:29:28.952354+00:00"
+  "status": "checkpoint",
+  "remote_accepted": 26,
+  "remote_head": "ed1b94aa42274c0f6d9f7acd9eb4c1e98c49d77b",
+  "updated_at": "2026-11-13T16:19:09.000196+00:00"
 }
