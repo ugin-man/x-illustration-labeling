@@ -7,12 +7,13 @@
   "completed_job_accepted": 50,
   "completed_remote_head": "9590b59c2601b0c2c7ec66b1bc913504bd1dbac2",
   "current_job": "prod-0141",
-  "current_remote_accepted": 6,
+  "current_remote_accepted": 7,
   "current_local_uncheckpointed": 0,
   "isolation_excluded_images_found": 0,
-  "note": "Queue context fetch failed three times with Git ls-remote error; stopping after limited retries. Draft and viewing record retained.",
-  "updated_at": "2026-11-13T11:20:40.851596+00:00",
-  "current_remote_head": "a59fc9441fa0dee67b93fba6a1294c8cd380012e",
-  "current_post": "2095810088640635245",
-  "current_post_status": "image_viewed_context_sync_blocked"
+  "note": "Connectivity recovered. Existing claim restored; context cache absent for already viewed post, deferred without refetch. Subsequent post checkpointed.",
+  "updated_at": "2026-11-13T11:52:23.430324+00:00",
+  "current_remote_head": "a3a3c7d90602f894a9f869b9395916222020d9c4",
+  "deferred_posts": [
+    "2095810088640635245"
+  ]
 }
