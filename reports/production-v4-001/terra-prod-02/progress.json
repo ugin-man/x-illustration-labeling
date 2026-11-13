@@ -1,8 +1,9 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "remote_accepted": 48,
-  "remote_head": "a7327ce2816f5772be7ebeb532eb408bf96a3c21",
-  "recorded_at": "2026-11-13T20:05:48Z",
-  "notice": "Four further posts checkpointed; image view audit updated."
+  "status": "completed",
+  "remote_accepted": 50,
+  "remote_head": "274fab5e5c673743127a07b4ec807cc69b959dc5",
+  "recorded_at": "2026-11-13T20:14:08Z",
+  "notice": "All 50 posts checkpointed and job finished; proceeding to next claim."
 }
