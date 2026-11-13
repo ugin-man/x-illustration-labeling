@@ -7,9 +7,10 @@
   "completed_job_accepted": 50,
   "completed_remote_head": "9590b59c2601b0c2c7ec66b1bc913504bd1dbac2",
   "current_job": "prod-0141",
-  "current_remote_accepted": 0,
-  "current_local_uncheckpointed": 2,
+  "current_remote_accepted": 6,
+  "current_local_uncheckpointed": 0,
   "isolation_excluded_images_found": 0,
-  "note": "Completed 0211; claimed 0141; a transient Git failure after local save prevented release of the worker gate. Waiting for gate expiration.",
-  "updated_at": "2026-11-13T10:59:24.033902+00:00"
+  "note": "Resumed after worker gate expiry and checkpointed six posts.",
+  "updated_at": "2026-11-13T11:18:03.903403+00:00",
+  "current_remote_head": "a59fc9441fa0dee67b93fba6a1294c8cd380012e"
 }
