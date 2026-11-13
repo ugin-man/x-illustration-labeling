@@ -45,9 +45,9 @@
   },
   "latest_checkpoint": {
     "job": "prod-0259",
-    "accepted": 4,
-    "remote_head": "c48ac7be3552d4566e8f7fec279ea9e8b43aa714",
-    "updated_at": "2026-11-13T20:43:03.833835+00:00",
+    "accepted": 8,
+    "remote_head": "ab5d41c9d5799834464c076b1f695640b57ecbf7",
+    "updated_at": "2026-11-13T20:53:34.291708+00:00",
     "isolation": {
       "loose_images_checked": 467,
       "archive_images_checked": 465,
