@@ -67,9 +67,15 @@
       "finish_head": "6c5a162c6e07f7bade2ca302278bd8a5e14c078d",
       "saved_posts": 50,
       "excluded_posts": 0
+    },
+    {
+      "job_id": "prod-0355",
+      "finish_head": "1b3f37b36bf482e93f7120a3ae5dd0f886edf1a9",
+      "saved_posts": 50,
+      "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-13T05:39:54.613593+00:00",
+  "recorded_at": "2026-11-13T06:36:10.655090+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -106,7 +112,9 @@
     "prod-0045: individual post text failures (404 or timeout) recorded without retries; incidental popularity or sales indicator exposure recorded in relevant review flags without values.",
     "prod-0045: first attempted image display for post 2094803443110334469 produced truncated output during context compaction; a subsequent successful display was logged with its actual recording time.",
     "prod-0046: individual post text failures recorded without retry; incidental popularity indicators in images or search outputs flagged without values.",
-    "prod-0046 post 2094814066221179111: first attempted image display was truncated during context compaction; subsequent successful display was logged at recording time."
+    "prod-0046 post 2094814066221179111: first attempted image display was truncated during context compaction; subsequent successful display was logged at recording time.",
+    "prod-0355: individual text failures recorded without retry; incidental popularity exposure flagged without values.",
+    "prod-0355 post 2097654897080705348 media 1: initial image tool output truncated during context compaction; subsequent successful display was logged at recording time. No policy refusal."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
