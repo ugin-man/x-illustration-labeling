@@ -16,3 +16,5 @@
 - Context synchronization recovered; checkpoint fddecb044d4de38cad0e0772e031edb9b53a955b: 44 accepted, 1 deferred, 5 ordinary posts remaining.
 
 - Checkpoint bf481375cc6473182eb5563da2270251d52064b9: 49 accepted and 1 deferred. Finish returned a transient Git fetch failure; result remains pending confirmation via the fixed CLI.
+
+- Finish confirmed needs_review, head 81963ee4063647518d47f658b544225cd089da72; 49 accepted and 1 deferred, not complete.
