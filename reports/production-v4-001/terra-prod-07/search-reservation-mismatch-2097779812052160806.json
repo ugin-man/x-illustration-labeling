@@ -1,0 +1,12 @@
+{
+  "job_id": "prod-0374",
+  "post_id": "2097779812052160806",
+  "issue": "reserved query and executed query differ; result is not saved and should not be used as evidence pending recovery",
+  "reserved_query": "遊戯王 GX TAG FORCE クロノス ヘルカイザー タッグ",
+  "executed_query": "遊戯王 GX TAG FORCE 勝利へのプリンスタッグ 天上院 吹雪 ヘルカイザー",
+  "actual_search_at_utc": "2026-11-13T03:32:43Z",
+  "searches": 1,
+  "pages": 0,
+  "elapsed_seconds_at_summary": 14.668,
+  "state": "unresolved; no further context actions or labeling attempted"
+}
