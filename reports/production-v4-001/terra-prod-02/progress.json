@@ -1,7 +1,9 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "remote_accepted": 26,
-  "remote_head": "391add3e3abf81de1f7508c79db4224a08da3aca",
-  "notice": "Four additional results checkpointed. Body fetch recovered; one subsequent post returned individual HTTP 404. Full view-events log restored after earlier report truncation."
+  "status": "OPS_R3_STOPPED",
+  "remote_accepted": 28,
+  "local_uncheckpointed": 0,
+  "remote_head": "cca55925e1a9c301a975119508dcd34e4e5acc3c",
+  "notice": "Stopped for ops-r3; next returned a new draft before stop instruction, no image displayed or context fetched for that draft."
 }
