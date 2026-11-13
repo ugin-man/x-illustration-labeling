@@ -1,0 +1,28 @@
+{
+  "worker": "terra-prod-02",
+  "run": "production-v4-001",
+  "research_root": "/workspace/production-v4-001",
+  "job": "prod-0410",
+  "recorded_at": "2026-11-13T21:22:15Z",
+  "remote": {
+    "status": "expired",
+    "accepted_count": 0,
+    "head": "af50550932eab36fc9c1e2edfacb4dc5b6530254"
+  },
+  "local_results": [],
+  "local_unsent_results": 0,
+  "draft": {
+    "exists": true,
+    "post_id": "2098078433322692940",
+    "sha256": "6f1899a863760c1f8c128f0858a88231af6e0b5cafb3f0cfda8cda2119ebc2c2",
+    "note": "Image was displayed and recorded in view-events; draft viewed flag remains false."
+  },
+  "context_cache_for_draft": "no matching local file found",
+  "worker_cli_process_running": false,
+  "last_error": {
+    "command": "ops_runtime_r3.worker context --context-action fetch",
+    "output": "QueueError: Push was not accepted; no reservation was acquired"
+  },
+  "status_read": "available",
+  "note": "Stopped for ops-r4 preparation; no retry of failed write or body fetch, no claim and no image re-display."
+}
