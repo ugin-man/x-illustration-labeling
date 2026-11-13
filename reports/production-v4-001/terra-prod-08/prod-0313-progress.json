@@ -1,11 +1,11 @@
 {
   "job": "prod-0313",
   "worker": "terra-prod-08",
-  "checkpoint_accepted_posts": 40,
-  "checkpoint_head": "ab6bee0f72b62b858d9ba6690aa1a4a14bc3ff6b",
-  "recorded_at_utc": "2026-11-13T10:52:25.120391+00:00",
+  "checkpoint_accepted_posts": 45,
+  "checkpoint_head": "3ca4667dc9444c1deb72a24f65c5206ee9649272",
+  "recorded_at_utc": "2026-11-13T11:04:20.684276+00:00",
   "status": "ops_r2_running",
   "audit_note": "投稿2097284197031551122のテキスト検索結果に画像検索ページと人気指標が偶然表示。画像や数値は研究入力・記録に使用せず、review_flagsに記録。",
   "uncheckpointed_saved_posts": 0,
-  "revision_note": "投稿2097286718022152241の未受理創作区分をreviseで訂正、履歴を保存。"
+  "revision_note": "未受理の投稿2097286718022152241と2097289757739123007をreviseで訂正、履歴を保存。"
 }
