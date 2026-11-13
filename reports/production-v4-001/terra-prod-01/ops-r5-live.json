@@ -1,0 +1,62 @@
+{
+  "worker": "terra-prod-01",
+  "root": "/workspace/production-v4-001",
+  "job": "prod-0259",
+  "operations_revision": "ops-r5",
+  "manifest_sha256": "5a5ca44e20c28b45941937f5e1f699fa98df50bae9895080ff8f64718be0297d",
+  "reconciliation": {
+    "remote_accepted_count": 18,
+    "exact_matches": 18,
+    "local_unaccepted_ids": [
+      "2096847967563174206"
+    ],
+    "conflicts": 0
+  },
+  "recovered_existing_ids": [
+    "2096847967563174206",
+    "2096848477800296500"
+  ],
+  "newly_processed_post_ids": [
+    "2096848478496543215",
+    "2096848986686812650"
+  ],
+  "accepted_before_new": 20,
+  "accepted_after_new": 22,
+  "checkpoint_head": "16f39c782af00ec32ec5dcbd0dd0fa7e0065d46b",
+  "new_view_events": [
+    {
+      "post_id": "2096848478496543215",
+      "media_index": 1,
+      "path": ".runtime/production-v4-001/prod-0259/images/70b4925453d4bdc35ebbec44aa84f2a4b81ec86c1841e2380e7899610757900e.jpg",
+      "view_returned_at": "2026-11-13T22:15:12+00:00",
+      "tool": "functions.view_image"
+    },
+    {
+      "post_id": "2096848986686812650",
+      "media_index": 1,
+      "path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0259/images/3b4c449a0238a871cf42c2eb15c334efb0296c7756498fb9254e7235e1eb2520.jpg",
+      "view_returned_at": "2026-11-13T22:18:21+00:00",
+      "tool": "functions.view_image"
+    },
+    {
+      "post_id": "2096848986686812650",
+      "media_index": 2,
+      "path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0259/images/182af34ab606d1f651d0005486ffc60e6e735994cd2fa86273c6c599492e0e35.jpg",
+      "view_returned_at": "2026-11-13T22:18:25+00:00",
+      "tool": "functions.view_image"
+    },
+    {
+      "post_id": "2096848986686812650",
+      "media_index": 3,
+      "path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0259/images/72c0c21ec22c866c82619d8fc0307f1e16af9a65b473e2ba64e88c6289e870c3.jpg",
+      "view_returned_at": "2026-11-13T22:18:29+00:00",
+      "tool": "functions.view_image"
+    }
+  ],
+  "isolation": {
+    "loose_files_checked": 467,
+    "archive_files_checked": 465,
+    "excluded_matches": 0
+  },
+  "recorded_at": "2026-11-13T22:22:55.191376+00:00"
+}
