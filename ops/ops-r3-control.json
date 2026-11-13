@@ -1,0 +1,10 @@
+{
+  "base_run_id": "production-v4-001",
+  "coordinator_ids": [
+    "ops-coordinator"
+  ],
+  "manifest_sha256": "39061d963ab5e83df1d47609eba63c75543bc90136b03d77f6bdb6ac36152455",
+  "operations_revision": "ops-r3",
+  "state": "blocked",
+  "upgraded_worker_ids": []
+}
