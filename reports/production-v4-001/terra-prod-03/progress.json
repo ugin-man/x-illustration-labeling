@@ -43,9 +43,15 @@
       "finish_head": "87fe87bf42e1e89a4ff9c06f490a66cb8cd08cbb",
       "saved_posts": 50,
       "excluded_posts": 0
+    },
+    {
+      "job_id": "prod-0323",
+      "finish_head": "2495bef517c8409b38cb98c0a1f811eb69605748",
+      "saved_posts": 49,
+      "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-13T02:10:01.756400+00:00",
+  "recorded_at": "2026-11-13T02:32:44.090254+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -74,7 +80,8 @@
     "prod-0369 was briefly reacquired with the previously reported invalid unaccepted local result still present; released without checkpointing again, preserving cached context and search budget.",
     "prod-0323 individual post text HTTP failures recorded without retry; incidental popularity exposure recorded in review flag without values.",
     "Post 2097355231550132445 excluded via model_refusal at media index 3; do not reopen any image of that post.",
-    "Popularity exposure in focal image and text was flagged without recording values."
+    "Popularity exposure in focal image and text was flagged without recording values.",
+    "prod-0323 completed with individual text failures recorded without retry; incidental popularity exposure flagged without values."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
@@ -108,11 +115,5 @@
       "2097735028042313797"
     ],
     "context_cache_directory": ".runtime/production-v4-001/prod-0368/context/"
-  },
-  "active_job": {
-    "job_id": "prod-0323",
-    "checkpointed_posts": 36,
-    "excluded_posts": 1,
-    "checkpoint_head": "a62077ac5ae1c57d745995431c7baef883d40b3f"
   }
 }
