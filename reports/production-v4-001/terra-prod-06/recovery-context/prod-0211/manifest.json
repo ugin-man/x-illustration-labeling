@@ -1,0 +1,151 @@
+{
+  "purpose": "Unaccepted, rejected-for-use audit backup; not accepted labels or instructions to checkpoint.",
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-06",
+  "job_id": "prod-0211",
+  "remote_status_observed_at_epoch": 1794557685,
+  "remote_status": "expired",
+  "remote_accepted_head": "b88016b5c85cf1c23cc03f86f24815efc350c760",
+  "remote_accepted_posts": 0,
+  "unaccepted_local_posts": 5,
+  "draft_note": "Draft matches the last saved result byte-for-byte; preserved anyway, not a distinct unsaved answer.",
+  "posts": [
+    {
+      "post_id": "2096421866487640171",
+      "context_cache_state": "available",
+      "known_failure": null,
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds_at_search_end": 0,
+      "elapsed_source": "saved result; no search performed",
+      "deadline": null,
+      "budget_file_present": false
+    },
+    {
+      "post_id": "2096422114198954300",
+      "context_cache_state": "available",
+      "known_failure": null,
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds_at_search_end": 0,
+      "elapsed_source": "saved result; no search performed",
+      "deadline": null,
+      "budget_file_present": false
+    },
+    {
+      "post_id": "2096422368457773161",
+      "context_cache_state": "available",
+      "known_failure": null,
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds_at_search_end": 0,
+      "elapsed_source": "saved result; no search performed",
+      "deadline": null,
+      "budget_file_present": false
+    },
+    {
+      "post_id": "2096422626776531206",
+      "context_cache_state": "available",
+      "known_failure": null,
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds_at_search_end": 0,
+      "elapsed_source": "saved result; no search performed",
+      "deadline": null,
+      "budget_file_present": false
+    },
+    {
+      "post_id": "2096422630178099504",
+      "context_cache_state": "available",
+      "known_failure": null,
+      "searches": 1,
+      "pages": 0,
+      "elapsed_seconds_at_search_end": 15.005,
+      "elapsed_source": "saved result and observed CLI summary",
+      "deadline": 1794542006.281686,
+      "budget_file_present": true
+    }
+  ],
+  "files": [
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/context/2096421866487640171.json",
+      "report_relative_path": "recovery-context/prod-0211/2096421866487640171.json",
+      "sha256": "70579b6e97ec6bf9b4560da6e33f01de4d133be3a3535a8ccf70f1bc7d8b55a2",
+      "bytes": 569
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/context/2096422114198954300.json",
+      "report_relative_path": "recovery-context/prod-0211/2096422114198954300.json",
+      "sha256": "81be97a4b7b3f9bdfac47120bdc5050f7757b1f3178f84068f15d0babe93c0b4",
+      "bytes": 618
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/context/2096422368457773161.json",
+      "report_relative_path": "recovery-context/prod-0211/2096422368457773161.json",
+      "sha256": "5529b4a1dfaf31977a0395eb37a08c839c5b6374c206441f77b9c2db3dea6a85",
+      "bytes": 526
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/context/2096422626776531206.json",
+      "report_relative_path": "recovery-context/prod-0211/2096422626776531206.json",
+      "sha256": "27bdb35a3f353adc647573e452f45470ba3b5060efc2678a186998ad12b3b28a",
+      "bytes": 499
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/context/2096422630178099504-budget.json",
+      "report_relative_path": "recovery-context/prod-0211/2096422630178099504-budget.json",
+      "sha256": "cbde9bbaef8bea6a26930360c92ca8e469a4692743a395afeb004264b630bb89",
+      "bytes": 174
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/context/2096422630178099504.json",
+      "report_relative_path": "recovery-context/prod-0211/2096422630178099504.json",
+      "sha256": "9826a09e07e7de530c98f98f44b829a2f6f26601e3c25dc59fb914cd5e89fa39",
+      "bytes": 542
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/results/2096421866487640171.json",
+      "report_relative_path": "recovery-unaccepted/prod-0211/results/2096421866487640171.json",
+      "sha256": "00447732ff229da7c01fe7cf325956ddc96a9e36ef9c23e50c6f8d87b18cda4d",
+      "bytes": 6443
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/results/2096422114198954300.json",
+      "report_relative_path": "recovery-unaccepted/prod-0211/results/2096422114198954300.json",
+      "sha256": "0e764e4f4d9781c6e155085e42562bde7780e5af96db216943374d883b32236d",
+      "bytes": 8212
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/results/2096422368457773161.json",
+      "report_relative_path": "recovery-unaccepted/prod-0211/results/2096422368457773161.json",
+      "sha256": "bfae8ca0615b436bb7b0f219bcb60dfffb53ec9959628659728a40864642558e",
+      "bytes": 6833
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/results/2096422626776531206.json",
+      "report_relative_path": "recovery-unaccepted/prod-0211/results/2096422626776531206.json",
+      "sha256": "71e5718af741a634a302dae6b00308ed49d64eae66895e77e3496b23f48e7c7a",
+      "bytes": 6663
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/results/2096422630178099504.json",
+      "report_relative_path": "recovery-unaccepted/prod-0211/results/2096422630178099504.json",
+      "sha256": "e94a27837410eba54a994547ddbd0a060a1a6ed7f9870fb8de49541e270dd43c",
+      "bytes": 6854
+    },
+    {
+      "original_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0211/draft.json",
+      "report_relative_path": "recovery-unaccepted/prod-0211/draft.json",
+      "sha256": "e94a27837410eba54a994547ddbd0a060a1a6ed7f9870fb8de49541e270dd43c",
+      "bytes": 6854
+    },
+    {
+      "original_path": "/workspace/production-v4-001-report-terra-prod-06/reports/production-v4-001/terra-prod-06/view-events.jsonl",
+      "extraction": "Original JSONL lines for the five post IDs preserved byte-for-byte; source file remains unchanged.",
+      "report_relative_path": "recovery-unaccepted/prod-0211/view-events.jsonl",
+      "sha256": "c572d1ac0bd7f3a79ee58ec15fc3aa7f3cd26bf4f872cf104badd9d35edb5217",
+      "bytes": 1080
+    }
+  ],
+  "caveat": "No image bytes, credentials, tokens, or popularity values included. Local source files were not edited. No checkpoint, hold, release, or claim performed."
+}
