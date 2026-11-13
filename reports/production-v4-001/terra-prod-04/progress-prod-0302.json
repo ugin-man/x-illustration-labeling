@@ -1,1 +1,1 @@
-{"worker": "terra-prod-04", "job": "prod-0302", "accepted_posts": 25, "local_uncheckpointed_posts": 0, "checkpoint_head": "df1c9050e97fb6d9c97508e83ab988064ef3f524", "operational_state": "in_progress"}
+{"worker": "terra-prod-04", "job": "prod-0302", "accepted_posts": 30, "local_uncheckpointed_posts": 0, "checkpoint_head": "129ce2a1946490683c837762ad853b8588bc329d", "operational_state": "in_progress"}
