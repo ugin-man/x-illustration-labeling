@@ -10,3 +10,5 @@
 - Checkpoint dc053225fe9c012d3a0693c8ca9b17532417686f: 15 posts accepted. One individual text retrieval returned HTTP 404 and was recorded as technical_failure.
 
 - Checkpoint 9bc207602c2da28fa13d72df7780318baf6a5fdb: 20 posts accepted. One individual text retrieval returned HTTP 404 and was recorded as technical_failure.
+
+- Checkpoint fafe170094a716b2be8afadb2039a5ee05c0e911: 24 posts accepted; next post already allocated but not yet viewed. One individual text retrieval returned HTTP 404 and was recorded as technical_failure.
