@@ -2,12 +2,12 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0138",
-  "checkpointed_posts": 46,
+  "checkpointed_posts": 50,
   "status": "OPS_R3_RUNNING",
-  "note": "prod-0138: 46 normal posts checkpointed; isolation excluded matches 0.",
-  "recorded_at": "2026-11-13T20:41:30.464169+00:00",
-  "checkpoint_head": "1145fa58297070527246e494712d426772784922",
-  "local_saved_posts": 46,
+  "note": "prod-0138: 50 normal posts checkpointed and job completed; isolation excluded matches 0.",
+  "recorded_at": "2026-11-13T20:50:43.655082+00:00",
+  "checkpoint_head": "2c7d9593214be6bb2ffbac51f8b768a74e61f363",
+  "local_saved_posts": 50,
   "uncheckpointed_saved_posts": 0,
   "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
   "previous_job": "prod-0242",
@@ -18,6 +18,6 @@
     "remote_head": "40fcd5a8978ff4f0562bdfc961873280e09faf4a"
   },
   "uncheckpointed_posts": 0,
-  "finish_head": "5dea1531361e7778cc9e667a5ea31bdf877afdaa",
+  "finish_head": "c06f2a523459dbe50fba041586f69c02feff6916",
   "job": "prod-0138"
 }
