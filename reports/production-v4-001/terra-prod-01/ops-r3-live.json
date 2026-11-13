@@ -44,8 +44,18 @@
     ]
   },
   "latest_checkpoint": {
-    "accepted": 41,
-    "remote_head": "14e764fa541e2de139c87f457b3643a1dbfc5851",
-    "updated_at": "2026-11-13T20:10:42.715328+00:00"
+    "accepted": 45,
+    "remote_head": "b39e3983bfe79660a7c5649d73487c84ef50f668",
+    "updated_at": "2026-11-13T20:21:25.470238+00:00"
+  },
+  "later_consecutive_context_failures": {
+    "source": "api.fxtwitter.com",
+    "code": 404,
+    "count": 3,
+    "post_ids": [
+      "2095582023536812245",
+      "2095582280320499832",
+      "2095582283206214112"
+    ]
   }
 }
