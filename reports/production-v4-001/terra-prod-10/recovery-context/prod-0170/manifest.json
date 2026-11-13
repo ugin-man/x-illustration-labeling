@@ -1,0 +1,165 @@
+{
+  "run_id": "production-v4-001",
+  "job_id": "prod-0170",
+  "worker_id": "terra-prod-10",
+  "recorded_at": "2026-11-13T08:15:21.227853+00:00",
+  "checkpoint_head": "8d6bf953bc4fb6e3ffdb1461557cd7e155400b5e",
+  "unaccepted_saved_post_ids": [
+    "2096033942185078975",
+    "2096033946559738251",
+    "2096034197400060269",
+    "2096034202106134634",
+    "2096035715671031893",
+    "2096035726072942878",
+    "2096036478635929603",
+    "2096036480644972854",
+    "2096036734287134926"
+  ],
+  "current_draft_post_id": "2096036987291767193",
+  "finding": {
+    "post_id": "2096036734287134926",
+    "field": "post_attributes.work_form",
+    "actual": "other",
+    "rule": "単一作品ならsingle_illustration"
+  },
+  "files": [
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096033942185078975.json",
+      "file": "results/2096033942185078975.json",
+      "sha256": "86dbef5d8422ab068087f432c3295ee1075e24fc6a0e138970bec87b6f7461dd",
+      "bytes": 6393
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096033946559738251.json",
+      "file": "results/2096033946559738251.json",
+      "sha256": "faf5ecbcf3d2daa477c16a34029fe73562e832630695f2ea35c4e46e64afa009",
+      "bytes": 6471
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096034197400060269.json",
+      "file": "results/2096034197400060269.json",
+      "sha256": "955961928b7e2001f00c6d3ee44afe8bd2db01ce4afd974ac99ef04669cd4fdb",
+      "bytes": 6318
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096034202106134634.json",
+      "file": "results/2096034202106134634.json",
+      "sha256": "0a9f082cbb804a3c2b105986800ac8485414e9f4d0daab633f8e05a9d32a7375",
+      "bytes": 6338
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096035715671031893.json",
+      "file": "results/2096035715671031893.json",
+      "sha256": "e5210c2cda6955e6cdef1cccd2ae864a548bd8a0bde6f1ccfd5714233e2878f8",
+      "bytes": 6678
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096035726072942878.json",
+      "file": "results/2096035726072942878.json",
+      "sha256": "0d9e9b4133af85e934e33b4bc782b0ad55df24ee14de077da8ee16ee95f8f87b",
+      "bytes": 6208
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096036478635929603.json",
+      "file": "results/2096036478635929603.json",
+      "sha256": "9762ad8534a338728eef1e4824384602b0bb7d64ee3ad56bd7eb714f5b78135e",
+      "bytes": 6497
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096036480644972854.json",
+      "file": "results/2096036480644972854.json",
+      "sha256": "ccb8687bc4f32e03b01c04d7f3c8692521c292942fbf80bfa75b70413264d6f0",
+      "bytes": 11100
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/results/2096036734287134926.json",
+      "file": "results/2096036734287134926.json",
+      "sha256": "5c56edc57087815598b25e057395b56010994403e7fde64c3230a9b1ab30ea1a",
+      "bytes": 8267
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096033942185078975.json",
+      "file": "context/2096033942185078975.json",
+      "sha256": "edd268233d6bbc1c60983dece57afea05f32cc7afc9e21cd2be1fefdc648f57b",
+      "bytes": 477
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096033946559738251.json",
+      "file": "context/2096033946559738251.json",
+      "sha256": "74330573dcb51440efa8d67b8b0f8851fa19e6630b4cb11057b67eec42d8a8c3",
+      "bytes": 514
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096034197400060269.json",
+      "file": "context/2096034197400060269.json",
+      "sha256": "6b408adfe24abfea7887f0bb088d83da57ea131ffc021b98788348db0fc85023",
+      "bytes": 461
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096034202106134634.json",
+      "file": "context/2096034202106134634.json",
+      "sha256": "9ff8533997ae26853fc8772fc5351dd681fc1a7af64db3ac2f7431d8c5ec85da",
+      "bytes": 681
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096035715671031893.json",
+      "file": "context/2096035715671031893.json",
+      "sha256": "555658f93a3dc0a5c6d34ec1125fe05ced7db42040b945923da19dcf983297f1",
+      "bytes": 542
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096035726072942878.json",
+      "file": "context/2096035726072942878.json",
+      "sha256": "25296aa797c978df95c2f573499c611ba617f26c2f634989444303437d248b0a",
+      "bytes": 491
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096036478635929603.json",
+      "file": "context/2096036478635929603.json",
+      "sha256": "e002dbca509af45ede6d8f526d17333cff99b048b5e8c3d07aa5ea2769500019",
+      "bytes": 557
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096036480644972854.json",
+      "file": "context/2096036480644972854.json",
+      "sha256": "a92bd8254c03c0173166bd6616f4794b83fd2aa9d197cec084a34cbd1d713ecc",
+      "bytes": 646
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096036734287134926.json",
+      "file": "context/2096036734287134926.json",
+      "sha256": "cd923be3aa95376f0e589be41c9d7d2d351529d0feeffa1610d7137b0d59f694",
+      "bytes": 667
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096036734287134926-budget.json",
+      "file": "context/2096036734287134926-budget.json",
+      "sha256": "c8a224069792930515c502b6e724c03253c2318005f471d765987b89a1f1bb44",
+      "bytes": 247
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/context/2096036987291767193.json",
+      "file": "context/2096036987291767193.json",
+      "sha256": "5a07399b5b5032d46b3c5634fd52929543f132501d2b05cae091a9a55f3f989d",
+      "bytes": 936
+    },
+    {
+      "source_path": "/workspace/production-v4-001/.runtime/production-v4-001/prod-0170/draft.json",
+      "file": "draft.json",
+      "sha256": "5b7db86b84ab6c6db7824ccee0907b3c2cecf81a4affeccac9b82e78c948fe11",
+      "bytes": 4299
+    }
+  ],
+  "missing_files": [
+    "context/2096033942185078975-budget.json",
+    "context/2096033946559738251-budget.json",
+    "context/2096034197400060269-budget.json",
+    "context/2096034202106134634-budget.json",
+    "context/2096035715671031893-budget.json",
+    "context/2096035726072942878-budget.json",
+    "context/2096036478635929603-budget.json",
+    "context/2096036480644972854-budget.json",
+    "context/2096036987291767193-budget.json"
+  ],
+  "note": "予算ファイル欠落は欠落として記録し再作成していない。受理済み結果、画像、lease tokenは含めない。"
+}
