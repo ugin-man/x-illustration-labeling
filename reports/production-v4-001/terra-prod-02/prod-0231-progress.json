@@ -1,0 +1,16 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-02",
+  "job_id": "prod-0231",
+  "status": "finished",
+  "post_count": 50,
+  "checkpoint_head": "70cc119509139d091dbb62dbb2b9a8751ffe3be3",
+  "finish_head": "0e812ecc72ef644918e317ef541c6f4083c0bd86",
+  "recorded_at": "2026-11-13T02:51:22.560200+00:00",
+  "recovery": {
+    "post_id": "2096636885460561947",
+    "context": "interrupted fetch with no recoverable result; no refetch or search; technical_failure",
+    "image_event": "actual image tool output before disconnection; exact time unknown, recorded retrospectively; event ID not exposed by tool"
+  },
+  "note": "Image display events contain metadata only."
+}
