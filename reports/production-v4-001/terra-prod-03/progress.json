@@ -81,7 +81,7 @@
       "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-13T07:35:08.416782+00:00",
+  "recorded_at": "2026-11-13T07:41:42.977914+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -123,7 +123,8 @@
     "prod-0355 post 2097654897080705348 media 1: initial image tool output truncated during context compaction; subsequent successful display was logged at recording time. No policy refusal.",
     "prod-0052: individual text failures recorded without retry; incidental popularity-related exposure noted in relevant review flags without values.",
     "prod-0052 post 2094853221030441119: search reservation command output was empty; permission was not observed, so no external search was performed and the reserved search was counted.",
-    "After completing prod-0355, prod-0368 and prod-0049 were reacquired and immediately released as instructed, without next, save, checkpoint or hold."
+    "After completing prod-0355, prod-0368 and prod-0049 were reacquired and immediately released as instructed, without next, save, checkpoint or hold.",
+    "prod-0059: five local results remain uncheckpointed, including post 2094956166925447558 where individual observable fields were uniformly marked unknown because the medium could not be established. Next post 2094956167713927375 was returned but not displayed or fetched. Release attempt was rejected by automatic approval review; lease and local results retained."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
