@@ -19,3 +19,6 @@
 - Checkpoint 398637acb7ef69eb1ab9760ed4d6644ebcc207cc: 40 posts accepted. One individual text fetch returned HTTP 404 and was recorded as technical_failure.
 
 - Checkpoint 815f065049079a2cf9f296cd4498a309d2375d23: 45 posts accepted.
+
+- Checkpoint 8cf1f0415d2a99898be2d2b44c2449ea5e8b8eb6: 50 posts accepted. One individual text fetch returned HTTP 401 and was recorded as technical_failure.
+- Completed head: 0a8794a230f592832b81d42498eb5a1e0bd4252f.
