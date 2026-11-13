@@ -1,9 +1,8 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "status": "OPS_R3_STOPPED",
-  "remote_accepted": 28,
-  "local_uncheckpointed": 0,
-  "remote_head": "cca55925e1a9c301a975119508dcd34e4e5acc3c",
-  "notice": "Stopped for ops-r3; next returned a new draft before stop instruction, no image displayed or context fetched for that draft."
+  "remote_accepted": 34,
+  "remote_head": "51f5cd17fc31d46b3c4e5509feba888bdaa89066",
+  "recorded_at": "2026-11-13T19:30:22Z",
+  "notice": "Three further posts checkpointed. For post 2097378737201488088 initial view log indexes corrected by appended events; no re-display."
 }
