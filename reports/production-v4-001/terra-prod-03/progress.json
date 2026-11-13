@@ -73,9 +73,15 @@
       "finish_head": "1b3f37b36bf482e93f7120a3ae5dd0f886edf1a9",
       "saved_posts": 50,
       "excluded_posts": 0
+    },
+    {
+      "job_id": "prod-0052",
+      "finish_head": "febe99622479510ed38cb42a0d64ca09f73be25a",
+      "saved_posts": 50,
+      "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-13T06:36:10.655090+00:00",
+  "recorded_at": "2026-11-13T07:35:08.416782+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -114,7 +120,10 @@
     "prod-0046: individual post text failures recorded without retry; incidental popularity indicators in images or search outputs flagged without values.",
     "prod-0046 post 2094814066221179111: first attempted image display was truncated during context compaction; subsequent successful display was logged at recording time.",
     "prod-0355: individual text failures recorded without retry; incidental popularity exposure flagged without values.",
-    "prod-0355 post 2097654897080705348 media 1: initial image tool output truncated during context compaction; subsequent successful display was logged at recording time. No policy refusal."
+    "prod-0355 post 2097654897080705348 media 1: initial image tool output truncated during context compaction; subsequent successful display was logged at recording time. No policy refusal.",
+    "prod-0052: individual text failures recorded without retry; incidental popularity-related exposure noted in relevant review flags without values.",
+    "prod-0052 post 2094853221030441119: search reservation command output was empty; permission was not observed, so no external search was performed and the reserved search was counted.",
+    "After completing prod-0355, prod-0368 and prod-0049 were reacquired and immediately released as instructed, without next, save, checkpoint or hold."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
