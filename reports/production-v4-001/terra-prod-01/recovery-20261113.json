@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-11-13T02:43:10.368514+00:00",
+  "job_id": "prod-0165",
+  "worker_id": "terra-prod-01",
+  "previous_checkpoint_posts": 20,
+  "preserved_local_results": 24,
+  "restored_checkpoint_posts": 20,
+  "preserved_files_match": true,
+  "checkpointed_posts": 25,
+  "checkpoint_head": "964615c76d340dfcdcedc9a3cefca8047d70b58f",
+  "isolation_excluded_images_found": 0,
+  "note": "Expired own lease reacquired; atomic checkpoint failed once and succeeded on retry; view events preserved."
+}
