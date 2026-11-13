@@ -12,3 +12,5 @@
 - Checkpoint 276d495c2920f3d635b37b1fb55db3d15fe0738c: 37 accepted, 1 deferred. Post 2097030521209667737 is deferred for needs_quality_review due to many small repeated depictions whose complete correspondence could not be reliably recorded. Deferred is not complete.
 
 - Post 2097030777536131179: image viewed, draft observations retained; context sync hit temporary Git fetch failure and the worker gate remained busy. Waiting for the fixed gate lease and grace period before retry.
+
+- Context synchronization recovered; checkpoint fddecb044d4de38cad0e0772e031edb9b53a955b: 44 accepted, 1 deferred, 5 ordinary posts remaining.
