@@ -13,6 +13,12 @@ from pipeline_production.common import canonical
 from pipeline_production.dispatch import DispatchQueue, AtomicConflict, INDEX_JOB
 from pipeline_production.git_queue import Conflict, LostLease, QueueError, ClaimBusy
 
+NETWORK_ATTEMPTS = 10
+
+
+def network_delay(attempt):
+    return min(2 ** attempt, 8) + random.uniform(0, .25)
+
 
 def git_failure_category(stderr):
     """Return a fixed category only. Never expose stderr/URLs/credentials."""
@@ -127,7 +133,7 @@ class OpsQueue(DispatchQueue):
         # Retrying reads cannot duplicate a reservation or a result. Writes are
         # never blindly replayed: the existing CAS/lost-ACK logic decides them.
         retry_read = check and args[0] in {'ls-remote', 'fetch'}
-        for attempt in range(3 if retry_read else 1):
+        for attempt in range(NETWORK_ATTEMPTS if retry_read else 1):
             try:
                 proc = super().git(*args, data=data, check=False)
                 if proc.returncode == 0 or not check:
@@ -136,11 +142,36 @@ class OpsQueue(DispatchQueue):
             except subprocess.TimeoutExpired:
                 category = 'transient_network'
                 proc = None
-            if retry_read and category == 'transient_network' and attempt < 2:
-                time.sleep(1 + attempt)
+            if retry_read and category == 'transient_network' and attempt + 1 < NETWORK_ATTEMPTS:
+                time.sleep(network_delay(attempt))
                 continue
             raise QueueError('Git ' + args[0] + ' failed: ' + category +
                              ' (bounded attempts=' + str(attempt + 1) + ')')
+
+    def acquire_claim_gate(self, worker_id):
+        # A failed cleanup leaves a 300s lease plus 120s grace. Wait normally
+        # for expiry/release instead of ending the worker on the first collision.
+        deadline = time.monotonic() + 450
+        for attempt in range(16):
+            try:
+                return super().acquire_claim_gate(worker_id)
+            except ClaimBusy:
+                remaining = deadline - time.monotonic()
+                if attempt == 15 or remaining <= 0:
+                    raise
+                print(json.dumps({'status': 'waiting_for_worker_gate',
+                                  'attempt': attempt + 1}), file=sys.stderr)
+                time.sleep(min(30, remaining))
+
+    def release_claim_gate(self):
+        # DispatchQueue.claim releases its gate in a finally block as well as
+        # __exit__. Cleanup must not turn a successful reservation into failure.
+        try:
+            return super().release_claim_gate()
+        except (QueueError, Conflict, LostLease):
+            self.claim_gate = None  # The remote lock is left to expire, not stolen.
+            print(json.dumps({'warning': 'claim_gate_cleanup_pending',
+                              'action': 'preserve_state_wait_for_gate_expiry'}), file=sys.stderr)
 
     def __exit__(self, exc_type, exc, traceback):
         # Gate cleanup is not the operation's result. An outage while releasing
@@ -191,7 +222,7 @@ class OpsQueue(DispatchQueue):
         candidate_state = json.loads(self.git('show', candidate + ':state.json').stdout)
         args = ['push'] + (['--atomic'] if atomic else []) + ['--porcelain', 'origin']
         args += [sha + ':' + name for name, sha in candidates.items()]
-        for attempt in range(3):
+        for attempt in range(NETWORK_ATTEMPTS):
             if candidate_state['status'] == 'leased' and candidate_state['lease_until'] <= self.clock():
                 raise LostLease('Candidate lease expired before publish; preserve state and reacquire')
             if atomic and self.claim_gate:
@@ -222,13 +253,13 @@ class OpsQueue(DispatchQueue):
             if any(observed.get(name) != sha for name, sha in expected.items()):
                 error = AtomicConflict if atomic else Conflict
                 raise error('Push ' + scope + ': refs_changed; refresh ownership before retry')
-            if category != 'transient_network' or attempt == 2:
+            if category != 'transient_network' or attempt + 1 == NETWORK_ATTEMPTS:
                 raise QueueError('Push ' + scope + ': ' + category +
                                  '; unchanged_remote; bounded_attempts=' + str(attempt + 1))
             print(json.dumps({'warning': 'push_transient_unaccepted', 'scope': scope,
                               'attempt': attempt + 1, 'action': 'retry_exact_commit_after_ref_check'}),
                   file=sys.stderr)
-            time.sleep(1 + attempt + random.uniform(0, .25))
+            time.sleep(network_delay(attempt))
 
     def _metadata_at(self, head):
         return {name: self.git('show', head + ':' + name).stdout

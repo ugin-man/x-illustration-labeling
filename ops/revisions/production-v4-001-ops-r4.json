@@ -6,10 +6,10 @@
   "classification_contract_sha256": "6aefd96c31d8c1b253feaf44ed36faf420755108bbb5c944c03e725f82725893",
   "classification_manual_sha256": "e2ffe387a62db75bede774e55313aae7c0180c353650241a507d09969cf68a16",
   "files_sha256": {
-    "docs/WORKER_OPERATIONS_R4.md": "1c560934b870d1159968978bc53fb96e6503ba2fad32858bc2f07743d69029a6",
+    "docs/WORKER_OPERATIONS_R4.md": "666d5d9ce5226b2aa3866890b44e4ca6f0b69c586e2e08ad5a331a7a19236ace",
     "ops_runtime_r4/__init__.py": "2b6d26942e4efc75aef87deb46b82d52958f34dfc6b0fdf0e8368cc7fb6453d9",
     "ops_runtime_r4/control.py": "30b63dda53aa585ed3b25bf315b16fbe5bf28722ea663029d528eed33b57ff4a",
-    "ops_runtime_r4/queue.py": "1cc9807dc1d543cb6c09c200da4affccc651f3dcd6c7960032cbf5f3a3572bbc",
+    "ops_runtime_r4/queue.py": "33c1b64282cfe7ba6d9de9ab77e409075ef225154c47c77ece48fc4bdaa149f7",
     "ops_runtime_r4/reconcile.py": "454c2b4f9b5ceff9ca0d11b1315a3c5e836b3680a64d7749838f01e30802c632",
     "ops_runtime_r4/worker.py": "ef32996311801c8151da2109ed6b1434ffe0716ec9b8fa0cd2ba37a21b9e371d"
   },

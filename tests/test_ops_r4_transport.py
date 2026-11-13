@@ -6,7 +6,7 @@ from unittest.mock import Mock, patch
 
 from ops_runtime_r4.queue import OpsQueue
 from pipeline_production.dispatch import AtomicConflict
-from pipeline_production.git_queue import Conflict, LostLease, QueueError
+from pipeline_production.git_queue import Conflict, LostLease, QueueError, ClaimBusy
 
 
 class PushRecoveryTests(unittest.TestCase):
@@ -88,11 +88,50 @@ class PushRecoveryTests(unittest.TestCase):
         with self.assertRaisesRegex(QueueError,'acceptance_indeterminate'):self.publish(q,j,old,new)
         self.assertEqual(sum(c.args[0]=='push' for c in q.git.call_args_list),1)
 
-    def test_transient_push_is_bounded_at_three(self):
+    def test_transient_push_is_bounded_at_ten(self):
         q,j,old,new=self.setup_queue([],[])
-        q,j,old,new=self.setup_queue([self.response()]*3,[old]*3)
-        with self.assertRaisesRegex(QueueError,'bounded_attempts=3'):self.publish(q,j,old,new)
-        self.assertEqual(sum(c.args[0]=='push' for c in q.git.call_args_list),3)
+        q,j,old,new=self.setup_queue([self.response()]*10,[old]*10)
+        with self.assertRaisesRegex(QueueError,'bounded_attempts=10'):self.publish(q,j,old,new)
+        self.assertEqual(sum(c.args[0]=='push' for c in q.git.call_args_list),10)
+
+    def test_longer_transient_outage_recovers_without_rebuilding_commit(self):
+        q,j,old,new=self.setup_queue([],[])
+        q,j,old,new=self.setup_queue([self.response()]*4+[self.response(0)],[old]*4)
+        self.assertEqual(self.publish(q,j,old,new),'new')
+        pushes=[c for c in q.git.call_args_list if c.args[0]=='push']
+        self.assertEqual(len(pushes),5)
+        self.assertTrue(all(c==pushes[0] for c in pushes))
+
+    def test_read_recovers_after_several_transient_failures(self):
+        q=OpsQueue.__new__(OpsQueue)
+        with patch('pipeline_production.git_queue.GitQueue.git',side_effect=[self.response()]*4+[self.response(0)]) as run, patch('ops_runtime_r4.queue.time.sleep'):
+            self.assertEqual(q.git('fetch','origin').returncode,0)
+            self.assertEqual(run.call_count,5)
+
+    def test_read_failure_budget_is_finite(self):
+        q=OpsQueue.__new__(OpsQueue)
+        with patch('pipeline_production.git_queue.GitQueue.git',return_value=self.response()) as run, patch('ops_runtime_r4.queue.time.sleep'):
+            with self.assertRaisesRegex(QueueError,'attempts=10'):q.git('ls-remote','origin')
+            self.assertEqual(run.call_count,10)
+
+    def test_busy_gate_waits_for_release_without_stealing(self):
+        q=OpsQueue.__new__(OpsQueue)
+        with patch('pipeline_production.dispatch.DispatchQueue.acquire_claim_gate',side_effect=[ClaimBusy('busy'),ClaimBusy('busy'),{'token':'new'}]) as run, patch('ops_runtime_r4.queue.time.sleep') as sleep:
+            self.assertEqual(q.acquire_claim_gate('worker-1'),{'token':'new'})
+            self.assertEqual(run.call_count,3)
+            self.assertEqual(sleep.call_count,2)
+
+    def test_gate_wait_has_deadline(self):
+        q=OpsQueue.__new__(OpsQueue)
+        with patch('pipeline_production.dispatch.DispatchQueue.acquire_claim_gate',side_effect=ClaimBusy('busy')) as run, patch('ops_runtime_r4.queue.time.monotonic',side_effect=[0,451]), patch('ops_runtime_r4.queue.time.sleep') as sleep:
+            with self.assertRaises(ClaimBusy):q.acquire_claim_gate('worker-1')
+            self.assertEqual(run.call_count,1);sleep.assert_not_called()
+
+    def test_claim_finally_cleanup_cannot_mask_a_successful_reservation(self):
+        q=OpsQueue.__new__(OpsQueue);q.claim_gate=('gate','token')
+        with patch('pipeline_production.git_queue.GitQueue.release_claim_gate',side_effect=QueueError('network')):
+            q.release_claim_gate()
+        self.assertIsNone(q.claim_gate)
 
     def test_candidate_expiry_stops_replay(self):
         q,j,old,new=self.setup_queue([],[])
