@@ -5,6 +5,17 @@
   ],
   "manifest_sha256": "1b197e57f1f1e98623e807ac2080eb52086015978fc6c9f9bcf8614dc2822306",
   "operations_revision": "ops-r4",
-  "state": "blocked",
-  "upgraded_worker_ids": []
+  "state": "enabled",
+  "upgraded_worker_ids": [
+    "terra-prod-01",
+    "terra-prod-02",
+    "terra-prod-03",
+    "terra-prod-04",
+    "terra-prod-05",
+    "terra-prod-06",
+    "terra-prod-07",
+    "terra-prod-08",
+    "terra-prod-09",
+    "terra-prod-10"
+  ]
 }
