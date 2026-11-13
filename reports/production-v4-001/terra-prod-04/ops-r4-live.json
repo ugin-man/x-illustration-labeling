@@ -1,0 +1,46 @@
+{
+  "worker": "terra-prod-04",
+  "root": "/workspace/production-v4-001-recovery-terra-prod-04-20261113",
+  "job": "prod-0105",
+  "operations_revision": "ops-r4",
+  "manifest_sha256": "1b197e57f1f1e98623e807ac2080eb52086015978fc6c9f9bcf8614dc2822306",
+  "reconciliation": {
+    "remote_accepted_count": 14,
+    "local_unaccepted_ids": [],
+    "recovered_existing_ids": [],
+    "exact_matches": 14
+  },
+  "newly_processed_post_ids": [
+    "2095508061356220722",
+    "2095508308123844975"
+  ],
+  "accepted_after": 16,
+  "checkpoint_head": "7c5507d02b92782a2849c6bc2b964807fd879cc9",
+  "new_view_events": [
+    {
+      "post_id": "2095508061356220722",
+      "media_index": 1,
+      "sha256": "551fdd3ffeba7d958991fbf8bdf6956f061b6e0080660412fd02eebbbfa47bbf",
+      "viewed_at_utc": "2026-11-13T21:49:38.116339+00:00",
+      "timestamp_note": "recorded immediately after successful view",
+      "tool": "functions.view_image",
+      "path": "/workspace/production-v4-001-recovery-terra-prod-04-20261113/.runtime/production-v4-001/prod-0105/images/551fdd3ffeba7d958991fbf8bdf6956f061b6e0080660412fd02eebbbfa47bbf.jpg"
+    },
+    {
+      "post_id": "2095508308123844975",
+      "media_index": 1,
+      "sha256": "50ee6b94b243618917e6ae64b9af801e1dc4e557c2990e23d82964bbee90df75",
+      "viewed_at_utc": "2026-11-13T21:51:19.555906+00:00",
+      "timestamp_note": "recorded immediately after successful view",
+      "tool": "functions.view_image",
+      "path": "/workspace/production-v4-001-recovery-terra-prod-04-20261113/.runtime/production-v4-001/prod-0105/images/50ee6b94b243618917e6ae64b9af801e1dc4e557c2990e23d82964bbee90df75.jpg"
+    }
+  ],
+  "isolation": {
+    "workspace": "/workspace",
+    "loose_images_checked": 662,
+    "archive_images_checked": 659,
+    "excluded_images_found": 0
+  },
+  "recorded_at_utc": "2026-11-13T21:52:59.531461+00:00"
+}
