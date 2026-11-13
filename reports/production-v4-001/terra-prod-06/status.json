@@ -7,15 +7,14 @@
   "completed_job_accepted": 50,
   "completed_remote_head": "9590b59c2601b0c2c7ec66b1bc913504bd1dbac2",
   "current_job": "prod-0141",
-  "current_remote_accepted": 19,
+  "current_remote_accepted": 24,
   "current_local_uncheckpointed": 0,
   "isolation_excluded_images_found": 0,
-  "note": "Attempt to defer multi-cover post for quality review returned Conflict: Post or an identical attachment is deferred; do not reopen it. Existing earlier deferral appears included in affected set; needs CLI review. No current answer submitted. Three unrelated valid answers checkpointed.",
-  "updated_at": "2026-11-13T12:26:55.866381+00:00",
-  "current_remote_head": "c100c17dc6a423b8e63b5cd08db0d64ee0a768c1",
+  "note": "ops-r3 resumed and pending defer succeeded; continuing normal posts.",
+  "updated_at": "2026-11-13T19:26:56.822947+00:00",
+  "current_remote_head": "81cb0e8c3c800f9b2549e706002b7c04f3055670",
   "deferred_posts": [
-    "2095810088640635245"
-  ],
-  "current_post": "2095813383681708133",
-  "current_post_status": "viewed_context_cached_defer_conflict"
+    "2095810088640635245",
+    "2095813383681708133"
+  ]
 }
