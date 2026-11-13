@@ -1,8 +1,8 @@
 {
   "job_id": "prod-0303",
   "worker_id": "terra-prod-08",
-  "checkpointed_posts": 7,
-  "checkpoint_head": "85fedeaf533fa13e483e2cb29998a7557728d260",
-  "recorded_at_utc": "2026-11-13T02:49:18.411022+00:00",
+  "checkpointed_posts": 15,
+  "checkpoint_head": "f1994818128e7f133a00e532ec621313f33b2c00",
+  "recorded_at_utc": "2026-11-13T02:57:37.344037+00:00",
   "audit_note": "投稿2097170285996785856の4表示は直後の記録時刻のみで正確な表示秒は未取得"
 }
