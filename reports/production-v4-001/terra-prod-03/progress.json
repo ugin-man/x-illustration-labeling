@@ -39,7 +39,7 @@
       "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-13T00:23:45.485985+00:00",
+  "recorded_at": "2026-11-13T00:43:53.112215+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -98,5 +98,10 @@
       "2097735028042313797"
     ],
     "context_cache_directory": ".runtime/production-v4-001/prod-0368/context/"
+  },
+  "active_job": {
+    "job_id": "prod-0324",
+    "checkpointed_posts": 19,
+    "checkpoint_head": "14aa28570863af271eade17d91bfd37040b999a5"
   }
 }
