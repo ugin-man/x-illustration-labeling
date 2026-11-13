@@ -1,0 +1,27 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-03",
+  "job_id": "prod-0059",
+  "research_root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
+  "preserved_root": "/workspace/production-v4-001",
+  "fixed_commit": "4d2c98374a1364faf1e2b546a4c460e80e9b2903",
+  "config_sha256": "28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1",
+  "recovery_manifest_commit": "ea52761e04c90aaaf8addc343bc9ba22d16f1bbc",
+  "recovery_manifest_sha256": "c8acca81bd33e5c536e3ae0f323168feeef4a54fee58c1105c5175d993590aa5",
+  "claim_status": "active_job_exists",
+  "restored_accepted": 0,
+  "isolation": {
+    "workspace": "/workspace",
+    "loose_images_checked": 1156,
+    "archive_images_checked": 1152,
+    "excluded_images_found": 0
+  },
+  "context_summary_on_resume": {
+    "posts": 5,
+    "searches": 0,
+    "pages": 0,
+    "elapsed_seconds": 0,
+    "note": "New CLI summary at resumption, not a historical elapsed measurement."
+  },
+  "recorded_at": "2026-11-13T08:25:51.516140+00:00"
+}
