@@ -37,9 +37,15 @@
       "finish_head": "972dd9b135c98e73263557229d8cdd7912b1b3e3",
       "saved_posts": 49,
       "excluded_posts": 1
+    },
+    {
+      "job_id": "prod-0324",
+      "finish_head": "87fe87bf42e1e89a4ff9c06f490a66cb8cd08cbb",
+      "saved_posts": 50,
+      "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-13T00:43:53.112215+00:00",
+  "recorded_at": "2026-11-13T01:20:47.516895+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -64,7 +70,8 @@
     "Popularity metrics incidentally appeared in images or search results; exposure was recorded without values.",
     "The first image view event for post 2097366874136920326 was recorded after execution environment startup; its timestamp is the later recording time.",
     "prod-0369: uncheckpointed post 2097739314381943250 cited a text search result whose URL was an image-search page, contrary to the input restriction. No image-search page or external image was opened. The job was released without checkpointing the result; do not reuse that result or prohibited source. Local context cache and budget are retained under .runtime/production-v4-001/prod-0369/context/; preserve the spent search budget and avoid re-fetching the post text when recovering.",
-    "prod-0368 released before checkpointing post 2097735028042313797: image hair-color flags were set to absent despite a small unresolved figure whose hair was uncertain. Do not reuse this unaccepted result. Nine locally saved results after the eight-post checkpoint were not accepted; preserve each context cache and its search budget during recovery, and do not reuse a stale draft."
+    "prod-0368 released before checkpointing post 2097735028042313797: image hair-color flags were set to absent despite a small unresolved figure whose hair was uncertain. Do not reuse this unaccepted result. Nine locally saved results after the eight-post checkpoint were not accepted; preserve each context cache and its search budget during recovery, and do not reuse a stale draft.",
+    "prod-0369 was briefly reacquired with the previously reported invalid unaccepted local result still present; released without checkpointing again, preserving cached context and search budget."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
@@ -76,7 +83,7 @@
   "recovery_job_prod_0369": {
     "job_id": "prod-0369",
     "status": "released",
-    "release_head": "1223f21e463bcfab8a3a372aa2a86ec13278067c",
+    "release_head": "94a67a0408565ee3b39f6828f6d722c514e32d44",
     "checkpointed_posts": 0,
     "unaccepted_post_id": "2097739314381943250"
   },
@@ -100,8 +107,7 @@
     "context_cache_directory": ".runtime/production-v4-001/prod-0368/context/"
   },
   "active_job": {
-    "job_id": "prod-0324",
-    "checkpointed_posts": 19,
-    "checkpoint_head": "14aa28570863af271eade17d91bfd37040b999a5"
+    "job_id": "prod-0323",
+    "checkpointed_posts": 0
   }
 }
