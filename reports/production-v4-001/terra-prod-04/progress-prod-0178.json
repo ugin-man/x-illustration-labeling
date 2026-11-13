@@ -1,9 +1,10 @@
 {
   "worker": "terra-prod-04",
   "job": "prod-0178",
-  "accepted": 47,
-  "remote_head": "24c44c7a694859908e7761d984a65735eaa52bd7",
+  "status": "completed",
+  "accepted": 50,
+  "remote_head": "f50819fe7f6ba698b30d23eb75faec03d3a74684",
   "isolation_excluded_matches": 0,
-  "recorded_at_utc": "2026-11-13T20:49:45.675573+00:00",
+  "recorded_at_utc": "2026-11-13T20:55:40.399165+00:00",
   "audit_note": "One viewing event was recorded after a transport disconnect; its exact viewing timestamp is unavailable."
 }
