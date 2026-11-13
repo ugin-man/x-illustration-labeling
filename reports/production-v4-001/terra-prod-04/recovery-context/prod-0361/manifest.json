@@ -1,0 +1,116 @@
+{
+  "run_id": "production-v4-001",
+  "job_id": "prod-0361",
+  "worker_id": "terra-prod-04",
+  "disposition": "unaccepted_not_adopted_audit_backup",
+  "recorded_at_utc": "2026-11-13T08:15:45.856965+00:00",
+  "accepted_remote_head": "f0c43b1450ded4225acb32ef9da533643a62fec5",
+  "accepted_posts": 14,
+  "remote_status_observed": "expired",
+  "unaccepted_local_count": 3,
+  "draft_note": "draft.json equals saved unaccepted answer 2097693567594700914 byte-for-byte; no separate unsaved draft found",
+  "posts": [
+    {
+      "post_id": "2097693332596220255",
+      "disposition": "unaccepted_not_adopted",
+      "context_fetch_state": "available",
+      "searches": 1,
+      "pages": 0,
+      "elapsed_seconds_at_cli_summary": 12.337,
+      "elapsed_basis": "completed CLI summary",
+      "budget_file_present": true,
+      "deadline_unix": 1794540348.0236006,
+      "started_at_unix": 1794540288.0236006
+    },
+    {
+      "post_id": "2097693565485039980",
+      "disposition": "unaccepted_not_adopted",
+      "context_fetch_state": "available",
+      "searches": 0,
+      "pages": 0,
+      "elapsed_seconds_at_cli_summary": 0,
+      "elapsed_basis": "no search or page reserved; recorded 0",
+      "budget_file_present": false,
+      "deadline_unix": null,
+      "budget_note": "No budget file exists; recorded searches 0, pages 0. Do not create a replacement."
+    },
+    {
+      "post_id": "2097693567594700914",
+      "disposition": "unaccepted_not_adopted",
+      "context_fetch_state": "available",
+      "searches": 1,
+      "pages": 1,
+      "elapsed_seconds_at_cli_summary": 26.479,
+      "elapsed_basis": "completed CLI summary",
+      "budget_file_present": true,
+      "deadline_unix": 1794540507.1427062,
+      "started_at_unix": 1794540447.1427062,
+      "known_issue": "Saved work_form multiple_illustrations may be incorrect for a crop and accessory variant of the same work; do not adopt without independent recovery review."
+    }
+  ],
+  "files": [
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/results/2097693332596220255.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-unaccepted/prod-0361/2097693332596220255.json",
+      "sha256": "60f88937050a463bacc4113e968946bac21b311cd94884d62c272e64d47bed70",
+      "bytes": 7817
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/context/2097693332596220255.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-context/prod-0361/2097693332596220255.json",
+      "sha256": "e8b4f3e4cb662369b8b6728ec646b5b532b2bbfe3bfa0a0f7b96e9ce01b1df36",
+      "bytes": 533
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/context/2097693332596220255-budget.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-context/prod-0361/2097693332596220255-budget.json",
+      "sha256": "29eab2a13785bbf0d3f4aeffdd1deafe4353f51757177c0d881f2ec0b3449060",
+      "bytes": 179
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/results/2097693565485039980.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-unaccepted/prod-0361/2097693565485039980.json",
+      "sha256": "bf94ee2868c7834b35536032824b061e9f0db890dcbafdaef6198216a0052bec",
+      "bytes": 11016
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/context/2097693565485039980.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-context/prod-0361/2097693565485039980.json",
+      "sha256": "4e6860f11635801d69bebb630535fb73241d460900055dd930405a20a31fc0d5",
+      "bytes": 490
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/results/2097693567594700914.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-unaccepted/prod-0361/2097693567594700914.json",
+      "sha256": "f541c751ce8afe1f142e547b5f54599ddf5a4a0929bb3983eb357b56742607e7",
+      "bytes": 9114
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/context/2097693567594700914.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-context/prod-0361/2097693567594700914.json",
+      "sha256": "71c750393ca014c9caf685bf6462d6d8e40e2b0cd938f25625c270ed6e7cd9c3",
+      "bytes": 852
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/context/2097693567594700914-budget.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-context/prod-0361/2097693567594700914-budget.json",
+      "sha256": "bb498aaa64553d848126a7265323cf175c4d758dae6c922de4a1bd2d924b5ab6",
+      "bytes": 203
+    },
+    {
+      "source_path": ".runtime/production-v4-001/prod-0361/draft.json",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-unaccepted/prod-0361/draft.json",
+      "sha256": "f541c751ce8afe1f142e547b5f54599ddf5a4a0929bb3983eb357b56742607e7",
+      "bytes": 9114
+    },
+    {
+      "source_path": "reports/production-v4-001/terra-prod-04/view-events.jsonl",
+      "source_detail": "three exact original lines selected for target post IDs",
+      "report_path": "reports/production-v4-001/terra-prod-04/recovery-context/prod-0361/view-events.jsonl",
+      "sha256": "2410f823a0f4922e5545d028c17dd4221f7d083f1f8f7b0012b7ca4a43fba133",
+      "bytes": 867
+    }
+  ],
+  "search_evidence_note": "Cache and original budget ledgers preserved. End-of-search elapsed values are from recorded CLI summary and corresponding saved answer; raw search output is not preserved as a local file. External text search result popularity metrics were exposed for 2097693332596220255; no metrics are copied.",
+  "safety_note": "No images, credentials, lease or dispatch tokens, or popularity numbers included. Do not treat archived answers as accepted."
+}
