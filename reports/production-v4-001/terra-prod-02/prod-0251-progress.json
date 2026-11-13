@@ -2,9 +2,9 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-02",
   "job_id": "prod-0251",
-  "checkpointed_posts": 24,
+  "checkpointed_posts": 31,
   "post_count": 50,
-  "checkpoint_head": "3e2df64dea06d1b35b132aed8e001415a6718415",
-  "recorded_at": "2026-11-13T04:34:40.129272+00:00",
+  "checkpoint_head": "8518dae7557ba7b26550f28c1901cae1ad3eca21",
+  "recorded_at": "2026-11-13T04:45:17.631385+00:00",
   "audit_note": "A next-returned image was found to contain a page screenshot; engagement indicators appeared incidentally. The screenshot was not used as research input and no indicator values were recorded."
 }
