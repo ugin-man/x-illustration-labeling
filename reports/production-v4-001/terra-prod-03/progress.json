@@ -55,9 +55,15 @@
       "finish_head": "0044855cc505d8da89069ac6cef3a1c393cdddf3",
       "saved_posts": 50,
       "excluded_posts": 0
+    },
+    {
+      "job_id": "prod-0045",
+      "finish_head": "fa8aaaac33b415d061c4b262391149cd45ea5a5d",
+      "saved_posts": 50,
+      "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-13T03:48:24.808964+00:00",
+  "recorded_at": "2026-11-13T04:44:11.829166+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -90,7 +96,9 @@
     "prod-0323 completed with individual text failures recorded without retry; incidental popularity exposure flagged without values.",
     "prod-0326 released without checkpointing two local results because post 2097370651808215439 excluded 3D virtual avatars from the illustration assessment on an uncertain interpretation. Reassess that post; do not reuse its unaccepted labels. The subsequent post 2097370927168393584 was viewed and its text fetch returned 404, but no result was saved. Preserve context caches and budgets during recovery; do not repeat the text fetch.",
     "prod-0095: individual focal text failures and inaccessible linked page recorded as technical failures. Incidental popularity exposure in search results flagged without values; image-search results were not used as evidence.",
-    "prod-0095: an erroneous duplicate view-event was removed before publication; no second view of that prior image occurred. The actual view of post 2095436089058369595 was recorded after correction, so its event timestamp is recording time, not the exact view time."
+    "prod-0095: an erroneous duplicate view-event was removed before publication; no second view of that prior image occurred. The actual view of post 2095436089058369595 was recorded after correction, so its event timestamp is recording time, not the exact view time.",
+    "prod-0045: individual post text failures (404 or timeout) recorded without retries; incidental popularity or sales indicator exposure recorded in relevant review flags without values.",
+    "prod-0045: first attempted image display for post 2094803443110334469 produced truncated output during context compaction; a subsequent successful display was logged with its actual recording time."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
