@@ -1,0 +1,13 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-06",
+  "research_root": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+  "preserved_original_root": "/workspace/production-v4-001",
+  "commit": "4d2c98374a1364faf1e2b546a4c460e80e9b2903",
+  "config_sha256": "28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1",
+  "source_manifest_sha256": "6fd12b6a02b78fa0d326acf28f88e4d448ed6a9d812459f2c671ecd970c752e3",
+  "context_files_verified": 6,
+  "claimed_job": "prod-0211",
+  "restored_posts": 0,
+  "isolation": {"workspace": "/workspace", "loose_images_checked": 621, "archive_images_checked": 617, "excluded_images_found": 0}
+}
