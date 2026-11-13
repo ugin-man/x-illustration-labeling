@@ -7,12 +7,12 @@
   "completed_job_accepted": 50,
   "completed_remote_head": "9590b59c2601b0c2c7ec66b1bc913504bd1dbac2",
   "current_job": "prod-0141",
-  "current_remote_accepted": 11,
+  "current_remote_accepted": 16,
   "current_local_uncheckpointed": 0,
   "isolation_excluded_images_found": 0,
-  "note": "Continued normal posts after recovery; one context-history post remains deferred.",
-  "updated_at": "2026-11-13T12:03:41.090396+00:00",
-  "current_remote_head": "b92c19138a1be9ac745a13cff29c1e8a84bb755a",
+  "note": "Continuing normal posts; one context-history post remains deferred.",
+  "updated_at": "2026-11-13T12:15:32.182701+00:00",
+  "current_remote_head": "78de31b837ef5a983a523cf5b985d0d1b6fee17b",
   "deferred_posts": [
     "2095810088640635245"
   ]
