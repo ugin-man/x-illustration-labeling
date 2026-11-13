@@ -39,7 +39,7 @@
       "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-12T23:59:55.376298+00:00",
+  "recorded_at": "2026-11-13T00:23:45.485985+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -63,7 +63,8 @@
     "Individual post text failures were recorded without retry.",
     "Popularity metrics incidentally appeared in images or search results; exposure was recorded without values.",
     "The first image view event for post 2097366874136920326 was recorded after execution environment startup; its timestamp is the later recording time.",
-    "prod-0369: uncheckpointed post 2097739314381943250 cited a text search result whose URL was an image-search page, contrary to the input restriction. No image-search page or external image was opened. The job was released without checkpointing the result; do not reuse that result or prohibited source. Local context cache and budget are retained under .runtime/production-v4-001/prod-0369/context/; preserve the spent search budget and avoid re-fetching the post text when recovering."
+    "prod-0369: uncheckpointed post 2097739314381943250 cited a text search result whose URL was an image-search page, contrary to the input restriction. No image-search page or external image was opened. The job was released without checkpointing the result; do not reuse that result or prohibited source. Local context cache and budget are retained under .runtime/production-v4-001/prod-0369/context/; preserve the spent search budget and avoid re-fetching the post text when recovering.",
+    "prod-0368 released before checkpointing post 2097735028042313797: image hair-color flags were set to absent despite a small unresolved figure whose hair was uncertain. Do not reuse this unaccepted result. Nine locally saved results after the eight-post checkpoint were not accepted; preserve each context cache and its search budget during recovery, and do not reuse a stale draft."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
@@ -78,5 +79,24 @@
     "release_head": "1223f21e463bcfab8a3a372aa2a86ec13278067c",
     "checkpointed_posts": 0,
     "unaccepted_post_id": "2097739314381943250"
+  },
+  "recovery_job_prod_0368": {
+    "job_id": "prod-0368",
+    "status": "released",
+    "release_head": "82a1925a5126c0966e2cb82925cfbd9adadf561f",
+    "checkpoint_head": "1307faf680423997f66f111d58578cdba6ee80d5",
+    "checkpointed_posts": 8,
+    "unaccepted_post_ids": [
+      "2097734270806847851",
+      "2097734271104675872",
+      "2097734762098209076",
+      "2097734763536879970",
+      "2097734768310059218",
+      "2097734771896197508",
+      "2097735024141566323",
+      "2097735027278917950",
+      "2097735028042313797"
+    ],
+    "context_cache_directory": ".runtime/production-v4-001/prod-0368/context/"
   }
 }
