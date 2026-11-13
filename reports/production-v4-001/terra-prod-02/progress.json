@@ -1,9 +1,10 @@
 {
   "worker": "terra-prod-02",
-  "job": "prod-0327",
-  "status": "completed",
-  "remote_accepted": 50,
-  "remote_head": "274fab5e5c673743127a07b4ec807cc69b959dc5",
-  "recorded_at": "2026-11-13T20:14:08Z",
-  "notice": "All 50 posts checkpointed and job finished; proceeding to next claim."
+  "job": "prod-0410",
+  "remote_accepted": 0,
+  "post_id": "2098078433322692940",
+  "status": "stopped_queue_error",
+  "recorded_at": "2026-11-13T20:16:50Z",
+  "error": "Push was not accepted; no reservation was acquired",
+  "notice": "First image displayed and audit retained. Context fetch returned queue error; no local matching context cache found, no result saved. No repeated context fetch."
 }
