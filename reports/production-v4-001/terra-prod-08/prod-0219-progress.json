@@ -1,10 +1,11 @@
 {
   "job": "prod-0219",
   "worker": "terra-prod-08",
-  "checkpoint_accepted_posts": 45,
-  "checkpoint_head": "5dce213c086a1ffef8a4e765f046e55d46433095",
-  "recorded_at_utc": "2026-11-13T12:49:38.099851+00:00",
-  "status": "ops_r2_running",
+  "checkpoint_accepted_posts": 50,
+  "checkpoint_head": "e8dbc154ffdf1156e5fbd450fe6c972a5e230ee0",
+  "recorded_at_utc": "2026-11-13T12:59:50.550397+00:00",
+  "status": "completed",
   "uncheckpointed_saved_posts": 0,
-  "isolation_excluded_images_found": 0
+  "isolation_excluded_images_found": 0,
+  "finish_head": "c1dd549839c03cde370ddfd1c479c4171f31c819"
 }
