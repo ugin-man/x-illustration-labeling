@@ -1,0 +1,29 @@
+{
+  "status": "OPS_R3_RUNNING",
+  "worker": "terra-prod-01",
+  "job": "prod-0115",
+  "new_posts": [
+    "2095579996261949687",
+    "2095580000070361414"
+  ],
+  "accepted_before": 21,
+  "accepted_after": 23,
+  "checkpoint_remote_head": "61d740a26f5bdd73d98897128ee3c604fa8af2b5",
+  "actual_image_tool": "functions.view_image",
+  "view_event_ids": [
+    "90872686-81cd-441d-a807-5b3c66fe8b4e",
+    "a47ef92d-3cce-45e3-b499-852e3c7be3a5",
+    "5e2b5efb-937c-40a6-8e19-da628f8069a5"
+  ],
+  "isolation": {
+    "loose_images_checked": 400,
+    "archive_images_checked": 398,
+    "excluded_images_found": 0
+  },
+  "recovered_defer": {
+    "post_id": "2095579511664624029",
+    "reason": "needs_quality_review",
+    "status": "deferred"
+  },
+  "recorded_at": "2026-11-13T19:15:12.120862+00:00"
+}
