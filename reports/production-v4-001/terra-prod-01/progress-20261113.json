@@ -6,7 +6,7 @@
   "checkpoint_accepted_posts": 50,
   "checkpoint_head": "8e3c55bedbedbb74cac3c5e8abe42e2cd2a3c9f3",
   "recovery": "environment restored; same active ownership verified; six pending results and context, draft, and viewing events matched preserved backup; CLI checkpoint succeeded; isolation excluded matches zero",
-  "updated_at": "2026-11-13T13:24:18.548504+00:00",
+  "updated_at": "2026-11-13T14:04:55.806199+00:00",
   "finish_head": "cabaeb8091c694bafcf7d4791adf9029825b98c0",
   "current_job": "prod-0115",
   "current_checkpoint_accepted_posts": 21,
@@ -49,6 +49,7 @@
     "post_id": "2095579511664624029",
     "reason": "needs_quality_review",
     "observation": "next succeeded and image was viewed once; defer returned Conflict: Post or an identical attachment is deferred; do not reopen it; a subsequent next returned the same post; no second image display or result",
-    "recovery": "preserve draft and view event; review CLI blocked-state inconsistency before continuing"
+    "recovery": "preserve draft and view event; review CLI blocked-state inconsistency before continuing",
+    "analysis": "ops_runtime.worker defer computes affected including previously deferred posts, then calls sync_one on each; ops_runtime.queue sync_context rejects existing blocked post. Existing earlier defer 2095577482703573034 remains; new defer is not confirmed and next returned the target again. No safe CLI-only bypass established."
   }
 }
