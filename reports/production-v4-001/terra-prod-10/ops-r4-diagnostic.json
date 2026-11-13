@@ -1,0 +1,82 @@
+{
+  "state": "OPS_R4_STOPPED",
+  "worker_id": "terra-prod-10",
+  "research_root": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
+  "job_id": "prod-0244",
+  "recorded_at": "2026-11-13T21:23:45.054417+00:00",
+  "remote_accepted_count": 15,
+  "remote_head": "20070c4e39e775bcb710e209512629088639a798",
+  "local_result_count": 15,
+  "local_results": [
+    {
+      "post_id": "2096708455025242253",
+      "sha256": "19909d6e3ccf2672482b1b1c81f4ec4e80bcfd233f6bb158ac3678adb980173c"
+    },
+    {
+      "post_id": "2096708708579659829",
+      "sha256": "a6d1588b0547c67f5335f1d9942b04e53526b35122113de23e9efd8085aef771"
+    },
+    {
+      "post_id": "2096708714401304964",
+      "sha256": "bf26734ede8ead00b3b979f0be2ea3eb80e51d9620852e5408eab83582b867ae"
+    },
+    {
+      "post_id": "2096708940004552731",
+      "sha256": "2e6ad09becaf0e90d7bab54be1c8b9eda0da2916ba0147b507207ca0fc4ced95"
+    },
+    {
+      "post_id": "2096709208024781150",
+      "sha256": "a5fc84ae31c039f5f15090dc5795e4101ea4a23865a0491ea73118c2c812079f"
+    },
+    {
+      "post_id": "2096709469938004344",
+      "sha256": "04d9da8d19b07492306b5f3efe00aa21498ba427397517fffbc39d8bbbeb1e30"
+    },
+    {
+      "post_id": "2096709708187054195",
+      "sha256": "82ee45a302b79ca4fa44d3826b210eaffa1f1e554f2de448e0dc0b3c8cceb804"
+    },
+    {
+      "post_id": "2096709708916965726",
+      "sha256": "22e54658cc24944bb1a14ba37a45b26f1865263054848397a17f4457df2cdec8"
+    },
+    {
+      "post_id": "2096709710103839044",
+      "sha256": "6ab674e703944ee9224256f2f969149ce7abe1132f93d5ad4f3c6aecd9e06a6f"
+    },
+    {
+      "post_id": "2096709716110184511",
+      "sha256": "817d7229b73e63b666c6f00ce5f682800f26175a7b19928c6602f2f3763f5b7c"
+    },
+    {
+      "post_id": "2096709971136454983",
+      "sha256": "a91b0887b8082ba4fe62c39f57147ccca1c6a0df3c777316a1818d65b52625c3"
+    },
+    {
+      "post_id": "2096709979160121678",
+      "sha256": "dbd93d33e773321adbd9b5c0c46aea8ddc7763ed32ea7054c6ca4126ee25442f"
+    },
+    {
+      "post_id": "2096710212954771725",
+      "sha256": "639f047bfc5c75adc7ec04ab4c0de80e8501186872b6ac42c6e111d4e98aba10"
+    },
+    {
+      "post_id": "2096710471667568947",
+      "sha256": "58472d2a52ab7c8fc88cbc53f269ccb82b813219e0069eadae2dee235fbac10e"
+    },
+    {
+      "post_id": "2096710476466147653",
+      "sha256": "5466f974f8c5f8e4972839d5f49e39c90c0d5032a104bae1e9b138ce2d23d02d"
+    }
+  ],
+  "local_uncheckpointed_count": 0,
+  "draft": {
+    "exists": true,
+    "post_id": "2096710476466147653",
+    "sha256": "5466f974f8c5f8e4972839d5f49e39c90c0d5032a104bae1e9b138ce2d23d02d",
+    "already_checkpointed": true
+  },
+  "running_research_cli_processes": 0,
+  "current_job_errors": [],
+  "note": "Stopped at user request; latest save and checkpoint succeeded; no new post started."
+}
