@@ -1,7 +1,7 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "remote_accepted": 22,
-  "remote_head": "ee09f7b75a8aa1c039065d3f3f89896a8c7070d8",
-  "notice": "Three successive individual body fetches returned HTTP 404; image observations and failures checkpointed; no body refetch."
+  "remote_accepted": 26,
+  "remote_head": "391add3e3abf81de1f7508c79db4224a08da3aca",
+  "notice": "Four additional results checkpointed. Body fetch recovered; one subsequent post returned individual HTTP 404. Full view-events log restored after earlier report truncation."
 }
