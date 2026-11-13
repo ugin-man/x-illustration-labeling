@@ -1,0 +1,17 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-09",
+  "job_id": "prod-0149",
+  "post_id": "2095884922972193015",
+  "position": 34,
+  "stop_reason": "画像表示後、担当モデルが内容を理由に分類を進められないと判断し、model_refusal を指定して exclude を試みたところ、自動承認審査が拒否したため停止。単なる属性の判別困難として処理したものではない。",
+  "observed_refusal": "画像ツールは正常に画像を返し、ツール拒否はなかった。exclude 試行前の実ツール履歴に独立したモデル拒否応答は記録されておらず、明示的なモデルのポリシー拒否イベントとしては確認できない。モデルの内部判断と確認可能な拒否イベントを区別する。",
+  "automatic_review": "exclude は自動承認審査で拒否され、実行されていない。理由の要旨: 画像ツールは正常終了し履歴にモデル拒否が示されず、投稿全体の除外は拒否時に限定された承認の範囲外の不可逆なリモート変更。迂回を禁止。",
+  "remote_checkpoint_head": "c3bd9935bb244547c0e34e0c87819c6d6abfdd1b",
+  "remote_checkpointed_posts": 33,
+  "local_saved_result_files": 33,
+  "local_uncheckpointed_saved_results": 0,
+  "current_draft": "当該投稿の未完了 draft が残る。viewed は false、finished_at は null。画像は実際に1回表示され、その閲覧イベントは別途報告済み。",
+  "current_queue_status": "expired; 最終確認時の所有記録は terra-prod-09、完了33件。",
+  "note": "投稿の除外・分類・完了は行っていない。prod-0298 の過去の hold は別件。"
+}
