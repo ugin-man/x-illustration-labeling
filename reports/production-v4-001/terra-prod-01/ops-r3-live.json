@@ -25,5 +25,22 @@
     "reason": "needs_quality_review",
     "status": "deferred"
   },
-  "recorded_at": "2026-11-13T19:15:12.120862+00:00"
+  "recorded_at": "2026-11-13T19:15:12.120862+00:00",
+  "later_checkpoint": {
+    "post_id": "2095580005535535217",
+    "accepted_after": 24,
+    "remote_head": "9435ccdde73b7577427e379603739ae0f1bc785a",
+    "view_event_id": "40fc3b7c-df86-41d1-8aed-ec2483d414e8",
+    "recorded_at": "2026-11-13T19:18:36.840197+00:00"
+  },
+  "consecutive_context_failures": {
+    "source": "api.fxtwitter.com",
+    "code": 404,
+    "count": 3,
+    "post_ids": [
+      "2095579996261949687",
+      "2095580000070361414",
+      "2095580005535535217"
+    ]
+  }
 }
