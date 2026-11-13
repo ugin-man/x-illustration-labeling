@@ -1,0 +1,21 @@
+{
+  "job_id": "prod-0374",
+  "status": "finished",
+  "accepted_posts": 50,
+  "recovery": {
+    "post_id": "2097779812052160806",
+    "reserved_and_executed_queries_differ": true,
+    "searches": 1,
+    "pages": 0,
+    "elapsed_seconds_at_research_end": 14.668,
+    "unmatched_search_used_as_source": false,
+    "review_flag_recorded": true
+  },
+  "prior_result_review": [
+    {
+      "post_id": "2097778269106151859",
+      "field": "technique",
+      "note": "受理済み結果はunknown。根拠文が元の描画手法を確定できないという理由で、通常の絵はデジタルとするマニュアルとの整合について再確認が必要。受理済み結果は変更していない。"
+    }
+  ]
+}
