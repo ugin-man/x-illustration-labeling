@@ -1,0 +1,9 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-04",
+  "job_id": "prod-0205",
+  "post_count": 50,
+  "status": "finished",
+  "remote_head": "ec9b9a34ef497f67291d12a0a926610d3a61bfb1",
+  "recorded_at_utc": "2026-11-13T03:03:01.123902+00:00"
+}
