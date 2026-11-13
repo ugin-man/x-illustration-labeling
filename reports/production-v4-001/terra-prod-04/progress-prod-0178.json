@@ -1,8 +1,8 @@
 {
   "worker": "terra-prod-04",
   "job": "prod-0178",
-  "accepted": 8,
-  "remote_head": "743460ace226e3e35c2c7cc774dfda652a2d013c",
+  "accepted": 13,
+  "remote_head": "b9dd3e4cff77aeac17e0cffff64a848a2a78505c",
   "isolation_excluded_matches": 0,
-  "recorded_at_utc": "2026-11-13T19:35:24.612193+00:00"
+  "recorded_at_utc": "2026-11-13T19:43:55.952674+00:00"
 }
