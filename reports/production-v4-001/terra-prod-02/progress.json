@@ -1,7 +1,7 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "remote_accepted": 11,
-  "remote_head": "3fd28f7d0b921d752cf44195d8459ce3551a5e73",
-  "notice": "Three additional results checkpointed on time threshold."
+  "remote_accepted": 16,
+  "remote_head": "6e05a555e24712c71f502deefa5a4057dc05d0b1",
+  "notice": "Five additional results checkpointed. One interrupted body fetch had no cache and was recorded as technical failure without refetch."
 }
