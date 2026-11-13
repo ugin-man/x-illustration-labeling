@@ -1,0 +1,248 @@
+{
+  "terra-prod-01": {
+    "threadId": "6af5f241-4e00-8191-9a7d-c9889091c088",
+    "final": "最新版の導入と `verify_revision` は成功しました。controlは `blocked` のままです。\n\nManifest SHA-256：`5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`\n\n既存results 36件とdraft `2096851759499223486` を保持し、開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-03023366-62e9-4a07-9f1e-0b37ebb1183b",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"verify_revision\": \"success\", \"batch_control\": \"blocked\", \"results\": 36, \"draft_post_id\": \"2096851759499223486\"}\n"
+      },
+      {
+        "id": "exec-62366177-3a40-4518-aa2b-3a238d4a2772",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 467, \"archive_images_checked\": 465, \"excluded_images_found\": 0}\n"
+      },
+      {
+        "id": "exec-5f36990d-cdad-4f43-b166-f10fad18ed41",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"manifest\": {\"base_commit\": \"4d2c98374a1364faf1e2b546a4c460e80e9b2903\", \"base_config_path\": \"runs/production-v4-001.json\", \"base_config_sha256\": \"28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1\", \"base_run_id\": \"production-v4-001\", \"classification_contract_sha256\": \"6aefd96c31d8c1b253feaf44ed36faf420755108bbb5c944c03e725f82725893\", \"classification_manual_sha256\": \"e2ffe387a62db75bede774e55313aae7c0180c353650241a507d09969cf68a16\", \"files_sha256\": {\"docs/WORKER_OPERATIONS_R5.md\": \"00ee6e46dee5694ad914664ec138389851b2650243470a113f90258b0b79e2a2\", \"ops_runtime_r5/__init__.py\": \"0348926b7932fdf89d87365c7033f66d28ac5cdd8d40a4082e4b656818481983\", \"ops_runtime_r5/control.py\": \"34e0e81e994b96e891a8282029c68428f05278c2a247a071943d1f722465c1a4\", \"ops_runtime_r5/queue.py\": \"34a236cda40d463cc9718fb1fed2b865d039ffbcb2e3792c090438595bccf439\", \"ops_runtime_r5/reconcile.py\": \"b8cbe40365a07b8319858e0bda4e3295d14fa503e6b4b9b3fc759c14cccbd0e3\", \"ops_runtime_r5/transport.py\": \"e7e30a198c129c1dbf498fc58cb475230ce6a4b7a66956be04fa7930682bc75c\", \"ops_runtime_r5/worker.py\": \"ee84b11fc278f6e6fc9583de49bc667b0de23ca5109cb360c685d09cc0684bad\"}, \"operations_revision\": \"ops-r5\", \"worker_manua"
+      }
+    ]
+  },
+  "terra-prod-02": {
+    "threadId": "6af5f247-ce7c-8191-be1c-9d7eef4a40b0",
+    "final": "最終候補への更新と `verify_revision` が成功しました。manifest SHA-256 は `5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`、controlは `blocked` です。\n\n既存results 17件とdraft `2098081200246259954` を保持し、開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-1df33d8d-2e5f-4ee6-b1f5-79cb3900ca50",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "verify_revision: success\n"
+      },
+      {
+        "id": "exec-2e7eed41-b13d-48a7-bacd-33436572a1e5",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "verify_revision: success\n"
+      },
+      {
+        "id": "exec-84f4aebb-41a3-4208-a683-b1d714dd7c45",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 1030, \"archive_images_checked\": 1027, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  },
+  "terra-prod-03": {
+    "threadId": "6af5f24e-1ac8-8191-aa25-2907975600a2",
+    "final": "最新版の導入と`verify_revision`が成功しました。controlは`blocked`のままです。\n\nmanifest SHA-256：`5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`\n\n既存結果43件とdraft `2097079964818637108`の保持を確認しました。開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-c0975f23-227c-4228-907a-c42ea090cea8",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
+        "exitCode": 0,
+        "output": "verify_revision=success control=blocked\n"
+      },
+      {
+        "id": "exec-1bd154cc-8167-45c7-a93e-7beef5fbbb17",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
+        "exitCode": 0,
+        "output": "verify_revision: {'manifest': {'base_commit': '4d2c98374a1364faf1e2b546a4c460e80e9b2903', 'base_config_path': 'runs/production-v4-001.json', 'base_config_sha256': '28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1', 'base_run_id': 'production-v4-001', 'classification_contract_sha256': '6aefd96c31d8c1b253feaf44ed36faf420755108bbb5c944c03e725f82725893', 'classification_manual_sha256': 'e2ffe387a62db75bede774e55313aae7c0180c353650241a507d09969cf68a16', 'files_sha256': {'docs/WORKER_OPERATIONS_R5.md': '00ee6e46dee5694ad914664ec138389851b2650243470a113f90258b0b79e2a2', 'ops_runtime_r5/__init__.py': '0348926b7932fdf89d87365c7033f66d28ac5cdd8d40a4082e4b656818481983', 'ops_runtime_r5/control.py': '34e0e81e994b96e891a8282029c68428f05278c2a247a071943d1f722465c1a4', 'ops_runtime_r5/queue.py': '34a236cda40d463cc9718fb1fed2b865d039ffbcb2e3792c090438595bccf439', 'ops_runtime_r5/reconcile.py': 'b8cbe40365a07b8319858e0bda4e3295d14fa503e6b4b9b3fc759c14cccbd0e3', 'ops_runtime_r5/transport.py': 'e7e30a198c129c1dbf498fc58cb475230ce6a4b7a66956be04fa7930682bc75c', 'ops_runtime_r5/worker.py': 'ee84b11fc278f6e6fc9583de49bc667b0de23ca5109cb360c685d09cc0684bad'}, 'operations_revision': 'ops-r"
+      },
+      {
+        "id": "exec-f4e2d4ab-783a-4fa3-8991-d8be77bcdd3e",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 1340, \"archive_images_checked\": 1336, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  },
+  "terra-prod-04": {
+    "threadId": "6af5f254-be94-8191-ae23-b503546d80ab",
+    "final": "更新候補の検証に成功しました。manifest SHA-256は `5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`、controlは `blocked` です。\n\n既存resultsとdraftを保持し、開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-346129a2-a16c-42c7-859e-cc6597bdf9f4",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-04-20261113",
+        "exitCode": 0,
+        "output": "revision_verified\ncontrol=enabled\nmanifest_sha256=5a5ca44e20c28b45941937f5e1f699fa98df50bae9895080ff8f64718be0297d\n"
+      },
+      {
+        "id": "exec-c9e92f5e-d64f-4062-be0d-a176be78d7e0",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-04-20261113",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 662, \"archive_images_checked\": 659, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  },
+  "terra-prod-05": {
+    "threadId": "6af5f25a-e028-8191-8823-bcebdec4c09b",
+    "final": "最新版の準備が完了しました。開始指示まで待機します。\n\n- commit：`8aa2fc34adcf794a49112b765f539b8f2c05e2dd`\n- manifest SHA-256：`5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`\n- `verify_revision` 成功、controlは `blocked`\n- 既存results 42件とdraft `2096724384975380966` を保持。新マニュアルを読了しました。",
+    "checks": [
+      {
+        "id": "exec-b5364053-f9c4-4cda-8906-ac7bd6a27af1",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "verify_revision=success\nbatch_control=blocked\nresults_count=42\ndraft_post=2096724384975380966\n"
+      },
+      {
+        "id": "exec-f46757bb-739c-426d-99c2-f60d8ce47f18",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{'manifest': {'base_commit': '4d2c98374a1364faf1e2b546a4c460e80e9b2903', 'base_config_path': 'runs/production-v4-001.json', 'base_config_sha256': '28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1', 'base_run_id': 'production-v4-001', 'classification_contract_sha256': '6aefd96c31d8c1b253feaf44ed36faf420755108bbb5c944c03e725f82725893', 'classification_manual_sha256': 'e2ffe387a62db75bede774e55313aae7c0180c353650241a507d09969cf68a16', 'files_sha256': {'docs/WORKER_OPERATIONS_R5.md': '00ee6e46dee5694ad914664ec138389851b2650243470a113f90258b0b79e2a2', 'ops_runtime_r5/__init__.py': '0348926b7932fdf89d87365c7033f66d28ac5cdd8d40a4082e4b656818481983', 'ops_runtime_r5/control.py': '34e0e81e994b96e891a8282029c68428f05278c2a247a071943d1f722465c1a4', 'ops_runtime_r5/queue.py': '34a236cda40d463cc9718fb1fed2b865d039ffbcb2e3792c090438595bccf439', 'ops_runtime_r5/reconcile.py': 'b8cbe40365a07b8319858e0bda4e3295d14fa503e6b4b9b3fc759c14cccbd0e3', 'ops_runtime_r5/transport.py': 'e7e30a198c129c1dbf498fc58cb475230ce6a4b7a66956be04fa7930682bc75c', 'ops_runtime_r5/worker.py': 'ee84b11fc278f6e6fc9583de49bc667b0de23ca5109cb360c685d09cc0684bad'}, 'operations_revision': 'ops-r5', 'worker_manua"
+      },
+      {
+        "id": "exec-fd99139f-fd57-4b8f-81d4-bfe19690221d",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 731, \"archive_images_checked\": 729, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  },
+  "terra-prod-06": {
+    "threadId": "6af5f261-b8a8-8191-b467-d98a289940bd",
+    "final": "batch版の最終候補を反映し、`verify_revision` が成功しました。controlは **blocked**、既存結果とdraftは保持しています。\n\nmanifest SHA-256: `5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`\n\n開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-c23c35c3-f2fc-41e5-9932-54e52f45f5f4",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+        "exitCode": 0,
+        "output": "updated four files; manifest hashes match; blocked\nverify_revision succeeded\n"
+      },
+      {
+        "id": "exec-7b23d0c0-379c-4157-914e-640d29bc0730",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+        "exitCode": 0,
+        "output": "verify_revision succeeded\n"
+      },
+      {
+        "id": "exec-aedb8b32-5c12-4a6a-a152-f8700a3ac45b",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 763, \"archive_images_checked\": 759, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  },
+  "terra-prod-07": {
+    "threadId": "6af5f268-0764-8191-9186-19e563bb1081",
+    "final": "最新版のbatch候補を導入し、revision検証に成功しました。controlは `blocked` です。\n\nmanifest SHA-256: `5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`\n\n`prod-0214` の既存結果9件、未checkpointの2件、draftを保持しています。開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-84aea09e-54c8-4f7e-9984-3c58a682f1b7",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "verification_succeeded control blocked\n"
+      },
+      {
+        "id": "exec-c5518b19-90a7-469c-b54b-106c90e6d4cc",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "verification_succeeded dict\n"
+      },
+      {
+        "id": "exec-f289001d-9c7e-48c9-b55e-18e5bc1d7311",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 676, \"archive_images_checked\": 673, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  },
+  "terra-prod-08": {
+    "threadId": "6af5f26e-368c-8191-9996-4c21cd718089",
+    "final": "最終候補 `8aa2fc34adcf794a49112b765f539b8f2c05e2dd` の指定4ファイルを更新し、`verify_revision`に成功しました。controlは`blocked`です。\n\nmanifest SHA-256：`5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`\n\n既存results 38件とdraft `2097870578116141410`を保持しています。開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-3ab45bb4-b4ba-4ee9-af7f-776de2c4ae7f",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"verified\": true, \"batch_state\": \"blocked\", \"manifest_sha256\": \"5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11\"}\n"
+      },
+      {
+        "id": "exec-f0a4d4b1-2cf6-416b-9611-d3a42892bf21",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{'manifest': {'base_commit': '4d2c98374a1364faf1e2b546a4c460e80e9b2903', 'base_config_path': 'runs/production-v4-001.json', 'base_config_sha256': '28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1', 'base_run_id': 'production-v4-001', 'classification_contract_sha256': '6aefd96c31d8c1b253feaf44ed36faf420755108bbb5c944c03e725f82725893', 'classification_manual_sha256': 'e2ffe387a62db75bede774e55313aae7c0180c353650241a507d09969cf68a16', 'files_sha256': {'docs/WORKER_OPERATIONS_R5.md': '00ee6e46dee5694ad914664ec138389851b2650243470a113f90258b0b79e2a2', 'ops_runtime_r5/__init__.py': '0348926b7932fdf89d87365c7033f66d28ac5cdd8d40a4082e4b656818481983', 'ops_runtime_r5/control.py': '34e0e81e994b96e891a8282029c68428f05278c2a247a071943d1f722465c1a4', 'ops_runtime_r5/queue.py': '34a236cda40d463cc9718fb1fed2b865d039ffbcb2e3792c090438595bccf439', 'ops_runtime_r5/reconcile.py': 'b8cbe40365a07b8319858e0bda4e3295d14fa503e6b4b9b3fc759c14cccbd0e3', 'ops_runtime_r5/transport.py': 'e7e30a198c129c1dbf498fc58cb475230ce6a4b7a66956be04fa7930682bc75c', 'ops_runtime_r5/worker.py': 'ee84b11fc278f6e6fc9583de49bc667b0de23ca5109cb360c685d09cc0684bad'}, 'operations_revision': 'ops-r5', 'worker_manua"
+      },
+      {
+        "id": "exec-c1958075-f4d6-4a6f-8589-863909300ab3",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 739, \"archive_images_checked\": 736, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  },
+  "terra-prod-09": {
+    "threadId": "6af5f274-5144-8191-a09d-eedf8c9720bc",
+    "final": "batch版の最終候補へ更新し、`verify_revision` の成功を確認しました。controlは **blocked** です。\n\nmanifest SHA-256: `5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`\n\n`prod-0380` の既存results 27件とdraftを保持しています。開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-ba6fd72b-a80a-4732-9248-7cc1576db92f",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "verify_revision=success manifest_sha256=5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11 control=blocked\n"
+      },
+      {
+        "id": "exec-8bb5c7a5-4e06-496d-88eb-4ab7b83b3ea5",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "verify_revision=success\nmanifest_sha256=5a5ca44e20c28b45941937f5e1f699fa98df50bae9895080ff8f64718be0297d\ncontrol=enabled\n"
+      },
+      {
+        "id": "exec-6fb26c8b-8fdc-40e9-a53d-a25c5e47358b",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 1211, \"archive_images_checked\": 1208, \"excluded_images_found\": 0}\n"
+      },
+      {
+        "id": "exec-a1ca85d6-bf69-45c0-b7f1-a7a71a8e4d7e",
+        "cwd": "/workspace/production-v4-001",
+        "exitCode": 0,
+        "output": "batch_verify=success batch_manifest_sha256=99c85b6904247509f51f0f24d60d79d8e585168c375276e0113c8187a0234cd4 batch_control=blocked\n"
+      }
+    ]
+  },
+  "terra-prod-10": {
+    "threadId": "6af5f27a-880c-8191-b571-543342aa80a5",
+    "final": "最終候補 `8aa2fc34adcf794a49112b765f539b8f2c05e2dd` を導入し、`verify_revision` は成功しました。manifest SHA-256は `5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11`、controlは **blocked** です。\n\n既存results 35件とdraft `2096713017610453258` を保持しています。開始指示まで待機します。",
+    "checks": [
+      {
+        "id": "exec-34b8d679-be74-4e7e-acba-f134b6413448",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
+        "exitCode": 0,
+        "output": "verification=success\nbatch_manifest_sha256=5929abc283003e7b8309917b66ca8a3bb2a77d2a01279242d15062655ce32c11\nbatch_control=blocked\n"
+      },
+      {
+        "id": "exec-ab4cb95e-3834-442c-a788-8eb1a278eac4",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
+        "exitCode": 0,
+        "output": "verification=success\nmanifest_sha256=5a5ca44e20c28b45941937f5e1f699fa98df50bae9895080ff8f64718be0297d\ncontrol=enabled\n"
+      },
+      {
+        "id": "exec-c4853c4e-9537-40e3-94e9-511fed7c2850",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
+        "exitCode": 0,
+        "output": "verification=success\nbatch_manifest_sha256=99c85b6904247509f51f0f24d60d79d8e585168c375276e0113c8187a0234cd4\nbatch_control=blocked\n"
+      },
+      {
+        "id": "exec-101ac58d-1ee1-435a-b152-f4b0b4ea8fab",
+        "cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
+        "exitCode": 0,
+        "output": "{\"workspace\": \"/workspace\", \"loose_images_checked\": 709, \"archive_images_checked\": 705, \"excluded_images_found\": 0}\n"
+      }
+    ]
+  }
+}

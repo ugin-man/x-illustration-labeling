@@ -1,0 +1,26 @@
+{
+  "full_suite": {
+    "tests": 237,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 1357.661
+  },
+  "final_runtime": {
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 92.214
+  },
+  "dispatch": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 82.246
+  },
+  "log_sha256": {
+    ".runtime/batch-full-tests.txt": "84d2ce0153110a30c86974453e73c0b4a43a8597c091c3abaef8d12c6b9e29ec",
+    ".runtime/batch-runtime-final-tests.txt": "c700afaa81d905fb9e840e14f996914a6e1857b0178146a15ff8b22bd7b89ba1",
+    ".runtime/batch-dispatch-tests.txt": "0a939049f61d2f6f4bfc5f0917b88b8d5fa1530ac53b62963586443a39502438"
+  }
+}

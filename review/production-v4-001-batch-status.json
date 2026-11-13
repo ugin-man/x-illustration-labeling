@@ -1,0 +1,90 @@
+{
+  "observed_at_utc": "2026-11-13 23:41:12 UTC",
+  "index_head": "ee51e86feb4b6575fe839ca5e324bb621cfb7952",
+  "shared_posts": 5712,
+  "authorized_posts": 20628,
+  "workers": [
+    {
+      "worker": "terra-prod-01",
+      "threadId": "6af5f241-4e00-8191-9a7d-c9889091c088",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "9984dc25-571f-4e51-abb9-5369911f3faf:26",
+      "message": "terra-prod-01／prod-0259 で新規2投稿 2096851761780994193、2096852518915694599 を共有保存しました。受理39件、head f81cc7d7815f5c0450c4449974d6386709323e85。新CLIのnextは各0.234秒・0.246秒、2件目のsaveは0.269秒です（1件目のsave単独時間は不明）。既存未送信2件と残存draftも回収済みです。続きを処理します。"
+    },
+    {
+      "worker": "terra-prod-02",
+      "threadId": "6af5f247-ce7c-8191-be1c-9d7eef4a40b0",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "031bb6df-de6a-4936-a2cf-636b64c25f8c:27",
+      "message": "terra-prod-02 / prod-0410 で新規2投稿 2098081212971819083、2098081464906920318 を共有保存しました。受理20件、head 0d6d5ee5bf25034e4003310f365a8cc831ad8bde。ローカルnextは約0.25秒・0.38秒、saveは約0.47秒・0.28秒でした。既存未送信 2098080955781284190 と残存draft 2098081200246259954 も回収済みです。続けて処理します。"
+    },
+    {
+      "worker": "terra-prod-03",
+      "threadId": "6af5f24e-1ac8-8191-aa25-2907975600a2",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "5ef5d1b1-88bd-424c-a01d-3a1221200d01:24",
+      "message": "prod-0291は50件を共有保存して完了しました。次の区分を取得して続行します。"
+    },
+    {
+      "worker": "terra-prod-04",
+      "threadId": "6af5f254-be94-8191-ae23-b503546d80ab",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "3ea02976-bf8e-4194-b8e9-dc0ee903458a:27",
+      "message": "terra-prod-04 / prod-0105 で既存の未共有2件を回収し、新規 2095512359528005872・2095512362879209634 も共有受理されました。受理43件、head 4deec89dd8e430871c7482e50d88f979996fc992。ローカルnextは約0.15〜0.20秒、saveは約0.20〜0.22秒でした。続けます。"
+    },
+    {
+      "worker": "terra-prod-05",
+      "threadId": "6af5f25a-e028-8191-8823-bcebdec4c09b",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "15c574ff-a678-4bb4-b04b-bb3a8b6f2f9c:25",
+      "message": "terra-prod-05 / prod-0246：既存未送信 2096724377144541396、2096724378088292734 と残存draft 2096724384975380966 を回収し、新規２件 2096724647140278504、2096724651254927456 を共有保存しました。受理45件、head 3f161312ec3171dbbf14ea960b7bdfe35d5392ca。新規２件のnextは0.441秒・0.633秒、saveは0.560秒・0.524秒でした。引き続き処理します。"
+    },
+    {
+      "worker": "terra-prod-06",
+      "threadId": "6af5f261-b8a8-8191-b467-d98a289940bd",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "9112d469-d753-416f-9344-d88df557adf6:27",
+      "message": "batch版で既存draft 2096924574751641952 を回収し、新規2件 2096924823662498044・2096924826619580542 も共有保存しました。workerは terra-prod-06、jobは prod-0268、受理3件、headは f668f7c284ee142e8efb423729ef563b897d7e73 です。ローカルnextは各約0.30秒、saveは約0.31秒・0.33秒でした。引き続き処理します。"
+    },
+    {
+      "worker": "terra-prod-07",
+      "threadId": "6af5f268-0764-8191-9186-19e563bb1081",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "30e2bc1b-31cb-4713-b240-19ca6422d050:26",
+      "message": "batch版で新規2投稿 2096461050862620859・2096461302873092435 を共有保存し、prod-0214 は受理12件、head 3083912f4c9ffa286e6e9f11c2016f32dea24368 です。回収した既存IDは 2096459781863350332・2096460795781767663・2096461043254043027。ローカル next は約0.26～0.28秒、save は約0.31～0.35秒でした。続けます。"
+    },
+    {
+      "worker": "terra-prod-08",
+      "threadId": "6af5f26e-368c-8191-9996-4c21cd718089",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "37cc5772-f900-45d5-8cd0-549f636127d1:25",
+      "message": "新規通常2投稿を共有保存しました。prod-0003の2098098414970171616は受理40件・head 2bb959ced9feb09680c637c93e51e898393d4815、prod-0312の2097274337837642042は受理1件・head 452b3cba02a08ef6e652f6f959b40a6c2991508aです。ローカルnextはそれぞれ約0.26秒・0.33秒、saveは約0.34秒・0.32秒でした。既存未送信の2097476428103368808、2097789891241541648とdraft 2097870578116141410も回収済みです。引き続きprod-0312を処理します。"
+    },
+    {
+      "worker": "terra-prod-09",
+      "threadId": "6af5f274-5144-8191-a09d-eedf8c9720bc",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "427907b4-05b3-4e27-b2b7-8a79aa86a035:23",
+      "message": "ops-batch-v1稼働中：terra-prod-09 / prod-0380 で新規2投稿 2097816716097286250、2097816953578827981 を共有し、受理数は29件、headは c758eabee72878991d5c1ed97348adeac685fe73 です。ローカルnextは0.367秒・0.396秒、saveは0.391秒・0.418秒でした。再開時に既存の未送信結果はありませんでした。"
+    },
+    {
+      "worker": "terra-prod-10",
+      "threadId": "6af5f27a-880c-8191-b571-543342aa80a5",
+      "status": "active",
+      "turnStatus": "inProgress",
+      "cursor": "633e93a0-6dc0-4621-8942-b7c598f46b83:27",
+      "message": "terra-prod-10 / prod-0244で新規2件 2096713021171307006、2096713256337559597 を受理し、共有headは 262370198720f033f45f7d3723a25eb68d073241、受理38件です。nextは0.390秒・0.420秒、saveは0.370秒・0.382秒でした。既存未送信 2096713013541867553 とdraft 2096713017610453258 も回収済みです。続きを処理します。"
+    }
+  ],
+  "automation_id": "10",
+  "automation_status": "ACTIVE"
+}

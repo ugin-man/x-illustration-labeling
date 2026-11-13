@@ -1,0 +1,646 @@
+{
+  "observed_at": "2026-11-13 23:34:57 UTC",
+  "index_head": "6e8ab4a822640fd459121eefb23b7c960e639683",
+  "baseline_total": 5641,
+  "current_total": 5689,
+  "unchanged_other_accepted_jobs": [
+    {
+      "job": "prod-0015",
+      "posts": 50,
+      "head": "5c0a7430b7bd53373c9645ccb03e6d9a8a35e448"
+    },
+    {
+      "job": "prod-0021",
+      "posts": 50,
+      "head": "99b547888b74c86b409f74ca7aa71da6ab1eaafa"
+    },
+    {
+      "job": "prod-0024",
+      "posts": 50,
+      "head": "56d72a82f053586d70da49ebdf405f7b39ed1434"
+    },
+    {
+      "job": "prod-0027",
+      "posts": 50,
+      "head": "20247685fe1d60ba42bd21dd4d15fcf16da9bf67"
+    },
+    {
+      "job": "prod-0040",
+      "posts": 50,
+      "head": "b47cfc22064c2aeb83266e12894a396533ad0263"
+    },
+    {
+      "job": "prod-0041",
+      "posts": 50,
+      "head": "cabaeb8091c694bafcf7d4791adf9029825b98c0"
+    },
+    {
+      "job": "prod-0045",
+      "posts": 50,
+      "head": "fa8aaaac33b415d061c4b262391149cd45ea5a5d"
+    },
+    {
+      "job": "prod-0046",
+      "posts": 50,
+      "head": "6c5a162c6e07f7bade2ca302278bd8a5e14c078d"
+    },
+    {
+      "job": "prod-0048",
+      "posts": 50,
+      "head": "80e8e04dca893be676c743571b3b94e16fca574b"
+    },
+    {
+      "job": "prod-0049",
+      "posts": 19,
+      "head": "e539a0991ab0cefac32a546f7816d6c3fde6f6b0"
+    },
+    {
+      "job": "prod-0050",
+      "posts": 50,
+      "head": "9abc4915b6fe58e35a0c197d8fd4dd8ac452202f"
+    },
+    {
+      "job": "prod-0051",
+      "posts": 50,
+      "head": "7092dbc10338f7a2e88ea11607b94e157a950f63"
+    },
+    {
+      "job": "prod-0052",
+      "posts": 50,
+      "head": "febe99622479510ed38cb42a0d64ca09f73be25a"
+    },
+    {
+      "job": "prod-0056",
+      "posts": 50,
+      "head": "2d8148e72251a3fdb4aac2262f17cebb1e0db5d7"
+    },
+    {
+      "job": "prod-0058",
+      "posts": 50,
+      "head": "c511e976b6a3b62f08d623a70f3197f3c451d2de"
+    },
+    {
+      "job": "prod-0059",
+      "posts": 50,
+      "head": "f74cf204c465a5ef8d63bbc3485f9a9bfec2d017"
+    },
+    {
+      "job": "prod-0062",
+      "posts": 50,
+      "head": "e03fc54880d93a55556264f88f0885a22b253dd9"
+    },
+    {
+      "job": "prod-0066",
+      "posts": 50,
+      "head": "f4985cf59d9d0ca3e0fc2125b4bfc46c882757ea"
+    },
+    {
+      "job": "prod-0068",
+      "posts": 50,
+      "head": "600967194d91740d8d7bef6bffda6086f1cc15ce"
+    },
+    {
+      "job": "prod-0069",
+      "posts": 50,
+      "head": "0690659c38a37254433826ea14e228fdcbdb2bf9"
+    },
+    {
+      "job": "prod-0072",
+      "posts": 48,
+      "head": "323ae5ffcd4de55b899962b3d417b2338bd1a672"
+    },
+    {
+      "job": "prod-0078",
+      "posts": 49,
+      "head": "54110ed6a5f59401a2db5718811043b44e0caa04"
+    },
+    {
+      "job": "prod-0080",
+      "posts": 49,
+      "head": "34d91fed66cea07ca680fd36292d21a05b8b0578"
+    },
+    {
+      "job": "prod-0081",
+      "posts": 48,
+      "head": "4f0d91638c95655d3d0919fcad7ef81e5d0cced3"
+    },
+    {
+      "job": "prod-0090",
+      "posts": 50,
+      "head": "6e13f3d62c466143c6db3e2beec9c22c9cfdb0b3"
+    },
+    {
+      "job": "prod-0092",
+      "posts": 50,
+      "head": "dda6286bc88627196cca749a271805e59e4ea592"
+    },
+    {
+      "job": "prod-0095",
+      "posts": 50,
+      "head": "0044855cc505d8da89069ac6cef3a1c393cdddf3"
+    },
+    {
+      "job": "prod-0096",
+      "posts": 9,
+      "head": "d2bdf46ce43a2c16805ba4c3b8932b5886bedcdb"
+    },
+    {
+      "job": "prod-0102",
+      "posts": 50,
+      "head": "ee27bbd376cc84347abe89b2304a52b397bf759c"
+    },
+    {
+      "job": "prod-0108",
+      "posts": 50,
+      "head": "e48515be90100206b0dd84b716072843e827c70f"
+    },
+    {
+      "job": "prod-0113",
+      "posts": 50,
+      "head": "1d7b8e834e439600801d86c844a78286afdbcea7"
+    },
+    {
+      "job": "prod-0114",
+      "posts": 50,
+      "head": "813b4ce273a6fa9857473379ba30fc1a76786bac"
+    },
+    {
+      "job": "prod-0115",
+      "posts": 48,
+      "head": "2fbbe526b03f615b5c3085825a83262a55f3b8b4"
+    },
+    {
+      "job": "prod-0117",
+      "posts": 50,
+      "head": "7517cfd625bccc9ecafe12598c0204deec1cdaaa"
+    },
+    {
+      "job": "prod-0125",
+      "posts": 50,
+      "head": "29e980bcd5ce43bef03e2de92888c2caa5d528f4"
+    },
+    {
+      "job": "prod-0127",
+      "posts": 50,
+      "head": "18dab1e252a52857cc048ec77ced0bfbc857cc35"
+    },
+    {
+      "job": "prod-0129",
+      "posts": 50,
+      "head": "30ed8318e3a4b826a6b88cce447c80c2555ee24c"
+    },
+    {
+      "job": "prod-0138",
+      "posts": 50,
+      "head": "c06f2a523459dbe50fba041586f69c02feff6916"
+    },
+    {
+      "job": "prod-0140",
+      "posts": 50,
+      "head": "989c4269da51b3ebcf4af2fb4758d71eeef7ff71"
+    },
+    {
+      "job": "prod-0141",
+      "posts": 48,
+      "head": "205d6facbc14439cb23d0b5c9f9a1516a42ee08a"
+    },
+    {
+      "job": "prod-0149",
+      "posts": 33,
+      "head": "42eb0f7bcaccc1b357c1873e5185a7855e0240ec"
+    },
+    {
+      "job": "prod-0154",
+      "posts": 50,
+      "head": "a113e6e614b48336961019aeddb622a1dc413612"
+    },
+    {
+      "job": "prod-0155",
+      "posts": 50,
+      "head": "4459458b6312057ae630ea94dd2f9a77311098ea"
+    },
+    {
+      "job": "prod-0159",
+      "posts": 50,
+      "head": "2d2453d61f7d9307a3c333c9518d5a4d9a70d00e"
+    },
+    {
+      "job": "prod-0165",
+      "posts": 50,
+      "head": "e1b7c4c1e3f304dd412cc3005c6f9ecef16a4368"
+    },
+    {
+      "job": "prod-0167",
+      "posts": 50,
+      "head": "27537eb71c3ac8156534a87df895d39b30a8f220"
+    },
+    {
+      "job": "prod-0170",
+      "posts": 50,
+      "head": "0403f0e6b9e09152c497108b3ec14329d9c42b84"
+    },
+    {
+      "job": "prod-0173",
+      "posts": 50,
+      "head": "d035b98e2c5f0fd6c83dfd8e58e9341b83d415d9"
+    },
+    {
+      "job": "prod-0175",
+      "posts": 50,
+      "head": "3c7eb9a92b38f5bb90fad11ddb411ce701f48ebf"
+    },
+    {
+      "job": "prod-0178",
+      "posts": 50,
+      "head": "f50819fe7f6ba698b30d23eb75faec03d3a74684"
+    },
+    {
+      "job": "prod-0184",
+      "posts": 50,
+      "head": "1da6ed05e8aa2f4c630a2719cba513d23c4f7313"
+    },
+    {
+      "job": "prod-0185",
+      "posts": 50,
+      "head": "8c58e34686862d018509910da7b9ec0c9ab7140d"
+    },
+    {
+      "job": "prod-0186",
+      "posts": 50,
+      "head": "5308ac4a8beda9515a2c85d64fe83057791bb65d"
+    },
+    {
+      "job": "prod-0187",
+      "posts": 50,
+      "head": "1a252a87bd827469be2c60a1ff293f471810efe4"
+    },
+    {
+      "job": "prod-0188",
+      "posts": 50,
+      "head": "cf4cbf06f043791342e9a47afa6996b84df4ac22"
+    },
+    {
+      "job": "prod-0191",
+      "posts": 50,
+      "head": "9de70d37503549db59926d86b41d0c346866d3a7"
+    },
+    {
+      "job": "prod-0193",
+      "posts": 50,
+      "head": "927d56e44f0eb1aa47ea18a8aa561f4e92dfcca1"
+    },
+    {
+      "job": "prod-0195",
+      "posts": 50,
+      "head": "434b794da3e9872e0dd20dbed1f65c05043d9b1b"
+    },
+    {
+      "job": "prod-0205",
+      "posts": 50,
+      "head": "ec9b9a34ef497f67291d12a0a926610d3a61bfb1"
+    },
+    {
+      "job": "prod-0211",
+      "posts": 50,
+      "head": "9590b59c2601b0c2c7ec66b1bc913504bd1dbac2"
+    },
+    {
+      "job": "prod-0215",
+      "posts": 50,
+      "head": "66db9f68ff4473b4803b46aaa44d733177ea58c3"
+    },
+    {
+      "job": "prod-0217",
+      "posts": 50,
+      "head": "12a3b39aa188a6465f46bbf9d00500a8e7e1e4d7"
+    },
+    {
+      "job": "prod-0219",
+      "posts": 50,
+      "head": "c1dd549839c03cde370ddfd1c479c4171f31c819"
+    },
+    {
+      "job": "prod-0221",
+      "posts": 50,
+      "head": "b9310104bbcb254e563d9045eb0d1cc42bab54bd"
+    },
+    {
+      "job": "prod-0222",
+      "posts": 50,
+      "head": "8bbe69a09fdeefc13b7c58fdd8e75a7bba69ff4f"
+    },
+    {
+      "job": "prod-0223",
+      "posts": 50,
+      "head": "52ff106b97ae42bc880dadc97e68ffe4f037f6d8"
+    },
+    {
+      "job": "prod-0225",
+      "posts": 50,
+      "head": "bfe723f6f6ee4241f9f03c1368695c248ae9a0d6"
+    },
+    {
+      "job": "prod-0231",
+      "posts": 50,
+      "head": "0e812ecc72ef644918e317ef541c6f4083c0bd86"
+    },
+    {
+      "job": "prod-0237",
+      "posts": 50,
+      "head": "fe20f70e46827e2c60a2e39a707853f159f9e5da"
+    },
+    {
+      "job": "prod-0241",
+      "posts": 50,
+      "head": "71506e3f839bfffa0835e7c7adc125e9d49e0320"
+    },
+    {
+      "job": "prod-0242",
+      "posts": 50,
+      "head": "5dea1531361e7778cc9e667a5ea31bdf877afdaa"
+    },
+    {
+      "job": "prod-0248",
+      "posts": 50,
+      "head": "0a8794a230f592832b81d42498eb5a1e0bd4252f"
+    },
+    {
+      "job": "prod-0251",
+      "posts": 50,
+      "head": "feb20120304903b2ae27ea93b0e5723598544746"
+    },
+    {
+      "job": "prod-0252",
+      "posts": 50,
+      "head": "1f47095d0f9611496d6fc0e0072f9726c3a2f608"
+    },
+    {
+      "job": "prod-0253",
+      "posts": 50,
+      "head": "6adde33ef884ca5243f1b74b9e15587bb6da3e78"
+    },
+    {
+      "job": "prod-0255",
+      "posts": 50,
+      "head": "9e1092d980db15c020501211a4166acf590f9454"
+    },
+    {
+      "job": "prod-0256",
+      "posts": 50,
+      "head": "4f836fe5ffd1dba2f450a6a0ee49173d6460e34e"
+    },
+    {
+      "job": "prod-0257",
+      "posts": 50,
+      "head": "03c9f4914b9731087c9ec4c86657c077ae03341a"
+    },
+    {
+      "job": "prod-0260",
+      "posts": 50,
+      "head": "98d75cd104178ef8ef8eb254f754c0c422a04aaf"
+    },
+    {
+      "job": "prod-0261",
+      "posts": 50,
+      "head": "f7060ed01d43c84af22f98dd2a470b628dacc6f3"
+    },
+    {
+      "job": "prod-0269",
+      "posts": 50,
+      "head": "64f9ce8f67bde187078fff1ef52bbafe71467042"
+    },
+    {
+      "job": "prod-0273",
+      "posts": 50,
+      "head": "faa3c673e7a403267eec38e8e3bab00b52af5d0c"
+    },
+    {
+      "job": "prod-0275",
+      "posts": 50,
+      "head": "78a3e342a9a06e563b2e95c01bb92e14b929b533"
+    },
+    {
+      "job": "prod-0284",
+      "posts": 49,
+      "head": "81963ee4063647518d47f658b544225cd089da72"
+    },
+    {
+      "job": "prod-0289",
+      "posts": 50,
+      "head": "34c044ef744a099548b60b1fd74158c0ca335ded"
+    },
+    {
+      "job": "prod-0295",
+      "posts": 50,
+      "head": "dc54790515925a19929f56b7fa7a8dbb89cb3a8d"
+    },
+    {
+      "job": "prod-0297",
+      "posts": 50,
+      "head": "9cfcb7efa0e9fe0dde231fe2af12f554b35df827"
+    },
+    {
+      "job": "prod-0301",
+      "posts": 50,
+      "head": "1a0ba82d22a690191d96f3aefb1f02786ac4934a"
+    },
+    {
+      "job": "prod-0302",
+      "posts": 50,
+      "head": "c4d4642d6c484da297f19cecba2a9c8b4fcb32fc"
+    },
+    {
+      "job": "prod-0303",
+      "posts": 50,
+      "head": "60b8683391e4424fdfadcb28153002599e1b2160"
+    },
+    {
+      "job": "prod-0308",
+      "posts": 50,
+      "head": "554eece91699937eb15f19e4e857d7f818d5ab2f"
+    },
+    {
+      "job": "prod-0313",
+      "posts": 50,
+      "head": "a62e690b9e2d1412281ea80c12dd4623aef3a799"
+    },
+    {
+      "job": "prod-0316",
+      "posts": 50,
+      "head": "3f89b49b58616bebae294647de398275b83b732e"
+    },
+    {
+      "job": "prod-0323",
+      "posts": 50,
+      "head": "2495bef517c8409b38cb98c0a1f811eb69605748"
+    },
+    {
+      "job": "prod-0324",
+      "posts": 50,
+      "head": "87fe87bf42e1e89a4ff9c06f490a66cb8cd08cbb"
+    },
+    {
+      "job": "prod-0325",
+      "posts": 50,
+      "head": "972dd9b135c98e73263557229d8cdd7912b1b3e3"
+    },
+    {
+      "job": "prod-0326",
+      "posts": 3,
+      "head": "e935c5ca9b4fa94eae89034b4d30f6d3b4caee2b"
+    },
+    {
+      "job": "prod-0327",
+      "posts": 50,
+      "head": "274fab5e5c673743127a07b4ec807cc69b959dc5"
+    },
+    {
+      "job": "prod-0333",
+      "posts": 50,
+      "head": "d4799742cccb2bba1e581e7271f66e6a8b277324"
+    },
+    {
+      "job": "prod-0337",
+      "posts": 50,
+      "head": "61c1fe68b4faf5076f3f1609ea868a634526a38a"
+    },
+    {
+      "job": "prod-0339",
+      "posts": 50,
+      "head": "c903e0ca8b797e4c1495ee343ed86c8aed82070b"
+    },
+    {
+      "job": "prod-0355",
+      "posts": 50,
+      "head": "1b3f37b36bf482e93f7120a3ae5dd0f886edf1a9"
+    },
+    {
+      "job": "prod-0361",
+      "posts": 50,
+      "head": "0925638710d91e60dd05f7762d65e9a9b8e0f1c1"
+    },
+    {
+      "job": "prod-0363",
+      "posts": 50,
+      "head": "7f35e6bdcc7560fe3207fcc26bd10bd9de887436"
+    },
+    {
+      "job": "prod-0365",
+      "posts": 50,
+      "head": "005bf337aa6a31b65be472196903cb066fbbb16d"
+    },
+    {
+      "job": "prod-0366",
+      "posts": 50,
+      "head": "88437164f4ebac0c3bc722cb2d852459d198ea5c"
+    },
+    {
+      "job": "prod-0367",
+      "posts": 50,
+      "head": "418ff901578199a47ebd90ea5409241b7c56c568"
+    },
+    {
+      "job": "prod-0368",
+      "posts": 16,
+      "head": "84c53f10a7154658ee4331b9a8e5608eb894629a"
+    },
+    {
+      "job": "prod-0373",
+      "posts": 50,
+      "head": "639da7050e4c24afc62e3f53055ab2a041676291"
+    },
+    {
+      "job": "prod-0374",
+      "posts": 50,
+      "head": "bab4d76f22bb2abe8857d6efdd553b98ae4fa59f"
+    },
+    {
+      "job": "prod-0377",
+      "posts": 50,
+      "head": "1ab0044bf13d682c5970ffbabf959e78db136a8a"
+    }
+  ],
+  "active_jobs": [
+    {
+      "job": "prod-0003",
+      "worker": "terra-prod-08",
+      "old_post_blobs": 36,
+      "old_metadata_blobs": 96,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "2bb959ced9feb09680c637c93e51e898393d4815"
+    },
+    {
+      "job": "prod-0268",
+      "worker": "terra-prod-06",
+      "old_post_blobs": 0,
+      "old_metadata_blobs": 2,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "f668f7c284ee142e8efb423729ef563b897d7e73"
+    },
+    {
+      "job": "prod-0380",
+      "worker": "terra-prod-09",
+      "old_post_blobs": 27,
+      "old_metadata_blobs": 57,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "c758eabee72878991d5c1ed97348adeac685fe73"
+    },
+    {
+      "job": "prod-0410",
+      "worker": "terra-prod-02",
+      "old_post_blobs": 16,
+      "old_metadata_blobs": 45,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "0d6d5ee5bf25034e4003310f365a8cc831ad8bde"
+    },
+    {
+      "job": "prod-0259",
+      "worker": "terra-prod-01",
+      "old_post_blobs": 34,
+      "old_metadata_blobs": 95,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "f81cc7d7815f5c0450c4449974d6386709323e85"
+    },
+    {
+      "job": "prod-0105",
+      "worker": "terra-prod-04",
+      "old_post_blobs": 39,
+      "old_metadata_blobs": 83,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "4deec89dd8e430871c7482e50d88f979996fc992"
+    },
+    {
+      "job": "prod-0214",
+      "worker": "terra-prod-07",
+      "old_post_blobs": 7,
+      "old_metadata_blobs": 19,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "3083912f4c9ffa286e6e9f11c2016f32dea24368"
+    },
+    {
+      "job": "prod-0244",
+      "worker": "terra-prod-10",
+      "old_post_blobs": 34,
+      "old_metadata_blobs": 73,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "262370198720f033f45f7d3723a25eb68d073241"
+    },
+    {
+      "job": "prod-0246",
+      "worker": "terra-prod-05",
+      "old_post_blobs": 40,
+      "old_metadata_blobs": 111,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "3f161312ec3171dbbf14ea960b7bdfe35d5392ca"
+    },
+    {
+      "job": "prod-0291",
+      "worker": "terra-prod-03",
+      "old_post_blobs": 39,
+      "old_metadata_blobs": 102,
+      "all_prior_blobs_unchanged": true,
+      "current_head": "0d4d8a5dad54e9eef6ea9030a615e877be84f632"
+    }
+  ],
+  "mismatches": []
+}

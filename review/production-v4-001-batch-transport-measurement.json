@@ -1,0 +1,43 @@
+{
+  "method": "Synthetic local bare Git. Counts are Git network-command invocations, not HTTP packets or cloud latency.",
+  "operations": {
+    "r5": {
+      "next": {
+        "ls-remote": 6,
+        "fetch": 6,
+        "push": 2
+      },
+      "context:fetch": {
+        "ls-remote": 15,
+        "fetch": 15,
+        "push": 4
+      },
+      "context:summary": {
+        "ls-remote": 7,
+        "fetch": 7,
+        "push": 2
+      },
+      "save": {
+        "ls-remote": 5,
+        "fetch": 5,
+        "push": 2
+      },
+      "checkpoint": {
+        "ls-remote": 11,
+        "fetch": 11,
+        "push": 3
+      }
+    },
+    "batch": {
+      "next": {},
+      "context:fetch": {},
+      "context:summary": {},
+      "save": {},
+      "checkpoint": {
+        "ls-remote": 2,
+        "fetch": 2,
+        "push": 1
+      }
+    }
+  }
+}
