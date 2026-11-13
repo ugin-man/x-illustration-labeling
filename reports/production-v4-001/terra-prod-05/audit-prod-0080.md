@@ -18,3 +18,5 @@
 - Resumed after ownership verification and isolation (excluded matches 0); five additional results checkpointed; remote head 4cdf4fbacf4ab5402ceaf0a38a6c955e29bdcac9 (34 accepted in job). Individual body HTTP failures were recorded without repeated fetch.
 
 - Four additional results checkpointed by time limit; remote head fa7a25f41a80fb054a40aeb111abd22a60470805 (38 accepted in job). An incidental popularity indicator in a text search was not used.
+
+- Two additional results checkpointed; remote head f81cd52bc8b0f7d64ff9133cb11e17aa181dbb1a (40 accepted). Post 2095160099203678553 deferred for quality review of 3D-render inclusion; no refusal occurred. A transient queue claim lock expired before checkpoint.
