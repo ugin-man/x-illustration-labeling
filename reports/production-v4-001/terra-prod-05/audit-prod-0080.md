@@ -14,3 +14,5 @@
 
 - Five additional results checkpointed; remote head 17345c9176757b178b8e6e9dd20cddabc658e78b (29 accepted in job).
 - Paused under the ops-r2 repeated technical failure instruction after individual body fetches returned HTTP 404 for three consecutive posts: 2095158050357412201, 2095158294893732326, 2095158295460040851. Image-derived results and technical_failure were saved; these posts were not excluded or retried. Actual service-wide outage has not been established.
+
+- Resumed after ownership verification and isolation (excluded matches 0); five additional results checkpointed; remote head 4cdf4fbacf4ab5402ceaf0a38a6c955e29bdcac9 (34 accepted in job). Individual body HTTP failures were recorded without repeated fetch.
