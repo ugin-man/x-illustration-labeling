@@ -18,10 +18,13 @@
   ],
   "newly_processed_post_ids": [
     "2097077929654325260",
-    "2097077931734643063"
+    "2097077931734643063",
+    "2097077934897131527",
+    "2097077935555715317",
+    "2097078176946303352"
   ],
-  "checkpoint_head": "fa43ba7bb88e4f4b6c48cf3c26f55947a136b329",
-  "remote_accepted_count": 26,
+  "checkpoint_head": "ffc9ae767d22b50f2166f411184d3fcb7519d217",
+  "remote_accepted_count": 29,
   "new_view_events": [
     {
       "post_id": "2097077929654325260",
@@ -34,6 +37,25 @@
       "path": "/workspace/production-v4-001-recovery-terra-prod-03-20261113/.runtime/production-v4-001/prod-0291/images/8f21a65b1fc6c3e6d7892c3c9129fe10af54f1a7c649ca6bf6c99f4279a379d4.jpg",
       "viewed_at": "2026-11-13T22:16:48+00:00",
       "tool": "functions.view_image"
+    },
+    {
+      "post_id": "2097077934897131527",
+      "path": "/workspace/production-v4-001-recovery-terra-prod-03-20261113/.runtime/production-v4-001/prod-0291/images/2ddc940032943da11f0bdb57b151c8e8195de32ae71239e916f75ae8380e8931.jpg",
+      "viewed_at": null,
+      "tool": "functions.view_image",
+      "note": "Initial tool output truncated; repeated display succeeded. Exact times unavailable; both before 2026-11-13T22:21:24Z."
+    },
+    {
+      "post_id": "2097077935555715317",
+      "path": "/workspace/production-v4-001-recovery-terra-prod-03-20261113/.runtime/production-v4-001/prod-0291/images/3e544b7ab402a304e60c19ff2a4de1a0e6cef5703b1cd6ceb41ec586e5ff7df3.jpg",
+      "viewed_at": "2026-11-13T22:24:34+00:00",
+      "tool": "functions.view_image"
+    },
+    {
+      "post_id": "2097078176946303352",
+      "path": "/workspace/production-v4-001-recovery-terra-prod-03-20261113/.runtime/production-v4-001/prod-0291/images/e8768654b9d458fbf8c226648b34604159c0f7187f31770ffd39ba3e3e161b7d.jpg",
+      "viewed_at": "2026-11-13T22:27:19+00:00",
+      "tool": "functions.view_image"
     }
   ],
   "isolation": {
@@ -42,5 +64,5 @@
     "archive_images_checked": 1336,
     "excluded_images_found": 0
   },
-  "recorded_at": "2026-11-13T22:19:38.360344+00:00"
+  "recorded_at": "2026-11-13T22:30:03.447071+00:00"
 }
