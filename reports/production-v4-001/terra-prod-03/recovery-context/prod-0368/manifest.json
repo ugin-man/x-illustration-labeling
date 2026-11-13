@@ -1,0 +1,178 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-03",
+  "job_id": "prod-0368",
+  "generated_at": "2026-11-13T02:49:34.282900+00:00",
+  "notes": [
+    "Copy only the listed cache and budget files byte-for-byte. Preserve existing budgets and never re-fetch cached post text.",
+    "Elapsed values are the recorded end-of-exploration context summaries; null means not confirmed.",
+    "Do not reuse prior draft, labels, external-source timestamps or image-search sources."
+  ],
+  "posts": [
+    {
+      "post_id": "2097734270806847851",
+      "elapsed_seconds": 14.48,
+      "searches": 1,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097734270806847851.json",
+          "kind": "cache",
+          "sha256": "92d1937dde18b57b0997faf58df9625f06404d00453c07946c9ff57cfd83a612"
+        },
+        {
+          "filename": "2097734270806847851-budget.json",
+          "kind": "budget",
+          "sha256": "1a3d34d6eb38827defe1b65bc337c656717ad353e4658c328ddc9a7d2f08399d"
+        }
+      ]
+    },
+    {
+      "post_id": "2097734271104675872",
+      "elapsed_seconds": 16.967,
+      "searches": 1,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097734271104675872.json",
+          "kind": "cache",
+          "sha256": "50018f63da125789a5b2ce7d6279deec4ddb0b8337f250b8347435ef3dda7e16"
+        },
+        {
+          "filename": "2097734271104675872-budget.json",
+          "kind": "budget",
+          "sha256": "9838c6fb8bbae5c08983d4833f8e39ebfc837447917b9aface47c735b6a9c0b6"
+        }
+      ]
+    },
+    {
+      "post_id": "2097734762098209076",
+      "elapsed_seconds": 13.604,
+      "searches": 1,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097734762098209076.json",
+          "kind": "cache",
+          "sha256": "84f9508a3d10d319b577de8a86d6e58e7e54f4cb0350e089534b0c44ed306a9a"
+        },
+        {
+          "filename": "2097734762098209076-budget.json",
+          "kind": "budget",
+          "sha256": "bee39d12a2e48b6c124de990ea06bf439e4dc46fd6ed47edafd2ffe76a467872"
+        }
+      ]
+    },
+    {
+      "post_id": "2097734763536879970",
+      "elapsed_seconds": 0,
+      "searches": 0,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097734763536879970.json",
+          "kind": "cache",
+          "sha256": "dfbbe31d211405c0e7a834961dfd9a4388e015e43a1bb0224452ad8c5af59826"
+        },
+        {
+          "filename": "2097734763536879970-budget.json",
+          "kind": "budget",
+          "sha256": null,
+          "missing": "No budget file; saved summary reports zero searches and zero pages."
+        }
+      ]
+    },
+    {
+      "post_id": "2097734768310059218",
+      "elapsed_seconds": 31.35,
+      "searches": 2,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097734768310059218.json",
+          "kind": "cache",
+          "sha256": "72714b75b13b7fabd40023a7b17fec1a165cc8775995a4b7e5b31980a34a845a"
+        },
+        {
+          "filename": "2097734768310059218-budget.json",
+          "kind": "budget",
+          "sha256": "b5e80a799f2127b3be17073095a15dc7728fa983819ffc602b17fdfe235cf718"
+        }
+      ]
+    },
+    {
+      "post_id": "2097734771896197508",
+      "elapsed_seconds": 0,
+      "searches": 0,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097734771896197508.json",
+          "kind": "cache",
+          "sha256": "f0f9492bc38980ed3ab891990a172e6c865f78a9b63c78d8a24819af4ad235c6"
+        },
+        {
+          "filename": "2097734771896197508-budget.json",
+          "kind": "budget",
+          "sha256": null,
+          "missing": "No budget file; saved summary reports zero searches and zero pages."
+        }
+      ]
+    },
+    {
+      "post_id": "2097735024141566323",
+      "elapsed_seconds": 0,
+      "searches": 0,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097735024141566323.json",
+          "kind": "cache",
+          "sha256": "9f4e7d5395f29598c5096a2602a825753f89eeb860c740ec3468dda987c70e0e"
+        },
+        {
+          "filename": "2097735024141566323-budget.json",
+          "kind": "budget",
+          "sha256": null,
+          "missing": "No budget file; saved summary reports zero searches and zero pages."
+        }
+      ]
+    },
+    {
+      "post_id": "2097735027278917950",
+      "elapsed_seconds": 16.465,
+      "searches": 1,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097735027278917950.json",
+          "kind": "cache",
+          "sha256": "bba2ef570f17dcc6f479a89c51798fe3f071ecdf89a2b30e41dd9fd3cd18aee1"
+        },
+        {
+          "filename": "2097735027278917950-budget.json",
+          "kind": "budget",
+          "sha256": "cb993ca9488f9e0f7a8e3f0c3598316505ea34c959e191401ac969cc6addea5d"
+        }
+      ]
+    },
+    {
+      "post_id": "2097735028042313797",
+      "elapsed_seconds": 16.968,
+      "searches": 1,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097735028042313797.json",
+          "kind": "cache",
+          "sha256": "3946a295904b00144cda9e5d778b6d6786cb36cde1238afe91cc9c3f5f96bb9a"
+        },
+        {
+          "filename": "2097735028042313797-budget.json",
+          "kind": "budget",
+          "sha256": "380abef2e051bb37b717aab9b3a781df56a112735c393f79a95c2d5407f52ad6"
+        }
+      ]
+    }
+  ]
+}

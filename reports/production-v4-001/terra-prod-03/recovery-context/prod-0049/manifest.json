@@ -1,0 +1,68 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-03",
+  "job_id": "prod-0049",
+  "generated_at": "2026-11-13T02:49:34.277212+00:00",
+  "notes": [
+    "Copy only the listed cache and budget files byte-for-byte. Preserve existing budgets and never re-fetch cached post text.",
+    "Elapsed values are the recorded end-of-exploration context summaries; null means not confirmed.",
+    "Do not reuse prior draft, labels, external-source timestamps or image-search sources."
+  ],
+  "posts": [
+    {
+      "post_id": "2094833008591487197",
+      "elapsed_seconds": 0,
+      "searches": 0,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2094833008591487197.json",
+          "kind": "cache",
+          "sha256": "850ade390b54754c2be2b10dd8f449c38de3b95113d82668ebf495ad957704e6"
+        },
+        {
+          "filename": "2094833008591487197-budget.json",
+          "kind": "budget",
+          "sha256": null,
+          "missing": "No budget file; saved summary reports zero searches and zero pages."
+        }
+      ]
+    },
+    {
+      "post_id": "2094833014325088560",
+      "elapsed_seconds": 11.375,
+      "searches": 1,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2094833014325088560.json",
+          "kind": "cache",
+          "sha256": "de330d9ed4398ba8bc0f260312669ee95b23227d8c91def54dafe57368eb2333"
+        },
+        {
+          "filename": "2094833014325088560-budget.json",
+          "kind": "budget",
+          "sha256": "4b84540ffdabb1981582f1625ab86c872e436d3982c9daf0a52043aa5d4e3a0f"
+        }
+      ]
+    },
+    {
+      "post_id": "2094833255333998737",
+      "elapsed_seconds": 27.75,
+      "searches": 2,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2094833255333998737.json",
+          "kind": "cache",
+          "sha256": "133d4ccbfa73b6c3c18606e3bd3e2dc2a8e3ababb91c91663885f3466a1546a7"
+        },
+        {
+          "filename": "2094833255333998737-budget.json",
+          "kind": "budget",
+          "sha256": "ee309ff37d1daebb9e4ed78c00b72b59cc979a55661255badd67fddb04a27a5b"
+        }
+      ]
+    }
+  ]
+}

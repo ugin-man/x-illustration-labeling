@@ -1,0 +1,31 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-03",
+  "job_id": "prod-0369",
+  "generated_at": "2026-11-13T02:49:34.278889+00:00",
+  "notes": [
+    "Copy only the listed cache and budget files byte-for-byte. Preserve existing budgets and never re-fetch cached post text.",
+    "Elapsed values are the recorded end-of-exploration context summaries; null means not confirmed.",
+    "Do not reuse prior draft, labels, external-source timestamps or image-search sources."
+  ],
+  "posts": [
+    {
+      "post_id": "2097739314381943250",
+      "elapsed_seconds": 15.395,
+      "searches": 1,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097739314381943250.json",
+          "kind": "cache",
+          "sha256": "01ac36f6d9d205722fdd516d51ef8c22d7e1bcd9c8d893169b88d5af081b0aba"
+        },
+        {
+          "filename": "2097739314381943250-budget.json",
+          "kind": "budget",
+          "sha256": "aa7bf4e011534d96c57384390fc839aa90def3f574594c0101c8115a2f5b6bb5"
+        }
+      ]
+    }
+  ]
+}

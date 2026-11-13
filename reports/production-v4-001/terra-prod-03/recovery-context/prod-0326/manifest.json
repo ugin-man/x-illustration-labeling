@@ -1,0 +1,70 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-03",
+  "job_id": "prod-0326",
+  "generated_at": "2026-11-13T02:49:34.284184+00:00",
+  "notes": [
+    "Copy only the listed cache and budget files byte-for-byte. Preserve existing budgets and never re-fetch cached post text.",
+    "Elapsed values are the recorded end-of-exploration context summaries; null means not confirmed.",
+    "Do not reuse prior draft, labels, external-source timestamps or image-search sources."
+  ],
+  "posts": [
+    {
+      "post_id": "2097370650314944850",
+      "elapsed_seconds": 0,
+      "searches": 0,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097370650314944850.json",
+          "kind": "cache",
+          "sha256": "3eb7ef78ea8f66279cdfd546fe92d7db624f421c6a06e05e4a680af43389fb59"
+        },
+        {
+          "filename": "2097370650314944850-budget.json",
+          "kind": "budget",
+          "sha256": null,
+          "missing": "No budget file; saved summary reports zero searches and zero pages."
+        }
+      ]
+    },
+    {
+      "post_id": "2097370651808215439",
+      "elapsed_seconds": 0,
+      "searches": 0,
+      "pages": 0,
+      "files": [
+        {
+          "filename": "2097370651808215439.json",
+          "kind": "cache",
+          "sha256": "e6c0b08317a5d1e5fd5ee2aba153a28115342d39cc2f39d2532797c0088bcc9d"
+        },
+        {
+          "filename": "2097370651808215439-budget.json",
+          "kind": "budget",
+          "sha256": null,
+          "missing": "No budget file; saved summary reports zero searches and zero pages."
+        }
+      ]
+    },
+    {
+      "post_id": "2097370927168393584",
+      "elapsed_seconds": null,
+      "searches": null,
+      "pages": null,
+      "files": [
+        {
+          "filename": "2097370927168393584.json",
+          "kind": "cache",
+          "sha256": "1c697c324f3359c5aabe6188fe119af624a3028c46b042beb669b16ee86211a1"
+        },
+        {
+          "filename": "2097370927168393584-budget.json",
+          "kind": "budget",
+          "sha256": null,
+          "missing": "取得中断で到達不明、再取得禁止"
+        }
+      ]
+    }
+  ]
+}
