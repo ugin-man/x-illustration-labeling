@@ -1,0 +1,6 @@
+{
+  "recorded_at": "2026-11-13T02:52:14.238123+00:00",
+  "job_id": "prod-0165",
+  "completed_checkpointed_posts": 29,
+  "checkpoint_head": "215076b393cea3a14cdc3bc977e7a4edc4a13739"
+}
