@@ -1,5 +1,5 @@
 {
-  "status": "running",
+  "status": "waiting_for_worker_gate",
   "job_id": "prod-0072",
   "worker_id": "terra-prod-03",
   "research_root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
@@ -13,5 +13,7 @@
     }
   ],
   "isolation_excluded_matches": 0,
-  "recorded_at": "2026-11-13T11:26:01.554091+00:00"
+  "recorded_at": "2026-11-13T11:35:34.593646+00:00",
+  "locally_saved_not_checkpointed": 3,
+  "note": "next時のGit push失敗後にworker gateがbusy。画像は開かず通常の期限満了を待って再試行。"
 }
