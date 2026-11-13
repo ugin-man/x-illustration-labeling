@@ -8,3 +8,5 @@
 
 - Resumed: subsequent post 2097030013262745970 text fetch succeeded. Checkpoint f1f7a13f14c42e5badfe57a572d1c37b165f12e3; accepted count 32.
 - Audit question (accepted, unchanged): 2097030013262745970, entity_kind / animal_count: the depicted cat-like character may be a robot character; this may affect the entity classification and count.
+
+- Checkpoint 276d495c2920f3d635b37b1fb55db3d15fe0738c: 37 accepted, 1 deferred. Post 2097030521209667737 is deferred for needs_quality_review due to many small repeated depictions whose complete correspondence could not be reliably recorded. Deferred is not complete.
