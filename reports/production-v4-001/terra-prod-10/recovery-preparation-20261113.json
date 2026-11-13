@@ -1,0 +1,15 @@
+{
+  "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
+  "preserved_old_root": "/workspace/production-v4-001",
+  "commit": "4d2c98374a1364faf1e2b546a4c460e80e9b2903",
+  "config_sha256": "28b77b5cb656eab9e47f955efd95f6d6bb19fd462c2ef81c7e03581249e67de1",
+  "manifest_sha256": "170d7221bc9b68b6785ca1996896d26853f2573202a96931b94440f97b026c22",
+  "context_files_verified": 11,
+  "tracked_runtime_files_matched": 16,
+  "isolation": {
+    "loose_images_checked": 347,
+    "archive_images_checked": 343,
+    "excluded_images_found": 0
+  },
+  "recorded_at": "2026-11-13T08:24:37.900815+00:00"
+}
