@@ -1,0 +1,8 @@
+{
+  "worker": "terra-prod-07",
+  "job": "prod-0333",
+  "remote_accepted": 27,
+  "remote_head": "a657890cd2c2ed3d26b6e677dd9c7a1c2956672f",
+  "updated_at": "2026-11-13T19:33:16.012335+00:00",
+  "isolation_excluded_matches": 0
+}
