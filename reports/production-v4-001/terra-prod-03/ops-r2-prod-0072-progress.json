@@ -3,8 +3,8 @@
   "job_id": "prod-0072",
   "worker_id": "terra-prod-03",
   "research_root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
-  "accepted": 18,
-  "checkpoint_head": "a12d835753b6b94444487cb18e74e881b23132b9",
+  "accepted": 22,
+  "checkpoint_head": "766719c4527286f77e34de965a3237ecba295349",
   "deferred": [
     {
       "post_id": "2095092045832732817",
@@ -13,5 +13,5 @@
     }
   ],
   "isolation_excluded_matches": 0,
-  "recorded_at": "2026-11-13T11:14:26.678019+00:00"
+  "recorded_at": "2026-11-13T11:26:01.554091+00:00"
 }
