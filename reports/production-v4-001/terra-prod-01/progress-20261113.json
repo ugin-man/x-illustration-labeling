@@ -6,12 +6,12 @@
   "checkpoint_accepted_posts": 50,
   "checkpoint_head": "8e3c55bedbedbb74cac3c5e8abe42e2cd2a3c9f3",
   "recovery": "environment restored; same active ownership verified; six pending results and context, draft, and viewing events matched preserved backup; CLI checkpoint succeeded; isolation excluded matches zero",
-  "updated_at": "2026-11-13T11:32:00.824248+00:00",
+  "updated_at": "2026-11-13T11:42:27.130718+00:00",
   "finish_head": "cabaeb8091c694bafcf7d4791adf9029825b98c0",
   "current_job": "prod-0241",
   "current_checkpoint_accepted_posts": 34,
   "current_checkpoint_head": "af290c5a1a830f665b24a6a7d746b90fb9b7e69b",
-  "local_uncheckpointed_posts": 0,
+  "local_uncheckpointed_posts": 3,
   "status": "OPS_R2_RUNNING",
   "current_job_status": "active",
   "review_job": {
@@ -25,5 +25,9 @@
       }
     ],
     "head": "54110ed6a5f59401a2db5718811043b44e0caa04"
-  }
+  },
+  "current_post": "2096692751236796886",
+  "current_post_viewed": false,
+  "temporary_wait": "worker gate leased; retry after lease_until plus queue grace",
+  "gate_retry_at_epoch": 1794570374
 }
