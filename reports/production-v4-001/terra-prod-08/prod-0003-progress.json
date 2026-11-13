@@ -1,11 +1,11 @@
 {
   "worker": "terra-prod-08",
   "job": "prod-0003",
-  "checkpoint_accepted_posts": 13,
-  "checkpoint_head": "6cc6a6e4c2f6aca1f57c9f07bf65fdb9c75f1303",
-  "recorded_at_utc": "2026-11-13T20:27:53.271857+00:00",
+  "checkpoint_accepted_posts": 17,
+  "checkpoint_head": "d7ae43f7e4324c148d6200ccf7a1f77ac42b88ae",
+  "recorded_at_utc": "2026-11-13T21:13:24.059687+00:00",
   "uncheckpointed_saved_posts": 0,
-  "status": "stopped_image_tool_transport_closed",
+  "status": "ops_r3_running",
   "isolation_excluded_images_found": 0,
   "consecutive_source_failures": {
     "source": "api.fxtwitter.com",
@@ -17,6 +17,9 @@
       "2094838058013335776"
     ]
   },
-  "pending_post_id": "2095451257175433562",
-  "pending_image_viewed": false
+  "image_unavailable_deferred": {
+    "post_id": "2095608576945565711",
+    "blocked_post_count": 3,
+    "reason": "実画像ツールが細い一部のみを返し判定できなかった"
+  }
 }
