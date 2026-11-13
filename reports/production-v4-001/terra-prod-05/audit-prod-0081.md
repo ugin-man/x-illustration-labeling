@@ -12,3 +12,4 @@
 - Sixth checkpoint: 5 further results accepted, remote head f12cbfc2a55c1e09e6c520ce4351614fba8f10d7. The quality-review deferral remains incomplete.
 - Environment restarted during a next operation. The worker still owned this job; no new image was opened during interruption. A fresh isolation audit checked 676 loose and 674 archive images, with 0 excluded matches.
 - Seventh checkpoint after the operation gate expired: 3 further results accepted, remote head af44ae345b283a6724101ea9689fcca52ddd64eb. The quality-review deferral remains incomplete.
+- Eighth checkpoint: 5 further results accepted, remote head 890121e8b1a35e8b27dc8ece7e46a6a700b66ba4. The quality-review deferral remains incomplete.
