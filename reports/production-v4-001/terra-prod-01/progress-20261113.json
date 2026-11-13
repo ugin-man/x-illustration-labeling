@@ -3,9 +3,10 @@
   "worker_id": "terra-prod-01",
   "finished_job": "prod-0040",
   "finished_posts": 50,
-  "checkpoint_accepted_posts": 50,
-  "checkpoint_head": "7dc8190937bbfb3494f74766a747f5bf10a4b138",
-  "recovery": "expired lease reacquired; local results and context verified against backup before checkpoint",
-  "updated_at": "2026-11-13T05:33:56.640606+00:00",
-  "finish_head": "b47cfc22064c2aeb83266e12894a396533ad0263"
+  "checkpoint_accepted_posts": 29,
+  "checkpoint_head": "06c98929fbfe4d32e651905d62876944ca01585f",
+  "recovery": "Git authentication restored; expired lease reacquired; 29 local results and 33 context files verified against backup, then checkpointed",
+  "updated_at": "2026-11-13T07:12:04.413917+00:00",
+  "finish_head": "b47cfc22064c2aeb83266e12894a396533ad0263",
+  "current_job": "prod-0041"
 }
