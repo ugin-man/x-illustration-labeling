@@ -1,0 +1,20 @@
+{
+  "status": "OPS_R3_RUNNING",
+  "worker": "terra-prod-02",
+  "job": "prod-0327",
+  "new_post_ids": [
+    "2097378494233948289",
+    "2097378495039176875"
+  ],
+  "remote_accepted_before": 28,
+  "remote_accepted_after": 30,
+  "remote_head": "2e6586341391a48367eccc82ba9b09753ba79da8",
+  "image_tool": "functions.view_image",
+  "images_displayed": 4,
+  "isolation": {
+    "loose_images_checked": 953,
+    "archive_images_checked": 950,
+    "excluded_images_found": 0
+  },
+  "recorded_at": "2026-11-13T19:15:54Z"
+}
