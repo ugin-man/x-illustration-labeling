@@ -11,3 +11,6 @@
 - Five additional results checkpointed; remote head db45c41b13490afd0ab6e27884adc9dff624797e. Incidental popularity indicators in image/text results were not used.
 
 - Five additional results checkpointed; remote head 7b1558317d3acfaf42e3df68dabaedee6df084de.
+
+- Five additional results checkpointed; remote head 17345c9176757b178b8e6e9dd20cddabc658e78b (29 accepted in job).
+- Paused under the ops-r2 repeated technical failure instruction after individual body fetches returned HTTP 404 for three consecutive posts: 2095158050357412201, 2095158294893732326, 2095158295460040851. Image-derived results and technical_failure were saved; these posts were not excluded or retried. Actual service-wide outage has not been established.
