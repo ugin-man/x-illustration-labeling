@@ -1,0 +1,23 @@
+{
+  "worker": "terra-prod-07",
+  "run": "production-v4-001",
+  "operations_revision": "ops-r3",
+  "job": "prod-0333",
+  "new_post_ids": [
+    "2097412864579699023",
+    "2097413104246435861"
+  ],
+  "accepted_before": 23,
+  "accepted_after": 25,
+  "checkpoint_remote_head": "5a5c12edd12bc23ce849040b5ee7f18efb36134d",
+  "image_tool": "functions.view_image",
+  "view_counts": {
+    "2097412864579699023": 4,
+    "2097413104246435861": 1
+  },
+  "isolation_excluded_images_found": 0,
+  "isolation_note": "各表示前の監査は除外一致0",
+  "checkpoint_recorded_at_utc": "2026-11-13T19:22:42.176545+00:00",
+  "control_sha256": "02c3300e2d493b8a09429c6d12411a7b13d007f01ef533b9c19bb1bc4df31344",
+  "manifest_sha256": "39061d963ab5e83df1d47609eba63c75543bc90136b03d77f6bdb6ac36152455"
+}
