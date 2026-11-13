@@ -2,9 +2,11 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-02",
   "job_id": "prod-0251",
-  "checkpointed_posts": 40,
+  "checkpointed_posts": 50,
   "post_count": 50,
-  "checkpoint_head": "18b9e0634a3e6797ed760d72f018e211ed89b3bc",
-  "recorded_at": "2026-11-13T04:56:18.794846+00:00",
-  "audit_note": "A next-returned image was found to contain a page screenshot; engagement indicators appeared incidentally. The screenshot was not used as research input and no indicator values were recorded."
+  "checkpoint_head": "ed2581907f306368b9b7962b305c10225adec4e5",
+  "recorded_at": "2026-11-13T05:10:04.075409+00:00",
+  "audit_note": "A next-returned image was found to contain a page screenshot; engagement indicators appeared incidentally. The screenshot was not used as research input and no indicator values were recorded.",
+  "finish_head": "feb20120304903b2ae27ea93b0e5723598544746",
+  "status": "finished"
 }
