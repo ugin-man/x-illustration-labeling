@@ -1,7 +1,8 @@
 {
   "job_id": "prod-0155",
   "worker_id": "terra-prod-08",
-  "checkpointed_posts": 10,
-  "checkpoint_head": "5b4294981977c73e67795c3ba9045acd25e1647b",
-  "recorded_at_utc": "2026-11-13T03:56:30.222473+00:00"
+  "checkpointed_posts": 18,
+  "checkpoint_head": "f60f56ced7d25cbb82e6d4dae538a145bd042795",
+  "recorded_at_utc": "2026-11-13T04:06:46.409401+00:00",
+  "note": "次の投稿の画像1件は閲覧・記録済み、分類未保存。"
 }
