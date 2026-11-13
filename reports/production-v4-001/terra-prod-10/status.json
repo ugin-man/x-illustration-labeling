@@ -1,14 +1,13 @@
 {
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
-  "job_id": "prod-0170",
-  "checkpointed_posts": 50,
-  "status": "finished_job",
-  "note": "prod-0170を復旧し50投稿をcheckpoint、finish。次のclaimに進む。",
-  "recorded_at": "2026-11-13T09:01:53.492260+00:00",
-  "checkpoint_head": "460da9ab295d16e48df2383d39f692042d68fb58",
-  "local_saved_posts": 50,
+  "job_id": "prod-0027",
+  "checkpointed_posts": 4,
+  "status": "active",
+  "note": "prod-0170 finish後、prod-0027を自律取得して4投稿checkpoint。",
+  "recorded_at": "2026-11-13T09:11:17.432575+00:00",
+  "checkpoint_head": "cfb1fb87723f2e64c842f609fcaac2345a39c13d",
+  "local_saved_posts": 4,
   "uncheckpointed_saved_posts": 0,
-  "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
-  "finish_head": "0403f0e6b9e09152c497108b3ec14329d9c42b84"
+  "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113"
 }
