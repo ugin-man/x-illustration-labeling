@@ -6,14 +6,14 @@
   "checkpoint_accepted_posts": 50,
   "checkpoint_head": "8e3c55bedbedbb74cac3c5e8abe42e2cd2a3c9f3",
   "recovery": "environment restored; same active ownership verified; six pending results and context, draft, and viewing events matched preserved backup; CLI checkpoint succeeded; isolation excluded matches zero",
-  "updated_at": "2026-11-13T13:20:57.232066+00:00",
+  "updated_at": "2026-11-13T13:24:18.548504+00:00",
   "finish_head": "cabaeb8091c694bafcf7d4791adf9029825b98c0",
   "current_job": "prod-0115",
-  "current_checkpoint_accepted_posts": 20,
-  "current_checkpoint_head": "657bd089471611cce5a02c4fc7427ec0a08d4387",
-  "local_uncheckpointed_posts": 1,
+  "current_checkpoint_accepted_posts": 21,
+  "current_checkpoint_head": "207476a33e6d26368c855f7ae70f9b45b7d85101",
+  "local_uncheckpointed_posts": 0,
   "status": "OPS_R2_RUNNING",
-  "current_job_status": "active",
+  "current_job_status": "stopped_for_conflict",
   "review_job": {
     "job_id": "prod-0078",
     "accepted_posts": 49,
@@ -44,5 +44,11 @@
       "reason": "needs_quality_review",
       "note": "3D avatar applicability under illustration criteria requires review"
     }
-  ]
+  ],
+  "operational_conflict": {
+    "post_id": "2095579511664624029",
+    "reason": "needs_quality_review",
+    "observation": "next succeeded and image was viewed once; defer returned Conflict: Post or an identical attachment is deferred; do not reopen it; a subsequent next returned the same post; no second image display or result",
+    "recovery": "preserve draft and view event; review CLI blocked-state inconsistency before continuing"
+  }
 }
