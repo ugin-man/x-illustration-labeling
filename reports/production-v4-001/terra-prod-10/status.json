@@ -4,8 +4,10 @@
   "job_id": "prod-0170",
   "checkpointed_posts": 29,
   "status": "paused_quality_review",
-  "note": "固定マニュアルとの判定不一致をcheckpoint済み結果に検出。受理済み結果は変更せず停止。閲覧済みの次投稿は未save。",
-  "recorded_at": "2026-11-13T07:50:12.194284+00:00",
+  "note": "固定マニュアルとの不一致を受理済み結果に検出。29投稿はcheckpoint済み、追加9投稿はローカル保存のみ。次の投稿は閲覧・本文取得済みで未save。",
+  "recorded_at": "2026-11-13T07:50:29.438591+00:00",
   "checkpoint_head": "8d6bf953bc4fb6e3ffdb1461557cd7e155400b5e",
-  "current_post_id": "2096036987291767193"
+  "current_post_id": "2096036987291767193",
+  "local_saved_posts": 38,
+  "uncheckpointed_saved_posts": 9
 }
