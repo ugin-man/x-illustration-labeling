@@ -1,0 +1,11 @@
+{
+  "worker": "terra-prod-07",
+  "job": "prod-0333",
+  "remote_accepted_at_last_checkpoint": 37,
+  "remote_head_at_last_checkpoint": "30f0d87681d93e818c9817141ee28d424ce10050",
+  "locally_saved_uncheckpointed": 2,
+  "draft_post_id": "2097415149208658321",
+  "stop_command": "save",
+  "error": "Push was not accepted; no reservation was acquired",
+  "updated_at": "2026-11-13T20:06:25.287460+00:00"
+}
