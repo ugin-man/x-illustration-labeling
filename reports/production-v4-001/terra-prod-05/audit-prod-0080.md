@@ -5,3 +5,5 @@
 - For post 2095154581168881723 the initial image-tool output was truncated without visible pixels or refusal; the same authorized image was displayed again. Viewing is recorded retrospectively in view-events.
 
 - Five additional results checkpointed; remote head a27163b3d832eb5284ffb8f97ed659539c2d179b.
+
+- Five additional results checkpointed; remote head 35d643d84eb03a857751bd6cdc508078f66d0456. One image and one text-search result incidentally contained popularity indicators; neither was used.
