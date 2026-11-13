@@ -1,11 +1,13 @@
 {
   "worker": "terra-prod-07",
   "job": "prod-0333",
-  "status": "checkpoint",
-  "remote_accepted": 22,
-  "remote_head": "5eaf57e078db8e3970e0fe21cc7993f1a75b796f",
+  "status": "ops_r3_stopped",
+  "remote_accepted": 23,
+  "local_uncheckpointed": 0,
+  "remote_head": "9eb1b4d30f94e136e5fd7f38f471866cef14e42f",
+  "reason": "ops-r3切替のための指示による停止",
   "previous_job": "prod-0021",
   "previous_status": "completed",
   "previous_remote_head": "99b547888b74c86b409f74ca7aa71da6ab1eaafa",
-  "updated_at": "2026-11-13T18:39:26.074728+00:00"
+  "updated_at": "2026-11-13T18:44:42.309501+00:00"
 }
