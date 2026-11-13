@@ -7,14 +7,19 @@
   "completed_job_accepted": 50,
   "completed_remote_head": "9590b59c2601b0c2c7ec66b1bc913504bd1dbac2",
   "current_job": "prod-0141",
-  "current_remote_accepted": 29,
-  "current_local_uncheckpointed": 3,
+  "current_remote_accepted": 30,
+  "current_local_uncheckpointed": "unverified",
   "isolation_excluded_images_found": 0,
-  "note": "Three answers locally saved; final save returned claim_gate_cleanup_pending. Waiting for natural gate expiry before continuing.",
-  "updated_at": "2026-11-13T20:01:56.230748+00:00",
-  "current_remote_head": "319200171278699c88fbca86122ee4c8e501bd90",
+  "note": "After claim gate expiry, read-only status showed 30 accepted and a different head although last observed checkpoint was 29. No worker process observed. Relationship to three local saved answers is unverified; stopped without further queue changes.",
+  "updated_at": "2026-11-13T20:09:34.021105+00:00",
+  "current_remote_head": "3d4f0481fb0f0186d2fe85ebebfc2cd598db8441",
   "deferred_posts": [
     "2095810088640635245",
     "2095813383681708133"
+  ],
+  "current_local_saved_candidates": [
+    "2095815151144595591",
+    "2095815398788915701",
+    "2095815399141175308"
   ]
 }
