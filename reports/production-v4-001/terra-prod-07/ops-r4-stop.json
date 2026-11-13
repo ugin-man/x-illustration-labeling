@@ -1,0 +1,25 @@
+{
+  "worker": "terra-prod-07",
+  "root": "/workspace/production-v4-001",
+  "job": "prod-0333",
+  "operations_revision": "ops-r4",
+  "manifest_sha256": "1b197e57f1f1e98623e807ac2080eb52086015978fc6c9f9bcf8614dc2822306",
+  "reconciliation_remote_accepted": 37,
+  "reconciliation_unaccepted_ids": [
+    "2097415145152786789",
+    "2097415146977309043"
+  ],
+  "recovered_ids": [
+    "2097415145152786789",
+    "2097415146977309043",
+    "2097415149208658321"
+  ],
+  "last_confirmed_checkpoint_head": "600489f18a52b4e22db3a16f927b3742b28b9e3b",
+  "last_confirmed_accepted_count": 40,
+  "locally_saved_post": "2097415154803548541",
+  "current_draft_post": "2097415403236642949",
+  "error_command": "context fetch",
+  "error": "Push atomic_job: acceptance_indeterminate; preserve local state",
+  "warning": "claim_gate_cleanup_pending",
+  "updated_at": "2026-11-13T21:54:26.721907+00:00"
+}
