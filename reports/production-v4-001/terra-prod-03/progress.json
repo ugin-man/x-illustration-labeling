@@ -45,7 +45,7 @@
       "excluded_posts": 0
     }
   ],
-  "recorded_at": "2026-11-13T01:52:20.247672+00:00",
+  "recorded_at": "2026-11-13T02:10:01.756400+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -72,7 +72,9 @@
     "prod-0369: uncheckpointed post 2097739314381943250 cited a text search result whose URL was an image-search page, contrary to the input restriction. No image-search page or external image was opened. The job was released without checkpointing the result; do not reuse that result or prohibited source. Local context cache and budget are retained under .runtime/production-v4-001/prod-0369/context/; preserve the spent search budget and avoid re-fetching the post text when recovering.",
     "prod-0368 released before checkpointing post 2097735028042313797: image hair-color flags were set to absent despite a small unresolved figure whose hair was uncertain. Do not reuse this unaccepted result. Nine locally saved results after the eight-post checkpoint were not accepted; preserve each context cache and its search budget during recovery, and do not reuse a stale draft.",
     "prod-0369 was briefly reacquired with the previously reported invalid unaccepted local result still present; released without checkpointing again, preserving cached context and search budget.",
-    "prod-0323 individual post text HTTP failures recorded without retry; incidental popularity exposure recorded in review flag without values."
+    "prod-0323 individual post text HTTP failures recorded without retry; incidental popularity exposure recorded in review flag without values.",
+    "Post 2097355231550132445 excluded via model_refusal at media index 3; do not reopen any image of that post.",
+    "Popularity exposure in focal image and text was flagged without recording values."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
@@ -109,7 +111,8 @@
   },
   "active_job": {
     "job_id": "prod-0323",
-    "checkpointed_posts": 23,
-    "checkpoint_head": "b9fe02bab79617353f09060edbaefd6817b30a87"
+    "checkpointed_posts": 36,
+    "excluded_posts": 1,
+    "checkpoint_head": "a62077ac5ae1c57d745995431c7baef883d40b3f"
   }
 }
