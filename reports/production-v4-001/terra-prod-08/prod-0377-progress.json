@@ -2,7 +2,7 @@
   "job_id": "prod-0377",
   "worker_id": "terra-prod-08",
   "status": "leased",
-  "checkpointed_posts": 19,
-  "checkpoint_head": "c201826740e0c3dff6f8621a433835390ee5bd80",
-  "recorded_at_utc": "2026-11-13T07:10:15.750583+00:00"
+  "checkpointed_posts": 28,
+  "checkpoint_head": "af53187f0a18db06c5f38dc3a91dd43b20dd4c11",
+  "recorded_at_utc": "2026-11-13T07:19:35.844315+00:00"
 }
