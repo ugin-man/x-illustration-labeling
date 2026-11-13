@@ -1,0 +1,146 @@
+{
+  "worker": "terra-prod-05",
+  "root": "/workspace/production-v4-001",
+  "job": "prod-0246",
+  "recorded_at_utc": "2026-11-13T21:22:23.009170+00:00",
+  "remote_status": "leased",
+  "remote_accepted_count": 24,
+  "remote_head": "1fe3233cf50de4a445230873ca99ae9fe79e560b",
+  "local_results": [
+    {
+      "post_id": "2096720094244356513",
+      "sha256": "154540f5e751c9bc0317b61617e33e0db65d17c5c91922f71e326a463e4bc503",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720094776955349",
+      "sha256": "d368d63c524263ed36701fbdf0ca2d71c179685c1a72c0d44765bb6aadba1cca",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720346170998878",
+      "sha256": "6bcd879a3e80edf4e5d88de924ed766240134b3c029be8e6dc74573af338cde2",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720346254864770",
+      "sha256": "14479eb0a8aa271110fec3f2bae523570bb1cc0a6bd64d4a20abe76e427d586b",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720597707587622",
+      "sha256": "96fbeeeeac6f4482bbc509298465c3f02dc9f77e5bfed117db9a774734a0a8e5",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720597707591735",
+      "sha256": "352136ac362bdbecec3f15e90fcc84dbaf802bb3bb88a4cd0ee6b63e7a197f8c",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720597736681743",
+      "sha256": "f48ed243f4e496b63e9bbd1909253ff91d0f9bd79fbbba70f39b67aa8076743d",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720597749547335",
+      "sha256": "685b647700da54bdcdba48a6db32d33adbc6672af6cfb44ad7a30a6d0e3b56e8",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720849428709670",
+      "sha256": "eac41cb9fc28e479f48e022a6f78a81cc23205bb5ac31049c4ec6d1827d1c63e",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720849461993588",
+      "sha256": "157116f7977199a3cc828b1c57889fab22faf4c16db6ddec5e7a18eb621f8646",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096720849927602682",
+      "sha256": "f6f739680456ca33d5cbc26a1a1c80df119c9a6fd0cf59c829e823b8f3e9961d",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721100965314786",
+      "sha256": "9867a3d5282a25dc245e96e5277aecbe16e8c80e5a7af342c7564ad8e1d61a07",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721101032173888",
+      "sha256": "a2420a713e22defcdf7e060516ae1c82f19f80dd57ce4516d83325bb14ec9709",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721108183724270",
+      "sha256": "4aa7f7cc2f1c4abbf1abc063b24bcaec2de7e0dedb2428e64d9eb3fc84fd6c0c",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721352665206979",
+      "sha256": "7029865af73218e398b749f568c0b4d0b4a4388412923e6b99601c189edbb628",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721352686256544",
+      "sha256": "5b28cd3803ce311618bcb378fdf5361e4e5230910cbd0bf0db0048135c8ae4eb",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721352694657143",
+      "sha256": "b5db579f58c1815dddd44f837d3811dc6fd9194471672fc1703af9536f9d9a4b",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721603983802751",
+      "sha256": "1274976bf052309da0d74b95cc25864c0e520d4350ba56c74224374291e879be",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721855709151608",
+      "sha256": "b56e109a99ad36c64b6bfa41ee741591569f6bea57e07d498353c96b33011849",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721855763849417",
+      "sha256": "01036c21cf1ce20dd8d0fa02229bfc2cae2718b0e104d539afc7fc2870d267b5",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096721865620529411",
+      "sha256": "62ca1333b28946db347446bfe3c224c7a468525139fad17f0541897619eae125",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096722111964299418",
+      "sha256": "e349433a9d14596f56b4c22d60eda198335fe413e69abaea0e3cd077b1bc81b1",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096722114795704556",
+      "sha256": "3cad3433226aa9d760b17da1757d154c46f1d034bb759ecb15c9ed2bcac8a3f1",
+      "in_local_accepted_snapshot": true
+    },
+    {
+      "post_id": "2096722120772649118",
+      "sha256": "38952ab3ec2b91d69e321bc62c503761af1bf45efe8582d30559026f45a483f5",
+      "in_local_accepted_snapshot": true
+    }
+  ],
+  "local_results_uncheckpointed_count": 0,
+  "draft": {
+    "exists": true,
+    "post_id": "2096722365241815322",
+    "sha256": "afa5c3aa7717f2311768304747d7e1bfff6610a18cffe640332427157a6e624e",
+    "saved_in_results": false
+  },
+  "unfinished_draft_count": 1,
+  "active_cli_at_inspection": false,
+  "last_failed_command": "save",
+  "last_error": {
+    "error": "QueueError",
+    "message": "Push was not accepted; no reservation was acquired"
+  },
+  "research_state": "stopped; no retry of failed write"
+}
