@@ -154,6 +154,32 @@ class BatchRuntimeTests(unittest.TestCase):
         self.assertEqual(first['remote_head'], second['remote_head'])
         self.assertEqual(second['status'], 'completed')
 
+    def test_save_interruption_after_result_write_reuses_finished_time(self):
+        jid, folder, manifest = self.claimed(); post = manifest['posts'][0]
+        row = self.answer(manifest, post); row['execution']['finished_at'] = None
+        draft = folder / 'draft.json'; atomic_write(draft, canonical(row))
+        real_write = worker.atomic_write
+        def interrupted(path, data):
+            if path == draft:
+                raise OSError('synthetic interruption after result write')
+            return real_write(path, data)
+        with patch('ops_batch.worker.atomic_write', interrupted):
+            with self.assertRaises(OSError): self.call('save', job=jid)
+        path = folder / 'results' / (post['post_id'] + '.json'); original = path.read_bytes()
+        self.call('save', job=jid)
+        self.assertEqual(path.read_bytes(), original)
+
+    def test_unknown_checkpoint_outcome_blocks_revision_but_keeps_new_work_local(self):
+        jid, folder, manifest, post, row = self.saved()
+        with patch.object(BatchQueue, 'commit_batch', side_effect=OSError('connection gone')):
+            with self.assertRaises(OSError): self.call('checkpoint', job=jid)
+        changed = copy.deepcopy(row); changed['review_flags'] = ['changed']
+        atomic_write(folder / 'draft.json', canonical(changed))
+        with self.assertRaisesRegex(Conflict, 'reconcile'):
+            self.call('revise', job=jid, post=post['post_id'], reason='test')
+        self.assertEqual(self.call('next', job=jid)['post_id'], manifest['posts'][1]['post_id'])
+        self.call('checkpoint', job=jid)
+
 
 class BatchOwnershipTests(unittest.TestCase):
     def test_other_worker_does_not_take_expired_owner_journal(self):

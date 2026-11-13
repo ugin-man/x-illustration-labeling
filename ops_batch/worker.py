@@ -268,6 +268,8 @@ def local(args, folder, manifest, config, session):
         write_session(folder, session)
         return dict(status='deferred', post_id=args.post, saved_locally=True, remote_accepted=False, next='next')
     if command in {'save', 'validate', 'revise'}:
+        if command == 'revise' and session.get('sync_pending'):
+            raise Conflict('Checkpoint outcome is unknown; reconcile before revising an existing result')
         source = Path(args.input) if args.input else folder / 'draft.json'
         row = read_json(source)
         post = helpers.require_post(manifest, row.get('post_id'), blocked)
@@ -283,7 +285,10 @@ def local(args, folder, manifest, config, session):
                 raise Conflict('Accepted answers are immutable')
             return dict(already_accepted=pid, remote_accepted=True)
         if row['execution']['finished_at'] is None:
-            row['execution']['finished_at'] = helpers.utcnow()
+            existing_path = folder / 'results' / (pid + '.json')
+            existing = read_json(existing_path) if existing_path.exists() else None
+            row['execution']['finished_at'] = (existing.get('execution', {}).get('finished_at')
+                                               if existing else None) or helpers.utcnow()
         base.validate_draft(row, post, config, manifest, folder)
         capture_context(folder, manifest, session)
         if command == 'validate':
@@ -347,11 +352,13 @@ def run(args):
                         base.validate_draft(row, post, config, manifest, folder)
                         if not disposition.is_exclusion(row) and row['execution']['worker_id'] != args.worker:
                             raise Conflict('Cannot publish another worker unfinished result')
+                session['sync_pending'] = True
+                write_session(folder, session)
                 head, state, metadata = queue.commit_batch(args.job, session['lease']['token'], args.worker,
                     manifest, rows, metadata_of(session), finish=args.command == 'finish')
                 session.update(lease=dict(state, head=head), metadata={n: r.decode() for n, r in metadata.items()},
                     accepted={pid: hashlib.sha256(canonical(row)).hexdigest() for pid, row in rows.items()},
-                    last_checkpoint_at=time.time())
+                    last_checkpoint_at=time.time(), sync_pending=False)
                 restore_context(folder, manifest, session)
                 write_session(folder, session)
                 atomic_write(folder / 'lease.json', canonical(session['lease']))
