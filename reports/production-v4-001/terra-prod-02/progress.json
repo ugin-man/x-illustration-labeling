@@ -1,7 +1,7 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0167",
-  "remote_accepted": 43,
-  "remote_head": "e583414dafa60b48ccc9f935ab43daf342fb740a",
-  "notice": "Body retrieval recovered after earlier individual HTTP failures; one transient Git ls-remote failure recovered on save retry."
+  "remote_accepted": 48,
+  "remote_head": "d4a1c32325d3775acd6e4d1c3912da941e030cb4",
+  "notice": "One interrupted body fetch had no cache; recorded technical failure without refetch. Git connectivity recovered."
 }
