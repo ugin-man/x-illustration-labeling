@@ -1,7 +1,12 @@
 {
   "worker": "terra-prod-02",
-  "job": "prod-0167",
-  "status": "completed",
-  "remote_accepted": 50,
-  "remote_head": "27537eb71c3ac8156534a87df895d39b30a8f220"
+  "job": "prod-0327",
+  "remote_accepted": 4,
+  "remote_head": "3c9c77f267c189f5d21d06382db6ab746cea1515",
+  "isolation": {
+    "loose_images_checked": 953,
+    "archive_images_checked": 950,
+    "excluded_images_found": 0
+  },
+  "notice": "One view-event media index corrected by appended metadata entry; no repeat view."
 }
