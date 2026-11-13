@@ -2,10 +2,10 @@
   "worker": "terra-prod-07",
   "job": "prod-0333",
   "status": "checkpoint",
-  "remote_accepted": 4,
-  "remote_head": "75cde491e53a0babf03bceb093e097aa2655a785",
+  "remote_accepted": 8,
+  "remote_head": "93b580e5704ae4b865f305fa39a2911ab9db6afd",
   "previous_job": "prod-0021",
   "previous_status": "completed",
   "previous_remote_head": "99b547888b74c86b409f74ca7aa71da6ab1eaafa",
-  "updated_at": "2026-11-13T17:42:02.923125+00:00"
+  "updated_at": "2026-11-13T17:53:00.174020+00:00"
 }
