@@ -1,8 +1,10 @@
 {
   "job_id": "prod-0303",
   "worker_id": "terra-prod-08",
-  "checkpointed_posts": 42,
-  "checkpoint_head": "380661efbe63865c97935615ac92861477a4d7b3",
-  "recorded_at_utc": "2026-11-13T03:27:12.856082+00:00",
-  "audit_note": "投稿2097170285996785856の4表示は直後の記録時刻のみで正確な表示秒は未取得"
+  "checkpointed_posts": 50,
+  "checkpoint_head": "0cf17cfb222e50d8df6de2387f9cd65874776196",
+  "recorded_at_utc": "2026-11-13T03:38:04.686344+00:00",
+  "audit_note": "投稿2097170285996785856の4表示は直後の記録時刻のみで正確な表示秒は未取得",
+  "finish_head": "60b8683391e4424fdfadcb28153002599e1b2160",
+  "status": "completed"
 }
