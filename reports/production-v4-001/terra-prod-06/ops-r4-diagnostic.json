@@ -1,0 +1,191 @@
+{
+  "worker": "terra-prod-06",
+  "run": "production-v4-001",
+  "research_root": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+  "job": "prod-0141",
+  "remote_status": "expired",
+  "remote_accepted": 30,
+  "remote_head": "3d4f0481fb0f0186d2fe85ebebfc2cd598db8441",
+  "local_results_count": 33,
+  "local_results": [
+    {
+      "post_id": "2095809325906415682",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095809325906415682.json",
+      "sha256": "22c3fd244c98cf056f2b39a093ca1b15f2f9ab562298c955fdcf91e6ae5c0d9f"
+    },
+    {
+      "post_id": "2095809578793685367",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095809578793685367.json",
+      "sha256": "74b89da4fdae700561c1355d7559bf0a8efa0fac88ec683ad477dfc9403c7f3d"
+    },
+    {
+      "post_id": "2095809583919051016",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095809583919051016.json",
+      "sha256": "fca9b8fe21790065535d54edee6b85f194cbcfab0d112abb288914dda0dec3d3"
+    },
+    {
+      "post_id": "2095809584715944362",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095809584715944362.json",
+      "sha256": "8f3169b1efc23a0484b1c54e1ea56a75ebcfb2da58c8cf4239e799f8acae7a0f"
+    },
+    {
+      "post_id": "2095809837351514465",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095809837351514465.json",
+      "sha256": "a35b76ba6a05d1a8b30ea846a567ac82349b977ec35cb1986316f7abda1f80f5"
+    },
+    {
+      "post_id": "2095810088628097138",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095810088628097138.json",
+      "sha256": "b565aea082bda88cdf255526b96d3d42fbc944d7837b1ec7c3e47e529569e462"
+    },
+    {
+      "post_id": "2095810093543805250",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095810093543805250.json",
+      "sha256": "fc1982577dbfb0bdbd72b8f70c1e678ac0b757d7e87d5d36e5f3d098a7cb5423"
+    },
+    {
+      "post_id": "2095810338272989505",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095810338272989505.json",
+      "sha256": "253d104ee9806fbfda00e8fb9795b5e0a83ac77eb9446b33dc37acea4d0e6b23"
+    },
+    {
+      "post_id": "2095810588362645841",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095810588362645841.json",
+      "sha256": "565cc3b7a610ece028090752f739ac9b797ff6a51819d3ea2eda6b838eac1455"
+    },
+    {
+      "post_id": "2095811102156403048",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095811102156403048.json",
+      "sha256": "155f44d397e7f56ea8a54810bad947459baad284d2ca69276b692bcabe454893"
+    },
+    {
+      "post_id": "2095811104211665403",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095811104211665403.json",
+      "sha256": "d1a56d61d67e7c0d468a8f64b978df16bce11419193d6b29a9cea58c00ed99dd"
+    },
+    {
+      "post_id": "2095811104312033391",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095811104312033391.json",
+      "sha256": "09909a7d3eadbde3d4dc42b55342b11eca163f9ef28ae55a48ddbab2146567e9"
+    },
+    {
+      "post_id": "2095811853595087065",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095811853595087065.json",
+      "sha256": "16712d637b0c5b36319a625898aea038fb355690895a2ecb33c61040d860aea3"
+    },
+    {
+      "post_id": "2095812117173833917",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095812117173833917.json",
+      "sha256": "c60e9824ce1fb4f90919b26cc60f617ef5bc009796bbd84bbe7ee98b65de3e3b"
+    },
+    {
+      "post_id": "2095812623048822962",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095812623048822962.json",
+      "sha256": "c10b79f7472a0ea69ec0886718e41af114aeca1816cef30e85e986b66683efe4"
+    },
+    {
+      "post_id": "2095812623531188231",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095812623531188231.json",
+      "sha256": "412f6040b0fd9943b31b8c135e818561c365926dd7bcb7defb6013e562ce7801"
+    },
+    {
+      "post_id": "2095812627968463050",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095812627968463050.json",
+      "sha256": "e16098f3bef31bc55bd0260339fa6731ac0f26c34535be493cbabe53bfd21d73"
+    },
+    {
+      "post_id": "2095812874619035864",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095812874619035864.json",
+      "sha256": "75f1fd3307718a2dea505e4780890179484310985753f04f79834acff037396b"
+    },
+    {
+      "post_id": "2095813120656867513",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095813120656867513.json",
+      "sha256": "2bc8a061b3cee92d2b4e2ecff0f9dc19fe86cbc923541a07ba00b5eed437bc65"
+    },
+    {
+      "post_id": "2095813383945658449",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095813383945658449.json",
+      "sha256": "f3b85bf1f29fc3545a3d28b4cc8d49ca156c4429f33cafe0584b6b60e1d1413d"
+    },
+    {
+      "post_id": "2095813889304989756",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095813889304989756.json",
+      "sha256": "364e31979d357a7bf7ce7e9911eb6fbafd43a20cc670ff61315329a3a937fd9f"
+    },
+    {
+      "post_id": "2095813891477614765",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095813891477614765.json",
+      "sha256": "8d54c6d273894ae04a7e16efbdfba6b458bc7da22a6a0f14ef3ad3b64997d6e9"
+    },
+    {
+      "post_id": "2095814138383786227",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095814138383786227.json",
+      "sha256": "492bd61beee2ce64be2b334380b7f0e42c986ab17cb40e45bd4c6645e9c37a04"
+    },
+    {
+      "post_id": "2095814384442306918",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095814384442306918.json",
+      "sha256": "01ed214c122bd59121f5583c0e8a7f7d5a8ab241d6bfb50069d366bb68e235d2"
+    },
+    {
+      "post_id": "2095814386879479999",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095814386879479999.json",
+      "sha256": "9367796bb6acaa37ffe8ee22a606228bdbcfd2b83af1572c6d9530e4ec6ab36e"
+    },
+    {
+      "post_id": "2095814388553007583",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095814388553007583.json",
+      "sha256": "585bf11164af47b0774a6dc5399f7d30c2df7249d7e7fe34104a5f1fad482749"
+    },
+    {
+      "post_id": "2095814392898257389",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095814392898257389.json",
+      "sha256": "9bce3f2265809ab9ad9957859618711d63554ca52a8df78236fb3dd1d16cd131"
+    },
+    {
+      "post_id": "2095814639162642588",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095814639162642588.json",
+      "sha256": "55baef41c898c993d87cfbe0394da580270df73d7f7769d7eef7eeaf4821de21"
+    },
+    {
+      "post_id": "2095814894650290563",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095814894650290563.json",
+      "sha256": "26707c255c55e8ba69fb2942b92d64fa8b98abce88c60f0c7a6641329e14397c"
+    },
+    {
+      "post_id": "2095815146350481918",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095815146350481918.json",
+      "sha256": "8f84e7fd30b5e60367b385b6497590a6f067467e443808d6099679f71f51e830"
+    },
+    {
+      "post_id": "2095815151144595591",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095815151144595591.json",
+      "sha256": "69a3963a84a0fdcbd8161158f7fa192c489ca0f7ce53d8e0759bcdf677297bb2"
+    },
+    {
+      "post_id": "2095815398788915701",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095815398788915701.json",
+      "sha256": "72d7e52051dd7de158e4ae2f95d425377bf52b4ec5e30fc82d8358fa40f73f5e"
+    },
+    {
+      "post_id": "2095815399141175308",
+      "relative_path": ".runtime/production-v4-001/prod-0141/results/2095815399141175308.json",
+      "sha256": "0e3b4acab364b787cf7c11a887373d74fe0e15e1c12ef736565b0251e82a6921"
+    }
+  ],
+  "local_unsubmitted_count": null,
+  "local_unsubmitted_note": "Remote result identities and local byte correspondence were not verified; 33 local results versus 30 accepted does not establish which files are unsubmitted.",
+  "draft": {
+    "exists": true,
+    "post_id": "2095815399141175308",
+    "sha256": "0e3b4acab364b787cf7c11a887373d74fe0e15e1c12ef736565b0251e82a6921"
+  },
+  "running_worker_processes": [],
+  "last_command_warning": {
+    "command": "ops_runtime_r3.worker save --job prod-0141",
+    "output": "claim_gate_cleanup_pending; saved_locally 2095815399141175308; exit 0"
+  },
+  "stop_reason": "After last observed checkpoint of 29, remote status showed 30 accepted with a different head; correspondence with local saves is unverified.",
+  "observed_at_utc": "2026-11-13T21:22:45.156814+00:00"
+}
