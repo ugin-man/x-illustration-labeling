@@ -1,9 +1,9 @@
 {
   "worker": "terra-prod-08",
   "job": "prod-0003",
-  "checkpoint_accepted_posts": 17,
-  "checkpoint_head": "d7ae43f7e4324c148d6200ccf7a1f77ac42b88ae",
-  "recorded_at_utc": "2026-11-13T21:13:24.059687+00:00",
+  "checkpoint_accepted_posts": 18,
+  "checkpoint_head": "de9eb3eb51c6c388d275c24fede644f02a39161c",
+  "recorded_at_utc": "2026-11-13T21:18:18.431827+00:00",
   "uncheckpointed_saved_posts": 0,
   "status": "ops_r3_running",
   "isolation_excluded_images_found": 0,
@@ -21,5 +21,6 @@
     "post_id": "2095608576945565711",
     "blocked_post_count": 3,
     "reason": "実画像ツールが細い一部のみを返し判定できなかった"
-  }
+  },
+  "count_correction": "前回記載17件は推定誤り。共有画像の保留連鎖を含む状態の現在のCLI集計は受理18件。保留は完了に含めない。"
 }
