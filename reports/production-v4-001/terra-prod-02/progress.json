@@ -1,8 +1,8 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "remote_accepted": 34,
-  "remote_head": "51f5cd17fc31d46b3c4e5509feba888bdaa89066",
-  "recorded_at": "2026-11-13T19:30:22Z",
-  "notice": "Three further posts checkpointed. For post 2097378737201488088 initial view log indexes corrected by appended events; no re-display."
+  "remote_accepted": 39,
+  "remote_head": "c3d6a0ed5fe2082475221f8fd662b8e59e3e3516",
+  "recorded_at": "2026-11-13T19:41:16Z",
+  "notice": "Five further posts checkpointed; image view audit updated."
 }
