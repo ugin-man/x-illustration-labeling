@@ -2,9 +2,9 @@
   "job_id": "prod-0215",
   "worker_id": "terra-prod-08",
   "status": "leased",
-  "checkpointed_posts": 24,
-  "checkpoint_head": "447c0e1b408b2e5cb9c108339b31b2a01a5e7108",
-  "recorded_at_utc": "2026-11-13T06:07:44.180208+00:00",
+  "checkpointed_posts": 32,
+  "checkpoint_head": "c850ba1e55a96ef9d4a4d388a8980b59ae9f1230",
+  "recorded_at_utc": "2026-11-13T06:18:11.813134+00:00",
   "audit_notes": [
     "Post 2096473181003599990: popularity information incidentally visible in image; values not recorded; review flag saved.",
     "Posts 2096475208488284414 and 2096475705223848376: popularity information incidentally displayed in text search; values not recorded; review flags saved."
