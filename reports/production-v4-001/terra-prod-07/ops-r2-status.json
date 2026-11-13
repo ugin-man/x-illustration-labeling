@@ -1,11 +1,8 @@
 {
   "worker": "terra-prod-07",
   "job": "prod-0021",
-  "status": "stopped_github_auth",
-  "remote_accepted_at_last_checkpoint": 16,
-  "checkpoint_head": "a86cf67183e84ab48ca6434dc82f80a2a2e611ad",
-  "last_observed_lease_head": "e7522584ca409757870259dc8c4d558f1e5f3e86",
-  "local_uncheckpointed": 1,
-  "draft_post": "2094568032672878940",
-  "updated_at": "2026-11-13T14:06:19.206597+00:00"
+  "status": "checkpoint",
+  "remote_accepted": 21,
+  "remote_head": "8053b6b4df3df432a1523d6586afcc471937f397",
+  "updated_at": "2026-11-13T15:23:23.833704+00:00"
 }
