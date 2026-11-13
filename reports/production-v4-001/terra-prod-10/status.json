@@ -2,9 +2,9 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0185",
-  "checkpointed_posts": 20,
-  "checkpoint_head": "f103ff165bbd0030ddc4cd5e17ff48f865154f72",
+  "checkpointed_posts": 27,
+  "checkpoint_head": "53ce319d076e303f783f1a981b947a67a2cc442a",
   "status": "active",
-  "note": "再取得後に前回の未保存draftと閲覧記録を照合し、再表示・再取得なしで保存。prod-0096・prod-0114の条件付き回復と一時release対象4区分の指示を保持。",
-  "recorded_at": "2026-11-13T03:02:10.710117+00:00"
+  "note": "prod-0096、prod-0114、prod-03の4区分の条件付き回復手順を保持。prod-03の4区分の一時release指示は後続指示で置換済み。",
+  "recorded_at": "2026-11-13T03:13:08.308402+00:00"
 }

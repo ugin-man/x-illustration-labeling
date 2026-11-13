@@ -16,15 +16,17 @@
       "manifest_path": "reports/production-v4-001/terra-prod-06/recovery-context/prod-0114/manifest.json",
       "manifest_sha256": "5ee14243a62dc790763d5542a6357bb03cf8099a8fd51f20f5f66b9f69e436fb",
       "instruction": "取得した場合のみ未受理投稿前にmanifestと列挙された6 cache/budgetファイルをSHA256照合し、列挙post IDの同名JSONのみ元バイトで継承。既存差異では停止。受理済み33投稿を変更しない。対象5投稿の本文再取得と追加検索・ページ取得は禁止。2095575705207873708は1検索0ページ14.116秒、他4件は0検索。出典時刻を推測せず、回復をreview_flagsと報告へ記録。"
+    },
+    "prod-03-recovery": {
+      "commit": "d139b75a55c0fee4416f2df23448643e95445cfc",
+      "path_template": "reports/production-v4-001/terra-prod-03/recovery-context/{JOB}/manifest.json",
+      "manifest_sha256": {
+        "prod-0049": "bc6f63aa2e032148f0b7469b7c6e6f3f2167f528c536e682adf04d2d4e7df2fd",
+        "prod-0326": "d9eb37edf19fd54b0d9903eff3774dbec41faf2d5cf8bd4a1dd20a69d29fe01f",
+        "prod-0368": "096f2b4d8e055e75d5b5d193d3b4f527e9893814325c051e7204ff592aadd900",
+        "prod-0369": "f311ecccf7fcf7f8a60db8682f2d5a07d43f00ce40c641c87e4edd431aeb0785"
+      },
+      "instruction": "一時release指示は置換済み。該当JOBをclaimした場合、未受理分処理前にmanifestと列挙されたcache/budgetを各SHA照合し、既存ファイル差異があれば上書きせず停止。欠落と記載されたbudgetは作成しない。列挙投稿の本文再取得・追加検索・ページ取得は禁止、実検索予算と終了時実測値を保持。post2097370927168393584は0検索0ページの本文404cache。受理済み結果・旧draft・誤記時刻・画像検索出典を使わず、CLI next後に通常の実画像表示で未受理分を処理。"
     }
-  },
-  "temporary_release_jobs": {
-    "job_ids": [
-      "prod-0049",
-      "prod-0369",
-      "prod-0368",
-      "prod-0326"
-    ],
-    "instruction": "引継ぎ準備が確認されるまで、claimで割当後はnext、画像表示、context、save、checkpoint、holdを実施せずCLI releaseして別区分へ。受理済み・ローカル結果を編集しない。"
   }
 }
