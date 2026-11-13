@@ -20,8 +20,9 @@
   "defer_post_id": "2095094572582137949",
   "defer_status": "deferred",
   "recorded_at": "2026-11-13T19:16:20.465299+00:00",
-  "current_accepted": 44,
-  "current_checkpoint_remote_head": "4b6a64dce35abdcce06b7f81c065eebf6437e0b6",
+  "current_accepted": 48,
+  "current_checkpoint_remote_head": "ee633392f24cf6d9c2c677d3485f4941564f5709",
   "latest_checkpoint_post": "2095095579043107245",
-  "latest_recorded_at": "2026-11-13T20:12:18.740325+00:00"
+  "latest_recorded_at": "2026-11-13T20:23:06.189207+00:00",
+  "deferred_unresolved": 2
 }
