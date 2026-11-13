@@ -1,7 +1,7 @@
 {
   "worker": "terra-prod-02",
   "job": "prod-0327",
-  "remote_accepted": 16,
-  "remote_head": "6e05a555e24712c71f502deefa5a4057dc05d0b1",
-  "notice": "Five additional results checkpointed. One interrupted body fetch had no cache and was recorded as technical failure without refetch."
+  "remote_accepted": 19,
+  "remote_head": "4e6cc18d0e8dd20afaf53c68040eba9c526e3adf",
+  "notice": "Three additional results checkpointed. One search completed within approximately 15–16 seconds; delayed summary 83.897 seconds included sync failure and retry."
 }
