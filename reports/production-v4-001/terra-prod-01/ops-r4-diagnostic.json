@@ -1,0 +1,98 @@
+{
+  "status": "OPS_R4_STOPPED",
+  "worker": "terra-prod-01",
+  "root": "/workspace/production-v4-001",
+  "job": "prod-0259",
+  "remote_accepted": 18,
+  "remote_head": "95d43c1865deb03d18944378fc2a86ba091a7f90",
+  "local_results": [
+    {
+      "post_id": "2096844676620062878",
+      "sha256": "f9b6194342e9e8a5888a0f1f729ee9786ae5777acaa61969bc6ab81169e96a2a"
+    },
+    {
+      "post_id": "2096844680554266818",
+      "sha256": "3de8b01f6660d20fec265d2da5e49d8208fdbc9102828a30cec9bff1e1e2000d"
+    },
+    {
+      "post_id": "2096844932963320070",
+      "sha256": "45dff2c4ec71edb2138a5a4b47d879c612447a4d8dda631c794e801bce95c03d"
+    },
+    {
+      "post_id": "2096844938503971291",
+      "sha256": "96b5f734f2b7dc0ad8f2926f98aa96c8f24a14d4b53c27ce26cad8a5c241f689"
+    },
+    {
+      "post_id": "2096845469590950126",
+      "sha256": "9d01d766899260132a03c8af87575b1f6e60731a6c27ac6b4b7068092f44920f"
+    },
+    {
+      "post_id": "2096845956432196072",
+      "sha256": "75bc92924826d02d3141cfd8feacdfa58f6585455488af8a15d3b56c3aa74a7b"
+    },
+    {
+      "post_id": "2096846200578437155",
+      "sha256": "7397d24d33b381b933d36f9bc05a99473be6edec4b59e81241ffb497f60abad9"
+    },
+    {
+      "post_id": "2096846459262181616",
+      "sha256": "d182deae3b5827dfacf5e3d74492c4c5e5b1b66ad4806fc431eaec788e79ae52"
+    },
+    {
+      "post_id": "2096846460830810392",
+      "sha256": "478033493188633631515d95241483b1ea53c8bace9983c6c3f4cd7a35c55599"
+    },
+    {
+      "post_id": "2096846702129168648",
+      "sha256": "39571e42c2f89692b022583f4d376c8593457016c1633c253e700c2399938000"
+    },
+    {
+      "post_id": "2096846702213054765",
+      "sha256": "3519d602effb4c82f8fa9c55671ca7c5b3b913aa0bff6f6d75074073f39fa149"
+    },
+    {
+      "post_id": "2096846964512248185",
+      "sha256": "24ae30085123826f64112d47d237ab87df8759a55bfd5dfdc96eac048c0a1faf"
+    },
+    {
+      "post_id": "2096846966017888267",
+      "sha256": "2aa3ed2f51b715cbb0eb47ba4e4da1d459edcc3fcf69db52520360e87c81acdf"
+    },
+    {
+      "post_id": "2096847208473903474",
+      "sha256": "d8f69cd0197746ff984ea880edc14ff00800dd9fd890ee2b63d8cd3d7de820b5"
+    },
+    {
+      "post_id": "2096847457946866125",
+      "sha256": "3fe34a3232e309a869a5f8a5769df3603cbbc67c256302b76681eab169fdf5f2"
+    },
+    {
+      "post_id": "2096847463445586195",
+      "sha256": "d5e43dea603f072aed8dee137d66f26e130162ddb3b4dc7a96e403e7e982d892"
+    },
+    {
+      "post_id": "2096847465182110032",
+      "sha256": "b120f70bf4cc46cc859b44fd6ac9354e3850d154ba888ceff37ba4b9eeb70ad8"
+    },
+    {
+      "post_id": "2096847719730229513",
+      "sha256": "d1d545fe36230b270813d243915600fa843d2fab822e8a631a0ebdee626467d1"
+    }
+  ],
+  "local_uncheckpointed_count": 0,
+  "local_uncheckpointed_basis": "successful checkpoint and CLI status accepted 18 matching 18 local result files; remote file hashes not independently verified",
+  "draft": {
+    "exists": true,
+    "post_id": "2096847719730229513"
+  },
+  "running_cli_processes": 0,
+  "latest_error": {
+    "command": "git ls-tree (read-only diagnostic)",
+    "message": "fatal: not a tree object; remote checkpoint object is not present in local Git object store"
+  },
+  "earlier_resolved_error": {
+    "command": "save",
+    "message": "AssertionError: entity_kind: Other requires a reason; corrected before subsequent successful save and checkpoint"
+  },
+  "recorded_at": "2026-11-13T21:25:09.696444+00:00"
+}
