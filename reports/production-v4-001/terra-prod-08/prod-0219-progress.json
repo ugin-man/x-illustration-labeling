@@ -1,0 +1,10 @@
+{
+  "job": "prod-0219",
+  "worker": "terra-prod-08",
+  "checkpoint_accepted_posts": 5,
+  "checkpoint_head": "24f939a443a28eb87ddbe50a8906154d8e52e746",
+  "recorded_at_utc": "2026-11-13T11:28:49.254949+00:00",
+  "status": "ops_r2_running",
+  "uncheckpointed_saved_posts": 0,
+  "isolation_excluded_images_found": 0
+}
