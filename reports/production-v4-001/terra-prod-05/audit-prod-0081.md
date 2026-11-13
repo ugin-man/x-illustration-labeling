@@ -20,3 +20,5 @@
 - Status after conflict: prod-0081 remains leased to terra-prod-05, with 38 of 50 posts remotely accepted; head eeffeceed0ec41159e13c0d5b697820da62bbaf6. Previously deferred posts remain incomplete. The post draft and view events are preserved.
 - Code inspection indicates another possible cause: the defer path loops over all previously blocked posts and calls `sync_one` for each; a guard on an earlier deferred post could produce the same conflict even without a shared attachment. This remains unverified. No queue or code was changed.
 - ops-r3: completed pending defer for 2095165920117453080 without reopening the images. New result 2095166172564226384 checkpointed after live verification; accepted count 41/50, remote head 4dd97b841680cdcac57f9963c8ac9fbc96268134.
+
+- 2026-11-13T19:27:22.230196+00:00 checkpoint: accepted 43/50, remote head ef857f9ed73470c2a853f343fd11fb8e502ede14; two additional saved posts; view events appended.
