@@ -1,0 +1,11 @@
+{
+  "state": "OPS_R2_STOPPED",
+  "worker_id": "terra-prod-06",
+  "research_root": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+  "job_id": "prod-0211",
+  "remote_head": "344d1924bb754b9d18837480e24f165c8df70081",
+  "remote_accepted_posts": 33,
+  "uncheckpointed_local_posts": 0,
+  "known_pending_preservation_post_ids": [],
+  "resume_condition": "Await explicit ops-r2 start from parent. Periodic continuation messages do not resume work."
+}
