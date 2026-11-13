@@ -44,9 +44,10 @@
     ]
   },
   "latest_checkpoint": {
-    "accepted": 45,
-    "remote_head": "b39e3983bfe79660a7c5649d73487c84ef50f668",
-    "updated_at": "2026-11-13T20:21:25.470238+00:00"
+    "accepted": 48,
+    "deferred": 2,
+    "remote_head": "e08981ac206443cf698ee683945d76b08ed9e1b2",
+    "updated_at": "2026-11-13T20:30:51.382767+00:00"
   },
   "later_consecutive_context_failures": {
     "source": "api.fxtwitter.com",
