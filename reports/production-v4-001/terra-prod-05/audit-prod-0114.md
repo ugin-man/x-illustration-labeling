@@ -6,3 +6,5 @@
 - Checkpoint `de550bc11e4af36e203b9d00c52bd1f140328ade` accepted 38 posts in total. Viewing metadata is in the accompanying view-events JSONL.
 
 - Continued with ordinary processing after the five inherited-context posts. Checkpoint `2674b4413edc8f7e79658cf8238dcbf2b2822626` accepted 45 posts in total; viewing events remain in the companion metadata file.
+
+- Completed prod-0114: 50/50 accepted; checkpoint 26345f3b20bab6a0d2df80119e717ab8743e5681; finish 813b4ce273a6fa9857473379ba30fc1a76786bac. Existing 33 accepted records preserved. Initial view output for post 2095576729532465288 was truncated without visible pixels; the same authorized image was viewed again without refusal and recorded.
