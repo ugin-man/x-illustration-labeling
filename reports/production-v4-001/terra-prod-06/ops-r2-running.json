@@ -1,0 +1,10 @@
+{
+  "worker_id": "terra-prod-06",
+  "operations_revision": "ops-r2",
+  "research_root": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+  "job_id": "prod-0211",
+  "restored_accepted_posts": 33,
+  "newly_accepted_posts": 1,
+  "remote_head_at_first_checkpoint": "4ea75e2b0f402ae7078c57ec495b997c73dc50f4",
+  "isolation_excluded_images_found": 0
+}
