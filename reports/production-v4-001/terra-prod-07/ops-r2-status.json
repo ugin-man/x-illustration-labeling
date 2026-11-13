@@ -1,8 +1,8 @@
 {
   "worker": "terra-prod-07",
-  "job": "prod-0173",
-  "status": "completed",
-  "remote_accepted": 50,
-  "remote_head": "d035b98e2c5f0fd6c83dfd8e58e9341b83d415d9",
-  "updated_at": "2026-11-13T11:00:26.592271+00:00"
+  "job": "prod-0125",
+  "status": "in_progress",
+  "remote_accepted": 5,
+  "remote_head": "b50bf2933491b12b10e8d30105c31611dff99d3e",
+  "updated_at": "2026-11-13T11:12:24.949313+00:00"
 }
