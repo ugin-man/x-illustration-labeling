@@ -2,9 +2,9 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0316",
-  "checkpointed_posts": 15,
-  "checkpoint_head": "fa7ba45e7594aa46e4d83479237e6b9f9ee65f1f",
+  "checkpointed_posts": 24,
+  "checkpoint_head": "64cb50540947e5c34bd60496a2da9451e87367d5",
   "status": "active",
   "note": "prod-0096、prod-0114、prod-03の4区分の条件付き回復手順を保持。prod-03の4区分の一時release指示は後続指示で置換済み。",
-  "recorded_at": "2026-11-13T05:20:37.116681+00:00"
+  "recorded_at": "2026-11-13T05:30:33.562881+00:00"
 }
