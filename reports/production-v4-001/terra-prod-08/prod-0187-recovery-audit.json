@@ -1,0 +1,26 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-08",
+  "job_id": "prod-0187",
+  "recorded_at_utc": "2026-11-13T02:41:24.823972+00:00",
+  "remote_status": "completed",
+  "remote_completed_posts": 50,
+  "remote_head": "1a252a87bd827469be2c60a1ff293f471810efe4",
+  "prior_checkpoint_completed_posts": 5,
+  "prior_checkpoint_head": "af305b6bac8e15d84002f2bfca31e59acf3dc2c9",
+  "local_saved_posts_not_checkpointed_at_interruption": [
+    "2096240011633181036",
+    "2096240255246749934",
+    "2096240257402597385"
+  ],
+  "interrupted_post": "2096240257520091332",
+  "missing_view_event": {
+    "post_id": "2096240257520091332",
+    "media_index": 1,
+    "sha256": "99db8dc3f475dfc130ba5edc3bd537cba71c5357e006aaf337fbdea7b2dd3654",
+    "tool": "functions.view_image",
+    "timestamp": "unknown",
+    "observation": "実ツール履歴で表示確認、直後の表示イベント記録コマンドは中断され、ローカルイベントに存在しない。時刻は推定しない。"
+  },
+  "disposition": "未反映ローカル結果と閲覧記録は変更・削除・再提出しない。完了済み区分に書き込まない。"
+}
