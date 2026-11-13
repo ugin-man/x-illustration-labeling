@@ -1,10 +1,10 @@
 {
-  "status": "running",
+  "status": "blocked_defer_conflict",
   "job_id": "prod-0072",
   "worker_id": "terra-prod-03",
   "research_root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
-  "accepted": 25,
-  "checkpoint_head": "086b2d613aaf075fbfcf78ee64c52eb8486a7f1e",
+  "accepted": 27,
+  "checkpoint_head": "e8ccecae3bbb38b0ceb57953f2ea569aa8db3e9a",
   "deferred": [
     {
       "post_id": "2095092045832732817",
@@ -13,7 +13,7 @@
     }
   ],
   "isolation_excluded_matches": 0,
-  "recorded_at": "2026-11-13T11:48:20.500583+00:00",
+  "recorded_at": "2026-11-13T11:49:50.434705+00:00",
   "locally_saved_not_checkpointed": 0,
-  "note": "next成功で返された2095094572582137949を1回閲覧後、deferは既に保留対象とのConflictを返した。再表示せず監査。原因未確認。"
+  "note": "2095094572582137949はnextで返された画像を1回閲覧。多数の個別人物を漏れなく記録できずdeferを試みたがConflict。再度nextは同一投稿を返したため再表示せず停止。コード上、deferが既存の保留済み投稿をaffectedに含めsync_oneするとblocked guardに抵触する可能性がある。対象投稿が既に保留されていると断定はできない。既存保留2095092045832732817は保持。"
 }
