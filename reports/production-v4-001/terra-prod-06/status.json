@@ -1,0 +1,15 @@
+{
+  "worker": "terra-prod-06",
+  "run": "production-v4-001",
+  "operations": "ops-r2",
+  "research_root": "/workspace/production-v4-001-recovery-terra-prod-06-20261113",
+  "completed_job": "prod-0211",
+  "completed_job_accepted": 50,
+  "completed_remote_head": "9590b59c2601b0c2c7ec66b1bc913504bd1dbac2",
+  "current_job": "prod-0141",
+  "current_remote_accepted": 0,
+  "current_local_uncheckpointed": 2,
+  "isolation_excluded_images_found": 0,
+  "note": "Completed 0211; claimed 0141; a transient Git failure after local save prevented release of the worker gate. Waiting for gate expiration.",
+  "updated_at": "2026-11-13T10:59:24.033902+00:00"
+}
