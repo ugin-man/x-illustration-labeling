@@ -5,11 +5,17 @@
   "checkpointed_posts": 28,
   "status": "OPS_R2_RUNNING",
   "note": "prod-0027 completed; prior deadline incident retained in separate audit.",
-  "recorded_at": "2026-11-13T13:14:01.663697+00:00",
+  "recorded_at": "2026-11-13T13:15:36.599616+00:00",
   "checkpoint_head": "2ba66940ea8f1c6485e5964ab0459b81bdfa8c8f",
   "local_saved_posts": 28,
   "uncheckpointed_saved_posts": 0,
   "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
   "previous_job": "prod-0027",
-  "previous_job_finish_head": "20247685fe1d60ba42bd21dd4d15fcf16da9bf67"
+  "previous_job_finish_head": "20247685fe1d60ba42bd21dd4d15fcf16da9bf67",
+  "latest_exclusion": {
+    "job_id": "prod-0308",
+    "post_id": "2097231479185314275",
+    "signal": "model_refusal",
+    "remote_head": "8ac18ce039a108a3d8b27efe3aac3d263176c838"
+  }
 }
