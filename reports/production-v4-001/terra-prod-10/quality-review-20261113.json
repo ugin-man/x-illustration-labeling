@@ -1,0 +1,25 @@
+{
+  "run_id": "production-v4-001",
+  "worker_id": "terra-prod-10",
+  "job_id": "prod-0170",
+  "checkpoint_head": "8d6bf953bc4fb6e3ffdb1461557cd7e155400b5e",
+  "recorded_at": "2026-11-13T07:50:12.194533+00:00",
+  "findings": [
+    {
+      "post_id": "2096032938861449393",
+      "field": "images[0].attributes.technique",
+      "issue": "固定マニュアル第2項は原画の撮影・スキャンが明らかな場合以外はデジタルとするが、当該回答はunknown。"
+    },
+    {
+      "post_id": "2096031082311467165",
+      "field": "post_attributes.work_form",
+      "issue": "固定マニュアル第3項は1作品ならsingle_illustrationとするが、単一作品をotherとした。"
+    },
+    {
+      "post_id": "2096032678848164327",
+      "field": "post_attributes.work_form",
+      "issue": "固定マニュアル第3項は1作品ならsingle_illustrationとするが、単一作品をotherとした。"
+    }
+  ],
+  "note": "受理済み結果は変更しない。その他にも同種の不一致が存在する可能性があるため、確認前に追加分類しない。現在の次投稿は画像を閲覧、本文を一度取得したが未save。"
+}
