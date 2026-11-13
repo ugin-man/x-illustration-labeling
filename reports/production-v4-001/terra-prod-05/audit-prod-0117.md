@@ -13,3 +13,4 @@
 - Following recovery, a checkpoint accepted five more posts, for 30 accepted in this job; queue head 2f3d504f5700d5ddadaa72c2a9a6f72eab4baca9. Text-search exposure to popularity indicators is recorded without values in the affected review flags.
 - Checkpoint accepted four more posts, bringing this job to 34 accepted; queue head da54466ee01d1a779830a16aaf9182d700343d89. Incidental exposure to popularity indicators in images or text results was recorded without values in the affected review flags.
 - Checkpoint accepted five additional posts, bringing the job to 39 accepted; queue head 4fe186d9627b80fd6c0e8301caf738208b5fa016.
+- Checkpoint accepted four additional posts, bringing the job to 43 accepted; queue head 2e926476dda0d357cb3ca6205d4536253af9bc18. One transient Git error recovered through the same ops-r2 context operation; incidental metric exposure was flagged without values.
