@@ -10,7 +10,9 @@
   "current_remote_accepted": 6,
   "current_local_uncheckpointed": 0,
   "isolation_excluded_images_found": 0,
-  "note": "Resumed after worker gate expiry and checkpointed six posts.",
-  "updated_at": "2026-11-13T11:18:03.903403+00:00",
-  "current_remote_head": "a59fc9441fa0dee67b93fba6a1294c8cd380012e"
+  "note": "Queue context fetch failed three times with Git ls-remote error; stopping after limited retries. Draft and viewing record retained.",
+  "updated_at": "2026-11-13T11:20:40.851596+00:00",
+  "current_remote_head": "a59fc9441fa0dee67b93fba6a1294c8cd380012e",
+  "current_post": "2095810088640635245",
+  "current_post_status": "image_viewed_context_sync_blocked"
 }
