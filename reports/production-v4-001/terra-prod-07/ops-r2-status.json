@@ -2,7 +2,7 @@
   "worker": "terra-prod-07",
   "job": "prod-0021",
   "status": "checkpoint",
-  "remote_accepted": 8,
-  "remote_head": "23cb0ea4b4837ff7fb5377d3609ff835f9beaa36",
-  "updated_at": "2026-11-13T13:38:03.029399+00:00"
+  "remote_accepted": 12,
+  "remote_head": "66bd55661f759b1994ae546cb9c3c3c9b30806b4",
+  "updated_at": "2026-11-13T13:48:31.405629+00:00"
 }
