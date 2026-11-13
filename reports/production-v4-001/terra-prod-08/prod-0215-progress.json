@@ -1,0 +1,9 @@
+{
+  "job_id": "prod-0215",
+  "worker_id": "terra-prod-08",
+  "status": "leased",
+  "checkpointed_posts": 8,
+  "checkpoint_head": "437147176e26edc97a76952f6633f131bd0bfb8f",
+  "recorded_at_utc": "2026-11-13T05:45:10.960878+00:00",
+  "audit_note": "Post 2096473181003599990: popularity information was incidentally visible in the image; no values recorded, review flag saved."
+}
