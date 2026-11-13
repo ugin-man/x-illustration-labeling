@@ -51,7 +51,7 @@
       "excluded_posts": 1
     }
   ],
-  "recorded_at": "2026-11-13T02:45:15.966827+00:00",
+  "recorded_at": "2026-11-13T03:09:35.901104+00:00",
   "notes": [
     "Four focal post text fetches returned 404.",
     "Popularity metrics incidentally exposed in search results, focal post text and image; values not recorded.",
@@ -82,7 +82,8 @@
     "Post 2097355231550132445 excluded via model_refusal at media index 3; do not reopen any image of that post.",
     "Popularity exposure in focal image and text was flagged without recording values.",
     "prod-0323 completed with individual text failures recorded without retry; incidental popularity exposure flagged without values.",
-    "prod-0326 released without checkpointing two local results because post 2097370651808215439 excluded 3D virtual avatars from the illustration assessment on an uncertain interpretation. Reassess that post; do not reuse its unaccepted labels. The subsequent post 2097370927168393584 was viewed and its text fetch returned 404, but no result was saved. Preserve context caches and budgets during recovery; do not repeat the text fetch."
+    "prod-0326 released without checkpointing two local results because post 2097370651808215439 excluded 3D virtual avatars from the illustration assessment on an uncertain interpretation. Reassess that post; do not reuse its unaccepted labels. The subsequent post 2097370927168393584 was viewed and its text fetch returned 404, but no result was saved. Preserve context caches and budgets during recovery; do not repeat the text fetch.",
+    "prod-0095: individual focal text failures and inaccessible linked page recorded as technical failures. Incidental popularity exposure in search results flagged without values; image-search results were not used as evidence."
   ],
   "recovery_job": {
     "job_id": "prod-0049",
@@ -130,5 +131,9 @@
     "viewed_unsaved_post_id": "2097370927168393584",
     "context_cache_directory": ".runtime/production-v4-001/prod-0326/context/"
   },
-  "current_job": "prod-0095"
+  "current_job": {
+    "job_id": "prod-0095",
+    "checkpointed_posts": 17,
+    "checkpoint_head": "205b772692ab07cc70fc39ede927d1cf75ef5fd1"
+  }
 }
