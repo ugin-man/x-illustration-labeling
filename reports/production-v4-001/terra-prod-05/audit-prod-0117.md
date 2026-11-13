@@ -12,3 +12,4 @@
 - Resumed after the recurring Git errors: ops-r2 claim restored 24 accepted posts, the interrupted context operation completed through the CLI with preserved history, and checkpoint accepted one further post at b5d76bdbdff387419ad93c797151eb0408171efc. Isolation audit found zero excluded-image matches before new image viewing.
 - Following recovery, a checkpoint accepted five more posts, for 30 accepted in this job; queue head 2f3d504f5700d5ddadaa72c2a9a6f72eab4baca9. Text-search exposure to popularity indicators is recorded without values in the affected review flags.
 - Checkpoint accepted four more posts, bringing this job to 34 accepted; queue head da54466ee01d1a779830a16aaf9182d700343d89. Incidental exposure to popularity indicators in images or text results was recorded without values in the affected review flags.
+- Checkpoint accepted five additional posts, bringing the job to 39 accepted; queue head 4fe186d9627b80fd6c0e8301caf738208b5fa016.
