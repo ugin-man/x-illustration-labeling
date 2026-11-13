@@ -20,9 +20,15 @@
   "defer_post_id": "2095094572582137949",
   "defer_status": "deferred",
   "recorded_at": "2026-11-13T19:16:20.465299+00:00",
-  "current_accepted": 48,
-  "current_checkpoint_remote_head": "ee633392f24cf6d9c2c677d3485f4941564f5709",
+  "current_accepted": 5,
+  "current_checkpoint_remote_head": "9ff9f33b22b2fe13b0be2c777a7a709a0920372a",
   "latest_checkpoint_post": "2095095579043107245",
-  "latest_recorded_at": "2026-11-13T20:23:06.189207+00:00",
-  "deferred_unresolved": 2
+  "latest_recorded_at": "2026-11-13T20:35:39.327860+00:00",
+  "deferred_unresolved": 2,
+  "current_job": "prod-0291",
+  "previous_job": "prod-0072",
+  "previous_job_accepted": 48,
+  "previous_job_deferred_unresolved": 2,
+  "previous_job_finish_status": "needs_review",
+  "latest_isolation_excluded_found": 0
 }
