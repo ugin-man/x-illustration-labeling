@@ -1,10 +1,10 @@
 {
-  "status": "waiting_for_worker_gate",
+  "status": "running",
   "job_id": "prod-0072",
   "worker_id": "terra-prod-03",
   "research_root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
-  "accepted": 22,
-  "checkpoint_head": "766719c4527286f77e34de965a3237ecba295349",
+  "accepted": 25,
+  "checkpoint_head": "086b2d613aaf075fbfcf78ee64c52eb8486a7f1e",
   "deferred": [
     {
       "post_id": "2095092045832732817",
@@ -13,7 +13,7 @@
     }
   ],
   "isolation_excluded_matches": 0,
-  "recorded_at": "2026-11-13T11:35:34.593646+00:00",
-  "locally_saved_not_checkpointed": 3,
-  "note": "next時のGit push失敗後にworker gateがbusy。画像は開かず通常の期限満了を待って再試行。"
+  "recorded_at": "2026-11-13T11:41:42.052857+00:00",
+  "locally_saved_not_checkpointed": 0,
+  "note": "worker gateの自然失効後に再開し、保存済み3件をcheckpoint。"
 }
