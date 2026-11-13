@@ -14,3 +14,5 @@
 - Checkpoint `1af3a5ad2c241e2eaa93bfd41cc3e5d4f8f08c6b`: 38 posts accepted. One photograph contained an ambiguous animal-shaped object; whether it was a flat illustration or a three-dimensional object was recorded as indeterminate. Individual text-fetch failures remained technical failures.
 
 - Checkpoint `a73a7fefee3a842db03822cb13134a8b81306075`: 47 posts accepted. A game screenshot with uncertain flat illustration versus 3D avatar was recorded as indeterminate; a 3D model progress image was flagged. Individual post-text errors were retained as technical failures.
+
+- Completed 50 posts: final checkpoint `99f85630936685a1250b16a8f7aa45963bcdb284`, finish `a113e6e614b48336961019aeddb622a1dc413612`. Viewing events were recorded in the companion JSONL. Individual text-fetch failures were saved as technical failures; ambiguous identities and uncolored hair were retained as unknown where necessary.
