@@ -2,12 +2,12 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0027",
-  "checkpointed_posts": 41,
+  "checkpointed_posts": 46,
   "status": "OPS_R2_RUNNING",
   "note": "Deadline incident retained in separate audit; continuing.",
-  "recorded_at": "2026-11-13T11:16:24.276848+00:00",
-  "checkpoint_head": "b0b85dda5d653e1de595a0fb207b7d669b8bcc2f",
-  "local_saved_posts": 41,
+  "recorded_at": "2026-11-13T11:29:12.327237+00:00",
+  "checkpoint_head": "09520468f5848d8eed1ce4bcbf3b7e424467bbda",
+  "local_saved_posts": 46,
   "uncheckpointed_saved_posts": 0,
   "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113"
 }
