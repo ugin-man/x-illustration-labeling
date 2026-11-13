@@ -1,0 +1,1 @@
+{"acquired_at":1794546622,"attempt":1,"catalog_sha256":"1ecb272083f564bc5c74c6fdb1ff78faaf5818cfd36392d8619e63d2add938ce","completed_posts":[],"job_id":"prod-0256","lease_until":1794550222,"retry_after":0,"run_id":"production-v4-001","status":"leased","token":"17667e1b9f9640979b65ddbe416c8c7c","updated_at":1794546622,"worker_id":"terra-prod-02"}
