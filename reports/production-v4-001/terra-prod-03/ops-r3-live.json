@@ -19,5 +19,9 @@
   },
   "defer_post_id": "2095094572582137949",
   "defer_status": "deferred",
-  "recorded_at": "2026-11-13T19:16:20.465299+00:00"
+  "recorded_at": "2026-11-13T19:16:20.465299+00:00",
+  "current_accepted": 30,
+  "current_checkpoint_remote_head": "ec7da3921711550900c223f6f0e71d4ed3da3ff8",
+  "latest_checkpoint_post": "2095095077953777901",
+  "latest_recorded_at": "2026-11-13T19:19:34.512823+00:00"
 }
