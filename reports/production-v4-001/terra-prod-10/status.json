@@ -2,9 +2,9 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0170",
-  "checkpointed_posts": 15,
+  "checkpointed_posts": 23,
   "status": "active",
-  "note": "同一区分を未完了分から継続し、15投稿をcheckpoint。",
-  "recorded_at": "2026-11-13T07:21:34.262864+00:00",
-  "checkpoint_head": "4c547bb56479c25a49d53d8ea476f45e240e210f"
+  "note": "23投稿をcheckpoint。",
+  "recorded_at": "2026-11-13T07:31:21.402799+00:00",
+  "checkpoint_head": "a4f745091ff97eb1c0c532202ca6803b4686295c"
 }
