@@ -1,26 +1,16 @@
 {
   "worker": "terra-prod-08",
   "job": "prod-0003",
-  "checkpoint_accepted_posts": 18,
-  "checkpoint_head": "de9eb3eb51c6c388d275c24fede644f02a39161c",
-  "recorded_at_utc": "2026-11-13T21:18:18.431827+00:00",
-  "uncheckpointed_saved_posts": 0,
-  "status": "ops_r3_running",
-  "isolation_excluded_images_found": 0,
-  "consecutive_source_failures": {
-    "source": "api.fxtwitter.com",
-    "http_code": 404,
-    "count": 3,
-    "post_ids": [
-      "2094791832857460909",
-      "2094828965181767887",
-      "2094838058013335776"
-    ]
+  "operations_revision": "ops-r5",
+  "newly_checkpointed_post_ids": [
+    "2096233182660272464",
+    "2096269832711012771"
+  ],
+  "checkpoint_head": "f0e3f69538f8be899c442616eee699c60382f5fb",
+  "isolation": {
+    "loose_images_checked": 739,
+    "archive_images_checked": 736,
+    "excluded_images_found": 0
   },
-  "image_unavailable_deferred": {
-    "post_id": "2095608576945565711",
-    "blocked_post_count": 3,
-    "reason": "実画像ツールが細い一部のみを返し判定できなかった"
-  },
-  "count_correction": "前回記載17件は推定誤り。共有画像の保留連鎖を含む状態の現在のCLI集計は受理18件。保留は完了に含めない。"
+  "recorded_at_utc": "2026-11-13T22:26:29.254458+00:00"
 }
