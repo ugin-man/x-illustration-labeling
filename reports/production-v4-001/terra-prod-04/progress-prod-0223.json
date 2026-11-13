@@ -1,1 +1,1 @@
-{"worker": "terra-prod-04", "job": "prod-0223", "checkpoint_head": "7db9c61179dc9b2f5321aacca8d04db30a5b4dae", "accepted_posts": 30, "local_uncheckpointed_posts": 0, "operational_state": "ops-r2-running", "root": "/workspace/production-v4-001-recovery-terra-prod-04-20261113"}
+{"worker": "terra-prod-04", "job": "prod-0223", "checkpoint_head": "f7f70f154f050f286dff8364d54d131be4d7cf82", "accepted_posts": 35, "local_uncheckpointed_posts": 0, "operational_state": "ops-r2-running", "root": "/workspace/production-v4-001-recovery-terra-prod-04-20261113"}
