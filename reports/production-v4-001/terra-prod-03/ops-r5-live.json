@@ -1,0 +1,46 @@
+{
+  "worker": "terra-prod-03",
+  "root": "/workspace/production-v4-001-recovery-terra-prod-03-20261113",
+  "job": "prod-0291",
+  "operations_revision": "ops-r5",
+  "manifest_sha256": "5a5ca44e20c28b45941937f5e1f699fa98df50bae9895080ff8f64718be0297d",
+  "reconciliation": {
+    "remote_accepted_count": 22,
+    "local_unaccepted_ids": [
+      "2097077680873365672"
+    ],
+    "exact_matches": 22,
+    "byte_conflicts": []
+  },
+  "recovered_existing_ids": [
+    "2097077680873365672",
+    "2097077686908903499"
+  ],
+  "newly_processed_post_ids": [
+    "2097077929654325260",
+    "2097077931734643063"
+  ],
+  "checkpoint_head": "fa43ba7bb88e4f4b6c48cf3c26f55947a136b329",
+  "remote_accepted_count": 26,
+  "new_view_events": [
+    {
+      "post_id": "2097077929654325260",
+      "path": "/workspace/production-v4-001-recovery-terra-prod-03-20261113/.runtime/production-v4-001/prod-0291/images/c20f74ba4f3e6ca2feb08ce97e9f387c46f10fa8dffb6f795edee46137948c0a.jpg",
+      "viewed_at": "2026-11-13T22:14:27+00:00",
+      "tool": "functions.view_image"
+    },
+    {
+      "post_id": "2097077931734643063",
+      "path": "/workspace/production-v4-001-recovery-terra-prod-03-20261113/.runtime/production-v4-001/prod-0291/images/8f21a65b1fc6c3e6d7892c3c9129fe10af54f1a7c649ca6bf6c99f4279a379d4.jpg",
+      "viewed_at": "2026-11-13T22:16:48+00:00",
+      "tool": "functions.view_image"
+    }
+  ],
+  "isolation": {
+    "workspace": "/workspace",
+    "loose_images_checked": 1340,
+    "archive_images_checked": 1336,
+    "excluded_images_found": 0
+  },
+  "recorded_at": "2026-11-13T22:19:38.360344+00:00"
+}
