@@ -9,3 +9,4 @@
 - Third checkpoint: 4 further results accepted, remote head dee9009b7d02abc7a7cc9e1e962fbf0eb0b05da6. The quality-review deferral remains incomplete.
 - Fourth checkpoint: 5 further results accepted, remote head 55c0e055fa1cd1ede03fcb012999b5ac796e83d4. The quality-review deferral remains incomplete.
 - Fifth checkpoint: 5 further results accepted, remote head ca0b8dee78cddfccaaed1253893a54702a1fda7a. The quality-review deferral remains incomplete.
+- Sixth checkpoint: 5 further results accepted, remote head f12cbfc2a55c1e09e6c520ce4351614fba8f10d7. The quality-review deferral remains incomplete.
