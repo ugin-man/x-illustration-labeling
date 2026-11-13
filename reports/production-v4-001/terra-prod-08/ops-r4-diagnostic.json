@@ -1,0 +1,107 @@
+{
+  "worker": "terra-prod-08",
+  "operations_revision": "ops-r3",
+  "root": "/workspace/production-v4-001",
+  "job": "prod-0003",
+  "remote": {
+    "status": "leased",
+    "accepted_count": 18,
+    "head": "de9eb3eb51c6c388d275c24fede644f02a39161c"
+  },
+  "local_results": [
+    {
+      "post_id": "2094477053534060820",
+      "sha256": "177498133c85526d84b6793a42d79fa39de15413b646b25ce66ce0ffbd5be046"
+    },
+    {
+      "post_id": "2094525563675259284",
+      "sha256": "d3acd0dc08300acba3fdf050c7783f06e81e638eea74b9653cea83e1bfe32917"
+    },
+    {
+      "post_id": "2094525801995636862",
+      "sha256": "89ffa5015ef41f52d7eb40f98edfb7f3e71af700aac03962902d1d8d5cc11cc5"
+    },
+    {
+      "post_id": "2094532394129002734",
+      "sha256": "f0102ccaf5b4a518b6ded93dd2534a4c9fb5020d8994ac7d33750716a39fac8e"
+    },
+    {
+      "post_id": "2094643480643633639",
+      "sha256": "e08469acffe96bbc6b86558c0a7eee70449dca04cab2dec38939f94dd6873a32"
+    },
+    {
+      "post_id": "2094791832857460909",
+      "sha256": "be1dc4109af75882608b51584f731c7327bf346416a193fcdc064e7aabdba73c"
+    },
+    {
+      "post_id": "2094828965181767887",
+      "sha256": "69b21bca60e0212a719c5406b524d46ec31d2a1d08729367d187c9e08a2e4d36"
+    },
+    {
+      "post_id": "2094830980301480101",
+      "sha256": "b23c469ca67865a920d28554ad81eb9499c17488bbc80b7d90dc77b9c2cc19af"
+    },
+    {
+      "post_id": "2094838058013335776",
+      "sha256": "4f6c87c54673a233fb212b6a9e75bcfb8ac5aabe2cac2f3ae8725eb309016ab3"
+    },
+    {
+      "post_id": "2094854235167010998",
+      "sha256": "8a7abf2ed4fcaaebcecb1bbc8dae3bf02df8d1ea32dfa672c6011d29a634cd7c"
+    },
+    {
+      "post_id": "2094856003506639111",
+      "sha256": "2f44a8ced233beae4fb3a9d4274ffefb32d56cc220ee9e5364de1fbff49431b4"
+    },
+    {
+      "post_id": "2094864085951164671",
+      "sha256": "86fa2579bd7739aa3f9fa99e55ef1ea69e5a15b8da8c69c07bda3113b3ca4346"
+    },
+    {
+      "post_id": "2095160864160858415",
+      "sha256": "e8fe2f669549887245adbc807da18d4026c8c9e39754f289b16f5477c23e4ba5"
+    },
+    {
+      "post_id": "2095451257175433562",
+      "sha256": "ad4baa710f6796db87225ec7b6363b6c8080c9d7ee6530781552556afdf13073"
+    },
+    {
+      "post_id": "2095457872410739166",
+      "sha256": "bb2422fa9773c95c8ceadc692ba471ebdf5337dad6a083c268f990f31ba74552"
+    },
+    {
+      "post_id": "2095510077914710149",
+      "sha256": "511d75bfa209d8cb9a7c26dbf7bdce0fec738d53425583f4ec1d91ce15aa55ec"
+    },
+    {
+      "post_id": "2095620718335844570",
+      "sha256": "8da2d7e873201c0d6b9f218d404845e2e9883441da133b155d092af21c507595"
+    },
+    {
+      "post_id": "2095639974582612408",
+      "sha256": "1d15381f5f66056358daccaf1a358b90ead592e4af438dc9812f2175caeec84b"
+    }
+  ],
+  "local_uncheckpointed_saved_count": 0,
+  "draft": {
+    "exists": true,
+    "post_id": "2095644277481316660",
+    "sha256": "f80b571a939c33d260a140101d6e2a439fc902428174b90898b8fb2fead76071"
+  },
+  "active_cli_processes": 0,
+  "last_error": {
+    "command": "exec_command: append view event and ops_runtime_r3.worker context fetch",
+    "category": "automatic_approval_rejection",
+    "reason": "The selected image hash matches the previously deferred unusable image, and the retained workflow explicitly requires shared/deferred images not be reopened.",
+    "note": "報告された一致理由は記録上の対象hashと保留hashが異なる。拒否操作は再実行していない。",
+    "unrecorded_view_event": {
+      "post_id": "2095644277481316660",
+      "media_index": 1,
+      "sha256": "03e3edacaa7b3a825035a4ca5bd955c7821d48a532a616b22a71bb1aa52b815e",
+      "viewed_at_utc": "2026-11-13T21:18:53Z",
+      "tool": "functions.view_image"
+    },
+    "deferred_sha256": "b3802cc0004b006c9eeb988e1a77788a9d36cd789a38c66c081056ef16141d4b"
+  },
+  "recorded_at_utc": "2026-11-13T21:22:44.154308+00:00"
+}
