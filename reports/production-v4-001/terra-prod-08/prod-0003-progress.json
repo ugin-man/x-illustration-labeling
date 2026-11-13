@@ -16,17 +16,17 @@
     "blocked_post_count": 2
   },
   "newly_checkpointed_post_ids": [
-    "2096702625945387462",
-    "2096727165178126571",
-    "2096817637548490771",
-    "2096855044301996177",
-    "2096976146969809084"
+    "2097084497103851943",
+    "2097088546138198375",
+    "2097128735808110855",
+    "2097328187785302073"
   ],
-  "checkpoint_head": "cfaa60aa31b780293b9407575ecc48a5545e89b8",
+  "checkpoint_head": "dfaa0abbca879fbd58662e57d7474f55ef2b99d9",
   "isolation": {
     "loose_images_checked": 739,
     "archive_images_checked": 736,
     "excluded_images_found": 0
   },
-  "recorded_at_utc": "2026-11-13T22:45:00.517093+00:00"
+  "recorded_at_utc": "2026-11-13T22:55:47.159146+00:00",
+  "previous_checkpoint_head": "cfaa60aa31b780293b9407575ecc48a5545e89b8"
 }
