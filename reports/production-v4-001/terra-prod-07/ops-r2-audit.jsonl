@@ -3,3 +3,4 @@
 {"worker": "terra-prod-07", "job": "prod-0021", "issue": "直前checkpointの報告件数を15と記したが、保存済みleaseのcompleted_posts照合では16。GitHub認証失敗で以後の報告pushとcheckpointは未実施。", "recorded_at": "2026-11-13T14:06:19.206597+00:00"}
 {"worker": "terra-prod-07", "job": "prod-0021", "post_id": "2094568033390125331", "issue": "未受理の自分の回答で場面ごとの表情を分離し、reviseで元回答の履歴を保全。", "recorded_at": "2026-11-13T15:23:23.833704+00:00"}
 {"worker": "terra-prod-07", "job": "prod-0021", "issue": "Git fetch失敗後、15秒以上の待機を挟んだ正規CLI nextが複数回Concurrent claim for this worker identityを返した。並行操作の有無を確認できず、キューを手編集せず停止。", "recorded_at": "2026-11-13T15:29:28.952354+00:00"}
+{"worker": "terra-prod-07", "job": "prod-0333", "post_id": "2097412360923165134", "issue": "実表示後の未push閲覧イベントに誤って以前の投稿IDとhashを記入し、直後に実表示のIDとhashへ訂正。以前の閲覧イベントは保持。", "recorded_at": "2026-11-13T18:18:07.084240+00:00"}
