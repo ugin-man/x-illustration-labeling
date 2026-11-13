@@ -2,15 +2,31 @@
   "worker": "terra-prod-08",
   "job": "prod-0003",
   "operations_revision": "ops-r5",
+  "prior_checkpoint": {
+    "post_ids": [
+      "2096651547094773896",
+      "2096673536765251952"
+    ],
+    "head": "1829381bb70a10ebbcebe1beab757c313eead041"
+  },
+  "deferred": {
+    "post_id": "2096682409215623555",
+    "reason": "image_unavailable",
+    "observation": "画像ツールの出力は細い一部分のみ",
+    "blocked_post_count": 2
+  },
   "newly_checkpointed_post_ids": [
-    "2096233182660272464",
-    "2096269832711012771"
+    "2096702625945387462",
+    "2096727165178126571",
+    "2096817637548490771",
+    "2096855044301996177",
+    "2096976146969809084"
   ],
-  "checkpoint_head": "f0e3f69538f8be899c442616eee699c60382f5fb",
+  "checkpoint_head": "cfaa60aa31b780293b9407575ecc48a5545e89b8",
   "isolation": {
     "loose_images_checked": 739,
     "archive_images_checked": 736,
     "excluded_images_found": 0
   },
-  "recorded_at_utc": "2026-11-13T22:26:29.254458+00:00"
+  "recorded_at_utc": "2026-11-13T22:45:00.517093+00:00"
 }
