@@ -1,0 +1,79 @@
+{
+  "worker": "terra-prod-04",
+  "root": "/workspace/production-v4-001-recovery-terra-prod-04-20261113",
+  "job": "prod-0105",
+  "remote_accepted": 14,
+  "remote_head": "bfd675c0f1995cc226aedd77af8b2f9431004892",
+  "local_results": [
+    {
+      "post_id": "2095505516118307278",
+      "sha256": "9974e2240d2164fff96807fd5f6c57aa59b8325913701bf925a510d52a14bc34"
+    },
+    {
+      "post_id": "2095505785086456231",
+      "sha256": "6aaa4aeb945c932d1886315ae170c4f31994362f0082d7ae2693e43d8b0c8355"
+    },
+    {
+      "post_id": "2095506029526327750",
+      "sha256": "b332766957cdb86d4dd80893bb41fcf20b68df372021596f9b3257b2f62c4e48"
+    },
+    {
+      "post_id": "2095506291112476839",
+      "sha256": "7ec11af471ff6efce767a1fca4e9760632a73c0a843e918b8d283dfa11fad66d"
+    },
+    {
+      "post_id": "2095506292647600181",
+      "sha256": "0490c455dd495eca12ed521d6a39cb3485f3f0a747fd03df4f2bc1494cb06b4f"
+    },
+    {
+      "post_id": "2095506796614140281",
+      "sha256": "850af6a3aadd8aa1e16f853af2c248f732007c979f7b71694c36eba5fc82cdf7"
+    },
+    {
+      "post_id": "2095506800829505549",
+      "sha256": "19ddf0aabb9e5ab39ebdc78e00027278073c9259c10e8fdf86eb337aebfc7aab"
+    },
+    {
+      "post_id": "2095507045894267377",
+      "sha256": "292c2b3a8bd8048a035a5ee2680ac9a7b9e716aaf541eab60eebe672103e7b59"
+    },
+    {
+      "post_id": "2095507296759804029",
+      "sha256": "b2943e12efca778b5b04d2f1990815a7fbcf0457000df1944b538571f9888570"
+    },
+    {
+      "post_id": "2095507297288257896",
+      "sha256": "9615031391b708f2e150395ae409dcd2e859b9aa21298eca1598807ce279da05"
+    },
+    {
+      "post_id": "2095507301650313377",
+      "sha256": "4aab97cdfd51b597a80ee07b42e9b5d5072c96ee3b95c977e815aca2c0282cff"
+    },
+    {
+      "post_id": "2095507305714634790",
+      "sha256": "96e9890af1c7a0c81c1e93771cad1aa539d1854d566c7108a4d1310b5f4cb3a2"
+    },
+    {
+      "post_id": "2095507556349440493",
+      "sha256": "4bc9553e904fd54255fdfade01b617d6441b0bfe503d97708eb758c9cf95b387"
+    },
+    {
+      "post_id": "2095508060332863620",
+      "sha256": "58070606c692ee76f851bca6bc748726dee4c2a2bfdc14ba628d160f492ac6ed"
+    }
+  ],
+  "local_unsubmitted_count": 0,
+  "draft": {
+    "exists": true,
+    "post_id": "2095508060332863620",
+    "note": "same post as last saved result; checkpoint completed"
+  },
+  "running_worker_processes": [],
+  "last_error": {
+    "command": "save",
+    "message": "AssertionError: Frozen validation failed",
+    "note": "post 2095506800829505549 draft field corrected before successful save and checkpoint"
+  },
+  "checkpoint_status": "success",
+  "recorded_at_utc": "2026-11-13T21:22:50.140599+00:00"
+}
