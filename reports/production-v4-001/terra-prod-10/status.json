@@ -2,13 +2,13 @@
   "run_id": "production-v4-001",
   "worker_id": "terra-prod-10",
   "job_id": "prod-0138",
-  "checkpointed_posts": 0,
+  "checkpointed_posts": 2,
   "status": "OPS_R2_RUNNING",
-  "note": "prod-0138: one local save; second post viewed. Session transport dropped during context command; worker claim gate busy, waiting for automatic expiry. Previous prod-0242 completed 49 normal plus one exclusion.",
-  "recorded_at": "2026-11-13T17:43:15.801168+00:00",
-  "checkpoint_head": "1a62e03164b5d45808ea6bd6ffe7d5fa123b08b0",
-  "local_saved_posts": 1,
-  "uncheckpointed_saved_posts": 1,
+  "note": "prod-0138: two normal posts checkpointed after session interruption and claim-gate expiry; context CLI restored the second post safely. Isolation audit excluded match 0.",
+  "recorded_at": "2026-11-13T17:51:43.446125+00:00",
+  "checkpoint_head": "392c1320219f1b325cfe9b2a6393465ba256f712",
+  "local_saved_posts": 2,
+  "uncheckpointed_saved_posts": 0,
   "research_cwd": "/workspace/production-v4-001-recovery-terra-prod-10-20261113",
   "previous_job": "prod-0242",
   "previous_job_finish_head": "5dea1531361e7778cc9e667a5ea31bdf877afdaa",
@@ -17,7 +17,7 @@
     "signal": "model_refusal",
     "remote_head": "40fcd5a8978ff4f0562bdfc961873280e09faf4a"
   },
-  "uncheckpointed_posts": 1,
+  "uncheckpointed_posts": 0,
   "finish_head": "5dea1531361e7778cc9e667a5ea31bdf877afdaa",
   "job": "prod-0138"
 }
