@@ -1,0 +1,144 @@
+{
+  "observed_at_jst": "2026-11-14 18:42",
+  "operations_revision": "resume-v1",
+  "code_commit": "3a5df2f5a0988d484885a2c628e090e9bc44abf1",
+  "total_shared": 9297,
+  "total_target": 20628,
+  "increase_during_recovery": 68,
+  "index_head": "b9641d4d38b6432f9c8fa40bc85d5475e9ab4d0b",
+  "active_workers": [
+    "terra-prod-01",
+    "terra-prod-02",
+    "terra-prod-03",
+    "terra-prod-04",
+    "terra-prod-05",
+    "terra-prod-06",
+    "terra-prod-07",
+    "terra-prod-08",
+    "terra-prod-09",
+    "terra-prod-10"
+  ],
+  "new_accepted_results": [
+    {
+      "worker": "terra-prod-01",
+      "job": "prod-0103",
+      "post_id": "2095495170309677260",
+      "head": "6f0b4e127e54070c999afc98e13e4a88d017ab66",
+      "started_at": "2026-11-14T04:03:23.229220+00:00",
+      "finished_at": "2026-11-14T09:35:03.780569+00:00"
+    },
+    {
+      "worker": "terra-prod-06",
+      "job": "prod-0305",
+      "post_id": "2097200126867726723",
+      "head": "856c9a91cc21e1e3dee2777a8776e4efdb86859b",
+      "started_at": "2026-11-14T09:34:18.851649+00:00",
+      "finished_at": "2026-11-14T09:35:14.234087+00:00"
+    },
+    {
+      "worker": "terra-prod-09",
+      "job": "prod-0110",
+      "post_id": "2095547985547624572",
+      "head": "e538974653845104c01c685550a6ab6faaa4bbbb",
+      "started_at": "2026-11-14T06:26:52.693034+00:00",
+      "finished_at": "2026-11-14T09:35:26.106081+00:00"
+    },
+    {
+      "worker": "terra-prod-02",
+      "job": "prod-0055",
+      "post_id": "2094878992923078690",
+      "head": "a30a95a1a15eab5d926473f659f47d30b166975b",
+      "started_at": "2026-11-14T09:32:46.524189+00:00",
+      "finished_at": "2026-11-14T09:33:41.619636+00:00"
+    },
+    {
+      "worker": "terra-prod-03",
+      "job": "prod-0047",
+      "post_id": "2094817598789890387",
+      "head": "edfb10d166237866a3a7905d319eb570484b7618",
+      "started_at": "2026-11-14T09:34:42.937686+00:00",
+      "finished_at": "2026-11-14T09:35:31.519132+00:00"
+    },
+    {
+      "worker": "terra-prod-05",
+      "job": "prod-0392",
+      "post_id": "2097941637175640414",
+      "head": "dfb9aba793714d54b90e69c482a446bf4fa6aa74",
+      "started_at": "2026-11-14T09:33:06.252043+00:00",
+      "finished_at": "2026-11-14T09:34:01.893741+00:00"
+    },
+    {
+      "worker": "terra-prod-08",
+      "job": "prod-0160",
+      "post_id": "2095953177460027449",
+      "head": "1447237c043deed622f59bb7425915a20e244789",
+      "started_at": "2026-11-14T09:35:50.635879+00:00",
+      "finished_at": "2026-11-14T09:36:49.910883+00:00"
+    },
+    {
+      "worker": "terra-prod-10",
+      "job": "prod-0394",
+      "post_id": "2097965553290010937",
+      "head": "c1b2973f33f99808a02b6c9f21947bda603270dc",
+      "started_at": "2026-11-14T09:32:29.080782+00:00",
+      "finished_at": "2026-11-14T09:33:32.710844+00:00"
+    },
+    {
+      "worker": "terra-prod-04",
+      "job": "prod-0207",
+      "post_id": "2096379370692853969",
+      "head": "19623d180895f742ae5bc10d896f593645918ee6",
+      "started_at": "2026-11-14T09:37:56.740621+00:00",
+      "finished_at": "2026-11-14T09:39:29.238167+00:00"
+    },
+    {
+      "worker": "terra-prod-07",
+      "job": "prod-0351",
+      "post_id": "2097616979058217216",
+      "head": "157c4a3decd582c3bcd85bea1832666e3551cbbb",
+      "started_at": "2026-11-14T09:37:07.238973+00:00",
+      "finished_at": "2026-11-14T09:37:53.810038+00:00"
+    }
+  ],
+  "frozen_schema_validation": "10 worker results passed",
+  "previous_records": [
+    {
+      "worker": "terra-prod-01",
+      "job": "prod-0103",
+      "before_head": "9f9b7c59daf1ae06fa0494f6a965f50ade3ede7d",
+      "after_head": "6f0b4e127e54070c999afc98e13e4a88d017ab66",
+      "accepted_before": 20,
+      "accepted_after": 21,
+      "changed": []
+    },
+    {
+      "worker": "terra-prod-06",
+      "job": "prod-0305",
+      "before_head": "9c56c00158316cf5e57c75333b8b72e8dfb96fd2",
+      "after_head": "856c9a91cc21e1e3dee2777a8776e4efdb86859b",
+      "accepted_before": 28,
+      "accepted_after": 33,
+      "changed": []
+    },
+    {
+      "worker": "terra-prod-09",
+      "job": "prod-0110",
+      "before_head": "36ab4d867613e47f9d9d5c4b3c9d33c18d6d92f3",
+      "after_head": "e538974653845104c01c685550a6ab6faaa4bbbb",
+      "accepted_before": 29,
+      "accepted_after": 32,
+      "changed": []
+    }
+  ],
+  "tests": {
+    "command": "python -m unittest discover -s tests -p test_draft_edit.py -v",
+    "passed": 4
+  },
+  "changes": [
+    "New continuation supersedes historical call interruption; genuine human/service stops remain honored",
+    "Draft edit helper derives identity from current draft and preserves original/candidate on mismatch",
+    "Hourly send-only prompt updated"
+  ],
+  "deployment": "Published revision and notified ten existing workers; no new chats or subagents created",
+  "policy_and_classification": "Frozen exclusion policy, classification schema/manual and queue implementation unchanged"
+}
