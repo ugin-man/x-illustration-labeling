@@ -1,0 +1,22 @@
+{
+  "observed_at_jst": "2026-11-14 20:20",
+  "worker": "terra-prod-05",
+  "status": "active",
+  "job": "prod-0013",
+  "held_post": "2094514162692984912",
+  "hold_reason": "approval_required",
+  "hold_is_completion": false,
+  "shared_before": 9,
+  "shared_after": 10,
+  "new_shared_post": "2094514168842146181",
+  "before_head": "1ae9d93105b974a996b439370fbc96de13291fcf",
+  "after_head": "fb9c6a118a9f2bf442376db27af96b7ace04bd99",
+  "old_result_blobs_changed": 0,
+  "original_draft_history_present": true,
+  "validation": "Frozen schema and actual image-tool event matched; new result started after recovery instruction.",
+  "operations_revision": "defer-v1",
+  "operations_commit": "43101d0e1e3f6a6c98504fc88248e424a8ee2348",
+  "change": "Replaced conditional wording with the existing defer-then-next workflow. No new code, restrictions, queue/schema changes or per-post approval step.",
+  "verification_test": "Existing defer retention/duplicate/atomic-commit test passed.",
+  "subagents_used": false
+}
