@@ -1,0 +1,11 @@
+{
+  "operations_revision": "resume-v1",
+  "base_run_id": "production-v4-001",
+  "previous_revision_commit": "244af8450bb5e4c8fd1d0868af93a75813281f2b",
+  "change": "Resume on new authorized continuation; bind draft edits to selected post without copied IDs. Frozen labels, queue and exclusions unchanged.",
+  "files_sha256": {
+    "tools/draft_edit.py": "c84c8bdb975665dd6cd57b2a5565f6d33d0209a3d446657fbf231c0a5d8b4ebc",
+    "docs/WORKER_CURRENT.md": "42d36672849f2c6ffc725a459a32ddbb79d229dda41fa027600f895e6baaf141",
+    "tests/test_draft_edit.py": "75bee2019f3bdd3e006cc2dee24dfcdd80d201078008b59edfb55ed366ca5110"
+  }
+}
