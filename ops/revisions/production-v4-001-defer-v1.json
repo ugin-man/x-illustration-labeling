@@ -1,0 +1,9 @@
+{
+  "operations_revision": "defer-v1",
+  "base_run_id": "production-v4-001",
+  "previous_revision_commit": "b679aa8044e9c46bd00ef8ef355881855c887123",
+  "change": "Use the existing unresolved-post defer command and continue other posts when exclusion is not approved. No new queue behavior, limits or classification changes.",
+  "files_sha256": {
+    "docs/WORKER_CURRENT.md": "45c42ebc130c49c4c6cee1123a29bda40c97f11b19c6ea8e7c7bd2463e183077"
+  }
+}
