@@ -1,0 +1,11 @@
+{
+  "operations_revision": "text-retry-v1",
+  "base_run_id": "production-v4-001",
+  "previous_operations": "ops-batch-v1",
+  "change": "Allow autonomous text refetch and transient retries; use one current operations guide. Queue protocol, classifications, exclusion policy and accepted records unchanged.",
+  "files_sha256": {
+    "tools/research_text.py": "a8b8a3f073df7c34af217073ae8a258c4968f027261094b1136dae8689465571",
+    "docs/WORKER_CURRENT.md": "d87cdec507625608a24ec20629c75307aab8372c7ff5ccd22177fc1cc252e33e",
+    "tests/test_research_text.py": "4b634875abc728f41bd01d4a4cabe841219b15938b7bd1192ddefa3a5251e0eb"
+  }
+}
