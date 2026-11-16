@@ -1,9 +1,0 @@
-{
-  "revision": "ops-r5",
-  "started_at_utc": "2026-11-13 22:09:33 UTC",
-  "enabled_commit": "0a66b4029bfd3ae8d0ad06b67cb40f1168e166f3",
-  "manifest_sha256": "5a5ca44e20c28b45941937f5e1f699fa98df50bae9895080ff8f64718be0297d",
-  "control_sha256": "6289aa7a339ec4e04bb4367f845b354809c6b0e321247d3e4f515c03ad10a77d",
-  "workers": 10,
-  "subagents_used": false
-}
