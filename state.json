@@ -1,1 +1,1 @@
-{"kind":"isolated-koyo-cas-probe","contains_production_data":false,"operations":{"probe-A":{"accepted":true},"probe-C":{"accepted":true}}}
+{"kind":"isolated-koyo-cas-probe","contains_production_data":false,"operations":{"probe-A":{"accepted":true},"probe-C":{"accepted":true},"probe-D":{"accepted":true}}}
