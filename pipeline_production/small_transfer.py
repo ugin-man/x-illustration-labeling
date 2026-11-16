@@ -36,6 +36,8 @@ def export_images(bundle, source, policy, destination):
     stage = Path(tempfile.mkdtemp(prefix='.small-transfer-', dir=destination.parent))
     try:
         manifest = unpack(bundle, source, stage, policy)
+        if manifest['split'] != 'production':
+            raise ValueError('Not production source')
         images = {}
         for post in manifest['posts']:
             for im in post['images']:
