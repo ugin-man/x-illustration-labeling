@@ -51,4 +51,36 @@ class TransferTests(unittest.TestCase):
   with self.assertRaises(OSError): self.runfetch(interrupted)
   self.calls=[]; self.runfetch(); self.assertEqual(len(self.calls),2)
 
+ def test_bad_source_hash_explicit(self):
+  bad=dict(self.source,sha256='0'*64)
+  with self.assertRaises(ValueError): export_images(self.bundle,bad,self.policy,self.root/'bad-source')
+ def test_corrupt_checkpoint_clears_receipt(self):
+  self.runfetch(); target=self.root/'out/images'/ (self.hashes[0]+'.jpg'); target.write_bytes(b'bad')
+  with self.assertRaises(ValueError): self.runfetch()
+  self.assertFalse((self.root/'out/selection-receipt.json').exists())
+ def test_symlink_destination(self):
+  (self.root/'elsewhere').mkdir(); (self.root/'out').symlink_to(self.root/'elsewhere',target_is_directory=True)
+  with self.assertRaises(ValueError): self.runfetch()
+ def test_symlink_image(self):
+  self.runfetch(); target=self.root/'out/images'/(self.hashes[0]+'.jpg'); target.unlink(); target.symlink_to(self.export/'images'/(self.hashes[0]+'.jpg'))
+  with self.assertRaises(ValueError): self.runfetch()
+ def test_writer_lock(self):
+  (self.root/'.out.transfer-lock').mkdir()
+  with self.assertRaises(ValueError): self.runfetch()
+  self.assertEqual(self.calls,[])
+ def test_client_excluded_hash(self):
+  self.policy['image_sha256']=[self.hashes[0]]
+  index=json.loads(self.index); index['policy_sha256']=hashlib.sha256(canonical(self.policy)).hexdigest()
+  self.index=canonical(index); self.pin=hashlib.sha256(self.index).hexdigest()
+  with self.assertRaises(ValueError): self.runfetch()
+  self.assertEqual(self.calls,['manifest.json'])
+ def test_selection_binding_after_interruption(self):
+  def interrupted(path,limit):
+   if path.startswith('images/'): raise OSError('interrupted')
+   return self.fetch(path,limit)
+  with self.assertRaises(OSError): self.runfetch(interrupted)
+  binding=self.root/'out/selection-binding.json'; self.assertTrue(binding.exists())
+  altered=json.loads(binding.read_bytes()); altered['post_ids']=['other']; binding.write_bytes(canonical(altered))
+  with self.assertRaises(ValueError): self.runfetch()
+
 if __name__=='__main__': unittest.main()
