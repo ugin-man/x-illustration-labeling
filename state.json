@@ -1,1 +1,1 @@
-{"kind":"isolated-koyo-cas-probe","contains_production_data":false,"operation_id":"probe-A","receipt":{"request_sha256":"synthetic-only","result":"accepted"}}
+{"kind":"isolated-koyo-cas-probe","contains_production_data":false,"operations":{"probe-A":{"accepted":true},"probe-C":{"accepted":true}}}
