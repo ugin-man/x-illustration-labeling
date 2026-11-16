@@ -12,7 +12,6 @@ import shutil
 import tempfile
 import zipfile
 
-from .bundles import unpack
 from .common import atomic_write, canonical, digest
 from .isolation import check_manifest
 
@@ -21,7 +20,7 @@ def _sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def export_images(bundle, source, policy, destination):
+def _export_images_locked(bundle, source, policy, destination):
     """Verify full upstream archive once, then stage single-image transfers.
 
     Never overwrite an export. Each image remains byte-for-byte identical;
@@ -35,14 +34,34 @@ def export_images(bundle, source, policy, destination):
     destination.parent.mkdir(parents=True, exist_ok=True)
     stage = Path(tempfile.mkdtemp(prefix='.small-transfer-', dir=destination.parent))
     try:
-        manifest = unpack(bundle, source, stage, policy)
-        if manifest['split'] != 'production':
-            raise ValueError('Not production source')
-        images = {}
-        for post in manifest['posts']:
-            for im in post['images']:
-                path = stage / im['path']
-                images[im['path']] = {'sha256': im['sha256'], 'bytes': path.stat().st_size}
+        if digest(bundle) != source['sha256']:
+            raise ValueError('Source archive hash mismatch')
+        with zipfile.ZipFile(bundle) as archive:
+            infos = archive.infolist()
+            if sum(i.file_size for i in infos) > 128 * 1024 * 1024:
+                raise ValueError('Archive too large')
+            raw = archive.read('manifest.json')
+            if _sha(raw) != source['manifest_sha256']:
+                raise ValueError('Source manifest hash mismatch')
+            manifest = json.loads(raw)
+            if (manifest['split'] != 'production' or manifest['job_id'] != source['job_id']
+                    or [p['post_id'] for p in manifest['posts']] != source['post_ids']
+                    or len(set(source['post_ids'])) != len(source['post_ids'])):
+                raise ValueError('Source manifest identity mismatch')
+            check_manifest(manifest, policy)
+            wanted = {i['path']: i['sha256'] for p in manifest['posts'] for i in p['images']}
+            if set(archive.namelist()) != set(wanted) | {'manifest.json'} or len(infos) != len(wanted) + 1:
+                raise ValueError('Unexpected or duplicate archive members')
+            images = {}
+            for name, sha in wanted.items():
+                if name != 'images/' + sha + '.jpg' or len(sha) != 64 or any(c not in '0123456789abcdef' for c in sha):
+                    raise ValueError('Unsafe image path/hash')
+                data = archive.read(name)
+                if not data or _sha(data) != sha:
+                    raise ValueError('Image checksum mismatch')
+                images[name] = {'sha256': sha, 'bytes': len(data)}
+                atomic_write(stage / name, data)
+            atomic_write(stage / 'manifest.json', raw)
         index = {'version': 1, 'source': {k: source[k] for k in
                  ('job_id', 'sha256', 'bytes', 'manifest_sha256', 'post_ids')},
                  'policy_sha256': _sha(canonical(policy)), 'images': images}
@@ -56,7 +75,7 @@ def export_images(bundle, source, policy, destination):
             shutil.rmtree(stage)
 
 
-def fetch_posts(fetch, index_raw, index_sha256, source, policy, post_ids, destination):
+def _fetch_posts_locked(fetch, index_raw, index_sha256, source, policy, post_ids, destination):
     """Fetch only selected whole posts plus transitive shared-hash peers.
 
     Callback is called once per image, sequentially. No archive download occurs.
@@ -106,11 +125,23 @@ def fetch_posts(fetch, index_raw, index_sha256, source, policy, post_ids, destin
     receipt = {'version': 1, 'index_sha256': index_sha256, 'source': expected,
                'post_ids': [p['post_id'] for p in posts], 'policy_sha256': index['policy_sha256']}
     marker = destination / 'selection-receipt.json'
+    binding = destination / 'selection-binding.json'
+    for special in (marker, binding, destination / 'images'):
+        if special.is_symlink():
+            raise ValueError('Symlink in destination')
+    if binding.exists() and binding.read_bytes() != canonical(receipt):
+        raise ValueError('Destination belongs to another selection')
     if marker.exists() and marker.read_bytes() != canonical(receipt):
         raise ValueError('Destination belongs to another selection')
+    atomic_write(binding, canonical(receipt))
+    # Once revalidation begins, a stale success marker must not survive failure.
+    if marker.exists():
+        marker.unlink()
     for path in dict.fromkeys(i['path'] for p in posts for i in p['images']):
         item = index['images'][path]
         target = destination / path
+        if target.is_symlink():
+            raise ValueError('Symlink checkpoint forbidden')
         if target.exists():
             if target.stat().st_size != item['bytes'] or digest(target) != item['sha256']:
                 raise ValueError('Existing checkpoint mismatch')
@@ -121,3 +152,43 @@ def fetch_posts(fetch, index_raw, index_sha256, source, policy, post_ids, destin
         atomic_write(target, data)
     atomic_write(marker, canonical(receipt))
     return posts
+
+
+def fetch_posts(fetch, index_raw, index_sha256, source, policy, post_ids, destination):
+    """Single-writer, symlink-safe wrapper for per-image acquisition.
+
+    An interrupted process may leave its lock; inspect ownership before removing
+    such a lock. No automatic expiry/reassignment is permitted.
+    """
+    destination = Path(destination).absolute()
+    for parent in (destination, *destination.parents):
+        if parent.is_symlink():
+            raise ValueError('Symlink destination/ancestor forbidden')
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    lock = destination.parent / ('.' + destination.name + '.transfer-lock')
+    try:
+        lock.mkdir()
+    except FileExistsError:
+        raise ValueError('Transfer already locked; do not reassign') from None
+    try:
+        return _fetch_posts_locked(fetch, index_raw, index_sha256, source, policy, post_ids, destination)
+    finally:
+        lock.rmdir()
+
+
+def export_images(bundle, source, policy, destination):
+    """Verify/stage a new export with a single-writer filesystem guard."""
+    destination = Path(destination).absolute()
+    for parent in (destination, *destination.parents):
+        if parent.is_symlink():
+            raise ValueError('Symlink destination/ancestor forbidden')
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    lock = destination.parent / ('.' + destination.name + '.transfer-lock')
+    try:
+        lock.mkdir()
+    except FileExistsError:
+        raise ValueError('Transfer already locked; do not reassign') from None
+    try:
+        return _export_images_locked(bundle, source, policy, destination)
+    finally:
+        lock.rmdir()
