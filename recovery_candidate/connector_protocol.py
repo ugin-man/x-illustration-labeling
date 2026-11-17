@@ -13,7 +13,9 @@ def envelope(writer,expected,before,after,operation,token,fencing_receipt=None):
     q=writer.q;candidate=q._commit(after,expected)
     base_tree=q.git('show','-s','--format=%T',expected).stdout.decode().strip()
     tree=q.git('show','-s','--format=%T',candidate).stdout.decode().strip()
-    raw=canonical(after).decode();payload={'protocol':'recovery-connector-1','repo':REPO,'branch':BRANCH,'expected_head':expected,'base_tree_sha':base_tree,'candidate_tree_sha':tree,'state_json_content':raw,'state_sha256':hashlib.sha256(raw.encode()).hexdigest(),'state_bytes':len(raw.encode()),'operation':operation,'lease_token':token,'fencing_receipt':fencing_receipt,'commit_message':'Koyo limited recovery '+operation,'plan_key':writer.key,'after_lease_until':after['koyo_index_handoffs'][writer.key]['lease']['until']}
+    changed={pid for field in ('context','events','rows') for pid in set(before['koyo_index_handoffs'][writer.key][field])|set(after['koyo_index_handoffs'][writer.key][field]) if before['koyo_index_handoffs'][writer.key][field].get(pid)!=after['koyo_index_handoffs'][writer.key][field].get(pid)}
+    target=next(iter(changed)) if len(changed)==1 else None
+    raw=canonical(after).decode();payload={'target_post_id':target,'protocol':'recovery-connector-current-batch-1','repo':REPO,'branch':BRANCH,'expected_head':expected,'base_tree_sha':base_tree,'candidate_tree_sha':tree,'state_json_content':raw,'state_sha256':hashlib.sha256(raw.encode()).hexdigest(),'state_bytes':len(raw.encode()),'operation':operation,'lease_token':token,'fencing_receipt':fencing_receipt,'commit_message':'Koyo limited recovery '+operation,'plan_key':writer.key,'after_lease_until':after['koyo_index_handoffs'][writer.key]['lease']['until']}
     return {'payload':payload,'sha256':sha(payload)}
 def validate_envelope(writer,e,before):
     p=e['payload']
@@ -53,7 +55,7 @@ def execution_receipt(e,candidate,ref_update_acknowledged,observed):
     """
     if type(ref_update_acknowledged) is not bool:raise Refused('explicit ACK status required')
     accepted=observed.get('accepted') is True and observed.get('head')==candidate and observed.get('state_sha256')==e['payload']['state_sha256']
-    return {'envelope_sha256':e['sha256'],'candidate':candidate,'accepted':accepted,'ref_update_acknowledged':ref_update_acknowledged,'external_request_permitted':accepted and ref_update_acknowledged,'operation':e['payload']['operation']}
+    return {'envelope_sha256':e['sha256'],'candidate':candidate,'accepted':accepted,'ref_update_acknowledged':ref_update_acknowledged,'external_request_permitted':accepted and ref_update_acknowledged,'operation':e['payload']['operation'],'target_post_id':e['payload'].get('target_post_id')}
 
 def pre_update_ref(writer,e,before,commit):
     validate_commit(e,commit)

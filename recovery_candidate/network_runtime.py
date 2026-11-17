@@ -139,14 +139,35 @@ class IndexWriter:
             pins=payload.get('code_sha256',{})
             if not expected_files<=set(pins) or any(digest(f)!=v for f,v in pins.items()):raise Refused('activation code pin mismatch')
             scope=payload.get('scope',{})
-            if scope.get('job_id')!='prod-0002' or scope.get('max_new_rows')!=1 or scope.get('external_exploration') is not False:raise Refused('limited restart scope required')
-            pid=scope.get('post_id')
-            if b['job_id']!=scope['job_id'] or pid not in b['plan']['payload']['source']['post_ids']:raise Refused('scope mismatch')
-            for field in ('context','events','rows'):
-                if any(b[field].get(p)!=a[field].get(p) for p in set(b[field])|set(a[field]) if p!=pid):raise Refused('outside single-post scope')
-            if operation=='exploration':raise Refused('external exploration disabled in limited restart')
-            base=payload.get('baseline_rows',{})
-            if not base or any(a['rows'].get(p)!=r for p,r in base.items()) or set(a['rows'])-set(base)-{pid}:raise Refused('baseline or single-row limit changed')
+            if scope.get('kind')=='current-batch-prod-0002-v1':
+                planned=b['plan']['payload']['source']['post_ids']
+                if len(planned)!=50 or planned[16]!='2096015385070039138':raise Refused('unexpected frozen batch')
+                permitted=planned[18:]
+                baseline_ids=set(planned[:16]+[planned[17]])
+                if (scope.get('job_id')!='prod-0002' or scope.get('post_ids')!=permitted
+                    or scope.get('held_post_ids')!=[planned[16]] or scope.get('max_new_rows')!=32
+                    or scope.get('external_exploration') is not False or b['job_id']!='prod-0002'):
+                    raise Refused('current-batch exact scope required')
+                base=payload.get('baseline_rows',{})
+                if set(base)!=baseline_ids or any(a['rows'].get(p)!=r for p,r in base.items()):raise Refused('17-row baseline changed')
+                if set(a['rows'])-set(base)-set(permitted) or len(set(a['rows'])-set(base))>32:raise Refused('batch row limit changed')
+                changed={p for field in ('context','events','rows') for p in set(b[field])|set(a[field]) if b[field].get(p)!=a[field].get(p)}
+                if operation in ('renew','reacquire'):
+                    if changed:raise Refused('lease operation changed post data')
+                    pid=None
+                else:
+                    if len(changed)!=1 or not changed<=set(permitted):raise Refused('one allowed post per operation; held post immutable')
+                    pid=next(iter(changed))
+                if operation=='exploration':raise Refused('external exploration remains disabled pending research clock review')
+            else:
+                if scope.get('job_id')!='prod-0002' or scope.get('max_new_rows')!=1 or scope.get('external_exploration') is not False:raise Refused('limited restart scope required')
+                pid=scope.get('post_id')
+                if b['job_id']!=scope['job_id'] or pid not in b['plan']['payload']['source']['post_ids']:raise Refused('scope mismatch')
+                for field in ('context','events','rows'):
+                    if any(b[field].get(p)!=a[field].get(p) for p in set(b[field])|set(a[field]) if p!=pid):raise Refused('outside single-post scope')
+                if operation=='exploration':raise Refused('external exploration disabled in limited restart')
+                base=payload.get('baseline_rows',{})
+                if not base or any(a['rows'].get(p)!=r for p,r in base.items()) or set(a['rows'])-set(base)-{pid}:raise Refused('baseline or single-row limit changed')
             if operation=='save-row':
                 context=a['rows'][pid]['context'];stop=context['stop_reason']
                 if stop=='source_unavailable':
@@ -155,7 +176,7 @@ class IndexWriter:
                 elif stop!='no_leads':raise Refused('limited restart only genuine no_leads or recorded source failure')
 
     def publish(self,expected,before,after,*,operation=None,lease_token=None,fencing_receipt=None,max_attempts=10):
-        if self.live and not self.enabled:raise Refused('live writes disabled pending reviewed activation')
+        if self.live:raise Refused('live writes require reviewed connector protocol; CLI push disabled')
         self.authorize_transition(before,after,operation,lease_token,fencing_receipt)
         self.preservation(before,after)
         head,actual=self.read()
