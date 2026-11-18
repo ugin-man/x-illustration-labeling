@@ -47,6 +47,98 @@ class Integrated(unittest.TestCase):
   self.c.validate(b,a,'save-row',b['koyo_index_handoffs'][self.key]['lease']['token'],pid)
   bad=copy.deepcopy(a);bad['koyo_index_handoffs'][self.key]['rows'][pid]['context']['attributes']['creation']['sources'][0]['url']='https://x.com/other/status/123'
   with self.assertRaises(Exception):self.c.validate(b,bad,'save-row',b['koyo_index_handoffs'][self.key]['lease']['token'],pid)
+ def commit_state(self,state,message):
+  head,_,c=self.g.read_state();t=self.io.create_tree(REPO,c['tree'],{'state.json':json.dumps(state)});n=self.io.create_commit(REPO,t,head,message);self.io.update_ref(REPO,DISPATCH,head,n);return head,n
+ def test_same_token_renewal_retains_stage(self):
+  from network_runtime import lease_transition
+  self.stage();head,b,_=self.g.read_state();token=b['koyo_index_handoffs'][self.key]['lease']['token'];now=b['koyo_index_handoffs'][self.key]['lease']['until']-300;self.w.clock=lambda:now;self.c.clock=lambda:now;after=lease_transition(b,self.key,token,now,1800);self.assertGreater(after['koyo_index_handoffs'][self.key]['lease']['until'],b['koyo_index_handoffs'][self.key]['lease']['until'])
+  self.w.authorize_transition(b,after,'renew',token);self.w.preservation(b,after);self.commit_state(after,'synthetic normal renewal')
+  self.assertEqual(self.c.checkpoint(force=True)['status'],'accepted')
+ def reacquire(self):
+  head,b,_=self.g.read_state();old=b['koyo_index_handoffs'][self.key]['lease'];at=old['until']+1;self.c.clock=lambda:at;self.w.clock=lambda:at
+  a=copy.deepcopy(b);h=a['koyo_index_handoffs'][self.key];fencing={'all_previous_koyo_writers_stopped':True,'verification_reference':'isolated sole fake writer verified'}
+  h['lease']={'owner':'koyo','token':'b'*32,'until':at+1800};h.setdefault('recovery_lease_history',[]).append({'prior_lease':copy.deepcopy(old),'fencing_receipt':fencing,'at':at})
+  self.w.authorize_transition(b,a,'reacquire',old['token'],fencing);self.w.preservation(b,a)
+  return self.commit_state(a,'synthetic accepted normal reacquisition')
+ def test_explicit_adoption_after_verified_reacquisition(self):
+  from stage_adoption import adopt
+  self.stage();prior,accepted=self.reacquire();item=self.a.restore(self.key)['stages'][0]
+  new,ticket=adopt(self.c,item,prior,accepted,'isolated explicit adoption review')
+  self.assertNotEqual(new['sha256'],item['sha256']);self.assertEqual(new['payload']['after'],item['payload']['after'])
+  recovered=self.c.restore_and_select();self.assertEqual(len(recovered['ready']),1);self.assertEqual(self.c.checkpoint(force=True)['status'],'accepted')
+ def test_adoption_without_accepted_reacquisition_refused(self):
+  from stage_adoption import adopt
+  self.stage();head,_,_=self.g.read_state()
+  with self.assertRaises(Exception):adopt(self.c,self.d['items'][0],head,head,'not enough')
+ def test_adoption_after_target_mutation_refused(self):
+  from stage_adoption import adopt
+  self.stage();prior,accepted=self.reacquire();_,s,_=self.g.read_state();pid=self.d['items'][0]['payload']['pid'];s['koyo_index_handoffs'][self.key]['context'][pid]['other']='changed';self.commit_state(s,'synthetic concurrent target changed')
+  with self.assertRaises(Exception):adopt(self.c,self.d['items'][0],prior,accepted,'review cannot authorize altered dependency')
+ def sealed_fixture(self):
+  import sys
+  path='/tmp/koyo-current-batch-candidate/exploration'
+  if path not in sys.path:sys.path.insert(0,path)
+  from exploration import Authority,new_clock,transition,digest as edigest
+  from persistent_runner import validate_batch
+  from prepare_live_activation import build_new_batch
+  item=self.d['items'][0];pid=item['payload']['pid'];b=apply(self.b,self.key,pid,item['payload']['after']);row=b['koyo_index_handoffs'][self.key]['rows'].pop(pid)
+  bind={'plan_sha256':self.key,'post_id':pid,'worker':'koyo','lease_token':b['koyo_index_handoffs'][self.key]['lease']['token']}
+  activation,_=build_new_batch(b,'a'*40,bind,'isolated existing sealed-ledger review',str(ROOT),Path(self.tmp.name)/'authority-unused',ROOT/'refusals')
+  authority=Authority();clock=new_clock(bind);initial=copy.deepcopy(clock);events=[];t=time.time()-10
+  def event(e):
+   nonlocal clock
+   events.append(e);clock=transition(clock,e,authority)
+  event({'kind':'reserve','at':t,'request_id':'synthetic-search','request_kind':'search','queries':['synthetic test only']})
+  proof=authority.verified_ack(bind,'synthetic-search',edigest(clock),'a'*40,t+1,acknowledged=True,readback_sha=edigest(clock))
+  event({'kind':'acknowledge','at':t+1,'request_id':'synthetic-search','proof':proof})
+  event({'kind':'external_started','at':t+2,'request_id':'synthetic-search'})
+  event({'kind':'external_finished','at':t+3,'request_id':'synthetic-search','result_sha256':'a'*64,'result_state':'available'})
+  event({'kind':'seal','at':t+4});validate_batch(initial,events,clock,authority)
+  b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']=clock
+  row['context'].update(searches=clock['seal']['searches'],pages=clock['seal']['pages'],elapsed_seconds=clock['seal']['elapsed_seconds'],stop_reason='no_leads')
+  a=copy.deepcopy(b);a['koyo_index_handoffs'][self.key]['rows'][pid]=row
+  self.commit_state(b,'synthetic fully replay-validated sealed ledger')
+  self.c.exploration_activation=activation
+  return b,a,pid
+ def test_sealed_exploration_stage_restore_checkpoint(self):
+  b,a,pid=self.sealed_fixture();self.c.preserve_completed(b,a,pid,'save-row')
+  self.assertEqual(len(self.c.restore_and_select()['ready']),1)
+  self.assertEqual(self.c.checkpoint(force=True)['status'],'accepted')
+ def test_sealed_budget_tampering_refused(self):
+  b,a,pid=self.sealed_fixture();b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']['seal']['elapsed_seconds']=0
+  a['koyo_index_handoffs'][self.key]['context'][pid]=copy.deepcopy(b['koyo_index_handoffs'][self.key]['context'][pid])
+  with self.assertRaises(Exception):self.c.preserve_completed(b,a,pid,'save-row')
+ def test_unfinished_exploration_refused(self):
+  b,a,pid=self.sealed_fixture();b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']['requests']['synthetic-search'].pop('finished_at')
+  a['koyo_index_handoffs'][self.key]['context'][pid]=copy.deepcopy(b['koyo_index_handoffs'][self.key]['context'][pid])
+  with self.assertRaises(Exception):self.c.preserve_completed(b,a,pid,'save-row')
+ def test_sealed_old_token_adoption_holds_without_rebinding(self):
+  from stage_adoption import adopt
+  b,a,pid=self.sealed_fixture();self.c.preserve_completed(b,a,pid,'save-row');original=self.a.restore(self.key)['stages'][0];prior,accepted=self.reacquire()
+  r=self.c.restore_and_select();self.assertEqual(r['ready'],[]);self.assertIn(pid,r['selection']['held_requires_reconciliation'])
+  adopted,ticket=adopt(self.c,original,prior,accepted,'isolated explicit historical sealed review')
+  self.assertEqual(adopted['payload']['after'],original['payload']['after'])
+  self.assertEqual(len(self.c.restore_and_select()['ready']),1)
+  self.assertEqual(self.c.checkpoint(force=True)['status'],'accepted')
+  saved=self.g.read_state()[1]['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']
+  self.assertEqual(saved,b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock'])
+ def test_sealed_adoption_with_changed_stage_time_refused(self):
+  from stage_adoption import adopt
+  b,a,pid=self.sealed_fixture();self.c.preserve_completed(b,a,pid,'save-row');original=self.a.restore(self.key)['stages'][0]
+  original['payload']['staged_at']=b['koyo_index_handoffs'][self.key]['lease']['until']+1;original['sha256']=digest(original['payload']);self.a.put(original)
+  prior,accepted=self.reacquire()
+  with self.assertRaises(Exception):adopt(self.c,original,prior,accepted,'cannot backdate expiry')
+ def test_reacquisition_without_fencing_refused(self):
+  from stage_adoption import adopt
+  self.stage();prior,accepted=self.reacquire();state,c=__import__('stage_adoption').snapshot_at(self.g,accepted)
+  state['koyo_index_handoffs'][self.key]['recovery_lease_history'][-1]['fencing_receipt']['all_previous_koyo_writers_stopped']=False
+  tree=self.io.create_tree(REPO,c['tree'],{'state.json':json.dumps(state)});forged=self.io.create_commit(REPO,tree,prior,'synthetic invalid fencing')
+  with self.assertRaises(Exception):adopt(self.c,self.a.restore(self.key)['stages'][0],prior,forged,'review cannot replace fencing')
+ def test_archive_ticket_ack_loss_resolves_without_replay(self):
+  from stage_adoption import adopt
+  self.stage();prior,accepted=self.reacquire();original=self.a.restore(self.key)['stages'][0];self.io.lose_ack=True
+  with self.assertRaises(TimeoutError):adopt(self.c,original,prior,accepted,'isolated reviewed adoption')
+  self.io.lose_ack=False;updates=self.io.updates;r=self.c.restore_and_select();self.assertEqual(len(r['ready']),1);self.assertEqual(self.io.updates,updates)
  def test_no_live_transport_adoption(self):
   self.a.io.offline_fixture_only=False
   with self.assertRaises(Refused):IntegratedWorker(self.w,self.a,self.g,self.plan,Path(self.tmp.name)/'outbox3')

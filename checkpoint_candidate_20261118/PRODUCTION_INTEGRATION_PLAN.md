@@ -7,11 +7,11 @@ No production activation or production data was changed. `integration_driver.py`
 - Validate each completed result with the actual IndexWriter transition/preservation logic and the actual pinned schema/source/view checks.
 - For ordinary evidence_sufficient with no exploration, use the separately reviewed direct-text route plus unchanged new_batch_scope validation, source pins and policy tombstones. Never fabricate a search or relabel as no_leads.
 - Archive completed results before treating them as durable.
-- On restart, retrieve archive, verify stages against fresh head/state/scope/lease; quarantine conflicts and old tokens rather than automatically adopting them.
+- On restart, retrieve archive, verify stages against fresh head/state/scope/lease; quarantine conflicts and old tokens rather than automatically adopting them. Explicit adoption requires exact archived source, an accepted parent/child reacquisition commit, unchanged historical normal validator and fencing receipt, current scope/token, and immutable ticket.
 - Selection excludes accepted and staged posts. A body attempt without recoverable stage is held for reconciliation, never fetched a second time.
 - Checkpoint at five posts or ten minutes, and at explicit safe handoff/end. Before publish use all existing CAS/tree/readback protections.
 
-Eight added integration scenarios pass. They use synthetic manifests and source fixtures only. The isolated archive uses real bare Git independently of the worker object; recreation verifies resume without a local stage list. Existing network v2 tests separately exercise the same unchanged research validators in a synthetic-only closed transport. Neither is a live deployment.
+Nineteen added integration scenarios pass. They use synthetic manifests and source fixtures only. The isolated archive uses real bare Git independently of the worker object; recreation verifies resume without a local stage list. Existing network v2 tests separately exercise the same unchanged research validators in a synthetic-only closed transport. Neither is a live deployment.
 
 ## Proposed production insertion points
 1. Sole current writer finishes/records the active operation and proves no uncertain publish remains. Record accepted head, pending body/row journal and exact token; do not change Terra or retained prior work.
@@ -29,3 +29,10 @@ The earlier measured local five-row test reduces large-ledger bytes by about 80%
 For production's first bounded interval, record exact operation durations, request/response bytes, accepted rows, staged rows, body failures, retrieval/exploration waits, renewal/recovery, and total elapsed wall time. Compare like-for-like save paths; do not call time since first image viewing active classification time. If per-stage archive overhead outweighs transfer savings, retain the safe old path and improve payload/roundtrips instead of declaring success.
 
 Still required before production: closed typed transport integration with normal activation, independent review of its final pins, sole-writer boundary, and actual same-scope timing. No claim of production throughput or physical cloud-destruction recovery is made.
+
+## Additional isolated recovery validation (not production authorization)
+Same-token normal renewal preserves stages. Changed-token adoption replays the unchanged normal reacquire validator on the accepted historical commit and verifies latest-head ancestry. Original stage remains archived; only its envelope lease token changes. No retrieval permission is granted. Ticket ACK loss is simulated and restored without write replay.
+
+Completed exploration is accepted only with its existing dedicated activation, immutable committed ledger, finished requests, budget/count validation, and actual SealedRowWriter/NewBatchClockGuard. An old-token sealed result is not rebound: the exact old clock and result are validated against the accepted historical state at original stage time; current scope/policy/schema and preservation are checked again. An explicit immutable adoption ticket is required. This new typed historical route remains fixture-only and needs independent review; it is not a substitute for the production activation protocol.
+
+Negative cases include missing accepted reacquisition, absent fencing, changed target dependencies, stage timestamp outside old lease, unfinished exploration, and altered seal/budget. No production external requests, actual research responses or runtime handoffs were performed. Exploration test ACKs/results are clearly synthetic locally generated fixtures, validated by the original transition code.

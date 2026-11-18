@@ -1,13 +1,24 @@
 test_accepted_baseline_preserved (__main__.Integrated.test_accepted_baseline_preserved) ... ok
+test_adoption_after_target_mutation_refused (__main__.Integrated.test_adoption_after_target_mutation_refused) ... ok
+test_adoption_without_accepted_reacquisition_refused (__main__.Integrated.test_adoption_without_accepted_reacquisition_refused) ... ok
+test_archive_ticket_ack_loss_resolves_without_replay (__main__.Integrated.test_archive_ticket_ack_loss_resolves_without_replay) ... ok
 test_checkpoint_wait_policy (__main__.Integrated.test_checkpoint_wait_policy) ... ok
+test_explicit_adoption_after_verified_reacquisition (__main__.Integrated.test_explicit_adoption_after_verified_reacquisition) ... ok
 test_foreign_scope_refused (__main__.Integrated.test_foreign_scope_refused) ... ok
 test_loss_of_unarchived_stage_never_refetch (__main__.Integrated.test_loss_of_unarchived_stage_never_refetch) ... ok
 test_no_live_transport_adoption (__main__.Integrated.test_no_live_transport_adoption) ... ok
 test_old_token_quarantine (__main__.Integrated.test_old_token_quarantine) ... ok
+test_reacquisition_without_fencing_refused (__main__.Integrated.test_reacquisition_without_fencing_refused) ... ok
 test_real_scope_stage_reset_checkpoint (__main__.Integrated.test_real_scope_stage_reset_checkpoint) ... ok
+test_same_token_renewal_retains_stage (__main__.Integrated.test_same_token_renewal_retains_stage) ... ok
+test_sealed_adoption_with_changed_stage_time_refused (__main__.Integrated.test_sealed_adoption_with_changed_stage_time_refused) ... ok
+test_sealed_budget_tampering_refused (__main__.Integrated.test_sealed_budget_tampering_refused) ... ok
+test_sealed_exploration_stage_restore_checkpoint (__main__.Integrated.test_sealed_exploration_stage_restore_checkpoint) ... ok
+test_sealed_old_token_adoption_holds_without_rebinding (__main__.Integrated.test_sealed_old_token_adoption_holds_without_rebinding) ... ok
+test_unfinished_exploration_refused (__main__.Integrated.test_unfinished_exploration_refused) ... ok
 test_zero_search_actual_scope (__main__.Integrated.test_zero_search_actual_scope) ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.678s
+Ran 19 tests in 3.748s
 
 OK
