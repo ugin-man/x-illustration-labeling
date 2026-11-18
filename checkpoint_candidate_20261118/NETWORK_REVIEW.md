@@ -16,3 +16,16 @@ For simulated ACK loss, the successful update response was deliberately not used
 After pin hardening, the production branch name was rejected before any I/O and a current test-branch read succeeded. No test of actual security rejection was manufactured or bypassed.
 
 The generic Python aggregate adapter was tested locally with actual research validators earlier; this separate network test uses the explicitly synthetic validator. Joining production validators/scope and network transport remains unimplemented and must receive independent review before any production application. Network event timings are protocol tests, not comparable baseline/optimized speed measurements.
+
+## Final pinned v2 rerun
+The earlier RESULTS.json intentionally remains historical evidence of the pre-hardening execution (including fetch_blob). FINAL_PINNED_RESULTS.json is the separate rerun of the final pinned source. The only public adapter entry points are runSuite, recoverAndCheckpoint, and faultSuite, with no parameters. Raw connector calls, arbitrary reads, candidate creation, and ref movement are closure-private.
+
+The v2 remote test uses entirely synthetic 50-post catalog/manifest and synthetic results. Unlike v1, each row goes through unchanged IndexWriter.authorize_transition/preservation, new_batch_scope exact scope checks, PinnedInputs, and contract_v4 validation. Synthetic activation is used only in an isolated local validator object (live validation checks enabled, writes not enabled); no operational activation is created and no actual image/view claim is made. Source and input pins are verified before each connector call. Scope/source are revalidated after candidate preparation and before ref write, with a 120-second lease margin; GitHub still offers no server lease-time predicate.
+
+The pinned final suite completed remote stage preservation, stateless remote-only reconstruction, two-row aggregate validation/publish/readback, competing-head preservation, and simulated ACK loss readback. The stale-head call again returned UNKNOWN, so error classification remains inconclusive. Fault injection creates only predetermined synthetic metadata. The whole production branch is refused before I/O.
+
+Physical machine destruction was not performed. Actual production deployment and classification speed remain untested. The v2 branches are separate from both v1 and production:
+- codex/koyo-checkpoint-network-archive-20261118-v2
+- codex/koyo-checkpoint-network-aggregate-20261118-v2
+
+FINAL_PINNED_RESULTS contains all final connector events; it contains no fetch_blob calls. The input fixture includes mock viewing receipts explicitly marked synthetic-test-not-real-view, which must never be used as real research observations.

@@ -28,6 +28,10 @@ test_lease_expiry_while_constructing_commit (test_git_adapters.GitAdapters.test_
 test_permission_denial_no_retry (test_git_adapters.GitAdapters.test_permission_denial_no_retry) ... ok
 test_reset_restores_git_archive_no_local_stage (test_git_adapters.GitAdapters.test_reset_restores_git_archive_no_local_stage) ... ok
 test_unknown_readback_keeps_candidate_journal (test_git_adapters.GitAdapters.test_unknown_readback_keeps_candidate_journal) ... ok
+test_bad_schema_refused (test_network_fixed.NetworkFixed.test_bad_schema_refused) ... ok
+test_changed_identity_refused (test_network_fixed.NetworkFixed.test_changed_identity_refused) ... ok
+test_fixed_scope_schema_accept (test_network_fixed.NetworkFixed.test_fixed_scope_schema_accept) ... ok
+test_missing_view_refused (test_network_fixed.NetworkFixed.test_missing_view_refused) ... ok
 test_real_fixed_validator_five_finalizations (test_real_validator.Integration.test_real_fixed_validator_five_finalizations) ... ok
 test_archive_conflicting_or_tampered_refused (test_recovery_zero.Recovery.test_archive_conflicting_or_tampered_refused) ... ok
 test_complete_local_loss_restores_stage_without_fetch (test_recovery_zero.Recovery.test_complete_local_loss_restores_stage_without_fetch) ... ok
@@ -54,6 +58,6 @@ test_archive_non_target_mode_refused (test_tree_integrity.TreeIntegrity.test_arc
 test_actual_fixed_validator_and_preservation (test_zero_fixed.FixedZero.test_actual_fixed_validator_and_preservation) ... ok
 
 ----------------------------------------------------------------------
-Ran 54 tests in 20.591s
+Ran 58 tests in 22.620s
 
 OK

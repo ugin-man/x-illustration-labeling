@@ -1,0 +1,477 @@
+{
+  "seed": {
+    "phase": "seeded",
+    "stages": 2,
+    "scope": {
+      "archive": "codex/koyo-checkpoint-network-archive-20261118-v2",
+      "aggregate": "codex/koyo-checkpoint-network-aggregate-20261118-v2"
+    },
+    "events": [
+      {
+        "operation": "mcp__codex_apps__github_create_branch",
+        "milliseconds": 700,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_branch",
+        "milliseconds": 690,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 402,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 365,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 551,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_tree",
+        "milliseconds": 627,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 427,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_commit",
+        "milliseconds": 963,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 419,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 357,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_update_ref",
+        "milliseconds": 1142,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 360,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 603,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 359,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 376,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 334,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 469,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_tree",
+        "milliseconds": 710,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 1016,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_commit",
+        "milliseconds": 619,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 411,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 317,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_update_ref",
+        "milliseconds": 1293,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 507,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 699,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 283,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 380,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 438,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 341,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_tree",
+        "milliseconds": 552,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 407,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_commit",
+        "milliseconds": 448,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 528,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 317,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_update_ref",
+        "milliseconds": 1497,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 376,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 633,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 375,
+        "isError": false
+      }
+    ]
+  },
+  "checkpoint": {
+    "phase": "checkpoint",
+    "receipt": {
+      "head": "43fe9a1a1fa50f0ea0ea5db4189deb5956191042"
+    },
+    "rows": 2,
+    "events": [
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 293,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 342,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 358,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 438,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 639,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 513,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 390,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 495,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_tree",
+        "milliseconds": 849,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 367,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_commit",
+        "milliseconds": 495,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 413,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 306,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 321,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 373,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 269,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_update_ref",
+        "milliseconds": 1368,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 371,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 588,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 456,
+        "isError": false
+      }
+    ]
+  },
+  "faults": {
+    "phase": "faults",
+    "head": "06ed688c1f430332843ff3a1af1f5e72ee3f006e",
+    "staleError": "{\"content\":[{\"type\":\"text\",\"text\":\"GithubGraphQLAPIError: [{'message': 'Something went wrong while executing your query on 2026-11-18T20:24:57Z. Please include `9F9A:1F8B28:94CA5A:1D800D3:6AFE0998` when reporting this issue.'}]\"}],\"structuredContent\":{\"error\":\"GithubGraphQLAPIError: [{'message': 'Something went wrong while executing your query on 2026-11-18T20:24:57Z. Please include `9F9A:1F8B28:94CA5A:1D800D3:6AFE0998` when reporting this issue.'}]\",\"error_code\":\"UNKNOWN\"},\"isError\":true}",
+    "concurrentPreserved": true,
+    "simulatedACKLoss": true,
+    "retries": 0,
+    "productionScopeRefused": true,
+    "events": [
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 371,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 373,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 339,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_tree",
+        "milliseconds": 581,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 374,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_commit",
+        "milliseconds": 413,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 372,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 306,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 407,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_tree",
+        "milliseconds": 495,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 447,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_commit",
+        "milliseconds": 447,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 902,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 522,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_update_ref",
+        "milliseconds": 1273,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 387,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 435,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 346,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_update_ref",
+        "milliseconds": 1163,
+        "isError": true
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 386,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 372,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 375,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_tree",
+        "milliseconds": 441,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 400,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_create_commit",
+        "milliseconds": 438,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 492,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 764,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_update_ref",
+        "milliseconds": 1437,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 383,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch",
+        "milliseconds": 353,
+        "isError": false
+      },
+      {
+        "operation": "mcp__codex_apps__github_fetch_file",
+        "milliseconds": 299,
+        "isError": false
+      }
+    ]
+  }
+}

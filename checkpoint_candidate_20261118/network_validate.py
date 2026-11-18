@@ -2,7 +2,7 @@
 import json,sys,time
 from git_adapters import complete_tree_sha,git_object_sha
 from checkpoint import prepare
-from test_checkpoint import validator
+from synthetic_fixed import validate_transition as validator
 x=json.loads(sys.argv[1])
 if x['op']=='tree':
  b=x['base'];n=x['candidate'];ed=x['edits']
