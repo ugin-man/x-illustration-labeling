@@ -11,7 +11,7 @@ No production activation or production data was changed. `integration_driver.py`
 - Selection excludes accepted and staged posts. A body attempt without recoverable stage is held for reconciliation, never fetched a second time.
 - Checkpoint at five posts or ten minutes, and at explicit safe handoff/end. Before publish use all existing CAS/tree/readback protections.
 
-Nineteen added integration scenarios pass. They use synthetic manifests and source fixtures only. The isolated archive uses real bare Git independently of the worker object; recreation verifies resume without a local stage list. Existing network v2 tests separately exercise the same unchanged research validators in a synthetic-only closed transport. Neither is a live deployment.
+Twenty added integration scenarios pass. They use synthetic manifests and source fixtures only. The isolated archive uses real bare Git independently of the worker object; recreation verifies resume without a local stage list. Existing network v2 tests separately exercise the same unchanged research validators in a synthetic-only closed transport. Neither is a live deployment.
 
 ## Proposed production insertion points
 1. Sole current writer finishes/records the active operation and proves no uncertain publish remains. Record accepted head, pending body/row journal and exact token; do not change Terra or retained prior work.
@@ -19,7 +19,7 @@ Nineteen added integration scenarios pass. They use synthetic manifests and sour
 3. Introduce typed completed-stage and checkpoint operations into the existing connector bridge. Do not expose generic update_ref, arbitrary branches or arbitrary tree writes as worker methods.
 4. Use an explicit same-repository archive branch and only completed-result namespaces. All source/body scopes remain the existing task's authorized data. Readback must prove stage durability.
 5. Hook the current next-post selection to restore_and_select. Resume incomplete acquisition only through original reconciliation, not through checkpoint selection.
-6. Preserve original ordinary/exploration separation. A sealed exploration result must carry the existing budget and receipts; an unsealed result cannot be staged as complete.
+6. Preserve original ordinary/exploration separation. Sealed exploration integration is disabled pending independently authenticated original authority provenance; neither sealed nor unsealed exploration can be staged by this candidate.
 7. Renew early through the existing normal lease workflow. A changed token requires explicit fencing/adoption review for old stages. CAS cannot impose server-side time expiry.
 8. Start a new measurement segment at the first actual production operation using new code. Label the previous 50-post segment as old save cadence; do not overwrite its elapsed history.
 
@@ -30,9 +30,11 @@ For production's first bounded interval, record exact operation durations, reque
 
 Still required before production: closed typed transport integration with normal activation, independent review of its final pins, sole-writer boundary, and actual same-scope timing. No claim of production throughput or physical cloud-destruction recovery is made.
 
-## Additional isolated recovery validation (not production authorization)
-Same-token normal renewal preserves stages. Changed-token adoption replays the unchanged normal reacquire validator on the accepted historical commit and verifies latest-head ancestry. Original stage remains archived; only its envelope lease token changes. No retrieval permission is granted. Ticket ACK loss is simulated and restored without write replay.
+## Security correction: sealed restoration is disabled
+Commit 4f19c30d35e89d6f90f6f8b04341e83f28c12e53 is an unsafe preliminary isolated prototype. Its historical sealed adoption and same-token sealed restoration must not be deployed. The original tests did not detect forged ACK MACs or invented management-read receipts followed by recomputed seal hashes.
 
-Completed exploration is accepted only with its existing dedicated activation, immutable committed ledger, finished requests, budget/count validation, and actual SealedRowWriter/NewBatchClockGuard. An old-token sealed result is not rebound: the exact old clock and result are validated against the accepted historical state at original stage time; current scope/policy/schema and preservation are checked again. An explicit immutable adoption ticket is required. This new typed historical route remains fixture-only and needs independent review; it is not a substitute for the production activation protocol.
+The corrected candidate refuses ALL sealed stage validation/restoration/adoption because this integration has no independent verifier for the original process-local authority and issued-proof registry. Accepted Git history, scope checks, immutable stage hashes, review tickets and structural budget consistency do not replace authenticated authority proof. Same-token and changed-token sealed stages are held for reconciliation, never refetched or silently rebound. The structural verify_seal helper is not an authentication gate.
 
-Negative cases include missing accepted reacquisition, absent fencing, changed target dependencies, stage timestamp outside old lease, unfinished exploration, and altered seal/budget. No production external requests, actual research responses or runtime handoffs were performed. Exploration test ACKs/results are clearly synthetic locally generated fixtures, validated by the original transition code.
+Same-token normal renewal and explicit changed-token adoption for ordinary non-sealed stages remain tested. No production activation or policy was relaxed. The original production worker remains unchanged. Before any future sealed support, a normal reviewed design must provide durable independently verifiable authority provenance and replay the complete original transitions and receipts; unavailable evidence must continue to fail closed.
+
+Negative tests cover forged ACK MAC plus recalculated seal hash, and invented management-read receipt plus recalculated budget/hash, both at same-token preserve and historical adoption. Tests use synthetic data and fake local Git only. No actual research requests or production handoffs are performed.

@@ -20,30 +20,10 @@ def require_ancestor(aggregate,ancestor,head):
  raise Refused('ancestry bound exceeded')
 
 def validate_historical_sealed(worker,item,prior,prior_head,current,after,pid,token):
- from checkpoint import apply,target
- from types import SimpleNamespace
- from sealed_stage_validation import validate as sealed_validate
- from new_batch_scope import validate_scope,validate_document
- from runtime_components import PinnedInputs
- key=worker.key;old=item['payload'];when=old['staged_at'];clock=prior['koyo_index_handoffs'][key]['context'][pid]['exploration_clock']
- if not clock['seal']['at']<=when<prior['koyo_index_handoffs'][key]['lease']['until']-30:raise Refused('historical sealed stage time outside authorized lease')
- if target(prior['koyo_index_handoffs'][key],pid)!=old['before']:raise Refused('historical sealed dependencies differ')
- historic=copy.copy(worker);historic.clock=lambda:when;historic.writer=copy.copy(worker.writer);historic.writer.clock=lambda:when
- historic.aggregate=SimpleNamespace(read_state=lambda:(prior_head,prior,None))
- prior_after=apply(prior,key,pid,old['after'])
- sealed_validate(historic,prior,prior_after,pid,old['lease_token'],worker.exploration_activation)
- worker.check(current)
- from next_batch import require_scheduler_permission
- require_scheduler_permission(current,key)
- if current['koyo_index_handoffs'][key]['lease']['token']!=token:raise Refused('new lease mismatch')
- if apply(current,key,pid,old['after'])!=after:raise Refused('adoption may only reuse exact immutable result')
- # Current ownership/policy/scope/schema remain mandatory. Only the clock token
- # stays historical; no clock/source/receipt is rewritten and no request is granted.
- validate_document(worker.writer.activation_document,worker.writer.root)
- validate_scope(worker.writer.activation_document['payload'],current,after,key,'save-row',worker.writer.root)
- PinnedInputs(worker.writer.root,current['koyo_index_handoffs'][key]).validate_row(old['after']['rows'],current['koyo_index_handoffs'][key]['events'][pid])
- worker.writer.preservation(current,after)
- return True
+ # Accepted Git state and a recomputed seal hash do not authenticate ACKs or
+ # management-read proofs. No durable independently verifiable authority exists
+ # in this integration. Never substitute historical structure for that authority.
+ raise Refused('sealed historical adoption held: original authority proof unavailable')
 
 def verify_adoption(worker,item,prior_head,reacquired_head,review_reference):
  if not review_reference or not getattr(worker.aggregate.io,'offline_fixture_only',False):raise Refused('isolated reviewed adoption only')

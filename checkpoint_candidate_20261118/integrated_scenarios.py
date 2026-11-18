@@ -100,10 +100,9 @@ class Integrated(unittest.TestCase):
   self.commit_state(b,'synthetic fully replay-validated sealed ledger')
   self.c.exploration_activation=activation
   return b,a,pid
- def test_sealed_exploration_stage_restore_checkpoint(self):
-  b,a,pid=self.sealed_fixture();self.c.preserve_completed(b,a,pid,'save-row')
-  self.assertEqual(len(self.c.restore_and_select()['ready']),1)
-  self.assertEqual(self.c.checkpoint(force=True)['status'],'accepted')
+ def test_sealed_exploration_stage_restore_requires_original_authority(self):
+  b,a,pid=self.sealed_fixture()
+  with self.assertRaisesRegex(Exception,'original authority'):self.c.preserve_completed(b,a,pid,'save-row')
  def test_sealed_budget_tampering_refused(self):
   b,a,pid=self.sealed_fixture();b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']['seal']['elapsed_seconds']=0
   a['koyo_index_handoffs'][self.key]['context'][pid]=copy.deepcopy(b['koyo_index_handoffs'][self.key]['context'][pid])
@@ -112,22 +111,30 @@ class Integrated(unittest.TestCase):
   b,a,pid=self.sealed_fixture();b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']['requests']['synthetic-search'].pop('finished_at')
   a['koyo_index_handoffs'][self.key]['context'][pid]=copy.deepcopy(b['koyo_index_handoffs'][self.key]['context'][pid])
   with self.assertRaises(Exception):self.c.preserve_completed(b,a,pid,'save-row')
- def test_sealed_old_token_adoption_holds_without_rebinding(self):
+ def test_sealed_old_token_adoption_held_without_authority(self):
   from stage_adoption import adopt
-  b,a,pid=self.sealed_fixture();self.c.preserve_completed(b,a,pid,'save-row');original=self.a.restore(self.key)['stages'][0];prior,accepted=self.reacquire()
+  b,a,pid=self.sealed_fixture();original=stage(b,a,self.key,pid,'save-row',time.time());self.a.put(original);prior,accepted=self.reacquire()
+  with self.assertRaisesRegex(Exception,'authority'):adopt(self.c,original,prior,accepted,'review does not authenticate proof')
   r=self.c.restore_and_select();self.assertEqual(r['ready'],[]);self.assertIn(pid,r['selection']['held_requires_reconciliation'])
-  adopted,ticket=adopt(self.c,original,prior,accepted,'isolated explicit historical sealed review')
-  self.assertEqual(adopted['payload']['after'],original['payload']['after'])
-  self.assertEqual(len(self.c.restore_and_select()['ready']),1)
-  self.assertEqual(self.c.checkpoint(force=True)['status'],'accepted')
-  saved=self.g.read_state()[1]['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']
-  self.assertEqual(saved,b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock'])
- def test_sealed_adoption_with_changed_stage_time_refused(self):
+ def tampered_sealed(self,kind):
+  b,a,pid=self.sealed_fixture()
+  from exploration import digest as edigest
+  c=b['koyo_index_handoffs'][self.key]['context'][pid]['exploration_clock']
+  if kind=='mac':c['requests']['synthetic-search']['ack']['mac']='0'*64
+  else:
+   r=c['requests']['synthetic-search'];c['management_reads']['forged']={'payload':{'binding':{},'request_id':'nonexistent','command':'arbitrary','started_at':r['started_at'],'ended_at':r['finished_at'],'duration':1},'sha256':'0'*64,'mac':'0'*64}
+  unsealed=copy.deepcopy(c);unsealed['seal']=None;unsealed['last_event_at']=c['requests']['synthetic-search']['finished_at']
+  from exploration import elapsed
+  c['seal']['ledger_sha256']=edigest(unsealed);c['seal']['elapsed_seconds']=elapsed(unsealed,c['seal']['at'])
+  a['koyo_index_handoffs'][self.key]['context'][pid]=copy.deepcopy(b['koyo_index_handoffs'][self.key]['context'][pid]);self.commit_state(b,'synthetic forged proof accepted state')
+  # A rehashed ledger is not trusted, even if already present in Git.
+  with self.assertRaisesRegex(Exception,'authority'):self.c.preserve_completed(b,a,pid,'save-row')
+  original=stage(b,a,self.key,pid,'save-row',time.time());self.a.put(original);prior,accepted=self.reacquire()
   from stage_adoption import adopt
-  b,a,pid=self.sealed_fixture();self.c.preserve_completed(b,a,pid,'save-row');original=self.a.restore(self.key)['stages'][0]
-  original['payload']['staged_at']=b['koyo_index_handoffs'][self.key]['lease']['until']+1;original['sha256']=digest(original['payload']);self.a.put(original)
-  prior,accepted=self.reacquire()
-  with self.assertRaises(Exception):adopt(self.c,original,prior,accepted,'cannot backdate expiry')
+  with self.assertRaisesRegex(Exception,'authority'):adopt(self.c,original,prior,accepted,'not an authority')
+  self.assertEqual(self.c.restore_and_select()['ready'],[])
+ def test_forged_ack_mac_rehashed_refused(self):self.tampered_sealed('mac')
+ def test_forged_management_read_rehashed_refused(self):self.tampered_sealed('management')
  def test_reacquisition_without_fencing_refused(self):
   from stage_adoption import adopt
   self.stage();prior,accepted=self.reacquire();state,c=__import__('stage_adoption').snapshot_at(self.g,accepted)

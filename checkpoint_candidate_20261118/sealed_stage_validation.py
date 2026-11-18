@@ -35,13 +35,8 @@ def verify_seal(clock):
  return True
 
 def validate(worker,before,after,pid,token,activation):
- key=worker.key;clock=before['koyo_index_handoffs'][key]['context'][pid]['exploration_clock']
- verify_seal(clock)
- if clock['binding']['lease_token']!=token:raise Refused('sealed old-token stage requires separate historical adoption review; never rebind clock')
- base=copy.copy(worker.writer);base.read=lambda:worker.aggregate.read_state()[:2]
- guard=NewBatchClockGuard(worker.writer.root,activation)
- path=('koyo_index_handoffs',key,'context',pid,'exploration_clock')
- sealed=SealedRowWriter(base,path,None,guard,[],token)
- sealed.authorize_transition(before,after,'save-row',token)
- sealed.preservation(before,after)
- return True
+ # verify_seal checks only consistency, not authenticated origin. In particular,
+ # forged ACK MACs or management-read receipts can be rehashed. The original
+ # process-local authority/issued registry is not recoverable from Git state.
+ # Neither same-token restart nor historical adoption may turn that into trust.
+ raise Refused('sealed stage held: independently verifiable original authority unavailable')
