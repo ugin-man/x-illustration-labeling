@@ -1,0 +1,18 @@
+--- /tmp/koyo-current-batch-candidate/network_runtime.py	2026-11-18 23:50:41.443804065 +0900
++++ network_runtime.py	2026-11-19 06:55:06.733511308 +0900
+@@ -212,6 +212,15 @@
+                 if stop=='source_unavailable':
+                     cache=b['context'].get(pid,{}).get('cache',{})
+                     if scope.get('allow_recorded_source_failure') is not True or cache.get('state') not in ('technical_failure','unavailable') or context.get('state')!='technical_failure' or any(context.get(k)!=0 for k in ('searches','pages','elapsed_seconds')):raise Refused('source failure not supported by durable cache/scope')
++                elif stop=='not_applicable':
++                    # Fixed-schema non-illustrated posts need no invented research.
++                    # Keep all scope, lease, image evidence and preservation gates.
++                    row=a['rows'][pid];prior=b['context'].get(pid,{})
++                    if scope.get('kind') not in ('current-batch-prod-0002-v1','new-claimed-batch-v1'):raise Refused('nonillustration requires reviewed batch scope')
++                    if 'cache' not in prior or 'fetch_started' not in prior or any(k in prior for k in ('budget','reservations','exploration_clock')):raise Refused('nonillustration requires recorded body and no exploration history')
++                    if context.get('state')!='complete' or any(context.get(k)!=0 for k in ('searches','pages','elapsed_seconds')):raise Refused('nonillustration has no research counters')
++                    if not row.get('images') or any(not im.get('viewed') or im.get('read_error') is not None or im.get('attributes',{}).get('illustration_present',{}).get('status')!='observed' or im['attributes']['illustration_present'].get('value') is not False for im in row['images']):raise Refused('nonillustration requires all actual viewed images explicitly absent')
++                    PinnedInputs(self.root,a).validate_row(row,a['events'].get(pid,[]))
+                 elif stop!='no_leads':raise Refused('limited restart only genuine no_leads or recorded source failure')
+ 
+     def publish(self,expected,before,after,*,operation=None,lease_token=None,fencing_receipt=None,max_attempts=10):
