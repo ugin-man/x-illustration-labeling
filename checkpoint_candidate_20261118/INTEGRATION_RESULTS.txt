@@ -1,0 +1,13 @@
+test_accepted_baseline_preserved (__main__.Integrated.test_accepted_baseline_preserved) ... ok
+test_checkpoint_wait_policy (__main__.Integrated.test_checkpoint_wait_policy) ... ok
+test_foreign_scope_refused (__main__.Integrated.test_foreign_scope_refused) ... ok
+test_loss_of_unarchived_stage_never_refetch (__main__.Integrated.test_loss_of_unarchived_stage_never_refetch) ... ok
+test_no_live_transport_adoption (__main__.Integrated.test_no_live_transport_adoption) ... ok
+test_old_token_quarantine (__main__.Integrated.test_old_token_quarantine) ... ok
+test_real_scope_stage_reset_checkpoint (__main__.Integrated.test_real_scope_stage_reset_checkpoint) ... ok
+test_zero_search_actual_scope (__main__.Integrated.test_zero_search_actual_scope) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.678s
+
+OK

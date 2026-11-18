@@ -58,6 +58,6 @@ test_archive_non_target_mode_refused (test_tree_integrity.TreeIntegrity.test_arc
 test_actual_fixed_validator_and_preservation (test_zero_fixed.FixedZero.test_actual_fixed_validator_and_preservation) ... ok
 
 ----------------------------------------------------------------------
-Ran 58 tests in 22.620s
+Ran 58 tests in 22.134s
 
 OK
