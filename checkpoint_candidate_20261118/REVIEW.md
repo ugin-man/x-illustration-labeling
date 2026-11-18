@@ -82,3 +82,22 @@ body reservation remains synchronous. No promise of Terra-level speed is justifi
 Current suite: 26 tests passed. No production activation changed. The earlier 15-test
 result is the baseline, superseded by this test count. The archive and zero-search
 modules remain disabled for live transport and need independent review + integration.
+
+## Independent-audit follow-up
+Suite now 30 passed. `test_zero_fixed.py` executes the actual fixed contract validator,
+pinned manifest/provenance and actual-view evidence checks, scheduler scope, prior
+accepted baseline preservation. It accepts a synthetic direct-body case and rejects
+missing view evidence / invalid schema value. This is still not a live activation.
+
+FixtureArchive now uses fsync + atomic hard-link publication, never replacement.
+A concurrent conflicting write test has exactly one winner. The production archive
+still needs the GitHub immutable-object/CAS equivalent and remote readback.
+`restore_available` restores independent posts while quarantining only conflicting
+post versions. Timestamp-only duplicates with identical binding/result collapse;
+changed results or changed lease tokens never resolve by latest-wins. Old-token
+stages require explicit verified fencing/adoption review, not automatic permission.
+
+The preserved GitHub commit 911b26ed0f28ef514245229f6c378fc87504414f contains the
+26-test baseline. Later snapshots supersede it only for source, not deployment.
+Transfer latency remains unmeasured in production for this candidate. Count reduction
+in fake tests must not be described as measured wall-clock speed improvement.

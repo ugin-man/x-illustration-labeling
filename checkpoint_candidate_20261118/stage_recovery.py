@@ -2,7 +2,7 @@
 A production adapter would use same authorized repo, a dedicated branch and immutable
 objects plus discoverable keys. This module has NO network implementation.
 """
-import copy,json,re
+import copy,json,re,os,tempfile
 from pathlib import Path
 from checkpoint import digest,Refused,save_journal
 class FixtureArchive:
@@ -10,9 +10,20 @@ class FixtureArchive:
     def __init__(self,path):self.path=Path(path);self.path.mkdir(parents=True,exist_ok=True)
     def put_if_absent(self,name,obj):
         file=self.path/name
-        if file.exists():
-            if json.loads(file.read_text())!=obj:raise Refused('immutable archive collision')
-        else:save_journal(file,obj)
+        # Publish a fully written immutable object atomically; never replace existing.
+        fd,tmp=tempfile.mkstemp(dir=self.path,prefix='.stage-')
+        try:
+            with os.fdopen(fd,'w') as stream:
+                json.dump(obj,stream,ensure_ascii=False,sort_keys=True)
+                stream.flush();os.fsync(stream.fileno())
+            try:os.link(tmp,file)
+            except FileExistsError:
+                if json.loads(file.read_text())!=obj:raise Refused('immutable archive collision')
+            directory=os.open(self.path,os.O_DIRECTORY)
+            try:os.fsync(directory)
+            finally:os.close(directory)
+        finally:
+            os.unlink(tmp)
     def get(self,name):return json.loads((self.path/name).read_text())
     def names(self):return sorted(p.name for p in self.path.glob('*.json'))
 
@@ -57,3 +68,23 @@ def select_unstaged(state,key,staged):
         if evidence:held.append(pid)
         else:eligible.append(pid)
     return {'next_post_id':eligible[0] if eligible else None,'pending_staged':ready,'held_requires_reconciliation':held,'external_request_permitted':False}
+
+
+def restore_available(key,store):
+    """Quarantine conflicting post versions; restore independent posts without guessing.
+    Timestamp-only duplicates with same token/dependencies/result are identical work.
+    Changed result or lease-token versions require explicit fencing/review, never latest-wins.
+    """
+    if not getattr(store,'offline_fixture_only',False):raise Refused('live archive not enabled')
+    groups={}
+    for name in store.names():
+        if not name.startswith(key+'--'):continue
+        item=store.get(name);p=item['payload']
+        if digest(p)!=item['sha256'] or name_for(item)!=name or p['key']!=key:raise Refused('archive tampered')
+        groups.setdefault(p['pid'],[]).append(item)
+    ready=[];conflicts={}
+    for pid,versions in groups.items():
+        identities={digest({k:v for k,v in it['payload'].items() if k!='staged_at'}) for it in versions}
+        if len(identities)==1:ready.append(min(versions,key=lambda it:it['payload']['staged_at']))
+        else:conflicts[pid]=[it['sha256'] for it in versions]
+    return {'stages':ready,'conflicts':conflicts,'external_request_permitted':False}

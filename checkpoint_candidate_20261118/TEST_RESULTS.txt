@@ -24,8 +24,12 @@ test_failed_body_refused (test_recovery_zero.Zero.test_failed_body_refused) ... 
 test_invented_evidence_refused (test_recovery_zero.Zero.test_invented_evidence_refused) ... ok
 test_other_changes_refused (test_recovery_zero.Zero.test_other_changes_refused) ... ok
 test_view_policy_failure_propagates (test_recovery_zero.Zero.test_view_policy_failure_propagates) ... ok
+test_actual_fixed_validator_and_preservation (test_zero_fixed.FixedZero.test_actual_fixed_validator_and_preservation) ... ok
+test_concurrent_immutable_conflict (test_archive_atomic.ArchiveAtomic.test_concurrent_immutable_conflict) ... ok
+test_new_token_never_auto_adopted (test_archive_atomic.ArchiveAtomic.test_new_token_never_auto_adopted) ... ok
+test_timestamp_duplicate_safe_result_conflict_quarantined (test_archive_atomic.ArchiveAtomic.test_timestamp_duplicate_safe_result_conflict_quarantined) ... ok
 
 ----------------------------------------------------------------------
-Ran 26 tests in 5.006s
+Ran 30 tests in 6.343s
 
 OK
