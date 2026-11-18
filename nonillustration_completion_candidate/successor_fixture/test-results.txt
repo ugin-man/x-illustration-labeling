@@ -1,0 +1,25 @@
+test_additional_module_rejected (__main__.SuccessorTests.test_additional_module_rejected) ... ok
+test_candidate_hash_mismatch_rejected (__main__.SuccessorTests.test_candidate_hash_mismatch_rejected) ... ok
+test_expired_lease_even_if_snapshot_bound (__main__.SuccessorTests.test_expired_lease_even_if_snapshot_bound) ... ok
+test_fixed_contract_change_rejected (__main__.SuccessorTests.test_fixed_contract_change_rejected) ... ok
+test_generation_rollback_rejected (__main__.SuccessorTests.test_generation_rollback_rejected) ... ok
+test_genesis_rebase_rejected (__main__.SuccessorTests.test_genesis_rebase_rejected) ... ok
+test_head_drift (__main__.SuccessorTests.test_head_drift) ... ok
+test_missing_module_rejected (__main__.SuccessorTests.test_missing_module_rejected) ... ok
+test_missing_review_or_approval (__main__.SuccessorTests.test_missing_review_or_approval) ... ok
+test_no_network_or_file_write_during_simulation (__main__.SuccessorTests.test_no_network_or_file_write_during_simulation) ... ok
+test_old_code_drift_rejected (__main__.SuccessorTests.test_old_code_drift_rejected) ... ok
+test_partial_install_fails_closed_and_matching_pair_restores (__main__.SuccessorTests.test_partial_install_fails_closed_and_matching_pair_restores) ... ok
+test_pending_and_active_writer_refuse (__main__.SuccessorTests.test_pending_and_active_writer_refuse) ... ok
+test_positive_passes_existing_validators_and_preserves_every_input (__main__.SuccessorTests.test_positive_passes_existing_validators_and_preserves_every_input) ... ok
+test_production_root_rejected (__main__.SuccessorTests.test_production_root_rejected) ... ok
+test_real_issuance_always_refused (__main__.SuccessorTests.test_real_issuance_always_refused) ... ok
+test_scope_edit_rejected (__main__.SuccessorTests.test_scope_edit_rejected) ... ok
+test_stale_preflight (__main__.SuccessorTests.test_stale_preflight) ... ok
+test_state_or_terra_mutation (__main__.SuccessorTests.test_state_or_terra_mutation) ... ok
+test_symlink_rejected (__main__.SuccessorTests.test_symlink_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.200s
+
+OK
