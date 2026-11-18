@@ -138,3 +138,7 @@ Local wall times are in the JSON and NOT transferable to GitHub/network performa
 These measurements exclude body/search reservations, image work and classification.
 Therefore this is promising for payload-dominated delays, not proof of real speedup.
 No main, production dispatch branch, live stage archive or runtime activation changed.
+
+## Recovery and tree integrity fix (54 tests)
+Recovered after runtime reset. Prior remote commit 4794dbc386092879eb85259069b0affe7b31c7fd is NOT deployment-ready: it could accept a correct state.json while losing unrelated tree files.
+Before any ref update the common commit builder now checks complete recursive Git tree Merkle roots, exact path sets, unchanged non-target modes/types/blob IDs, and target UTF-8 content. Archive and aggregate share these checks. Class/role mismatch is also refused. Fault tests cover dropped base, extra files, wrong content, non-target mode/type changes, symlink targets, truncated listings and archive preservation. Independent execution after recovery: 54 tests passed. Live adapter remains disabled. Updated benchmark supersedes earlier counts and still does not measure GitHub latency.

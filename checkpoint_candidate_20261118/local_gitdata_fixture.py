@@ -23,7 +23,7 @@ class LocalGitData:
  def list_tree(self,repo,sha):
   self.check(repo);out={}
   for line in self.git('ls-tree','-r',sha).splitlines():
-   mode,typ,rest=line.split(' ',2);blob,path=rest.split('\t');out[path]=blob
+   mode,typ,rest=line.split(' ',2);blob,path=rest.split('\t');out[path]={'sha':blob,'mode':mode,'type':typ}
   return out
  def get_blob(self,repo,sha):
   self.check(repo)

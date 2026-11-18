@@ -1,19 +1,19 @@
 {
   "scope": "5 synthetic completed rows only; excludes body/search reservations, real classification and GitHub latency",
   "baseline_single_row": {
-    "wall_seconds": 0.6606112659937935,
+    "wall_seconds": 0.8159968789987033,
     "metrics": {
-      "calls": 80,
-      "request_bytes": 13012130,
-      "response_bytes": 39018813,
-      "elapsed_seconds": 0.3296195240545785,
+      "calls": 95,
+      "request_bytes": 13013390,
+      "response_bytes": 52026298,
+      "elapsed_seconds": 0.3999129139992874,
       "by_operation": {
         "create_commit": 5,
         "create_tree": 5,
-        "get_blob": 15,
+        "get_blob": 20,
         "get_commit": 20,
         "get_ref": 15,
-        "list_tree": 15,
+        "list_tree": 25,
         "update_ref": 5
       },
       "measurement": "isolated local GitData fixture, not GitHub latency"
@@ -21,35 +21,35 @@
     "cas_updates": 5
   },
   "archive_and_aggregate": {
-    "wall_seconds": 0.36909614299656823,
+    "wall_seconds": 0.4053474840038689,
     "aggregate_metrics": {
-      "calls": 16,
-      "request_bytes": 2602524,
-      "response_bytes": 7803615,
-      "elapsed_seconds": 0.08604867200483568,
+      "calls": 19,
+      "request_bytes": 2602776,
+      "response_bytes": 10405194,
+      "elapsed_seconds": 0.07884152897167951,
       "by_operation": {
         "create_commit": 1,
         "create_tree": 1,
-        "get_blob": 3,
+        "get_blob": 4,
         "get_commit": 4,
         "get_ref": 3,
-        "list_tree": 3,
+        "list_tree": 5,
         "update_ref": 1
       },
       "measurement": "isolated local GitData fixture, not GitHub latency"
     },
     "archive_metrics": {
-      "calls": 63,
-      "request_bytes": 9076,
-      "response_bytes": 12933,
-      "elapsed_seconds": 0.14739486498001497,
+      "calls": 78,
+      "request_bytes": 10336,
+      "response_bytes": 22136,
+      "elapsed_seconds": 0.17996616204618476,
       "by_operation": {
         "create_commit": 5,
         "create_tree": 5,
-        "get_blob": 10,
+        "get_blob": 15,
         "get_commit": 16,
         "get_ref": 11,
-        "list_tree": 11,
+        "list_tree": 21,
         "update_ref": 5
       },
       "measurement": "isolated local GitData fixture, not GitHub latency"
