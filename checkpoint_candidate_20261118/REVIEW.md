@@ -101,3 +101,40 @@ The preserved GitHub commit 911b26ed0f28ef514245229f6c378fc87504414f contains th
 26-test baseline. Later snapshots supersede it only for source, not deployment.
 Transfer latency remains unmeasured in production for this candidate. Count reduction
 in fake tests must not be described as measured wall-clock speed improvement.
+
+## GitHub-shaped archive and aggregate adapters (43 tests)
+`git_adapters.py` now implements the Git Data operation sequence: immutable stage
+path -> tree -> commit -> expected-head CAS -> exact content readback; aggregate
+writes one state.json with all existing unrelated tree entries retained. It verifies
+all staged results are archived first. Source-module pin checks, exact repository and
+role-specific branch checks are mandatory before each I/O. A separate reviewed live
+activation is NOT present; any non-fixture transport is explicitly refused.
+
+`local_gitdata_fixture.py` uses a genuine local bare Git repository with atomic
+`git update-ref new expected-old`. The fixture persists independently of the runner,
+and resetting/recreating adapters restores archived stages. No network or credentials
+are used. The actual fixed validator integration now also traverses these adapters.
+
+43 tests pass, including permission denial without retry, lost ACK before/after ref
+acceptance, unavailable readback preserving outbox candidate, changed parent/head,
+competing writer preservation, code-pin/destination refusal, and reset recovery.
+Two tests require the preexisting frozen source-validator fixture locally; its real
+state/body data is deliberately NOT in this code-only backup. Reconstitute dependencies
+through the authorized research recovery workflow before rerunning those integrations.
+
+Late expiry is tested explicitly: a GitHub-shaped CAS can arrive after client-side
+lease expiry if the head has not changed. The receipt exposes
+`lease_expired_after_send=true` and prohibits continuing without renewal. This is not
+claimed to prevent the late write; only a backend time predicate could guarantee that.
+A legitimately reacquired lease changes head/token and therefore fences the old CAS.
+
+### Measured, but only in isolated local Git
+`BENCHMARK.json` records five synthetic completed rows in a 2.6 MB padded ledger.
+Single-row path: 80 API-shaped calls, 5 CAS, 13,012,130 outbound bytes, 39,018,813
+response bytes. Archive+aggregate: 79 calls, 6 CAS (5 small stage archives + 1 large
+checkpoint), 2,611,600 outbound bytes, 7,816,548 response bytes. About 80% fewer bytes,
+but essentially no reduction in total API calls, and one additional CAS.
+Local wall times are in the JSON and NOT transferable to GitHub/network performance.
+These measurements exclude body/search reservations, image work and classification.
+Therefore this is promising for payload-dominated delays, not proof of real speedup.
+No main, production dispatch branch, live stage archive or runtime activation changed.

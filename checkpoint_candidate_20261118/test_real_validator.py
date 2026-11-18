@@ -25,4 +25,19 @@ class Integration(unittest.TestCase):
    result=cp.prepare('fixture-head',b,states,validate,original.NOW)
    self.assertEqual(calls,ids);self.assertEqual(result['payload']['after']['entries'],b['entries'])
    self.assertEqual(len(result['payload']['after']['koyo_index_handoffs'][k]['rows']),len(h['rows'])+5)
+   # The same five synthetic rows traverse the GitHub-shaped archive + CAS adapter.
+   import tempfile
+   from pathlib import Path
+   from git_adapters import GitHubArchive,GitHubAggregate,ARCHIVE,DISPATCH,canonical
+   from local_gitdata_fixture import LocalGitData
+   from test_git_adapters import gate
+   with tempfile.TemporaryDirectory() as d:
+    io=LocalGitData(Path(d)/'remote.git');io.seed(ARCHIVE,{'README':'fixture'});io.seed(DISPATCH,{'state.json':canonical(b),'other':'preserve'})
+    archive=GitHubArchive(io,gate('archive'))
+    for item in states:self.assertEqual(archive.put(item)['status'],'accepted')
+    adapter=GitHubAggregate(io,gate('aggregate'))
+    receipt=adapter.publish(states,validate,archive,Path(d)/'outbox.json',lambda:original.NOW,margin=30)
+    self.assertEqual(receipt['status'],'accepted')
+    self.assertEqual(adapter.read_state()[1],result['payload']['after'])
+
   finally:f.tearDown()

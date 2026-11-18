@@ -28,8 +28,21 @@ test_actual_fixed_validator_and_preservation (test_zero_fixed.FixedZero.test_act
 test_concurrent_immutable_conflict (test_archive_atomic.ArchiveAtomic.test_concurrent_immutable_conflict) ... ok
 test_new_token_never_auto_adopted (test_archive_atomic.ArchiveAtomic.test_new_token_never_auto_adopted) ... ok
 test_timestamp_duplicate_safe_result_conflict_quarantined (test_archive_atomic.ArchiveAtomic.test_timestamp_duplicate_safe_result_conflict_quarantined) ... ok
+test_aggregate_lost_ack_reconciles (test_git_adapters.GitAdapters.test_aggregate_lost_ack_reconciles) ... ok
+test_ambiguous_before_commit_never_retried (test_git_adapters.GitAdapters.test_ambiguous_before_commit_never_retried) ... ok
+test_archive_and_aggregate_roundtrip (test_git_adapters.GitAdapters.test_archive_and_aggregate_roundtrip) ... ok
+test_archive_conflict_preserves_existing (test_git_adapters.GitAdapters.test_archive_conflict_preserves_existing) ... ok
+test_archive_lost_ack_no_duplicate_commit (test_git_adapters.GitAdapters.test_archive_lost_ack_no_duplicate_commit) ... ok
+test_archive_missing_blocks_aggregate (test_git_adapters.GitAdapters.test_archive_missing_blocks_aggregate) ... ok
+test_bad_pins_wrong_branch_live_adapter_rejected (test_git_adapters.GitAdapters.test_bad_pins_wrong_branch_live_adapter_rejected) ... ok
+test_cas_competitor_no_overwrite (test_git_adapters.GitAdapters.test_cas_competitor_no_overwrite) ... ok
+test_expiry_inside_cas_reported_not_hidden (test_git_adapters.GitAdapters.test_expiry_inside_cas_reported_not_hidden) ... ok
+test_lease_expiry_while_constructing_commit (test_git_adapters.GitAdapters.test_lease_expiry_while_constructing_commit) ... ok
+test_permission_denial_no_retry (test_git_adapters.GitAdapters.test_permission_denial_no_retry) ... ok
+test_reset_restores_git_archive_no_local_stage (test_git_adapters.GitAdapters.test_reset_restores_git_archive_no_local_stage) ... ok
+test_unknown_readback_keeps_candidate_journal (test_git_adapters.GitAdapters.test_unknown_readback_keeps_candidate_journal) ... ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 6.343s
+Ran 43 tests in 18.012s
 
 OK
