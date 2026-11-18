@@ -1,0 +1,31 @@
+test_advanced_head_requires_reconcile (test_checkpoint.Tests.test_advanced_head_requires_reconcile) ... ok
+test_conflict_does_not_overwrite (test_checkpoint.Tests.test_conflict_does_not_overwrite) ... ok
+test_due_five_or_ten_minutes (test_checkpoint.Tests.test_due_five_or_ten_minutes) ... ok
+test_five_rows_one_cas (test_checkpoint.Tests.test_five_rows_one_cas) ... ok
+test_invalid_member_atomic_reject (test_checkpoint.Tests.test_invalid_member_atomic_reject) ... ok
+test_journal_roundtrip (test_checkpoint.Tests.test_journal_roundtrip) ... ok
+test_lease_and_scope (test_checkpoint.Tests.test_lease_and_scope) ... ok
+test_live_adapter_rejected (test_checkpoint.Tests.test_live_adapter_rejected) ... ok
+test_lost_ack_readback_no_replay (test_checkpoint.Tests.test_lost_ack_readback_no_replay) ... ok
+test_rebase_preserves_other_work (test_checkpoint.Tests.test_rebase_preserves_other_work) ... ok
+test_reservation_required_and_preserved (test_checkpoint.Tests.test_reservation_required_and_preserved) ... ok
+test_resume_exact_rows_no_new_write (test_checkpoint.Tests.test_resume_exact_rows_no_new_write) ... ok
+test_tamper_duplicate_limit (test_checkpoint.Tests.test_tamper_duplicate_limit) ... ok
+test_target_conflict (test_checkpoint.Tests.test_target_conflict) ... ok
+test_real_fixed_validator_five_finalizations (test_real_validator.Integration.test_real_fixed_validator_five_finalizations) ... ok
+test_archive_conflicting_or_tampered_refused (test_recovery_zero.Recovery.test_archive_conflicting_or_tampered_refused) ... ok
+test_complete_local_loss_restores_stage_without_fetch (test_recovery_zero.Recovery.test_complete_local_loss_restores_stage_without_fetch) ... ok
+test_dynamic_expiry_during_prepare (test_recovery_zero.Recovery.test_dynamic_expiry_during_prepare) ... ok
+test_lost_unarchived_reservation_held_other_pristine_selected (test_recovery_zero.Recovery.test_lost_unarchived_reservation_held_other_pristine_selected) ... ok
+test_new_owner_during_transfer_blocks_old_writer (test_recovery_zero.Recovery.test_new_owner_during_transfer_blocks_old_writer) ... ok
+test_body_only_without_clock_or_search (test_recovery_zero.Zero.test_body_only_without_clock_or_search) ... ok
+test_external_source_crosspost_unsupported_refused (test_recovery_zero.Zero.test_external_source_crosspost_unsupported_refused) ... ok
+test_failed_body_refused (test_recovery_zero.Zero.test_failed_body_refused) ... ok
+test_invented_evidence_refused (test_recovery_zero.Zero.test_invented_evidence_refused) ... ok
+test_other_changes_refused (test_recovery_zero.Zero.test_other_changes_refused) ... ok
+test_view_policy_failure_propagates (test_recovery_zero.Zero.test_view_policy_failure_propagates) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 5.006s
+
+OK
