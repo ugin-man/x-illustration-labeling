@@ -20,7 +20,7 @@ def build(state,head,key,review_reference,root,base=None,image_gate=None):
  pins=PinnedInputs(root,h)
  if set(pins.posts)!=set(ids):raise Refused('manifest membership mismatch')
  if any(set(ids)&set(old['plan']['payload']['source']['post_ids']) for k,old in state['koyo_index_handoffs'].items() if k!=key):raise Refused('overlap with prior work')
- from new_batch_images import make_binding
+ from new_batch_images import make_binding,BINDING_KEYS
  if not isinstance(image_gate,dict):raise Refused('reviewed image gate binding required')
  image_gate=make_binding(**image_gate)
  base=Path(base or Path(__file__).parent)
@@ -34,9 +34,9 @@ def build(state,head,key,review_reference,root,base=None,image_gate=None):
 def validate_scope(payload,before,after,key,operation,root):
  b=before['koyo_index_handoffs'][key];a=after['koyo_index_handoffs'][key];scope=payload['scope'];base=payload.get('baseline_handoff',{});ids=b['plan']['payload']['source']['post_ids']
  if payload.get('revision')!=KIND or scope!={'kind':KIND,'job_id':b['job_id'],'post_ids':ids,'held_post_ids':[],'max_new_rows':50,'external_exploration':False,'allow_recorded_source_failure':True}:raise Refused('new batch exact scope mismatch')
- from new_batch_images import make_binding
+ from new_batch_images import make_binding,BINDING_KEYS
  binding=payload.get('image_gate',{})
- if set(binding)!={'bundle_root','audit_roots','local_refusal_dir','review_reference'} or make_binding(**binding)!=binding:raise Refused('pinned image gate missing or altered')
+ if set(binding) not in (BINDING_KEYS,BINDING_KEYS|{'coverage_boundaries'}) or make_binding(**binding)!=binding:raise Refused('pinned image gate missing or altered')
  required={str((Path(__file__).parent/f).resolve()) for f in FILES}
  required|={str((Path(root)/f).resolve()) for f in ('pipeline_production/isolation.py','pipeline_production/disposition.py')}
  if not required<=set(payload.get('code_sha256',{})):raise Refused('new batch mandatory code pins missing')

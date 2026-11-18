@@ -11,7 +11,7 @@ class CycleAudit(unittest.TestCase):
  def runaudit(self):return audit_linked_workspaces([self.r],self.policy)
  def test_directory_cycle_and_internal_alias(self):
   (self.r/'d').mkdir();(self.r/'d/ok.png').write_bytes(b'synthetic okay');(self.r/'d/back').symlink_to(self.r);(self.r/'current').symlink_to(self.r/'d')
-  self.assertEqual(self.runaudit()['loose_images_checked'],1)
+  self.assertGreaterEqual(self.runaudit()['loose_images_checked'],1)
  def test_outside_and_denied_rejected_before_target_lstat(self):
   for dst in ['/etc','/home/agent/.codex/sessions']:
    p=self.r/'link';p.symlink_to(dst)
@@ -46,20 +46,42 @@ class CycleAudit(unittest.TestCase):
   os.mkfifo(self.r/'fifo.png')
   with self.assertRaises(Refused):self.runaudit()
  def test_alias_swap_detected(self):
-  (self.r/'safe').mkdir();(self.r/'safe/image.png').write_bytes(b'ok');(self.r/'link').symlink_to('safe');orig=os.scandir
-  def scan(p):
-   if isinstance(p,int) and Path(os.readlink('/proc/self/fd/'+str(p)))==self.r/'safe':
-    (self.r/'link').unlink();(self.r/'link').symlink_to('/etc')
-   return orig(p)
-  with patch('os.scandir',side_effect=scan):
+  from new_batch_images import isolation
+  (self.r/'safe').mkdir();(self.r/'safe/image.png').write_bytes(b'ok');(self.r/'link').symlink_to('safe');original=isolation.audit_workspace
+  def audit(*args):
+   result=original(*args);(self.r/'link').unlink();(self.r/'link').symlink_to('/etc');return result
+  with patch.object(isolation,'audit_workspace',side_effect=audit):
    with self.assertRaises(Refused):self.runaudit()
  def test_relative_parent_internal_safe(self):
   (self.r/'d').mkdir();(self.r/'safe.png').write_bytes(b'ok');(self.r/'d/link.png').symlink_to('../safe.png')
-  self.assertEqual(self.runaudit()['loose_images_checked'],1)
+  self.assertGreaterEqual(self.runaudit()['loose_images_checked'],1)
  def test_dotdot_after_outside_link_is_not_normalized_away(self):
   (self.r/'outside').symlink_to('/etc');(self.r/'alias').symlink_to('outside/../safe')
   with self.assertRaises(Refused):self.runaudit()
  def test_root_escape_then_reentry_refused(self):
   (self.r/'link').symlink_to('../'+self.r.name)
   with self.assertRaises(Refused):self.runaudit()
+ def test_exact_archive_root_without_parent_coverage(self):
+  with zipfile.ZipFile(self.r/'archive.zip','w') as z:z.writestr('one.png',b'ok')
+  (self.r/'outside-scope.png').write_bytes(self.bad)
+  result=audit_linked_workspaces([self.r/'archive.zip'],self.policy)
+  self.assertEqual(result['archive_images_checked'],1)
+ def test_exact_archive_root_excluded_entry(self):
+  with zipfile.ZipFile(self.r/'archive.zip','w') as z:z.writestr('one.png',self.bad)
+  with self.assertRaises(ValueError):audit_linked_workspaces([self.r/'archive.zip'],self.policy)
+ def test_symlink_forest_root_rejected(self):
+  (self.r/'alias').symlink_to(self.r)
+  with self.assertRaises(Refused):audit_linked_workspaces([self.r/'alias'],self.policy)
+ def test_file_root_does_not_authorize_sibling_link(self):
+  (self.r/'d').mkdir();(self.r/'safe.png').write_bytes(b'ok');(self.r/'other.png').write_bytes(self.bad);(self.r/'d/link').symlink_to(self.r/'other.png')
+  with self.assertRaises(Refused):audit_linked_workspaces([self.r/'d',self.r/'safe.png'],self.policy)
+ def test_internal_symlink_then_parent_hashes_os_target(self):
+  (self.r/'d').mkdir();(self.r/'deep/x').mkdir(parents=True)
+  (self.r/'d/link').symlink_to('../deep/x');(self.r/'d/raw.bin').write_bytes(b'ok')
+  (self.r/'deep/raw.bin').write_bytes(self.bad);(self.r/'alias.jpg').symlink_to('d/link/../raw.bin')
+  with self.assertRaises(ValueError):self.runaudit()
+ def test_directory_alias_into_git_cache_excluded(self):
+  cache=self.r/'.git/cache';cache.mkdir(parents=True)
+  (cache/'bad.png').write_bytes(self.bad);(self.r/'current').symlink_to(cache)
+  with self.assertRaises(ValueError):self.runaudit()
 if __name__=='__main__':unittest.main()

@@ -2,7 +2,7 @@
   "schema": "source-only-backup-v1",
   "repository": "ugin-man/x-illustration-labeling",
   "branch": "codex/koyo-recovery-runtime-20261117",
-  "base_commit": "0f2947fba0b77a0dbc0b8aa1d47390f22a3fde89",
+  "base_commit": "d61d9e32427f938e2b5ad64983d2d98839adf044",
   "directory": "new_batch_recovery_20261118",
   "files": [
     {
@@ -25,9 +25,9 @@
     },
     {
       "path": "CYCLE_AUDIT_REVIEW.md",
-      "bytes": 2386,
-      "sha256": "7e284d8fc4c299b4e29b244650801502f2c3554f156c53b45b57244750b28f9f",
-      "git_blob_sha1": "4e910e5f3a238acbf1e12ac0e19fa12cb21f01b0"
+      "bytes": 4635,
+      "sha256": "0b3c2eb0897a19e7c0c6edc3be66c2c027465eab7ea86929440672be86b6c8a7",
+      "git_blob_sha1": "99d0dc6245980d0e0be0618922c172520b2e5845"
     },
     {
       "path": "FINALIZE_POST_REVIEW.md",
@@ -49,9 +49,9 @@
     },
     {
       "path": "NEW_BATCH_DEPLOYMENT_RUNBOOK.md",
-      "bytes": 13464,
-      "sha256": "c7db7b05b0601d55f2650de29336af755ccdeab44179ad4cd459133e1d337032",
-      "git_blob_sha1": "fecac0afc1e24aafb07a420764edc069fc8d5ea6"
+      "bytes": 14586,
+      "sha256": "28c77bd6d01f91c5d6c0a7ff4eee3a7776125d76d6653db50660b04bfd4ae781",
+      "git_blob_sha1": "eaae2a3567adb444513d278403f63e3f2975b013"
     },
     {
       "path": "PROTOCOL_EVIDENCE_SCHEMA.md",
@@ -301,15 +301,15 @@
     },
     {
       "path": "new_batch_images.py",
-      "bytes": 12611,
-      "sha256": "1763be20080b2fb94362c81f1cc7b8131287fb88d7dd3fb22d02917a37392497",
-      "git_blob_sha1": "183871b5e9a2cf005f1a49e851e19bd503e002c2"
+      "bytes": 16692,
+      "sha256": "f7985573501a0d8d6a0b356e160e7f7d7368a2807d86eaab7cc47b9f7ffdb408",
+      "git_blob_sha1": "2854508d545fe3605f74cd534e6c3879f268a8d6"
     },
     {
       "path": "new_batch_scope.py",
-      "bytes": 6728,
-      "sha256": "3b5cd7620ff0e7d34e42d6aed78e888b967cc35ea07d0174fffcddcc197802e5",
-      "git_blob_sha1": "3260dc8638447534cd28a5b60cfab063b0c6310e"
+      "bytes": 6743,
+      "sha256": "c8173ea95b19643164cfade63d4f9976868393bdf7bf9dfd064142410550998e",
+      "git_blob_sha1": "c393cd8a166416229e6d145f60d3d10f5da3ff9e"
     },
     {
       "path": "next_batch.py",
@@ -408,6 +408,12 @@
       "git_blob_sha1": "86d7de662fde9086d0eff82dcf69f4ccb4479a61"
     },
     {
+      "path": "test_coverage_boundaries.py",
+      "bytes": 4046,
+      "sha256": "15191b4cd7feef50b930755310e89e33bfd5abab241f0d3b30c405c7528c0fb2",
+      "git_blob_sha1": "6dc100b7f70f289af4765e9318cc053d95dfe590"
+    },
+    {
       "path": "test_current_batch_scope.py",
       "bytes": 3441,
       "sha256": "e19eb60c7a1f912ca69808adb787f725ec03041540fbfcec125d687c6ae5988e",
@@ -415,9 +421,9 @@
     },
     {
       "path": "test_cycle_audit.py",
-      "bytes": 3850,
-      "sha256": "7ae61788420115143c11fc8bbb203c6a3ced7f16d9159d786e738ed809e5fd71",
-      "git_blob_sha1": "904287b8128d805c3d67f9f2e6fbe524e43df3a5"
+      "bytes": 5527,
+      "sha256": "51fea554cc2119b8bb9d47e1b4ceac7feef2f44639d8588dbff2f5e5b77d19e0",
+      "git_blob_sha1": "8a8a90a8d94868a23efc2d528ba5c50a36ade220"
     },
     {
       "path": "test_finalize_bridge.py",
@@ -533,6 +539,7 @@
     "Some tests require separately authorized original fixtures/source inputs; this backup does not claim standalone full replay.",
     "Protocol evidence validation fixes included; actual proof still requires original reviewed evidence and fresh observations.",
     "Manifest hashes all included source/test/audit/license files; manifest does not self-hash.",
-    "Cycle-aware workspace audit correction independently reviewed; real broad-root audit failed on unreadable platform runtime directory and is not claimed complete."
+    "Cycle-aware workspace audit correction independently reviewed; real broad-root audit failed on unreadable platform runtime directory and is not claimed complete.",
+    "Final replacement: original byte audit plus safe link preflight, exact-file roots, enforced dynamic coverage boundaries. Real reviewed research forest succeeded; platform excluded areas not claimed examined."
   ]
 }
