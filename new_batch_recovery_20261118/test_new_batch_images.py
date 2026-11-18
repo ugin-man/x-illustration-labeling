@@ -75,9 +75,9 @@ class ImageGate(unittest.TestCase):
   import zipfile
   with zipfile.ZipFile(self.w/'cache.zip','w') as z:z.writestr('blocked.png',b'forbidden-fixture-not-image')
   with self.assertRaises(ValueError):self.call()
- def test_symlink_audit_coverage_refused(self):
+ def test_internal_symlink_audit_coverage_checked(self):
   (self.w/'linked').symlink_to(self.bundle,target_is_directory=True)
-  with self.assertRaises(Refused):self.call()
+  self.assertEqual(self.call()['status'],'ready_for_actual_view')
  def test_local_policy_refusal_blocks_entire_post(self):
   write(self.refusals/'first.json',self.exclusion(self.ids[0]));r=self.call();self.assertEqual(r['status'],'known_refusal_requires_exclusion');self.assertEqual(r['image_paths'],[])
  def test_shared_refused_hash_blocks_next_post(self):

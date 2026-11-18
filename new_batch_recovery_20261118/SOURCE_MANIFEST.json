@@ -2,7 +2,7 @@
   "schema": "source-only-backup-v1",
   "repository": "ugin-man/x-illustration-labeling",
   "branch": "codex/koyo-recovery-runtime-20261117",
-  "base_commit": "f5f778320320844d8fb273fdd526b397c92ecb54",
+  "base_commit": "0f2947fba0b77a0dbc0b8aa1d47390f22a3fde89",
   "directory": "new_batch_recovery_20261118",
   "files": [
     {
@@ -24,6 +24,12 @@
       "git_blob_sha1": "b3ecf20d149e0dddd236129725182fa3ed7bbfda"
     },
     {
+      "path": "CYCLE_AUDIT_REVIEW.md",
+      "bytes": 2386,
+      "sha256": "7e284d8fc4c299b4e29b244650801502f2c3554f156c53b45b57244750b28f9f",
+      "git_blob_sha1": "4e910e5f3a238acbf1e12ac0e19fa12cb21f01b0"
+    },
+    {
       "path": "FINALIZE_POST_REVIEW.md",
       "bytes": 2886,
       "sha256": "f460cba30f25fc9251273f383338054441848da4dd3a49258bc615abaf1292bb",
@@ -40,6 +46,12 @@
       "bytes": 2119,
       "sha256": "6b7ee15004c80297497e214833914c05ad26c7c6e2856c4ef1bb56ce01d5e7ca",
       "git_blob_sha1": "d0e1c8b8990e5860a146080c7580d5cd0d33267b"
+    },
+    {
+      "path": "NEW_BATCH_DEPLOYMENT_RUNBOOK.md",
+      "bytes": 13464,
+      "sha256": "c7db7b05b0601d55f2650de29336af755ccdeab44179ad4cd459133e1d337032",
+      "git_blob_sha1": "fecac0afc1e24aafb07a420764edc069fc8d5ea6"
     },
     {
       "path": "PROTOCOL_EVIDENCE_SCHEMA.md",
@@ -289,9 +301,9 @@
     },
     {
       "path": "new_batch_images.py",
-      "bytes": 7865,
-      "sha256": "a5ceef30b65448098c8f230146fffa2ab228c0b96803a28ca31e51428a15eb6f",
-      "git_blob_sha1": "66fe9ad4b32d455b3257b9910175c3f7653b0e5a"
+      "bytes": 12611,
+      "sha256": "1763be20080b2fb94362c81f1cc7b8131287fb88d7dd3fb22d02917a37392497",
+      "git_blob_sha1": "183871b5e9a2cf005f1a49e851e19bd503e002c2"
     },
     {
       "path": "new_batch_scope.py",
@@ -402,6 +414,12 @@
       "git_blob_sha1": "b343792d388a4e23525e4bb7dcbc09b1ba40a381"
     },
     {
+      "path": "test_cycle_audit.py",
+      "bytes": 3850,
+      "sha256": "7ae61788420115143c11fc8bbb203c6a3ced7f16d9159d786e738ed809e5fd71",
+      "git_blob_sha1": "904287b8128d805c3d67f9f2e6fbe524e43df3a5"
+    },
+    {
       "path": "test_finalize_bridge.py",
       "bytes": 2192,
       "sha256": "160ff2109e43f44fd27be2407e928663de3777f6793d05ce8b4b37fc0f5b0f06",
@@ -439,9 +457,9 @@
     },
     {
       "path": "test_new_batch_images.py",
-      "bytes": 8442,
-      "sha256": "c9b8450b3a508d13c6d6ba82f01d41c947b2f470add276ccbd51766e346165a6",
-      "git_blob_sha1": "b55054de41c8e8f9d01a4ce656e28f3840567185"
+      "bytes": 8471,
+      "sha256": "f3c221cdc76f9fd7bab1b56da1d2478592cefdeba58ea0cab6930f6a4b5d27c5",
+      "git_blob_sha1": "bd33d8842b3dd212fb109129cc1dcf46653f8a84"
     },
     {
       "path": "test_new_batch_scope.py",
@@ -514,6 +532,7 @@
     "Source-only backup, not live activation. No index, production or other branch changes.",
     "Some tests require separately authorized original fixtures/source inputs; this backup does not claim standalone full replay.",
     "Protocol evidence validation fixes included; actual proof still requires original reviewed evidence and fresh observations.",
-    "Manifest hashes all included source/test/audit/license files; manifest does not self-hash."
+    "Manifest hashes all included source/test/audit/license files; manifest does not self-hash.",
+    "Cycle-aware workspace audit correction independently reviewed; real broad-root audit failed on unreadable platform runtime directory and is not claimed complete."
   ]
 }
