@@ -1,29 +1,28 @@
-# イラスト卒論：AI分類の実行基盤
+# イラスト卒論の分類データ
 
-20,758投稿・26,612画像参照を、独立したCodex Cloud担当が自分で予約して処理する。
-GitHubは非公開。元データ・既存の人手回答は変更しない。
+既存の卒論分析を再現するときは、**固定版 `fixed-11543`** を使う。追加版は版名を指定して使う。
 
-**現在は起動前の準備段階。AIによる本番ラベルはまだない。**
-パイロット用の分類仕様と実行コードを用意した。Cloudでの画像入力・Git認証は最初の実機確認が必要。
+| 版 | 内容 |
+| --- | --- |
+| [固定版 `fixed-11543`](fixed-11543/manifest.json) | 2026年11月14日の停止時点の11,543処理記録。分類ラベル11,512件、ポリシー暫定除外31件。240本の作業ブランチを照合し、記録が入っていた238区分の内容を元のGitオブジェクトから固定した。 |
+| [追加版 `additions-20261124`](additions-20261124/manifest.json) | 分類ラベル842件。別経路のKoyo回収117件、Hydrogen試行50件、Hydrogen継続作業675件。Hydrogen継続分の締切は2026年11月24日23:11 JST。固定版との投稿ID重複は0件。 |
+| [回収時の確認記録](recovery-review.json) | 下書き・未確定・暫定除外の18投稿に関する出典と理由。分類ラベルの件数には含めない。 |
 
-- `data/catalog.json`: 固定入力台帳。416バッチ、通常50投稿以下。画像の全SHA-256を検査済み。
-- [data-v1 Release](../../releases/tag/data-v1): 画像バッチ。担当分だけダウンロードする。
-- `pipeline/worker.py`: 自主予約、入力取得、JSON雛形、検証、保存、チェックポイント、完了。
-- `pipeline/git_queue.py`: バッチ別のGitブランチで原子的に予約する。担当用常設サーバーは不要。
-- `pipeline/collect.py`: 検証してJSONL・投稿単位CSV・要確認一覧へ集約する。
-- `docs/WORKER.md`: 担当用の短い実行手順。
-- `docs/OPERATIONS.md`: 起動前・試験・障害時の手順。
-- `review/classification_redesign.md`: 元アプリの24項目を見直した理由。
-- `review/terra_labeling_manual_draft.md`: 判定基準。推測で不明を埋めない。
+## 読み出し
 
-Python 3.10以降とGitのみ。APIキーによるモデル呼び出しは実装しない。
-モデルの画像判断はCodex自身が行い、このCLIは入出力と整合性を担当する。
+各版の `manifest.json` に対象ファイル、投稿件数、SHA-256 がある。作業ブランチを集め直す場合にも、分析に使用する版のマニフェストを基準にする。
 
 ```sh
-python -m unittest discover -s tests -v
-python -m pipeline.worker contract
+# 既存の卒論分析
+python read_dataset.py --dataset fixed-11543 --output ./fixed-export
+
+# 追加分の確認
+python read_dataset.py --dataset additions-20261124 --output ./additions-export
+
+# 明示的に両方を使う追加分析
+python read_dataset.py --dataset combined --output ./combined-export
 ```
 
-人手が40投稿/時なら20,758投稿で約519時間。40画像/時なら26,612画像参照で約665時間。
-22,000画像を40画像/時で処理する場合は550時間。投稿と画像の単位を区別する。
-Cloud並列化の実効速度・利用枠・必要日数はパイロットの実測後に判断する。
+`records.jsonl` は全処理記録、`labels.jsonl` は分類ラベル、`exclusions.jsonl` はポリシー暫定除外の記録。いずれも投稿IDで照合できる。既存の分析と同じ抽出条件・人気指標データを使用する。追加版にも同じv4-1の分類基準を適用し、モデル・実行経路は行の `provenance` と追加版の出典表で確認できる。Koyo経路のモデル名は実行ログに記録されていない。
+
+この配布版はコミット単位で固定する。後日回収したデータは新しい版として扱う。ここに置くのは分類結果と回収メタデータで、画像入力の取得は不要。
