@@ -4,9 +4,21 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+import re
 
 
 DATASETS = ('fixed-11543', 'additions-20261124')
+
+
+def datasets_at(root):
+    release = root / 'release.json'
+    if not release.exists():
+        return DATASETS
+    metadata = json.loads(release.read_text(encoding='utf-8'))
+    baseline, latest = metadata['baseline'], metadata['latest_additions']
+    if baseline != DATASETS[0] or not re.fullmatch(r'additions-\d{8}', latest):
+        raise ValueError('Invalid release dataset IDs')
+    return baseline, latest
 
 
 def load(root, name):
@@ -44,14 +56,18 @@ def load(root, name):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--dataset', choices=(*DATASETS, 'combined'), default=DATASETS[0])
+    parser.add_argument('--dataset', default=DATASETS[0])
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parent)
     args = parser.parse_args()
+    root = args.root.resolve()
+    datasets = datasets_at(root)
+    if args.dataset not in (*datasets, 'combined'):
+        parser.error('choose ' + ', '.join((*datasets, 'combined')))
     rows = {}
-    names = DATASETS if args.dataset == 'combined' else (args.dataset,)
+    names = datasets if args.dataset == 'combined' else (args.dataset,)
     for name in names:
-        selected = load(args.root.resolve(), name)
+        selected = load(root, name)
         if rows.keys() & selected.keys():
             raise ValueError('Selected snapshots contain overlapping posts')
         rows.update(selected)
