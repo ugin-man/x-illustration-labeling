@@ -1,0 +1,1 @@
+{"acquired_at":1795861434,"attempt":1,"catalog_sha256":"1ecb272083f564bc5c74c6fdb1ff78faaf5818cfd36392d8619e63d2add938ce","completed_posts":[],"job_id":"prod-0349","lease_until":1795865034,"retry_after":0,"run_id":"production-v4-001-terra-unified-20261128","status":"leased","token":"f23ff10763074e279ccce518ac357d9b","updated_at":1795861434,"worker_id":"terra-prod-01"}
