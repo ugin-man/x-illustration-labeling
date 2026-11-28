@@ -1,0 +1,16 @@
+{
+  "worker": "terra-prod-09",
+  "job": "prod-0245",
+  "root": "/workspace/production-v4-001-recovery-terra-prod-09-20261128",
+  "operations_revision": "ops-r5",
+  "initial_accepted": 13,
+  "accepted": 49,
+  "new_accepted": 36,
+  "deferred_post_id": "2096717047967461465",
+  "deferred_reason": "needs_quality_review: prior draft unavailable and prior display output truncated; no observation reconstructed",
+  "status": "needs_review",
+  "remote_head": "b0955b199435d8a444b65ceba16f30266e66d1cd",
+  "recorded_at": "2026-11-28T08:48:53.920501+00:00",
+  "isolation_excluded_matches": 0,
+  "new_view_events": 40
+}
