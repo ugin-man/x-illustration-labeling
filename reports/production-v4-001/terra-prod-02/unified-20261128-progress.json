@@ -1,0 +1,79 @@
+{
+  "run_id": "production-v4-001-terra-unified-20261128",
+  "worker_id": "terra-prod-02",
+  "fixed_commit": "d201a21a7d8ad0185e2f4863e5aa970eca0f7dfb",
+  "recorded_at_utc": "2026-11-28T12:22:08.392404+00:00",
+  "first_logged_view_utc": "2026-11-28T09:40:05.206Z",
+  "startup_isolation": {
+    "loose_images_checked": 71,
+    "archive_images_checked": 69,
+    "excluded_images_found": 0,
+    "note": "起動時の隔離監査で表示された結果。取得時刻の正確な記録は残っていない。"
+  },
+  "jobs": [
+    {
+      "job_id": "prod-0276",
+      "status": "needs_review",
+      "accepted": 46,
+      "deferred": 4,
+      "head": "7c3f758e931fac2b8378923f0ace20cec53a863e"
+    },
+    {
+      "job_id": "prod-0322",
+      "status": "completed",
+      "accepted": 50,
+      "head": "38649681f7af9cb2d32ca85527c341cedd6dc993"
+    },
+    {
+      "job_id": "prod-0353",
+      "status": "completed",
+      "accepted": 50,
+      "head": "1651d76c5db3dfa1956f9ac228701ef95e8e36e4"
+    },
+    {
+      "job_id": "prod-0357",
+      "status": "completed",
+      "accepted": 50,
+      "head": "6cdf4620c5673294dbb9560842f18dc8d9399de9"
+    }
+  ],
+  "deferred": [
+    {
+      "post_id": "2096978918368829777",
+      "signal": "context_record_mismatch"
+    },
+    {
+      "post_id": "2096979683044933838",
+      "signal": "needs_quality_review"
+    },
+    {
+      "post_id": "2096980178308370824",
+      "signal": "needs_quality_review"
+    },
+    {
+      "post_id": "2096982213661511854",
+      "signal": "needs_quality_review"
+    }
+  ],
+  "additional_audit_notes": [
+    {
+      "post_id": "2097666029921141189",
+      "note": "画像1の閲覧要求時刻の記録が欠落。返却時刻のみ記録。"
+    },
+    {
+      "post_id": "2097632404370599986",
+      "note": "公式展示に関する由来の確信度に懸念。受理済み結果は保持。"
+    },
+    {
+      "post_id": "2097664521460498777",
+      "note": "公式ポスターの由来判断に推論が含まれる可能性。受理済み結果は保持。"
+    },
+    {
+      "post_id": "2097664523000017285",
+      "note": "原作カラーページの由来判断について画像の完全一致未確認。受理済み結果は保持。"
+    }
+  ],
+  "image_refusals": "この実行で実際の画像ツール拒否は観測していない。",
+  "availability": "次のclaimはall_leased。取得可能な区分なし。全量完了を意味しない。",
+  "startup_test_log": "本セッションの起動時の生テスト出力は保存されていない。報告用に再実行した結果を別ファイルに保存。"
+}

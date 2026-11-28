@@ -1,0 +1,191 @@
+[
+  {
+    "post_id": "2097349686386631158",
+    "state": "technical_failure",
+    "code": 401,
+    "retrieved_at": "2026-11-28T10:47:02.346780+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097349686386631158"
+  },
+  {
+    "post_id": "2097351438116728949",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:00:08.635602+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097351438116728949"
+  },
+  {
+    "post_id": "2097346661236514973",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:22:11.803521+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097346661236514973"
+  },
+  {
+    "post_id": "2097349176405434721",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:40:18.323125+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097349176405434721"
+  },
+  {
+    "post_id": "2097351218159063410",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:59:29.877487+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097351218159063410"
+  },
+  {
+    "post_id": "2097347907276198062",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:29:18.924505+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097347907276198062"
+  },
+  {
+    "post_id": "2097348662397681961",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:34:44.083117+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097348662397681961"
+  },
+  {
+    "post_id": "2097347906584092691",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:28:47.202550+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097347906584092691"
+  },
+  {
+    "post_id": "2096983224144793748",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:14:16.506447+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2096983224144793748"
+  },
+  {
+    "post_id": "2096982711470842047",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T10:10:25.444246+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2096982711470842047"
+  },
+  {
+    "post_id": "2096978416046354883",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T09:15:38.846360+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2096978416046354883"
+  },
+  {
+    "post_id": "2096979936741580944",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T09:54:29.494709+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2096979936741580944"
+  },
+  {
+    "post_id": "2096978672817504371",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T09:40:13.476166+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2096978672817504371"
+  },
+  {
+    "post_id": "2096980682694328344",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T09:56:59.854648+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2096980682694328344"
+  },
+  {
+    "post_id": "2096979165463417180",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T09:42:37.902109+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2096979165463417180"
+  },
+  {
+    "post_id": "2097631640541675810",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:10:05.856298+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097631640541675810"
+  },
+  {
+    "post_id": "2097634425886617717",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:26:00.431483+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097634425886617717"
+  },
+  {
+    "post_id": "2097638212412035510",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:36:53.588863+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097638212412035510"
+  },
+  {
+    "post_id": "2097634180146594104",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:23:45.333197+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097634180146594104"
+  },
+  {
+    "post_id": "2097634923951874486",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:28:34.740556+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097634923951874486"
+  },
+  {
+    "post_id": "2097634417414222101",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:24:52.723706+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097634417414222101"
+  },
+  {
+    "post_id": "2097637955162841168",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:36:19.795666+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097637955162841168"
+  },
+  {
+    "post_id": "2097633154995745030",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:19:46.009565+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097633154995745030"
+  },
+  {
+    "post_id": "2097664521544642591",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:45:14.992394+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097664521544642591"
+  },
+  {
+    "post_id": "2097665576504373594",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T11:51:41.435643+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097665576504373594"
+  },
+  {
+    "post_id": "2097668800942661937",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T12:09:43.231476+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097668800942661937"
+  },
+  {
+    "post_id": "2097667284231971090",
+    "state": "technical_failure",
+    "code": 404,
+    "retrieved_at": "2026-11-28T12:00:16.571918+00:00",
+    "source_url": "https://api.fxtwitter.com/2/status/2097667284231971090"
+  }
+]
