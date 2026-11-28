@@ -18,3 +18,5 @@ View-event `recorded_at` is the time the event was recorded after viewing, not a
 2026-11-28: prod-0319 は50投稿すべて remote accepted、finish completed、remote head `2ae3e4c032d09b7255dd453e6445742de9bf8e1a`。画像ツールの拒否なし。
 
 2026-11-28 12:31 UTC: 次区分 claim は `all_leased`。取得可能0、他担当のリース2、needs_review 18、completed 20。run全体は未完了。
+
+再開時の隔離監査は除外画像0件。再取得は `all_leased`、取得可能0、他担当リース1、needs_review 18。未共有の作業なし。
