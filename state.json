@@ -1,0 +1,1 @@
+{"acquired_at":1795873948,"attempt":1,"catalog_sha256":"1ecb272083f564bc5c74c6fdb1ff78faaf5818cfd36392d8619e63d2add938ce","completed_posts":[],"job_id":"claim-gate-terra-prod-08","lease_until":1795874248,"retry_after":0,"run_id":"production-v4-001-terra-cont-20261128","status":"leased","token":"b4bdbef442cf4bd1970d0061aa7811b0","updated_at":1795873948,"worker_id":"terra-prod-08"}
