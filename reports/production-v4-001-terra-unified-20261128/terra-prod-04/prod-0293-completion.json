@@ -1,0 +1,1 @@
+{"job_id": "prod-0293", "operations_revision": "ops-batch-v1", "remote_accepted_count": 50, "remote_head": "40b0815b5fd17c0b6f9a9e8f2b955c1bedb1cb1c", "local_pending_ids": [], "draft_post_id": "2097091322419294509", "current_post_id": "2097091322419294509", "checkpoint_due": true, "lease_seconds_remaining": 0, "status": "completed", "temporary_exclusions": 1}
