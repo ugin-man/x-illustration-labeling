@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-11-28T13:48:54.820519+00:00",
+  "fixed_commit": "d201a21a7d8ad0185e2f4863e5aa970eca0f7dfb",
+  "isolation": {
+    "workspace": "/workspace",
+    "loose_images_checked": 268,
+    "archive_images_checked": 265,
+    "excluded_images_found": 0
+  },
+  "claim_status": "available",
+  "claim_returned_job": null,
+  "expired_job": "prod-0265",
+  "expired_owner": "terra-prod-06",
+  "queue_rule": "Expired assignments remain with their owner; no reassignment was made.",
+  "checkpointed_posts": 1943,
+  "unresolved_posts": 57,
+  "total_posts": 2000
+}
