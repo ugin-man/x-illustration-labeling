@@ -1,0 +1,11 @@
+{
+  "run_id": "production-v4-001-terra-unified-20261128",
+  "worker_id": "terra-prod-04",
+  "fixed_commit": "d201a21a7d8ad0185e2f4863e5aa970eca0f7dfb",
+  "job_id": "prod-0278",
+  "status": "completed",
+  "accepted_posts": 50,
+  "head": "447c8814e39c028a0f01bfd1b1d5f6e2250c1b20",
+  "view_event_time_note": "Times in view-events are approximate concurrent clock readings, not exact timestamps; tool history documents actual image views. Multiple-image entries share an approximate start time.",
+  "next_claimed_job": "prod-0288"
+}

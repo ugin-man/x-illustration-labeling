@@ -1,0 +1,326 @@
+test_interrupted_ack_is_recovered_without_duplicate_job (test_batch_dispatch.BatchDispatchTests.test_interrupted_ack_is_recovered_without_duplicate_job) ... ok
+test_parallel_batch_commits_preserve_each_job_and_index (test_batch_dispatch.BatchDispatchTests.test_parallel_batch_commits_preserve_each_job_and_index) ... ok
+test_ten_concurrent_claims_distinct_and_index_job_heads_match (test_batch_dispatch.BatchDispatchTests.test_ten_concurrent_claims_distinct_and_index_job_heads_match) ... ok
+test_other_worker_does_not_take_expired_owner_journal (test_batch_runtime.BatchOwnershipTests.test_other_worker_does_not_take_expired_owner_journal) ... ok
+test_accepted_immutable_and_pending_recovered_without_reclassification (test_batch_runtime.BatchRuntimeTests.test_accepted_immutable_and_pending_recovered_without_reclassification) ... ok
+test_all_per_post_operations_have_zero_git_calls (test_batch_runtime.BatchRuntimeTests.test_all_per_post_operations_have_zero_git_calls) ... ok
+test_corrupt_file_and_missing_required_fields_still_rejected (test_batch_runtime.BatchRuntimeTests.test_corrupt_file_and_missing_required_fields_still_rejected) ... ok
+test_defer_blocks_duplicates_and_keeps_original_then_commits_once (test_batch_runtime.BatchRuntimeTests.test_defer_blocks_duplicates_and_keeps_original_then_commits_once) ... ok
+test_expired_local_lease_stops_new_view_but_saves_existing_work (test_batch_runtime.BatchRuntimeTests.test_expired_local_lease_stops_new_view_but_saves_existing_work) ... ok
+test_interrupted_fetch_is_local_technical_failure_not_whole_job_defer (test_batch_runtime.BatchRuntimeTests.test_interrupted_fetch_is_local_technical_failure_not_whole_job_defer) ... ok
+test_local_search_reservation_survives_restart_without_duplicate_permission (test_batch_runtime.BatchRuntimeTests.test_local_search_reservation_survives_restart_without_duplicate_permission) ... ok
+test_lost_finish_response_is_idempotent_and_preserves_all_rows (test_batch_runtime.BatchRuntimeTests.test_lost_finish_response_is_idempotent_and_preserves_all_rows) ... ok
+test_policy_refusal_persists_offline_and_never_exposes_duplicate_path (test_batch_runtime.BatchRuntimeTests.test_policy_refusal_persists_offline_and_never_exposes_duplicate_path) ... ok
+test_save_interruption_after_result_write_reuses_finished_time (test_batch_runtime.BatchRuntimeTests.test_save_interruption_after_result_write_reuses_finished_time) ... ok
+test_unknown_checkpoint_outcome_blocks_revision_but_keeps_new_work_local (test_batch_runtime.BatchRuntimeTests.test_unknown_checkpoint_outcome_blocks_revision_but_keeps_new_work_local) ... ok
+test_background_measures_detail_and_rejects_old_location_types (test_contract_v3.CompactSchemaTests.test_background_measures_detail_and_rejects_old_location_types) ... ok
+test_blocked_claim_does_not_open_git_or_download_images (test_contract_v3.CompactSchemaTests.test_blocked_claim_does_not_open_git_or_download_images) ... ok
+test_creation_uses_original_derivative_other_or_unknown_with_sources (test_contract_v3.CompactSchemaTests.test_creation_uses_original_derivative_other_or_unknown_with_sources) ... ok
+test_crop_has_fixed_chest_and_waist_options (test_contract_v3.CompactSchemaTests.test_crop_has_fixed_chest_and_waist_options) ... ok
+test_incomplete_template_and_missing_optional_fields (test_contract_v3.CompactSchemaTests.test_incomplete_template_and_missing_optional_fields) ... ok
+test_known_character_hair_sets_have_consistent_negative_flags (test_contract_v3.CompactSchemaTests.test_known_character_hair_sets_have_consistent_negative_flags) ... ok
+test_links_hair_presence_and_image_coverage_are_enforced (test_contract_v3.CompactSchemaTests.test_links_hair_presence_and_image_coverage_are_enforced) ... ok
+test_main_subject_is_required_and_separate_from_character_presence (test_contract_v3.CompactSchemaTests.test_main_subject_is_required_and_separate_from_character_presence) ... ok
+test_mixed_is_not_an_image_category (test_contract_v3.CompactSchemaTests.test_mixed_is_not_an_image_category) ... ok
+test_presence_does_not_turn_incomplete_or_unknown_characters_into_absence (test_contract_v3.CompactSchemaTests.test_presence_does_not_turn_incomplete_or_unknown_characters_into_absence) ... ok
+test_rejects_old_or_invented_fields_colors_and_ranges (test_contract_v3.CompactSchemaTests.test_rejects_old_or_invented_fields_colors_and_ranges) ... ok
+test_same_characters_across_panels_and_images_count_once (test_contract_v3.CompactSchemaTests.test_same_characters_across_panels_and_images_count_once) ... ok
+test_technique_is_required_with_two_values_or_unknown (test_contract_v3.CompactSchemaTests.test_technique_is_required_with_two_values_or_unknown) ... ok
+test_unassessed_context_and_contradictory_status_are_rejected (test_contract_v3.CompactSchemaTests.test_unassessed_context_and_contradictory_status_are_rejected) ... ok
+test_unseen_image_prevents_full_count_and_duplicate_media_are_rejected (test_contract_v3.CompactSchemaTests.test_unseen_image_prevents_full_count_and_duplicate_media_are_rejected) ... ok
+test_zero_characters_and_hairless_characters_cannot_have_positive_hair (test_contract_v3.CompactSchemaTests.test_zero_characters_and_hairless_characters_cannot_have_positive_hair) ... ok
+test_creation_without_source_rejected (test_data_contract.ContractTests.test_creation_without_source_rejected) ... ok
+test_metrics_and_quoted_post_do_not_leak (test_data_contract.ContractTests.test_metrics_and_quoted_post_do_not_leak) ... ok
+test_search_count_and_deadline_enforced (test_data_contract.ContractTests.test_search_count_and_deadline_enforced) ... ok
+test_template_and_missing_images_are_rejected (test_data_contract.ContractTests.test_template_and_missing_images_are_rejected) ... ok
+test_unknown_not_false_and_positive_wins (test_data_contract.ContractTests.test_unknown_not_false_and_positive_wins) ... ok
+test_zip_traversal_rejected_even_with_matching_zip_hash (test_data_contract.ContractTests.test_zip_traversal_rejected_even_with_matching_zip_hash) ... ok
+test_authoring_preserves_identity_history_and_uses_unchanged_save (test_draft_edit.DraftEditTests.test_authoring_preserves_identity_history_and_uses_unchanged_save) ... ok
+test_deferred_or_saved_post_cannot_be_edited_as_current_draft (test_draft_edit.DraftEditTests.test_deferred_or_saved_post_cannot_be_edited_as_current_draft) ... ok
+test_exception_or_concurrent_change_never_overwrites_draft (test_draft_edit.DraftEditTests.test_exception_or_concurrent_change_never_overwrites_draft) ... ok
+test_id_or_image_change_keeps_original_and_preserves_candidate (test_draft_edit.DraftEditTests.test_id_or_image_change_keeps_original_and_preserves_candidate) ... ok
+test_real_bundle_io_with_synthetic_unknown_answers (test_end_to_end.EndToEndTests.test_real_bundle_io_with_synthetic_unknown_answers) ... skipped 'Local preparation bundles not available; cloud unit tests remain offline'
+test_cache_audit_detects_renamed_bytes_in_files_and_archives (test_isolation.IsolationTests.test_cache_audit_detects_renamed_bytes_in_files_and_archives) ... ok
+test_excluded_archive_is_rejected_before_any_image_is_written (test_isolation.IsolationTests.test_excluded_archive_is_rejected_before_any_image_is_written) ... ok
+test_human_archive_override_must_be_outside_workspace (test_isolation.IsolationTests.test_human_archive_override_must_be_outside_workspace) ... ok
+test_missing_or_changed_policy_and_receipt_fail_closed (test_isolation.IsolationTests.test_missing_or_changed_policy_and_receipt_fail_closed) ... ok
+test_safe_input_passes_but_swapped_or_escaped_path_is_not_exposed (test_isolation.IsolationTests.test_safe_input_passes_but_swapped_or_escaped_path_is_not_exposed) ... ok
+test_base_configuration_and_checkout_must_remain_pinned (test_ops_control.ControlTests.test_base_configuration_and_checkout_must_remain_pinned) ... ok
+test_blocked_allows_read_only_preflight_but_not_research (test_ops_control.ControlTests.test_blocked_allows_read_only_preflight_but_not_research) ... ok
+test_code_manual_manifest_binding_and_module_completeness (test_ops_control.ControlTests.test_code_manual_manifest_binding_and_module_completeness) ... ok
+test_control_cannot_authorize_another_manifest_or_coordinator (test_ops_control.ControlTests.test_control_cannot_authorize_another_manifest_or_coordinator) ... ok
+test_enable_requires_every_unique_pinned_worker (test_ops_control.ControlTests.test_enable_requires_every_unique_pinned_worker) ... ok
+test_base_configuration_and_checkout_must_remain_pinned (test_ops_r3_control.ControlTests.test_base_configuration_and_checkout_must_remain_pinned) ... ok
+test_blocked_allows_read_only_preflight_but_not_research (test_ops_r3_control.ControlTests.test_blocked_allows_read_only_preflight_but_not_research) ... ok
+test_code_manual_manifest_binding_and_module_completeness (test_ops_r3_control.ControlTests.test_code_manual_manifest_binding_and_module_completeness) ... ok
+test_control_cannot_authorize_another_manifest_or_coordinator (test_ops_r3_control.ControlTests.test_control_cannot_authorize_another_manifest_or_coordinator) ... ok
+test_enable_requires_every_unique_pinned_worker (test_ops_r3_control.ControlTests.test_enable_requires_every_unique_pinned_worker) ... ok
+test_context_cache_cannot_be_replaced_and_budget_deadline_cannot_extend (test_ops_r3_runtime.OpsQueueTests.test_context_cache_cannot_be_replaced_and_budget_deadline_cannot_extend) ... ok
+test_defer_persists_metadata_without_inventing_completion (test_ops_r3_runtime.OpsQueueTests.test_defer_persists_metadata_without_inventing_completion) ... ok
+test_deferred_hash_component_blocks_transitive_duplicates_only (test_ops_r3_runtime.OpsQueueTests.test_deferred_hash_component_blocks_transitive_duplicates_only) ... ok
+test_resume_review_has_no_nonatomic_fallback (test_ops_r3_runtime.OpsQueueTests.test_resume_review_has_no_nonatomic_fallback) ... ok
+test_resume_review_preserves_accepted_bytes_and_updates_index_atomically (test_ops_r3_runtime.OpsQueueTests.test_resume_review_preserves_accepted_bytes_and_updates_index_atomically) ... ok
+test_revision_audit_rechecks_unaccepted_guard_after_atomic_race (test_ops_r3_runtime.OpsQueueTests.test_revision_audit_rechecks_unaccepted_guard_after_atomic_race) ... ok
+test_sidecar_api_cannot_modify_results_state_or_manifest (test_ops_r3_runtime.OpsQueueTests.test_sidecar_api_cannot_modify_results_state_or_manifest) ... ok
+test_sidecar_writes_require_current_token_and_worker_identity (test_ops_r3_runtime.OpsQueueTests.test_sidecar_writes_require_current_token_and_worker_identity) ... ok
+test_sidecars_survive_expiry_and_reassignment_without_accepted_results (test_ops_r3_runtime.OpsQueueTests.test_sidecars_survive_expiry_and_reassignment_without_accepted_results) ... ok
+test_context_conflict_can_be_deferred_without_replacing_remote_or_losing_local_bytes (test_ops_r3_runtime.OpsRuntimeTests.test_context_conflict_can_be_deferred_without_replacing_remote_or_losing_local_bytes) ... ok
+test_context_request_replay_does_not_spend_again_or_authorize_another_search (test_ops_r3_runtime.OpsRuntimeTests.test_context_request_replay_does_not_spend_again_or_authorize_another_search) ... ok
+test_defer_skips_post_and_same_hash_but_preserves_other_work_and_unresolved_count (test_ops_r3_runtime.OpsRuntimeTests.test_defer_skips_post_and_same_hash_but_preserves_other_work_and_unresolved_count) ... ok
+test_defer_without_answer_preserves_context_for_post_and_duplicate (test_ops_r3_runtime.OpsRuntimeTests.test_defer_without_answer_preserves_context_for_post_and_duplicate) ... ok
+test_deferred_inputs_cannot_be_reopened_by_context_save_or_revise (test_ops_r3_runtime.OpsRuntimeTests.test_deferred_inputs_cannot_be_reopened_by_context_save_or_revise) ... ok
+test_disabled_or_unacknowledged_revision_fails_before_claim (test_ops_r3_runtime.OpsRuntimeTests.test_disabled_or_unacknowledged_revision_fails_before_claim) ... ok
+test_expired_context_ledger_is_preserved_without_another_search (test_ops_r3_runtime.OpsRuntimeTests.test_expired_context_ledger_is_preserved_without_another_search) ... ok
+test_interrupted_fetch_has_durable_marker_and_never_refetches (test_ops_r3_runtime.OpsRuntimeTests.test_interrupted_fetch_has_durable_marker_and_never_refetches) ... ok
+test_lost_ack_after_defer_commit_recovers_without_reopening_input (test_ops_r3_runtime.OpsRuntimeTests.test_lost_ack_after_defer_commit_recovers_without_reopening_input) ... ok
+test_next_still_checks_actual_file_hash_before_exposing_a_path (test_ops_r3_runtime.OpsRuntimeTests.test_next_still_checks_actual_file_hash_before_exposing_a_path) ... ok
+test_r2_tombstone_survives_new_revision_and_second_defer (test_ops_r3_runtime.OpsRuntimeTests.test_r2_tombstone_survives_new_revision_and_second_defer) ... ok
+test_refusal_exclusion_does_not_validate_or_checkpoint_another_broken_answer (test_ops_r3_runtime.OpsRuntimeTests.test_refusal_exclusion_does_not_validate_or_checkpoint_another_broken_answer) ... ok
+test_release_preserves_legacy_context_before_handoff (test_ops_r3_runtime.OpsRuntimeTests.test_release_preserves_legacy_context_before_handoff) ... ok
+test_repeated_defer_is_idempotent_even_for_hash_linked_post (test_ops_r3_runtime.OpsRuntimeTests.test_repeated_defer_is_idempotent_even_for_hash_linked_post) ... ok
+test_revise_cannot_replace_another_workers_unaccepted_answer (test_ops_r3_runtime.OpsRuntimeTests.test_revise_cannot_replace_another_workers_unaccepted_answer) ... ok
+test_revise_cannot_replace_policy_exclusion_or_bypass_frozen_validator (test_ops_r3_runtime.OpsRuntimeTests.test_revise_cannot_replace_policy_exclusion_or_bypass_frozen_validator) ... ok
+test_revise_preserves_original_and_rejects_remote_accepted_overwrite (test_ops_r3_runtime.OpsRuntimeTests.test_revise_preserves_original_and_rejects_remote_accepted_overwrite) ... ok
+test_sequential_defer_does_not_resync_an_earlier_blocked_component (test_ops_r3_runtime.OpsRuntimeTests.test_sequential_defer_does_not_resync_an_earlier_blocked_component) ... ok
+test_auth_rate_limit_and_unknown_failures_are_not_retried (test_ops_r3_transport.TransportTests.test_auth_rate_limit_and_unknown_failures_are_not_retried) ... ok
+test_cleanup_failure_preserves_success_and_original_error (test_ops_r3_transport.TransportTests.test_cleanup_failure_preserves_success_and_original_error) ... ok
+test_push_is_never_blindly_retried (test_ops_r3_transport.TransportTests.test_push_is_never_blindly_retried) ... ok
+test_reads_stop_after_three_transient_failures (test_ops_r3_transport.TransportTests.test_reads_stop_after_three_transient_failures) ... ok
+test_timeout_read_is_bounded_and_does_not_leak_command (test_ops_r3_transport.TransportTests.test_timeout_read_is_bounded_and_does_not_leak_command) ... ok
+test_transient_read_retries_bounded_and_recovers (test_ops_r3_transport.TransportTests.test_transient_read_retries_bounded_and_recovers) ... ok
+test_interrupted_ack_is_recovered_without_duplicate_job (test_ops_r4_dispatch.DispatchRecoveryTests.test_interrupted_ack_is_recovered_without_duplicate_job) ... ok
+test_parallel_checkpoints_retry_only_atomic_conflicts_and_preserve_immutable_results (test_ops_r4_dispatch.DispatchRecoveryTests.test_parallel_checkpoints_retry_only_atomic_conflicts_and_preserve_immutable_results) ... ok
+test_ten_concurrent_claims_distinct_and_index_job_heads_match (test_ops_r4_dispatch.DispatchRecoveryTests.test_ten_concurrent_claims_distinct_and_index_job_heads_match) ... ok
+test_missing_accepted_copy_is_restored_without_reclassification (test_ops_r4_runtime.ReconciliationTests.test_missing_accepted_copy_is_restored_without_reclassification) ... ok
+test_real_conflict_preserves_both_and_does_not_overwrite (test_ops_r4_runtime.ReconciliationTests.test_real_conflict_preserves_both_and_does_not_overwrite) ... ok
+test_save_of_identical_accepted_result_is_idempotent_but_changes_fail (test_ops_r4_runtime.ReconciliationTests.test_save_of_identical_accepted_result_is_idempotent_but_changes_fail) ... ok
+test_stale_count_is_reconciled_by_exact_ids_and_bytes (test_ops_r4_runtime.ReconciliationTests.test_stale_count_is_reconciled_by_exact_ids_and_bytes) ... ok
+test_unsubmitted_bytes_survive_reconciliation_and_checkpoint (test_ops_r4_runtime.ReconciliationTests.test_unsubmitted_bytes_survive_reconciliation_and_checkpoint) ... ok
+test_auth_rate_limit_and_unknown_stop_without_leaking_output (test_ops_r4_transport.PushRecoveryTests.test_auth_rate_limit_and_unknown_stop_without_leaking_output) ... ok
+test_busy_gate_waits_for_release_without_stealing (test_ops_r4_transport.PushRecoveryTests.test_busy_gate_waits_for_release_without_stealing) ... {"status": "waiting_for_worker_gate", "attempt": 1}
+{"status": "waiting_for_worker_gate", "attempt": 2}
+ok
+test_candidate_expiry_stops_replay (test_ops_r4_transport.PushRecoveryTests.test_candidate_expiry_stops_replay) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+ok
+test_changed_refs_are_never_replayed (test_ops_r4_transport.PushRecoveryTests.test_changed_refs_are_never_replayed) ... ok
+test_claim_finally_cleanup_cannot_mask_a_successful_reservation (test_ops_r4_transport.PushRecoveryTests.test_claim_finally_cleanup_cannot_mask_a_successful_reservation) ... {"warning": "claim_gate_cleanup_pending", "action": "preserve_state_wait_for_gate_expiry"}
+ok
+test_failed_observation_does_not_replay_uncertain_push (test_ops_r4_transport.PushRecoveryTests.test_failed_observation_does_not_replay_uncertain_push) ... ok
+test_gate_wait_has_deadline (test_ops_r4_transport.PushRecoveryTests.test_gate_wait_has_deadline) ... ok
+test_longer_transient_outage_recovers_without_rebuilding_commit (test_ops_r4_transport.PushRecoveryTests.test_longer_transient_outage_recovers_without_rebuilding_commit) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 2, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 3, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 4, "action": "retry_exact_commit_after_ref_check"}
+ok
+test_lost_ack_is_accepted_without_second_push (test_ops_r4_transport.PushRecoveryTests.test_lost_ack_is_accepted_without_second_push) ... ok
+test_partial_atomic_observation_is_never_treated_as_success (test_ops_r4_transport.PushRecoveryTests.test_partial_atomic_observation_is_never_treated_as_success) ... ok
+test_push_timeout_still_reconciles_lost_ack (test_ops_r4_transport.PushRecoveryTests.test_push_timeout_still_reconciles_lost_ack) ... ok
+test_read_failure_budget_is_finite (test_ops_r4_transport.PushRecoveryTests.test_read_failure_budget_is_finite) ... ok
+test_read_recovers_after_several_transient_failures (test_ops_r4_transport.PushRecoveryTests.test_read_recovers_after_several_transient_failures) ... ok
+test_transient_push_is_bounded_at_ten (test_ops_r4_transport.PushRecoveryTests.test_transient_push_is_bounded_at_ten) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 2, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 3, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 4, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 5, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 6, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 7, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 8, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 9, "action": "retry_exact_commit_after_ref_check"}
+ok
+test_transient_push_replays_exact_commit_only_after_unchanged_refs (test_ops_r4_transport.PushRecoveryTests.test_transient_push_replays_exact_commit_only_after_unchanged_refs) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"warning": "push_transient_unaccepted", "scope": "atomic_job", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+ok
+test_interrupted_ack_is_recovered_without_duplicate_job (test_ops_r5_dispatch.DispatchRecoveryTests.test_interrupted_ack_is_recovered_without_duplicate_job) ... ok
+test_parallel_checkpoints_retry_only_atomic_conflicts_and_preserve_immutable_results (test_ops_r5_dispatch.DispatchRecoveryTests.test_parallel_checkpoints_retry_only_atomic_conflicts_and_preserve_immutable_results) ... ok
+test_ten_concurrent_claims_distinct_and_index_job_heads_match (test_ops_r5_dispatch.DispatchRecoveryTests.test_ten_concurrent_claims_distinct_and_index_job_heads_match) ... ok
+test_429_honors_retry_after_and_reset (test_ops_r5_http.HttpRecoveryTests.test_429_honors_retry_after_and_reset) ... ok
+test_commit_digits_are_not_http_status (test_ops_r5_http.HttpRecoveryTests.test_commit_digits_are_not_http_status) ... ok
+test_connect_proxy_response_is_not_mistaken_for_permanent_auth_failure (test_ops_r5_http.HttpRecoveryTests.test_connect_proxy_response_is_not_mistaken_for_permanent_auth_failure) ... ok
+test_explicit_bad_credentials_do_not_trigger_permission_changes (test_ops_r5_http.HttpRecoveryTests.test_explicit_bad_credentials_do_not_trigger_permission_changes) ... ok
+test_http_403_then_success_retries_same_read_without_changing_credentials (test_ops_r5_http.HttpRecoveryTests.test_http_403_then_success_retries_same_read_without_changing_credentials) ... ok
+test_http_date_retry_after (test_ops_r5_http.HttpRecoveryTests.test_http_date_retry_after) ... ok
+test_persistent_403_has_finite_budget (test_ops_r5_http.HttpRecoveryTests.test_persistent_403_has_finite_budget) ... ok
+test_retry_progress_never_corrupts_stdout_json (test_ops_r5_http.HttpRecoveryTests.test_retry_progress_never_corrupts_stdout_json) ... ok
+test_trace_headers_and_tokens_never_escape_returned_push_response (test_ops_r5_http.HttpRecoveryTests.test_trace_headers_and_tokens_never_escape_returned_push_response) ... ok
+test_missing_accepted_copy_is_restored_without_reclassification (test_ops_r5_runtime.ReconciliationTests.test_missing_accepted_copy_is_restored_without_reclassification) ... ok
+test_real_conflict_preserves_both_and_does_not_overwrite (test_ops_r5_runtime.ReconciliationTests.test_real_conflict_preserves_both_and_does_not_overwrite) ... ok
+test_save_of_identical_accepted_result_is_idempotent_but_changes_fail (test_ops_r5_runtime.ReconciliationTests.test_save_of_identical_accepted_result_is_idempotent_but_changes_fail) ... ok
+test_stale_count_is_reconciled_by_exact_ids_and_bytes (test_ops_r5_runtime.ReconciliationTests.test_stale_count_is_reconciled_by_exact_ids_and_bytes) ... ok
+test_unsubmitted_bytes_survive_reconciliation_and_checkpoint (test_ops_r5_runtime.ReconciliationTests.test_unsubmitted_bytes_survive_reconciliation_and_checkpoint) ... ok
+test_busy_gate_waits_for_release_without_stealing (test_ops_r5_transport.PushRecoveryTests.test_busy_gate_waits_for_release_without_stealing) ... {"status": "waiting_for_worker_gate", "attempt": 1}
+{"status": "waiting_for_worker_gate", "attempt": 2}
+ok
+test_candidate_expiry_stops_replay (test_ops_r5_transport.PushRecoveryTests.test_candidate_expiry_stops_replay) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 1, "remaining_seconds": 1.4}
+ok
+test_changed_refs_are_never_replayed (test_ops_r5_transport.PushRecoveryTests.test_changed_refs_are_never_replayed) ... ok
+test_claim_finally_cleanup_cannot_mask_a_successful_reservation (test_ops_r5_transport.PushRecoveryTests.test_claim_finally_cleanup_cannot_mask_a_successful_reservation) ... {"warning": "claim_gate_cleanup_pending", "action": "preserve_state_wait_for_gate_expiry"}
+ok
+test_explicit_auth_and_unknown_stop_without_leaking_output (test_ops_r5_transport.PushRecoveryTests.test_explicit_auth_and_unknown_stop_without_leaking_output) ... ok
+test_failed_observation_does_not_replay_uncertain_push (test_ops_r5_transport.PushRecoveryTests.test_failed_observation_does_not_replay_uncertain_push) ... ok
+test_gate_wait_has_deadline (test_ops_r5_transport.PushRecoveryTests.test_gate_wait_has_deadline) ... ok
+test_longer_transient_outage_recovers_without_rebuilding_commit (test_ops_r5_transport.PushRecoveryTests.test_longer_transient_outage_recovers_without_rebuilding_commit) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 1, "remaining_seconds": 1.1}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 2, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 2, "remaining_seconds": 2.5}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 3, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 3, "remaining_seconds": 4.5}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 4, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 4, "remaining_seconds": 8.1}
+ok
+test_lost_ack_is_accepted_without_second_push (test_ops_r5_transport.PushRecoveryTests.test_lost_ack_is_accepted_without_second_push) ... ok
+test_partial_atomic_observation_is_never_treated_as_success (test_ops_r5_transport.PushRecoveryTests.test_partial_atomic_observation_is_never_treated_as_success) ... ok
+test_push_timeout_still_reconciles_lost_ack (test_ops_r5_transport.PushRecoveryTests.test_push_timeout_still_reconciles_lost_ack) ... ok
+test_read_failure_budget_is_finite (test_ops_r5_transport.PushRecoveryTests.test_read_failure_budget_is_finite) ... {"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 1, "remaining_seconds": 1.3}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 2, "remaining_seconds": 2.5}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 3, "remaining_seconds": 4.9}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 4, "remaining_seconds": 8.4}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 5, "remaining_seconds": 8.6}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 6, "remaining_seconds": 8.7}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 7, "remaining_seconds": 8.5}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 8, "remaining_seconds": 8.6}
+{"status": "git_retry_wait", "operation": "ls-remote", "category": "transient_network", "http_status": 503, "attempt": 9, "remaining_seconds": 8.9}
+ok
+test_read_recovers_after_several_transient_failures (test_ops_r5_transport.PushRecoveryTests.test_read_recovers_after_several_transient_failures) ... {"status": "git_retry_wait", "operation": "fetch", "category": "transient_network", "http_status": 503, "attempt": 1, "remaining_seconds": 1.7}
+{"status": "git_retry_wait", "operation": "fetch", "category": "transient_network", "http_status": 503, "attempt": 2, "remaining_seconds": 2.3}
+{"status": "git_retry_wait", "operation": "fetch", "category": "transient_network", "http_status": 503, "attempt": 3, "remaining_seconds": 4.5}
+{"status": "git_retry_wait", "operation": "fetch", "category": "transient_network", "http_status": 503, "attempt": 4, "remaining_seconds": 8.0}
+ok
+test_transient_push_is_bounded_at_ten (test_ops_r5_transport.PushRecoveryTests.test_transient_push_is_bounded_at_ten) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 1, "remaining_seconds": 1.1}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 2, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 2, "remaining_seconds": 2.7}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 3, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 3, "remaining_seconds": 4.6}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 4, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 4, "remaining_seconds": 8.3}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 5, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 5, "remaining_seconds": 8.1}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 6, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 6, "remaining_seconds": 8.2}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 7, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 7, "remaining_seconds": 8.2}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 8, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 8, "remaining_seconds": 8.8}
+{"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 9, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 9, "remaining_seconds": 8.1}
+ok
+test_transient_push_replays_exact_commit_only_after_unchanged_refs (test_ops_r5_transport.PushRecoveryTests.test_transient_push_replays_exact_commit_only_after_unchanged_refs) ... {"warning": "push_transient_unaccepted", "scope": "worker_gate", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_worker_gate", "category": "transient_network", "http_status": 503, "attempt": 1, "remaining_seconds": 1.5}
+{"warning": "push_transient_unaccepted", "scope": "atomic_job", "attempt": 1, "action": "retry_exact_commit_after_ref_check"}
+{"status": "git_retry_wait", "operation": "push_atomic_job", "category": "transient_network", "http_status": 503, "attempt": 1, "remaining_seconds": 2.0}
+ok
+test_context_cache_cannot_be_replaced_and_budget_deadline_cannot_extend (test_ops_runtime.OpsQueueTests.test_context_cache_cannot_be_replaced_and_budget_deadline_cannot_extend) ... ok
+test_defer_persists_metadata_without_inventing_completion (test_ops_runtime.OpsQueueTests.test_defer_persists_metadata_without_inventing_completion) ... ok
+test_deferred_hash_component_blocks_transitive_duplicates_only (test_ops_runtime.OpsQueueTests.test_deferred_hash_component_blocks_transitive_duplicates_only) ... ok
+test_resume_review_has_no_nonatomic_fallback (test_ops_runtime.OpsQueueTests.test_resume_review_has_no_nonatomic_fallback) ... ok
+test_resume_review_preserves_accepted_bytes_and_updates_index_atomically (test_ops_runtime.OpsQueueTests.test_resume_review_preserves_accepted_bytes_and_updates_index_atomically) ... ok
+test_revision_audit_rechecks_unaccepted_guard_after_atomic_race (test_ops_runtime.OpsQueueTests.test_revision_audit_rechecks_unaccepted_guard_after_atomic_race) ... ok
+test_sidecar_api_cannot_modify_results_state_or_manifest (test_ops_runtime.OpsQueueTests.test_sidecar_api_cannot_modify_results_state_or_manifest) ... ok
+test_sidecar_writes_require_current_token_and_worker_identity (test_ops_runtime.OpsQueueTests.test_sidecar_writes_require_current_token_and_worker_identity) ... ok
+test_sidecars_survive_expiry_and_reassignment_without_accepted_results (test_ops_runtime.OpsQueueTests.test_sidecars_survive_expiry_and_reassignment_without_accepted_results) ... ok
+test_context_conflict_can_be_deferred_without_replacing_remote_or_losing_local_bytes (test_ops_runtime.OpsRuntimeTests.test_context_conflict_can_be_deferred_without_replacing_remote_or_losing_local_bytes) ... ok
+test_context_request_replay_does_not_spend_again_or_authorize_another_search (test_ops_runtime.OpsRuntimeTests.test_context_request_replay_does_not_spend_again_or_authorize_another_search) ... ok
+test_defer_skips_post_and_same_hash_but_preserves_other_work_and_unresolved_count (test_ops_runtime.OpsRuntimeTests.test_defer_skips_post_and_same_hash_but_preserves_other_work_and_unresolved_count) ... ok
+test_defer_without_answer_preserves_context_for_post_and_duplicate (test_ops_runtime.OpsRuntimeTests.test_defer_without_answer_preserves_context_for_post_and_duplicate) ... ok
+test_deferred_inputs_cannot_be_reopened_by_context_save_or_revise (test_ops_runtime.OpsRuntimeTests.test_deferred_inputs_cannot_be_reopened_by_context_save_or_revise) ... ok
+test_disabled_or_unacknowledged_revision_fails_before_claim (test_ops_runtime.OpsRuntimeTests.test_disabled_or_unacknowledged_revision_fails_before_claim) ... ok
+test_expired_context_ledger_is_preserved_without_another_search (test_ops_runtime.OpsRuntimeTests.test_expired_context_ledger_is_preserved_without_another_search) ... ok
+test_interrupted_fetch_has_durable_marker_and_never_refetches (test_ops_runtime.OpsRuntimeTests.test_interrupted_fetch_has_durable_marker_and_never_refetches) ... ok
+test_next_still_checks_actual_file_hash_before_exposing_a_path (test_ops_runtime.OpsRuntimeTests.test_next_still_checks_actual_file_hash_before_exposing_a_path) ... ok
+test_refusal_exclusion_does_not_validate_or_checkpoint_another_broken_answer (test_ops_runtime.OpsRuntimeTests.test_refusal_exclusion_does_not_validate_or_checkpoint_another_broken_answer) ... ok
+test_release_preserves_legacy_context_before_handoff (test_ops_runtime.OpsRuntimeTests.test_release_preserves_legacy_context_before_handoff) ... ok
+test_revise_cannot_replace_another_workers_unaccepted_answer (test_ops_runtime.OpsRuntimeTests.test_revise_cannot_replace_another_workers_unaccepted_answer) ... ok
+test_revise_cannot_replace_policy_exclusion_or_bypass_frozen_validator (test_ops_runtime.OpsRuntimeTests.test_revise_cannot_replace_policy_exclusion_or_bypass_frozen_validator) ... ok
+test_revise_preserves_original_and_rejects_remote_accepted_overwrite (test_ops_runtime.OpsRuntimeTests.test_revise_preserves_original_and_rejects_remote_accepted_overwrite) ... ok
+test_classification_contract_has_no_changes (test_parallel_runtime.ParallelRuntimeTests.test_classification_contract_has_no_changes) ... ok
+test_excluded_input_rejected_before_any_extraction (test_parallel_runtime.ParallelRuntimeTests.test_excluded_input_rejected_before_any_extraction) ... ok
+test_same_worker_concurrent_claims_cannot_acquire_two_jobs (test_parallel_runtime.ParallelRuntimeTests.test_same_worker_concurrent_claims_cannot_acquire_two_jobs) ... ok
+test_subset_extracts_only_its_own_images (test_parallel_runtime.ParallelRuntimeTests.test_subset_extracts_only_its_own_images) ... ok
+test_three_actual_cli_claims_get_distinct_jobs (test_parallel_runtime.ParallelRuntimeTests.test_three_actual_cli_claims_get_distinct_jobs) ... ok
+test_three_contenders_same_job_have_exactly_one_winner (test_parallel_runtime.ParallelRuntimeTests.test_three_contenders_same_job_have_exactly_one_winner) ... ok
+test_unknown_worker_and_changed_scope_rejected (test_parallel_runtime.ParallelRuntimeTests.test_unknown_worker_and_changed_scope_rejected) ... ok
+test_delayed_initial_claim_cannot_create_orphan_or_second_assignment (test_production_runtime.DispatchTests.test_delayed_initial_claim_cannot_create_orphan_or_second_assignment) ... ok
+test_expiry_preserves_checkpoint_and_fences_old_and_delayed_writers (test_production_runtime.DispatchTests.test_expiry_preserves_checkpoint_and_fences_old_and_delayed_writers) ... ok
+test_hundreds_of_jobs_do_not_add_remote_reads_to_normal_claim_or_status (test_production_runtime.DispatchTests.test_hundreds_of_jobs_do_not_add_remote_reads_to_normal_claim_or_status) ... ok
+test_index_conflict_rejects_otherwise_valid_new_job_atomically (test_production_runtime.DispatchTests.test_index_conflict_rejects_otherwise_valid_new_job_atomically) ... ok
+test_interrupted_ack_is_recovered_without_duplicate_job (test_production_runtime.DispatchTests.test_interrupted_ack_is_recovered_without_duplicate_job) ... ok
+test_parallel_checkpoints_retry_only_atomic_conflicts_and_preserve_immutable_results (test_production_runtime.DispatchTests.test_parallel_checkpoints_retry_only_atomic_conflicts_and_preserve_immutable_results) ... ok
+test_same_identity_concurrent_claims_cannot_take_two_jobs (test_production_runtime.DispatchTests.test_same_identity_concurrent_claims_cannot_take_two_jobs) ... ok
+test_server_without_atomic_push_fails_closed_without_any_job_or_index (test_production_runtime.DispatchTests.test_server_without_atomic_push_fails_closed_without_any_job_or_index) ... ok
+test_status_is_read_only_token_free_and_distinguishes_tail_states (test_production_runtime.DispatchTests.test_status_is_read_only_token_free_and_distinguishes_tail_states) ... ok
+test_ten_concurrent_claims_distinct_and_index_job_heads_match (test_production_runtime.DispatchTests.test_ten_concurrent_claims_distinct_and_index_job_heads_match) ... ok
+test_authorized_scope_and_contract_unchanged (test_production_runtime.ProductionRuntimeTests.test_authorized_scope_and_contract_unchanged) ... ok
+test_excluded_inputs_and_nonproduction_sources_rejected_before_extraction (test_production_runtime.ProductionRuntimeTests.test_excluded_inputs_and_nonproduction_sources_rejected_before_extraction) ... ok
+test_existing_lease_rehydrates_after_lost_local_lease_file (test_production_runtime.ProductionRuntimeTests.test_existing_lease_rehydrates_after_lost_local_lease_file) ... ok
+test_refusal_excludes_post_and_same_hash_before_any_path_is_returned (test_production_runtime.ProductionRuntimeTests.test_refusal_excludes_post_and_same_hash_before_any_path_is_returned) ... ok
+test_save_checkpoint_finish_collect_and_autonomous_next_job (test_production_runtime.ProductionRuntimeTests.test_save_checkpoint_finish_collect_and_autonomous_next_job) ... ok
+test_ten_real_cli_processes_claim_disjoint_jobs (test_production_runtime.ProductionRuntimeTests.test_ten_real_cli_processes_claim_disjoint_jobs) ... ok
+test_checkpoint_cannot_replace_manifest (test_queue.QueueTests.test_checkpoint_cannot_replace_manifest) ... ok
+test_conflicting_results_never_overwrite (test_queue.QueueTests.test_conflicting_results_never_overwrite) ... ok
+test_expiry_preserves_saved_posts_and_fences_old_owner (test_queue.QueueTests.test_expiry_preserves_saved_posts_and_fences_old_owner) ... ok
+test_hold_preserves_checkpoint_and_prevents_automatic_reclaim (test_queue.QueueTests.test_hold_preserves_checkpoint_and_prevents_automatic_reclaim) ... ok
+test_parallel_reservations_have_one_winner (test_queue.QueueTests.test_parallel_reservations_have_one_winner) ... ok
+test_release_backoff_and_catalog_mismatch (test_queue.QueueTests.test_release_backoff_and_catalog_mismatch) ... ok
+test_stale_sibling_cannot_replace_accepted_checkpoint (test_queue.QueueTests.test_stale_sibling_cannot_replace_accepted_checkpoint) ... ok
+test_process_interruption_does_not_prohibit_next_request (test_research_text.TextFetchTests.test_process_interruption_does_not_prohibit_next_request) ... ok
+test_retry_failure_then_success_preserves_old_records (test_research_text.TextFetchTests.test_retry_failure_then_success_preserves_old_records) ... ok
+test_terminal_failure_returns_and_later_call_can_retry (test_research_text.TextFetchTests.test_terminal_failure_returns_and_later_call_can_retry) ... ok
+test_correct_draft_id_no_git_and_deferred_post_stays_blocked (test_research_text.TextGuardTests.test_correct_draft_id_no_git_and_deferred_post_stays_blocked) ... ok
+test_conflict_and_invalid_inputs_do_not_overwrite_saved_review (test_review_app.HumanReviewTests.test_conflict_and_invalid_inputs_do_not_overwrite_saved_review) ... ok
+test_http_persistence_export_and_origin_protection (test_review_app.HumanReviewTests.test_http_persistence_export_and_origin_protection) ... ok
+test_image_route_rejects_bytes_changed_after_loading (test_review_app.HumanReviewTests.test_image_route_rejects_bytes_changed_after_loading) ... ok
+test_saved_review_reloads_without_changing_labels (test_review_app.HumanReviewTests.test_saved_review_reloads_without_changing_labels) ... ok
+test_v3_review_uses_screened_source_and_omits_refused_duplicates (test_review_app.HumanReviewTests.test_v3_review_uses_screened_source_and_omits_refused_duplicates) ... ok
+test_atomic_conflict_unknown_ids_and_bulk_preserves_exclusions (test_screening.ScreeningTests.test_atomic_conflict_unknown_ids_and_bulk_preserves_exclusions) ... ok
+test_exclusion_propagates_duplicates_and_undo_restores (test_screening.ScreeningTests.test_exclusion_propagates_duplicates_and_undo_restores) ... ok
+test_hold_and_unseen_are_not_complete_and_edits_revoke (test_screening.ScreeningTests.test_hold_and_unseen_are_not_complete_and_edits_revoke) ... ok
+test_http_metadata_only_start_and_csrf_protection (test_screening.ScreeningTests.test_http_metadata_only_start_and_csrf_protection) ... ok
+test_new_bundles_physically_omit_excluded_images_and_source_unchanged (test_screening.ScreeningTests.test_new_bundles_physically_omit_excluded_images_and_source_unchanged) ... ok
+test_anthropomorphic_animal_is_still_animal (test_v4_runtime.ContractV4Tests.test_anthropomorphic_animal_is_still_animal) ... ok
+test_applicable_post_fields_cannot_be_hidden_as_not_applicable (test_v4_runtime.ContractV4Tests.test_applicable_post_fields_cannot_be_hidden_as_not_applicable) ... ok
+test_csv_preserves_states_and_all_units (test_v4_runtime.ContractV4Tests.test_csv_preserves_states_and_all_units) ... ok
+test_humanoid_robot_keeps_attributes_not_person_count (test_v4_runtime.ContractV4Tests.test_humanoid_robot_keeps_attributes_not_person_count) ... ok
+test_line_art_with_actual_black_hair_fill_keeps_black (test_v4_runtime.ContractV4Tests.test_line_art_with_actual_black_hair_fill_keeps_black) ... ok
+test_mob_count_zero_preserves_presence_and_hair (test_v4_runtime.ContractV4Tests.test_mob_count_zero_preserves_presence_and_hair) ... ok
+test_no_environment_does_not_block_independent_time (test_v4_runtime.ContractV4Tests.test_no_environment_does_not_block_independent_time) ... ok
+test_no_twelve_character_truncation (test_v4_runtime.ContractV4Tests.test_no_twelve_character_truncation) ... ok
+test_original_24_fields_and_required_values (test_v4_runtime.ContractV4Tests.test_original_24_fields_and_required_values) ... ok
+test_pending_is_not_unknown (test_v4_runtime.ContractV4Tests.test_pending_is_not_unknown) ... ok
+test_repeated_character_different_appearances_is_one (test_v4_runtime.ContractV4Tests.test_repeated_character_different_appearances_is_one) ... ok
+test_review_renderer_exposes_all_required_fields_and_states (test_v4_runtime.ContractV4Tests.test_review_renderer_exposes_all_required_fields_and_states) ... ok
+test_search_budget_counts_queries_and_deadline (test_v4_runtime.ContractV4Tests.test_search_budget_counts_queries_and_deadline) ... ok
+test_subject_does_not_gate_other_fields (test_v4_runtime.ContractV4Tests.test_subject_does_not_gate_other_fields) ... ok
+test_uncolored_paper_cannot_be_hair_color (test_v4_runtime.ContractV4Tests.test_uncolored_paper_cannot_be_hair_color) ... ok
+test_unknown_role_cannot_be_exact_count (test_v4_runtime.ContractV4Tests.test_unknown_role_cannot_be_exact_count) ... ok
+test_authorization_pins_scope_and_model (test_v4_runtime.RuntimeV4Tests.test_authorization_pins_scope_and_model) ... ok
+test_full_claim_save_checkpoint_finish_collect (test_v4_runtime.RuntimeV4Tests.test_full_claim_save_checkpoint_finish_collect) ... ok
+test_only_pinned_worker_and_launch_block_fail_closed (test_v4_runtime.RuntimeV4Tests.test_only_pinned_worker_and_launch_block_fail_closed) ... ok
+test_policy_refusal_is_metadata_only_and_next_skips (test_v4_runtime.RuntimeV4Tests.test_policy_refusal_is_metadata_only_and_next_skips) ... ok
+test_prior_exclusion_and_tampered_bytes_rejected (test_v4_runtime.RuntimeV4Tests.test_prior_exclusion_and_tampered_bytes_rejected) ... ok
+test_all_rows_checkpointed_is_not_job_completion (test_watch_snapshot.WatchSnapshotTests.test_all_rows_checkpointed_is_not_job_completion) ... ok
+test_expired_lease_grace_and_reclaimable_are_distinct (test_watch_snapshot.WatchSnapshotTests.test_expired_lease_grace_and_reclaimable_are_distinct) ... ok
+test_wrong_scope_is_rejected (test_watch_snapshot.WatchSnapshotTests.test_wrong_scope_is_rejected) ... ok
+test_all_excluded_job_completes_without_fabricated_labels (test_worker_v3.WorkerV3Tests.test_all_excluded_job_completes_without_fabricated_labels) ... ok
+test_claim_resume_local_save_checkpoint_finish_collect (test_worker_v3.WorkerV3Tests.test_claim_resume_local_save_checkpoint_finish_collect) ... ok
+test_code_change_fails_closed_and_blocked_commands_do_not_use_git (test_worker_v3.WorkerV3Tests.test_code_change_fails_closed_and_blocked_commands_do_not_use_git) ... ok
+test_context_ledger_rejects_fabricated_work_and_cache_mixups (test_worker_v3.WorkerV3Tests.test_context_ledger_rejects_fabricated_work_and_cache_mixups) ... ok
+test_exclusion_cleanup_does_not_authorize_next_post (test_worker_v3.WorkerV3Tests.test_exclusion_cleanup_does_not_authorize_next_post) ... ok
+test_exclusion_requires_real_signal_metadata_and_cannot_overwrite_labels (test_worker_v3.WorkerV3Tests.test_exclusion_requires_real_signal_metadata_and_cannot_overwrite_labels) ... ok
+test_expiry_and_human_edit_block_work_without_touching_remote (test_worker_v3.WorkerV3Tests.test_expiry_and_human_edit_block_work_without_touching_remote) ... ok
+test_hold_stops_job_and_preserves_completed_local_results (test_worker_v3.WorkerV3Tests.test_hold_stops_job_and_preserves_completed_local_results) ... ok
+test_new_screening_revision_keeps_frozen_catalog_and_requires_new_authorization (test_worker_v3.WorkerV3Tests.test_new_screening_revision_keeps_frozen_catalog_and_requires_new_authorization) ... ok
+test_policy_exclusion_skips_post_and_stays_out_of_research_tables (test_worker_v3.WorkerV3Tests.test_policy_exclusion_skips_post_and_stays_out_of_research_tables) ... ok
+test_refusal_persists_before_network_failure_and_metadata_retry_is_safe (test_worker_v3.WorkerV3Tests.test_refusal_persists_before_network_failure_and_metadata_retry_is_safe) ... ok
+
+----------------------------------------------------------------------
+Ran 247 tests in 68.907s
+
+OK (skipped=1)
+{"edited_draft": "5", "job_id": "job-03", "saved_result": false}
+data-v3-e46722ee09f3: 2 posts; prepared locally only. Production is still blocked.
+data-v3-86c13ed3b199: 2 posts; prepared locally only. Production is still blocked.
+data-v3-c432396e8b96: 2 posts; prepared locally only. Production is still blocked.
+data-v3-ae7a92d0fe31: 2 posts; prepared locally only. Production is still blocked.
+data-v3-1dd8140dbb41: 2 posts; prepared locally only. Production is still blocked.
+data-v3-f75903c7066d: 2 posts; prepared locally only. Production is still blocked.
