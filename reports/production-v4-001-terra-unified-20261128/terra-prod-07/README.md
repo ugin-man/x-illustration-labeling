@@ -8,3 +8,5 @@ View-event `recorded_at` is the time the event was recorded after viewing, not a
 2026-11-28: prod-0277 の20投稿を checkpoint、remote accepted 20、remote head `2400af9592668a99aaee162e266b5d4a5ed1c803`。ローカル未共有なし。閲覧記録は記録時刻であり閲覧時刻の主張ではない。
 
 2026-11-28: prod-0277 は50投稿すべて remote accepted、finish completed、remote head `93f6d2f3855eb03118e395c7004714a25d57d2e0`。次区分 prod-0285 を取得。
+
+2026-11-28: prod-0285 は20投稿を checkpoint、remote accepted 20、remote head `e8126413ba3e4e996762926622c6b356a5b5af57`。ローカル未共有なし。実画像ツールの拒否なし。
