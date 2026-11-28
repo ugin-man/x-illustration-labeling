@@ -1,0 +1,9 @@
+{
+  "job_id": "prod-0288",
+  "worker": "terra-prod-04",
+  "status": "completed",
+  "remote_accepted_count": 50,
+  "remote_head": "d950321276737c6ed4257fb157fcc9a2a06846e1",
+  "view_event_timestamps": "approximate concurrent clock readings; multi-image records can share approximate start time",
+  "image_refusals": 0
+}
