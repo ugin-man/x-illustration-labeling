@@ -99,7 +99,7 @@ def unpack(bundle, job, destination, exclusion_policy=None):
 
 
 def prepare_job(catalog, job, destination, assets, policy, bundle_dir=None):
-    """Verify the pinned screened production archive and extract its exact job."""
+    """Verify a screened archive and extract only the posts pinned for this run."""
     destination = Path(destination)
     manifest = job['manifest']
     if hashlib.sha256(canonical(manifest)).hexdigest() != job['manifest_sha256']:
@@ -109,7 +109,8 @@ def prepare_job(catalog, job, destination, assets, policy, bundle_dir=None):
         raise ValueError('Job manifest belongs to a different production dataset')
     if len(job['sources']) != 1 or job['sources'][0]['job_id'] != job['job_id']:
         raise ValueError('Production requires exactly one self-contained source per job')
-    if job['sources'][0]['manifest_sha256'] != job['manifest_sha256']:
+    if (job['sources'][0]['manifest_sha256'] != job['manifest_sha256']
+            and not catalog.get('subset_of_catalog_sha256')):
         raise ValueError('Production source must match the exact pinned job manifest')
     wanted = {p['post_id']: p for p in manifest['posts']}
     if len(wanted) != len(manifest['posts']) or list(wanted) != job['post_ids']:

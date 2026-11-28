@@ -375,6 +375,28 @@ class ProductionRuntimeTests(unittest.TestCase):
             prepare_job(self.catalog, changed, target, {}, self.policy, bundle_dir=self.bundle_dir)
         self.assertFalse(target.exists())
 
+    def test_screened_subset_extracts_only_unchanged_selected_posts(self):
+        subset = copy.deepcopy(self.catalog['jobs'][0])
+        kept, omitted = subset['manifest']['posts']
+        subset['manifest']['posts'] = [kept]
+        subset['post_ids'] = [kept['post_id']]
+        subset['manifest_sha256'] = hashlib.sha256(canonical(subset['manifest'])).hexdigest()
+        target = self.root / 'subset'
+        with self.assertRaisesRegex(ValueError, 'exact pinned job manifest'):
+            prepare_job(self.catalog, subset, target, {}, self.policy, bundle_dir=self.bundle_dir)
+
+        catalog = dict(self.catalog, subset_of_catalog_sha256='a' * 64)
+        manifest = prepare_job(catalog, subset, target, {}, self.policy, bundle_dir=self.bundle_dir)
+        self.assertEqual(manifest['posts'], [kept])
+        images = {im['path'] for im in kept['images']}
+        self.assertEqual({p.relative_to(target).as_posix() for p in target.rglob('*.jpg')}, images)
+        self.assertNotEqual(omitted['post_id'], kept['post_id'])
+
+        subset['manifest']['posts'][0] = dict(kept, images=[])
+        subset['manifest_sha256'] = hashlib.sha256(canonical(subset['manifest'])).hexdigest()
+        with self.assertRaisesRegex(ValueError, 'Subset differs from the screened source'):
+            prepare_job(catalog, subset, self.root / 'tampered', {}, self.policy, bundle_dir=self.bundle_dir)
+
     def test_authorized_scope_and_contract_unchanged(self):
         self.assertEqual((self.repo / 'pipeline_production/contract_v4.py').read_bytes(),
                          (self.repo / 'pipeline_parallel/contract_v4.py').read_bytes())
